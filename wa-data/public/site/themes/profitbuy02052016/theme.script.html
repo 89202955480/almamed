@@ -1,0 +1,100 @@
+<script type="text/javascript">
+;(function(window, undefined){
+    window.profitbuy = window.profitbuy || { };
+    window.profitbuy = {
+        home_url: "{$wa_url}",
+        {if !empty($theme_settings.category_tree_submenu_count)}submenu_count: {$theme_settings.category_tree_submenu_count},{/if}
+        {if $wa->shop}
+            shop_url: "{$wa->getUrl('shop/frontend')}",
+            default_img_url: { dummy96: "{$wa_theme_url}img/dummy96.png" },
+            {if !empty($theme_settings.flying_cart_item)}
+                flying_cart_item: {$theme_settings.flying_cart_item},
+                setFlyingHeight: function(){
+                    setTimeout(function(){
+                        var h = 0;
+                        $('#flying-cart li').filter(':lt('+window.profitbuy.flying_cart_item+')').each(function(){
+                            h += $(this).innerHeight();
+                        });
+                        $('#flying-cart').css('max-height', h + 1);    
+                    }, 300);
+                },
+            {/if}
+            {if !empty($theme_settings.description_cut)}desc_cut: {(int) $theme_settings.description_cut},{/if}
+            {if !empty($theme_settings.autofit)}autofit: {$theme_settings.autofit},{/if}
+            {if !empty($theme_settings.product_preview)}product_preview: 1,{/if}
+            {if !empty($theme_settings.scroll_image)}scroll_image: 1,{/if}
+        {/if}
+        locale: "{$wa->locale()}",
+        translate: function(message) {
+            if (typeof this.messages[this.locale] !== 'undefined' && this.messages[this.locale][message]) {
+                return this.messages[this.locale][message];
+            }
+            if (this.messages[message]) {
+                return this.messages[message];
+            }
+            return message;
+        },
+        messages: {
+            'ru_RU': {
+                'More': 'Еще',
+                'Show more': 'Показать еще',
+                'More categories': 'Еще категории',
+                'Remove from cart': 'Удалить из корзины',
+                'pcs.': 'шт.',
+                'Expand description': 'Развернуть описание',
+                'Collapse description': 'Свернуть описание',
+                'Back to home page': 'Вернуться на главную',
+                'or': 'или',
+                'back to current page': 'остаться на текущей странице',
+                'Congratulations!': 'Поздравляем!',
+                'Authorization was successful!': 'Авторизация прошла успешно!',
+                'Much product is no longer available!': 'Столько товара нет в наличии!'
+            }
+        },
+        loading: {
+            overlayAdd: function(e, size, pos){
+                if (size === undefined) {
+                    size = 16;
+                }
+                if (e.css('position') == 'static') {
+                    e.css('position', 'relative');
+                }
+                e.addClass('loading-overlay-active')
+                 .append('<div class="loading-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255,255,255,0.4); z-index: 100;"><i class="icon' + size + ' loading" style="position: absolute; top: 50%; margin-top: -' + (size/2) + 'px; left: 50%; margin-left: -' + (size/2) + 'px; border: none !important"></i></div>');
+            },
+            overlayRemove: function(e){
+                e.removeClass('loading-overlay-active')
+                 .find('.loading-overlay').remove();
+            }
+        }
+    }
+})(window);
+
+{if 0}{* PLUGIN WMIMAGEINCAT: replace 0 to 1 to enable *}
+    {if empty($theme_settings.speedup) || $uae}
+        {if $wa->shop && class_exists(shopWmimageincatPlugin)}var images = {json_encode(shopWmimageincatPlugin::getCategoryImageObj())};{/if}
+        $(document).ready(function(){
+            if(typeof(images) != 'undefined'){
+                $.each(images, function(k,v){
+                    if(v.icon) {
+                        $('[data-icon-id="'+k+'"]').prepend('<img class="plugin-imageincat-img" src="'+v.icon+'" alt="">');
+                    }
+                });
+            }
+        });
+    {else}
+        window.stack_inline_js.push('\
+            {if $wa->shop && class_exists(shopWmimageincatPlugin)}var images = {json_encode(shopWmimageincatPlugin::getCategoryImageObj())};{/if}\
+            $(document).ready(function(){ \
+                if(typeof(images) != "undefined"){ \
+                    $.each(images, function(k,v){ \
+                        if(v.icon) { \
+                            $(\'[data-icon-id="\'+k+\'"]\').prepend(\'<img class="plugin-imageincat-img" src="\'+v.icon+\'" alt="">\');\
+                        }\
+                    });\
+                }\
+            });\
+        ');
+    {/if}
+{/if}
+</script>

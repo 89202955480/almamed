@@ -1,0 +1,86 @@
+body {
+	background-color: #dfdede;
+	color: #000000;
+	font-family: Arial, Tahoma;
+}
+
+.wraper {
+  height: 150px;
+  width: 800px;
+  background-color: #005594;
+}
+
+.content {
+  height: 630px;
+  width: 780px;
+  padding-top: 50px;
+  padding-left: 20px;
+  background-color: #ffffff;
+  text-align: left;
+  color: #000000;
+  font-size: 20px;
+}
+
+.question {
+  font-size: 30px;
+}
+
+.failure {
+  font-size: 20px;
+  color:#DD4444;
+}
+
+input[type=submit] {
+	width: 180px;
+	padding: 15px;
+	font-size: 18px;
+	font-weight: normal;
+	color: #ffffff;
+	border: none;
+	background-color: #f5aa00;
+	cursor:pointer;
+	border-radius:5px;
+}
+
+input[type=submit]:hover {
+	background-color: #f59000;
+}
+
+input {
+	padding: 10px;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+	border: none;
+	background-color: #edecec;
+	margin: 0px 10px 0px 0px;
+}
+
+select {
+	padding: 10px;
+	font-size: 18px;
+	font-weight: normal;
+	color: #000000;
+	border: none;
+	background-color: #edecec;
+	margin: 0px 10px 0px 0px;
+}
+
+.title-text {
+  width:400px;
+  font-size: 20px;
+}
+
+.config {
+  width: 730px;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 50px;
+}
+
+h2 {
+  color: #ffffff;
+  font-size: 20px;
+}

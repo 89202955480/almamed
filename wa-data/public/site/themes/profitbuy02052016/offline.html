@@ -1,0 +1,23 @@
+<ul class="offline-wrapper">
+    {if !empty($theme_settings.address)}
+        {if !empty($theme_settings.address_map_url)}
+            <li class="address">
+                <a href="{$theme_settings.address_map_url}" class="map-wrapper" rel="nofollow" target="_blank" title="[`View on map`]"><i class="mdi-place mdi-2x"></i><span>{$theme_settings.address}</span></a>
+            </li>
+        {else}
+            <li class="address no-hover">
+                <i class="mdi-place mdi-2x"></i>{$theme_settings.address}
+            </li>
+        {/if}
+    {/if}
+    {if !empty($wh)}
+        <li class="workhours no-hover hint">
+            {if is_array($wh)}
+                {$wh.days_from_to}
+                {if $wh.hours_from && $wh.hours_to} {$wh.hours_from}—{$wh.hours_to}{/if}
+            {else}
+                {$wh}
+            {/if}
+        </li>
+    {/if}
+</ul>

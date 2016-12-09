@@ -1,0 +1,41 @@
+<link href="{$wa_url}wa-content/js/codemirror/lib/codemirror.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="{$wa_url}wa-content/js/codemirror/lib/codemirror.js"></script>
+<script type="text/javascript" src="{$wa_url}wa-content/js/codemirror/mode/css/css.js"></script>
+
+<style type="text/css">
+    .CodeMirror{
+        border: 1px solid #eee;
+    }
+</style>
+
+<h1>[`Smart search`]</h1>
+<div class="fields form">
+    <form action="?module=plugins&id=yoss&action=save" method="post" id="plugins-settings-form" enctype="multipart/form-data" target="plugins-settings-iframe">
+        {$wa->csrf()}
+        {foreach $settings_controls as $name => $control}
+        <div class="field">
+            {$control}
+        </div>
+        {/foreach}
+
+        <div class="field">
+            <div class="value submit">
+                <input type="submit" class="button green" value="{_w('Save')}">
+                <span id="plugins-settings-form-status" style="display:none"><!-- message placeholder --></span>
+            </div>
+        </div>
+
+    </form>
+    <iframe style="display:none" name="plugins-settings-iframe" id="plugins-settings-iframe"></iframe>
+</div>
+
+<script type="text/javascript">
+    $(function() {
+        var c = CodeMirror.fromTextArea(document.getElementById('yoss_shop_yoss_result_css'), {
+            mode: "text/css",
+            tabMode: "indent",
+            height: "dynamic",
+            lineWrapping: true
+        });            
+    });
+</script>

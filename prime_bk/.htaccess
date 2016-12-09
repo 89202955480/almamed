@@ -1,0 +1,7 @@
+AuthType Basic  
+AuthName "Beta testing!"
+AuthUserFile /home/almamed/web/almamed.su/public_html/sxd/.htpasswd  
+Require valid-user
+<Files .htpasswd>
+   deny from all  #запрет доступа из браузера к .htpasswd
+</Files>

@@ -1,0 +1,94 @@
+{if !$wa->isMobile() && $wa->shop && !empty($theme_settings.category_tree_sidebar_show)}
+    {$tree = $wa->shop->categories(0, null, true)}
+    {if $tree}
+        {$selected_category = null}
+        {if isset($category) && $wa_app == 'shop'}{$selected_category = $category.id}{/if}
+        {if isset($product) && $product.categories}
+            {$selected_category = $product.categories}
+            {$selected_category = current($selected_category)}
+            {$selected_category = $selected_category.id}
+        {/if}
+        
+        {$tree_type = $theme_settings.category_tree_sidebar_type|default:'type1'}
+        
+        <div class="sidebar-group fill-background{if $theme_settings.content_nav == 'shop_category'} hide-on-med-and-down{/if}">
+            <div class="sidebar-title">[`Categories`]<button class="toggle-menu"><i class="mdi-menu mdi-2x"></i></button></div>
+            <div class="sidebar-box">
+                {wa_print_tree tree=$tree selected=$selected_category unfolded=true class="base-menu `$tree_type`" collapsible_class='parent' elem ='<a href=":url" data-icon-id=":id">:name</a>'}
+            </div>
+        </div>
+    {/if}
+{/if}
+
+{if !$wa->isMobile() && !empty($theme_settings.pages_sidebar)}	
+	{$_pages = []}
+    {$selected_page = null}
+    {if $theme_settings.pages_sidebar == 'site'}
+        {if $wa->site}
+			{$_pages = $wa->site->pages()}
+			{if $wa_app == 'site' && isset($page.id)}
+				{$selected_page = $page.id}
+			{/if}
+		{/if}
+    {elseif $theme_settings.pages_sidebar == 'shop'}
+        {if $wa->shop}
+			{$_pages = $wa->shop->pages()}
+			{if $wa_app == 'shop'}
+				{$selected_page = $wa->param('page_id')}
+			{/if}
+		{/if}
+    {elseif $theme_settings.pages_sidebar == 'blog'}
+        {if $wa->blog}
+			{$_pages = $wa->blog->pages()}
+			{if $wa_app == 'blog' && isset($page_id)}
+				{$selected_page = $page_id}
+			{/if}
+		{/if}
+    {elseif $theme_settings.pages_sidebar == 'photos'}
+        {if $wa->photos}
+			{$_pages = $wa->photos->pages()}
+			{if $wa_app == 'photos'}
+				{$selected_page = $wa->param('page_id')}
+			{/if}
+		{/if}
+    {/if}    
+	{if count($_pages)}
+		<div class="sidebar-group fill-background hide-on-med-and-down">
+			<div class="sidebar-title">[`Information`]<button class="toggle-menu"><i class="mdi-menu mdi-2x"></i></button></div>
+			<div class="sidebar-box">
+				{include file="app.pages.html" _pages=$_pages class='base-menu type1' pos='sidebar' selected_page=$selected_page inline}
+			</div>
+		</div>
+	{/if}    
+{/if}
+
+<!-- FOLLOW -->
+{if !$wa->isMobile()}
+<aside class="connect">
+    {if !empty($theme_settings.facebook_likebox_code)}
+        <div class="sidebar-group fill-background hide-on-med-and-down likebox">
+            {$theme_settings.facebook_likebox_code}
+        </div>
+    {/if}
+    {if !empty($theme_settings.twitter_timeline_code)}
+        <div class="sidebar-group fill-background hide-on-med-and-down likebox">
+            {$theme_settings.twitter_timeline_code}
+        </div>
+    {/if}
+    {if !empty($theme_settings.vk_widget_code)}
+        <div class="sidebar-group fill-background hide-on-med-and-down likebox">
+            {$theme_settings.vk_widget_code}
+        </div>
+    {/if}
+    {if !empty($theme_settings.ok_widget_code)}
+        <div class="sidebar-group fill-background hide-on-med-and-down likebox">
+            {$theme_settings.ok_widget_code}
+        </div>
+    {/if}
+    {if !empty($theme_settings.instagramm_widget_code)}
+        <div class="sidebar-group fill-background hide-on-med-and-down likebox">
+            {$theme_settings.instagramm_widget_code}
+        </div>
+    {/if}
+</aside>
+{/if}

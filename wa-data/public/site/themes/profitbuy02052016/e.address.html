@@ -1,0 +1,4 @@
+<ul class="e-address-wrapper">
+    {if !empty($email)}<li><a href="mailto:{$email}"><i class="mdi-email mdi-lg"></i>{$email}</a></li>{/if}
+    {if !empty($theme_settings.address_skype)}<li><a href="skype:{$theme_settings.address_skype}?call"><i class="icon16 skype16"></i>{$theme_settings.address_skype}</a></li>{/if}
+</ul>

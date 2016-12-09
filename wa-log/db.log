@@ -1,0 +1,2605 @@
+
+2015-09-09 18:45:18:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 35
+                   WHERE `id` = 664
+Error: 1062
+Message: Duplicate entry '35-shovnyy-material' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-09-09 18:45:30:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 35
+                   WHERE `id` = 664
+Error: 1062
+Message: Duplicate entry '35-shovnyy-material' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-09-09 18:45:34:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 35
+                   WHERE `id` = 664
+Error: 1062
+Message: Duplicate entry '35-shovnyy-material' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-09-09 18:46:26:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 35
+                   WHERE `id` = 666
+Error: 1062
+Message: Duplicate entry '35-lazernoe-oborudovanie' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-09-09 18:46:33:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 35
+                   WHERE `id` = 665
+Error: 1062
+Message: Duplicate entry '35-kislorodnye-kontsentratory' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-09-09 18:46:37:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 35
+                   WHERE `id` = 665
+Error: 1062
+Message: Duplicate entry '35-kislorodnye-kontsentratory' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-09-09 18:46:42:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 35
+                   WHERE `id` = 665
+Error: 1062
+Message: Duplicate entry '35-kislorodnye-kontsentratory' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-09-09 18:46:46:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 35
+                   WHERE `id` = 665
+Error: 1062
+Message: Duplicate entry '35-kislorodnye-kontsentratory' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-09-09 18:46:51:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 35
+                   WHERE `id` = 665
+Error: 1062
+Message: Duplicate entry '35-kislorodnye-kontsentratory' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-09-09 18:46:55:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 35
+                   WHERE `id` = 665
+Error: 1062
+Message: Duplicate entry '35-kislorodnye-kontsentratory' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-11-17 13:56:32:
+Query Error
+Query: SELECT dashboard_id FROM wa_widget LIMIT 0
+Error: 1054
+Message: Unknown column 'dashboard_id' in 'field list'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+include()
+3. n/a:n/a
+waAppConfig->includeUpdate()
+4. n/a:n/a
+waAppConfig->checkUpdates()
+5. n/a:n/a
+waSystem::getInstance()
+6. n/a:n/a
+waSystem->dispatch()
+
+2015-11-18 12:25:31:
+Query Error
+Query: UPDATE shop_category
+                   SET `url` = 'medicinskie-plakaty/pervaya-reanimatsionnaya-i-meditsinskaya-pomoshch', `full_url` = 'medicinskie-plakaty/pervaya-reanimatsionnaya-i-meditsinskaya-pomoshch'
+                   WHERE `id` = 847
+Error: 1062
+Message: Duplicate entry 'medicinskie-plakaty/pervaya-reanimatsionnaya-i-meditsinskaya-pom' for key 'full_url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+shopCategoryModel->updateUrl()
+5. n/a:n/a
+shopCategoryModel->update()
+6. n/a:n/a
+shopProductsSaveListSettingsController->saveCategorySettings()
+7. n/a:n/a
+shopProductsSaveListSettingsController->saveSettings()
+8. n/a:n/a
+shopProductsSaveListSettingsController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-11-27 20:20:02:
+Query Error
+Query: SELECT total_discount FROM shop_order_items WHERE 0
+Error: 1054
+Message: Unknown column 'total_discount' in 'field list'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->query()
+2. n/a:n/a
+include()
+3. n/a:n/a
+waAppConfig->includeUpdate()
+4. n/a:n/a
+waAppConfig->checkUpdates()
+5. n/a:n/a
+waSystem::getInstance()
+6. n/a:n/a
+wa()
+7. n/a:n/a
+webasystBackendCountController->execute()
+8. n/a:n/a
+waController->run()
+9. n/a:n/a
+waJsonController->run()
+10. n/a:n/a
+waFrontController->execute()
+11. n/a:n/a
+waFrontController->dispatch()
+12. n/a:n/a
+waSystem->dispatch()
+
+2015-12-11 15:32:08:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 0
+                   WHERE `id` = 137
+Error: 1062
+Message: Duplicate entry '0-svetilniki-meditsinskie' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-12-11 15:36:02:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 26
+                   WHERE `id` = 140
+Error: 1062
+Message: Duplicate entry '26-nalobnye-osvetiteli' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-12-22 19:00:14:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 924
+                   WHERE `id` = 94
+Error: 1062
+Message: Duplicate entry '924-jendoskopy-dlja-ginekologii' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-12-23 10:38:33:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 885
+                   WHERE `id` = 1011
+Error: 1062
+Message: Duplicate entry '885-endoskopy-dlya-artroskopii' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-12-23 18:57:22:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 35
+                   WHERE `id` = 1223
+Error: 1062
+Message: Duplicate entry '35-kislorodnye-kontsentratory' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-12-24 11:23:45:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 93
+                   WHERE `id` = 1227
+Error: 1062
+Message: Duplicate entry '93-meditsinskie-svetilniki-heine-germaniya' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-12-24 11:24:29:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 0
+                   WHERE `id` = 1228
+Error: 1062
+Message: Duplicate entry '0-meditsinskie-svetilniki-heine-germaniya' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-12-24 15:34:58:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 147
+                   WHERE `id` = 188
+Error: 1062
+Message: Duplicate entry '147-lazernaya-epilyatsiya' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-12-24 15:35:04:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 147
+                   WHERE `id` = 188
+Error: 1062
+Message: Duplicate entry '147-lazernaya-epilyatsiya' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-12-24 15:35:13:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 147
+                   WHERE `id` = 188
+Error: 1062
+Message: Duplicate entry '147-lazernaya-epilyatsiya' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-12-24 15:35:20:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 147
+                   WHERE `id` = 188
+Error: 1062
+Message: Duplicate entry '147-lazernaya-epilyatsiya' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-12-24 15:35:33:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 8
+                   WHERE `id` = 1326
+Error: 1062
+Message: Duplicate entry '8-lazernaya-epilyatsiya' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-12-25 10:18:16:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 27
+                   WHERE `id` = 168
+Error: 1062
+Message: Duplicate entry '27-sterilizatory-vozdushnye-spu' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-12-25 10:18:22:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 27
+                   WHERE `id` = 168
+Error: 1062
+Message: Duplicate entry '27-sterilizatory-vozdushnye-spu' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-12-25 10:47:35:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 35
+                   WHERE `id` = 14
+Error: 1062
+Message: Duplicate entry '35-mikroskopy-meditsinskie' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-12-25 12:08:13:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 1146
+                   WHERE `id` = 785
+Error: 1062
+Message: Duplicate entry '1146-nabory-instrumentov-dlya-diagnostiki-i-khirurgii-v-otorinol' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-12-28 12:40:54:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 29
+                   WHERE `id` = 1538
+Error: 1062
+Message: Duplicate entry '29-stomatologicheskie-ustanovki' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-12-28 12:41:03:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 29
+                   WHERE `id` = 1538
+Error: 1062
+Message: Duplicate entry '29-stomatologicheskie-ustanovki' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-12-28 13:05:59:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 0
+                   WHERE `id` = 1592
+Error: 1062
+Message: Duplicate entry '0-rukoyatki-welch-allyn' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-12-28 16:22:25:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 11
+                   WHERE `id` = 1098
+Error: 1062
+Message: Duplicate entry '11-khirurgicheskie-instrumenty-dlya-otorinolaringologii' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2015-12-28 16:25:11:
+Query Error
+Query: UPDATE shop_category
+                   SET `full_url` = 'khirurgiya/khirurgicheskie-instrumenty/instrumenty-khirurgicheskie-po-napravleniyam/khirurgicheskie-instrumenty-dlya-otorinolaringologii'
+                   WHERE `id` = 1634
+Error: 1062
+Message: Duplicate entry 'khirurgiya/khirurgicheskie-instrumenty/instrumenty-khirurgichesk' for key 'full_url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+shopCategoryModel->move()
+5. n/a:n/a
+shopProductsMoveListController->move()
+6. n/a:n/a
+shopProductsMoveListController->execute()
+7. n/a:n/a
+waController->run()
+8. n/a:n/a
+waJsonController->run()
+9. n/a:n/a
+waFrontController->execute()
+10. n/a:n/a
+waFrontController->dispatch()
+11. n/a:n/a
+waSystem->dispatch()
+
+2015-12-28 16:25:37:
+Query Error
+Query: UPDATE shop_category
+                   SET `full_url` = 'lor-oborudovanie-instrumenty/khirurgicheskie-instrumenty-dlya-otorinolaringologii'
+                   WHERE `id` = 1098
+Error: 1062
+Message: Duplicate entry 'lor-oborudovanie-instrumenty/khirurgicheskie-instrumenty-dlya-ot' for key 'full_url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+shopCategoryModel->move()
+5. n/a:n/a
+shopProductsMoveListController->move()
+6. n/a:n/a
+shopProductsMoveListController->execute()
+7. n/a:n/a
+waController->run()
+8. n/a:n/a
+waJsonController->run()
+9. n/a:n/a
+waFrontController->execute()
+10. n/a:n/a
+waFrontController->dispatch()
+11. n/a:n/a
+waSystem->dispatch()
+
+2015-12-29 17:00:57:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 1071
+                   WHERE `id` = 399
+Error: 1062
+Message: Duplicate entry '1071-oborudovanie-dlya-videoendoskopii' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2016-02-02 20:00:22:
+Query Error
+Query: SELECT parent FROM shop_error301
+Error: 1054
+Message: Unknown column 'parent' in 'field list'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->query()
+2. n/a:n/a
+include()
+3. n/a:n/a
+waPlugin->includeUpdate()
+4. n/a:n/a
+waPlugin->checkUpdates()
+5. n/a:n/a
+waPlugin->__construct()
+6. n/a:n/a
+waSystem->event()
+7. n/a:n/a
+shopConfig->getRouting()
+8. n/a:n/a
+waRouting->getAppRoutes()
+9. n/a:n/a
+waRouting->dispatch()
+10. n/a:n/a
+waSystem->dispatch()
+
+2016-05-29 23:45:50:
+Query Error
+Query: INSERT  INTO shop_feature_values_varchar
+                   (`value`, `sort`, `feature_id`) VALUES ('', 94, 6)
+Error: 1062
+Message: Duplicate entry '6-' for key 'values'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->query()
+2. n/a:n/a
+waModel->insert()
+3. n/a:n/a
+shopSortableModel->insert()
+4. n/a:n/a
+shopFeatureValuesModel->addValue()
+5. n/a:n/a
+shopFeatureModel->setValues()
+6. n/a:n/a
+shopSettingsFeaturesFeatureSaveController->execute()
+7. n/a:n/a
+waController->run()
+8. n/a:n/a
+waJsonController->run()
+9. n/a:n/a
+waFrontController->execute()
+10. n/a:n/a
+waFrontController->dispatch()
+11. n/a:n/a
+waSystem->dispatch()
+
+2016-05-29 23:45:54:
+Query Error
+Query: INSERT  INTO shop_feature_values_varchar
+                   (`value`, `sort`, `feature_id`) VALUES ('', 94, 6)
+Error: 1062
+Message: Duplicate entry '6-' for key 'values'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->query()
+2. n/a:n/a
+waModel->insert()
+3. n/a:n/a
+shopSortableModel->insert()
+4. n/a:n/a
+shopFeatureValuesModel->addValue()
+5. n/a:n/a
+shopFeatureModel->setValues()
+6. n/a:n/a
+shopSettingsFeaturesFeatureSaveController->execute()
+7. n/a:n/a
+waController->run()
+8. n/a:n/a
+waJsonController->run()
+9. n/a:n/a
+waFrontController->execute()
+10. n/a:n/a
+waFrontController->dispatch()
+11. n/a:n/a
+waSystem->dispatch()
+
+2016-06-07 12:08:57:
+Query Error
+Query: SELECT transfer_id FROM `shop_product_stocks_log` WHERE 0
+Error: 1054
+Message: Unknown column 'transfer_id' in 'field list'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+include()
+3. n/a:n/a
+waAppConfig->includeUpdate()
+4. n/a:n/a
+waAppConfig->checkUpdates()
+5. n/a:n/a
+waSystem::getInstance()
+6. n/a:n/a
+waRouting->getAppRoutes()
+7. n/a:n/a
+waRouting->dispatch()
+8. n/a:n/a
+waSystem->dispatch()
+
+2016-06-07 12:08:58:
+Query Error
+Query: SELECT `unsettled` FROM `shop_order` WHERE 0
+Error: 1054
+Message: Unknown column 'unsettled' in 'field list'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+include()
+3. n/a:n/a
+waAppConfig->includeUpdate()
+4. n/a:n/a
+waAppConfig->checkUpdates()
+5. n/a:n/a
+waSystem::getInstance()
+6. n/a:n/a
+waRouting->getAppRoutes()
+7. n/a:n/a
+waRouting->dispatch()
+8. n/a:n/a
+waSystem->dispatch()
+
+2016-06-07 12:08:58:
+Query Error
+Query: SELECT `enabled` FROM `shop_promo` WHERE 0
+Error: 1054
+Message: Unknown column 'enabled' in 'field list'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+include()
+3. n/a:n/a
+waAppConfig->includeUpdate()
+4. n/a:n/a
+waAppConfig->checkUpdates()
+5. n/a:n/a
+waSystem::getInstance()
+6. n/a:n/a
+waRouting->getAppRoutes()
+7. n/a:n/a
+waRouting->dispatch()
+8. n/a:n/a
+waSystem->dispatch()
+
+2016-06-07 12:08:58:
+Query Error
+Query: SELECT `background_color` FROM `shop_promo` WHERE 0
+Error: 1054
+Message: Unknown column 'background_color' in 'field list'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+include()
+3. n/a:n/a
+waAppConfig->includeUpdate()
+4. n/a:n/a
+waAppConfig->checkUpdates()
+5. n/a:n/a
+waSystem::getInstance()
+6. n/a:n/a
+waRouting->getAppRoutes()
+7. n/a:n/a
+waRouting->dispatch()
+8. n/a:n/a
+waSystem->dispatch()
+
+2016-06-07 12:08:58:
+Query Error
+Query: SELECT `countdown_datetime` FROM `shop_promo` WHERE 0
+Error: 1054
+Message: Unknown column 'countdown_datetime' in 'field list'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+include()
+3. n/a:n/a
+waAppConfig->includeUpdate()
+4. n/a:n/a
+waAppConfig->checkUpdates()
+5. n/a:n/a
+waSystem::getInstance()
+6. n/a:n/a
+waRouting->getAppRoutes()
+7. n/a:n/a
+waRouting->dispatch()
+8. n/a:n/a
+waSystem->dispatch()
+
+2016-06-07 12:08:58:
+Query Error
+Query: SELECT `video_url` FROM `shop_product` WHERE 0
+Error: 1054
+Message: Unknown column 'video_url' in 'field list'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+include()
+3. n/a:n/a
+waAppConfig->includeUpdate()
+4. n/a:n/a
+waAppConfig->checkUpdates()
+5. n/a:n/a
+waSystem::getInstance()
+6. n/a:n/a
+waRouting->getAppRoutes()
+7. n/a:n/a
+waRouting->dispatch()
+8. n/a:n/a
+waSystem->dispatch()
+
+2016-06-17 17:24:06:
+Query Error
+Query: UPDATE shop_feature_values_varchar
+                   SET `value` = ''
+                   WHERE `id` = 171
+Error: 1062
+Message: Duplicate entry '6-' for key 'values'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+shopSortableModel->updateById()
+4. n/a:n/a
+shopProductbrandsPluginBackendSaveController->execute()
+5. n/a:n/a
+waController->run()
+6. n/a:n/a
+waJsonController->run()
+7. n/a:n/a
+waFrontController->execute()
+8. n/a:n/a
+waFrontController->dispatch()
+9. n/a:n/a
+waSystem->dispatch()
+
+2016-06-17 17:49:30:
+Query Error
+Query: UPDATE shop_feature_values_varchar
+                   SET `value` = ''
+                   WHERE `id` = 181
+Error: 1062
+Message: Duplicate entry '6-' for key 'values'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+shopSortableModel->updateById()
+4. n/a:n/a
+shopProductbrandsPluginBackendSaveController->execute()
+5. n/a:n/a
+waController->run()
+6. n/a:n/a
+waJsonController->run()
+7. n/a:n/a
+waFrontController->execute()
+8. n/a:n/a
+waFrontController->dispatch()
+9. n/a:n/a
+waSystem->dispatch()
+
+2016-06-17 17:58:36:
+Query Error
+Query: UPDATE shop_feature_values_varchar
+                   SET `value` = ''
+                   WHERE `id` = 181
+Error: 1062
+Message: Duplicate entry '6-' for key 'values'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+shopSortableModel->updateById()
+4. n/a:n/a
+shopProductbrandsPluginBackendSaveController->execute()
+5. n/a:n/a
+waController->run()
+6. n/a:n/a
+waJsonController->run()
+7. n/a:n/a
+waFrontController->execute()
+8. n/a:n/a
+waFrontController->dispatch()
+9. n/a:n/a
+waSystem->dispatch()
+
+2016-06-17 18:04:54:
+Query Error
+Query: UPDATE shop_feature_values_varchar
+                   SET `value` = ''
+                   WHERE `id` = 160
+Error: 1062
+Message: Duplicate entry '6-' for key 'values'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+shopSortableModel->updateById()
+4. n/a:n/a
+shopProductbrandsPluginBackendSaveController->execute()
+5. n/a:n/a
+waController->run()
+6. n/a:n/a
+waJsonController->run()
+7. n/a:n/a
+waFrontController->execute()
+8. n/a:n/a
+waFrontController->dispatch()
+9. n/a:n/a
+waSystem->dispatch()
+
+2016-06-21 09:57:44:
+Query Error
+Query: INSERT  INTO shop_feature_values_color
+                   (`value`, `code`, `sort`, `feature_id`) VALUES ('белый', '16777215', 1, 3)
+Error: 1062
+Message: Duplicate entry '3-белый' for key 'values'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->query()
+2. n/a:n/a
+waModel->insert()
+3. n/a:n/a
+shopSortableModel->insert()
+4. n/a:n/a
+shopFeatureValuesModel->addValue()
+5. n/a:n/a
+shopFeatureModel->setValues()
+6. n/a:n/a
+shopTypeModel->insertTemplate()
+7. n/a:n/a
+shopSettingsFeaturesTypeSaveController->execute()
+8. n/a:n/a
+waController->run()
+9. n/a:n/a
+waJsonController->run()
+10. n/a:n/a
+waFrontController->execute()
+11. n/a:n/a
+waFrontController->dispatch()
+12. n/a:n/a
+waSystem->dispatch()
+
+2016-06-21 09:57:44:
+Query Error
+Query: INSERT  INTO shop_feature_values_color
+                   (`value`, `code`, `sort`, `feature_id`) VALUES ('желтый', '16776960', 2, 3)
+Error: 1062
+Message: Duplicate entry '3-желтый' for key 'values'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->query()
+2. n/a:n/a
+waModel->insert()
+3. n/a:n/a
+shopSortableModel->insert()
+4. n/a:n/a
+shopFeatureValuesModel->addValue()
+5. n/a:n/a
+shopFeatureModel->setValues()
+6. n/a:n/a
+shopTypeModel->insertTemplate()
+7. n/a:n/a
+shopSettingsFeaturesTypeSaveController->execute()
+8. n/a:n/a
+waController->run()
+9. n/a:n/a
+waJsonController->run()
+10. n/a:n/a
+waFrontController->execute()
+11. n/a:n/a
+waFrontController->dispatch()
+12. n/a:n/a
+waSystem->dispatch()
+
+2016-06-21 09:57:44:
+Query Error
+Query: INSERT  INTO shop_feature_values_color
+                   (`value`, `code`, `sort`, `feature_id`) VALUES ('зеленый', '65280', 3, 3)
+Error: 1062
+Message: Duplicate entry '3-зеленый' for key 'values'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->query()
+2. n/a:n/a
+waModel->insert()
+3. n/a:n/a
+shopSortableModel->insert()
+4. n/a:n/a
+shopFeatureValuesModel->addValue()
+5. n/a:n/a
+shopFeatureModel->setValues()
+6. n/a:n/a
+shopTypeModel->insertTemplate()
+7. n/a:n/a
+shopSettingsFeaturesTypeSaveController->execute()
+8. n/a:n/a
+waController->run()
+9. n/a:n/a
+waJsonController->run()
+10. n/a:n/a
+waFrontController->execute()
+11. n/a:n/a
+waFrontController->dispatch()
+12. n/a:n/a
+waSystem->dispatch()
+
+2016-06-21 09:57:44:
+Query Error
+Query: INSERT  INTO shop_feature_values_color
+                   (`value`, `code`, `sort`, `feature_id`) VALUES ('коричневый', '9849600', 4, 3)
+Error: 1062
+Message: Duplicate entry '3-коричневый' for key 'values'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->query()
+2. n/a:n/a
+waModel->insert()
+3. n/a:n/a
+shopSortableModel->insert()
+4. n/a:n/a
+shopFeatureValuesModel->addValue()
+5. n/a:n/a
+shopFeatureModel->setValues()
+6. n/a:n/a
+shopTypeModel->insertTemplate()
+7. n/a:n/a
+shopSettingsFeaturesTypeSaveController->execute()
+8. n/a:n/a
+waController->run()
+9. n/a:n/a
+waJsonController->run()
+10. n/a:n/a
+waFrontController->execute()
+11. n/a:n/a
+waFrontController->dispatch()
+12. n/a:n/a
+waSystem->dispatch()
+
+2016-06-21 09:57:44:
+Query Error
+Query: INSERT  INTO shop_feature_values_color
+                   (`value`, `code`, `sort`, `feature_id`) VALUES ('красный', '16711680', 5, 3)
+Error: 1062
+Message: Duplicate entry '3-красный' for key 'values'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->query()
+2. n/a:n/a
+waModel->insert()
+3. n/a:n/a
+shopSortableModel->insert()
+4. n/a:n/a
+shopFeatureValuesModel->addValue()
+5. n/a:n/a
+shopFeatureModel->setValues()
+6. n/a:n/a
+shopTypeModel->insertTemplate()
+7. n/a:n/a
+shopSettingsFeaturesTypeSaveController->execute()
+8. n/a:n/a
+waController->run()
+9. n/a:n/a
+waJsonController->run()
+10. n/a:n/a
+waFrontController->execute()
+11. n/a:n/a
+waFrontController->dispatch()
+12. n/a:n/a
+waSystem->dispatch()
+
+2016-06-21 09:57:44:
+Query Error
+Query: INSERT  INTO shop_feature_values_color
+                   (`value`, `code`, `sort`, `feature_id`) VALUES ('оранжевый', '16753920', 6, 3)
+Error: 1062
+Message: Duplicate entry '3-оранжевый' for key 'values'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->query()
+2. n/a:n/a
+waModel->insert()
+3. n/a:n/a
+shopSortableModel->insert()
+4. n/a:n/a
+shopFeatureValuesModel->addValue()
+5. n/a:n/a
+shopFeatureModel->setValues()
+6. n/a:n/a
+shopTypeModel->insertTemplate()
+7. n/a:n/a
+shopSettingsFeaturesTypeSaveController->execute()
+8. n/a:n/a
+waController->run()
+9. n/a:n/a
+waJsonController->run()
+10. n/a:n/a
+waFrontController->execute()
+11. n/a:n/a
+waFrontController->dispatch()
+12. n/a:n/a
+waSystem->dispatch()
+
+2016-06-21 09:57:44:
+Query Error
+Query: INSERT  INTO shop_feature_values_color
+                   (`value`, `code`, `sort`, `feature_id`) VALUES ('серебро', '12632256', 7, 3)
+Error: 1062
+Message: Duplicate entry '3-серебро' for key 'values'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->query()
+2. n/a:n/a
+waModel->insert()
+3. n/a:n/a
+shopSortableModel->insert()
+4. n/a:n/a
+shopFeatureValuesModel->addValue()
+5. n/a:n/a
+shopFeatureModel->setValues()
+6. n/a:n/a
+shopTypeModel->insertTemplate()
+7. n/a:n/a
+shopSettingsFeaturesTypeSaveController->execute()
+8. n/a:n/a
+waController->run()
+9. n/a:n/a
+waJsonController->run()
+10. n/a:n/a
+waFrontController->execute()
+11. n/a:n/a
+waFrontController->dispatch()
+12. n/a:n/a
+waSystem->dispatch()
+
+2016-06-21 09:57:44:
+Query Error
+Query: INSERT  INTO shop_feature_values_color
+                   (`value`, `code`, `sort`, `feature_id`) VALUES ('серый', '8421504', 8, 3)
+Error: 1062
+Message: Duplicate entry '3-серый' for key 'values'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->query()
+2. n/a:n/a
+waModel->insert()
+3. n/a:n/a
+shopSortableModel->insert()
+4. n/a:n/a
+shopFeatureValuesModel->addValue()
+5. n/a:n/a
+shopFeatureModel->setValues()
+6. n/a:n/a
+shopTypeModel->insertTemplate()
+7. n/a:n/a
+shopSettingsFeaturesTypeSaveController->execute()
+8. n/a:n/a
+waController->run()
+9. n/a:n/a
+waJsonController->run()
+10. n/a:n/a
+waFrontController->execute()
+11. n/a:n/a
+waFrontController->dispatch()
+12. n/a:n/a
+waSystem->dispatch()
+
+2016-06-21 09:57:44:
+Query Error
+Query: INSERT  INTO shop_feature_values_color
+                   (`value`, `code`, `sort`, `feature_id`) VALUES ('черный', '0', 9, 3)
+Error: 1062
+Message: Duplicate entry '3-черный' for key 'values'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->query()
+2. n/a:n/a
+waModel->insert()
+3. n/a:n/a
+shopSortableModel->insert()
+4. n/a:n/a
+shopFeatureValuesModel->addValue()
+5. n/a:n/a
+shopFeatureModel->setValues()
+6. n/a:n/a
+shopTypeModel->insertTemplate()
+7. n/a:n/a
+shopSettingsFeaturesTypeSaveController->execute()
+8. n/a:n/a
+waController->run()
+9. n/a:n/a
+waJsonController->run()
+10. n/a:n/a
+waFrontController->execute()
+11. n/a:n/a
+waFrontController->dispatch()
+12. n/a:n/a
+waSystem->dispatch()
+
+2016-06-24 08:24:21:
+Query Error
+Query: INSERT  INTO shop_feature_values_varchar
+                   (`value`, `sort`, `feature_id`) VALUES ('', 3, 109)
+Error: 1062
+Message: Duplicate entry '109-' for key 'values'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->query()
+2. n/a:n/a
+waModel->insert()
+3. n/a:n/a
+shopSortableModel->insert()
+4. n/a:n/a
+shopFeatureValuesModel->addValue()
+5. n/a:n/a
+shopFeatureModel->setValues()
+6. n/a:n/a
+shopSettingsFeaturesFeatureSaveController->execute()
+7. n/a:n/a
+waController->run()
+8. n/a:n/a
+waJsonController->run()
+9. n/a:n/a
+waFrontController->execute()
+10. n/a:n/a
+waFrontController->dispatch()
+11. n/a:n/a
+waSystem->dispatch()
+
+2016-07-15 14:08:37:
+Query Error
+Query: SELECT h1 FROM shop_productbrands WHERE 0
+Error: 1054
+Message: Unknown column 'h1' in 'field list'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->query()
+2. n/a:n/a
+include()
+3. n/a:n/a
+waPlugin->includeUpdate()
+4. n/a:n/a
+waPlugin->checkUpdates()
+5. n/a:n/a
+waPlugin->__construct()
+6. n/a:n/a
+waSystem->event()
+7. n/a:n/a
+shopConfig->getRouting()
+8. n/a:n/a
+waRouting->getAppRoutes()
+9. n/a:n/a
+waRouting->getUrl()
+10. n/a:n/a
+waSystem->getRouteUrl()
+11. n/a:n/a
+shopBackendLayout->execute()
+12. n/a:n/a
+waLayout->display()
+13. n/a:n/a
+waViewController->display()
+14. n/a:n/a
+waViewController->run()
+15. n/a:n/a
+waFrontController->execute()
+16. n/a:n/a
+waFrontController->dispatch()
+17. n/a:n/a
+waSystem->dispatch()
+
+2016-11-23 18:23:04:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 1760
+                   WHERE `id` = 2122
+Error: 1062
+Message: Duplicate entry '1760-anoskopy-welch-allyn' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2016-11-23 18:23:09:
+Query Error
+Query: UPDATE shop_category
+                   SET `parent_id` = 1760
+                   WHERE `id` = 2122
+Error: 1062
+Message: Duplicate entry '1760-anoskopy-welch-allyn' for key 'url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+waNestedSetModel->_move()
+5. n/a:n/a
+waNestedSetModel->move()
+6. n/a:n/a
+shopCategoryModel->move()
+7. n/a:n/a
+shopProductsMoveListController->move()
+8. n/a:n/a
+shopProductsMoveListController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2016-11-28 15:53:49:
+Query Error
+Query: UPDATE shop_category
+                   SET `url` = 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine', `full_url` = 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine'
+                   WHERE `id` = 2135
+Error: 1062
+Message: Duplicate entry 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine' for key 'full_url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+shopCategoryModel->updateUrl()
+5. n/a:n/a
+shopCategoryModel->update()
+6. n/a:n/a
+shopProductsSaveListSettingsController->saveCategorySettings()
+7. n/a:n/a
+shopProductsSaveListSettingsController->saveSettings()
+8. n/a:n/a
+shopProductsSaveListSettingsController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2016-11-28 15:53:59:
+Query Error
+Query: UPDATE shop_category
+                   SET `url` = 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine', `full_url` = 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine'
+                   WHERE `id` = 2135
+Error: 1062
+Message: Duplicate entry 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine' for key 'full_url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+shopCategoryModel->updateUrl()
+5. n/a:n/a
+shopCategoryModel->update()
+6. n/a:n/a
+shopProductsSaveListSettingsController->saveCategorySettings()
+7. n/a:n/a
+shopProductsSaveListSettingsController->saveSettings()
+8. n/a:n/a
+shopProductsSaveListSettingsController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2016-11-28 15:54:34:
+Query Error
+Query: UPDATE shop_category
+                   SET `url` = 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine', `full_url` = 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine'
+                   WHERE `id` = 2135
+Error: 1062
+Message: Duplicate entry 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine' for key 'full_url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+shopCategoryModel->updateUrl()
+5. n/a:n/a
+shopCategoryModel->update()
+6. n/a:n/a
+shopProductsSaveListSettingsController->saveCategorySettings()
+7. n/a:n/a
+shopProductsSaveListSettingsController->saveSettings()
+8. n/a:n/a
+shopProductsSaveListSettingsController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2016-11-28 15:54:54:
+Query Error
+Query: UPDATE shop_category
+                   SET `url` = 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine', `full_url` = 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine'
+                   WHERE `id` = 2135
+Error: 1062
+Message: Duplicate entry 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine' for key 'full_url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+shopCategoryModel->updateUrl()
+5. n/a:n/a
+shopCategoryModel->update()
+6. n/a:n/a
+shopProductsSaveListSettingsController->saveCategorySettings()
+7. n/a:n/a
+shopProductsSaveListSettingsController->saveSettings()
+8. n/a:n/a
+shopProductsSaveListSettingsController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2016-11-28 15:55:43:
+Query Error
+Query: UPDATE shop_category
+                   SET `url` = 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine', `full_url` = 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine'
+                   WHERE `id` = 2135
+Error: 1062
+Message: Duplicate entry 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine' for key 'full_url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+shopCategoryModel->updateUrl()
+5. n/a:n/a
+shopCategoryModel->update()
+6. n/a:n/a
+shopProductsSaveListSettingsController->saveCategorySettings()
+7. n/a:n/a
+shopProductsSaveListSettingsController->saveSettings()
+8. n/a:n/a
+shopProductsSaveListSettingsController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2016-11-28 15:56:17:
+Query Error
+Query: UPDATE shop_category
+                   SET `url` = 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine', `full_url` = 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine'
+                   WHERE `id` = 2135
+Error: 1062
+Message: Duplicate entry 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine' for key 'full_url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+shopCategoryModel->updateUrl()
+5. n/a:n/a
+shopCategoryModel->update()
+6. n/a:n/a
+shopProductsSaveListSettingsController->saveCategorySettings()
+7. n/a:n/a
+shopProductsSaveListSettingsController->saveSettings()
+8. n/a:n/a
+shopProductsSaveListSettingsController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2016-11-28 15:57:28:
+Query Error
+Query: UPDATE shop_category
+                   SET `url` = 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine', `full_url` = 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine'
+                   WHERE `id` = 1756
+Error: 1062
+Message: Duplicate entry 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine' for key 'full_url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+shopCategoryModel->updateUrl()
+5. n/a:n/a
+shopCategoryModel->update()
+6. n/a:n/a
+shopProductsSaveListSettingsController->saveCategorySettings()
+7. n/a:n/a
+shopProductsSaveListSettingsController->saveSettings()
+8. n/a:n/a
+shopProductsSaveListSettingsController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2016-11-28 16:04:19:
+Query Error
+Query: INSERT  INTO shop_category
+                   (`name`, `url`, `description`, `meta_title`, `meta_keywords`, `meta_description`, `parent_id`, `type`, `status`, `filter`, `sort_products`, `include_sub_categories`, `full_url`, `create_datetime`, `left_key`, `right_key`, `depth`) VALUES ('osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine/', 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine', '', '', '', '', 0, 0, 1, NULL, NULL, 0, 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine', '2016-11-28 16:04:19', 3275, 3276, 0)
+Error: 1062
+Message: Duplicate entry 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine' for key 'full_url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->query()
+2. n/a:n/a
+waModel->insert()
+3. n/a:n/a
+waNestedSetModel->_add()
+4. n/a:n/a
+waNestedSetModel->add()
+5. n/a:n/a
+shopCategoryModel->add()
+6. n/a:n/a
+shopProductsSaveListSettingsController->saveCategorySettings()
+7. n/a:n/a
+shopProductsSaveListSettingsController->saveSettings()
+8. n/a:n/a
+shopProductsSaveListSettingsController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2016-11-28 16:04:37:
+Query Error
+Query: INSERT  INTO shop_category
+                   (`name`, `url`, `description`, `meta_title`, `meta_keywords`, `meta_description`, `parent_id`, `type`, `status`, `filter`, `sort_products`, `include_sub_categories`, `full_url`, `create_datetime`, `left_key`, `right_key`, `depth`) VALUES ('333333333333', 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine', '', '', '', '', 0, 0, 1, NULL, NULL, 0, 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine', '2016-11-28 16:04:37', 3275, 3276, 0)
+Error: 1062
+Message: Duplicate entry 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine' for key 'full_url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->query()
+2. n/a:n/a
+waModel->insert()
+3. n/a:n/a
+waNestedSetModel->_add()
+4. n/a:n/a
+waNestedSetModel->add()
+5. n/a:n/a
+shopCategoryModel->add()
+6. n/a:n/a
+shopProductsSaveListSettingsController->saveCategorySettings()
+7. n/a:n/a
+shopProductsSaveListSettingsController->saveSettings()
+8. n/a:n/a
+shopProductsSaveListSettingsController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2016-11-28 16:06:19:
+Query Error
+Query: UPDATE shop_category
+                   SET `url` = 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine', `full_url` = 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine'
+                   WHERE `id` = 2139
+Error: 1062
+Message: Duplicate entry 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine' for key 'full_url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+shopCategoryModel->updateUrl()
+5. n/a:n/a
+shopCategoryModel->update()
+6. n/a:n/a
+shopProductsSaveListSettingsController->saveCategorySettings()
+7. n/a:n/a
+shopProductsSaveListSettingsController->saveSettings()
+8. n/a:n/a
+shopProductsSaveListSettingsController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2016-11-28 16:06:58:
+Query Error
+Query: UPDATE shop_category
+                   SET `url` = 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine', `full_url` = 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine'
+                   WHERE `id` = 2139
+Error: 1062
+Message: Duplicate entry 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine' for key 'full_url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+shopCategoryModel->updateUrl()
+5. n/a:n/a
+shopCategoryModel->update()
+6. n/a:n/a
+shopProductsSaveListSettingsController->saveCategorySettings()
+7. n/a:n/a
+shopProductsSaveListSettingsController->saveSettings()
+8. n/a:n/a
+shopProductsSaveListSettingsController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2016-11-28 16:07:10:
+Query Error
+Query: UPDATE shop_category
+                   SET `url` = 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine', `full_url` = 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine'
+                   WHERE `id` = 2139
+Error: 1062
+Message: Duplicate entry 'osvetitelnaya-golovka-dlya-anoskopov--proktoskopov-heine' for key 'full_url'
+Stack:
+0. n/a:n/a
+waModel->run()
+1. n/a:n/a
+waModel->exec()
+2. n/a:n/a
+waModel->updateByField()
+3. n/a:n/a
+waModel->updateById()
+4. n/a:n/a
+shopCategoryModel->updateUrl()
+5. n/a:n/a
+shopCategoryModel->update()
+6. n/a:n/a
+shopProductsSaveListSettingsController->saveCategorySettings()
+7. n/a:n/a
+shopProductsSaveListSettingsController->saveSettings()
+8. n/a:n/a
+shopProductsSaveListSettingsController->execute()
+9. n/a:n/a
+waController->run()
+10. n/a:n/a
+waJsonController->run()
+11. n/a:n/a
+waFrontController->execute()
+12. n/a:n/a
+waFrontController->dispatch()
+13. n/a:n/a
+waSystem->dispatch()
+
+2016-12-06 14:39:33 178.75.123.172
+Query Error 1054: Unknown column 'type' in 'field list'
+Query: SELECT type, description FROM wa_group LIMIT 0
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('SELECT type, de...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/webasyst/lib/updates/1.5/1477654742.php(7): waModel->exec('SELECT type, de...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/config/waAppConfig.class.php(391): include('/home/almamed/w...')
+#3 /home/almamed/web/almamed.su/public_html/wa-system/config/waAppConfig.class.php(343): waAppConfig->includeUpdate('/home/almamed/w...')
+#4 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(94): waAppConfig->checkUpdates()
+#5 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(1627): waSystem::getInstance('webasyst', NULL, false)
+#6 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(534): wa('webasyst')
+#7 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/instal...')
+#8 /home/almamed/web/almamed.su/public_html/index.php(7): waSystem->dispatch()
+#9 {main}
+
+2016-12-06 14:39:33 178.75.123.172
+Query Error 1054: Unknown column 'datetime' in 'field list'
+Query: SELECT `datetime` FROM `wa_user_groups` LIMIT 0
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('SELECT `datetim...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/webasyst/lib/updates/1.5/1479214159.php(4): waModel->exec('SELECT `datetim...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/config/waAppConfig.class.php(391): include('/home/almamed/w...')
+#3 /home/almamed/web/almamed.su/public_html/wa-system/config/waAppConfig.class.php(343): waAppConfig->includeUpdate('/home/almamed/w...')
+#4 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(94): waAppConfig->checkUpdates()
+#5 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(1627): waSystem::getInstance('webasyst', NULL, false)
+#6 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(534): wa('webasyst')
+#7 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/instal...')
+#8 /home/almamed/web/almamed.su/public_html/index.php(7): waSystem->dispatch()
+#9 {main}
+
+2016-12-06 14:40:37 178.75.123.172
+Query Error 1054: Unknown column 'type' in 'field list'
+Query: SELECT `type` FROM `shop_push_client` WHERE 0
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('SELECT `type` F...')
+#1 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/updates/7.0/1469017698.php(6): waModel->query('SELECT `type` F...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/config/waAppConfig.class.php(391): include('/home/almamed/w...')
+#3 /home/almamed/web/almamed.su/public_html/wa-system/config/waAppConfig.class.php(343): waAppConfig->includeUpdate('/home/almamed/w...')
+#4 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(94): waAppConfig->checkUpdates()
+#5 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(1627): waSystem::getInstance('shop', NULL, 1)
+#6 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(537): wa('shop', 1)
+#7 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#8 /home/almamed/web/almamed.su/public_html/index.php(7): waSystem->dispatch()
+#9 {main}

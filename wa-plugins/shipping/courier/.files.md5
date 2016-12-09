@@ -1,0 +1,13 @@
+667935a416553f1cec6b2fb86b599999 *img/courier.png
+443548d29037b0846ba2c605c8519537 *img/courier16.png
+a1751e1f10a3b96b05d0401c97e72008 *lib/.htaccess
+38f80bb60483f3610b79d6160734f05e *lib/config/build.php
+2485b4c478481a304df1cc51c4d29614 *lib/config/plugin.php
+4b3071cb1b6c1dbdcdc211ea3cd039d0 *lib/config/settings.php
+12e7493154531384ae704191bd50b35a *lib/courierShipping.class.php
+94795a993ff098f529b6eee1f0fcf9a0 *locale/en_US/LC_MESSAGES/shipping_courier.mo
+da508607e3d13c244c2522c536b9d669 *locale/en_US/LC_MESSAGES/shipping_courier.po
+453def515be6abc34e2a10b67bac4dd8 *locale/ru_RU/LC_MESSAGES/shipping_courier.mo
+39c90ba18845b8034fda345683bf8d63 *locale/ru_RU/LC_MESSAGES/shipping_courier.po
+f2eec63d4886afeffa4d02277b36e3d0 *templates/form.html
+67ee8bda4e961e48358f2e14636bd243 *templates/settings.html
