@@ -4,3 +4,4 @@ wa-data/public/shop/products/
 wa-data/protected/shop/products/
 wa-config/db.php
 wa-cache/
+.idea
