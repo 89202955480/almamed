@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:47
+<?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:02
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/site/themes/profitbuy/index.html" */ ?>
-<?php /*%%SmartyHeaderCode:19631199795846ace3971011-95818508%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1468033588584a9db2cdc0d0-40066078%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -131,7 +131,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '19631199795846ace3971011-95818508',
+  'nocache_hash' => '1468033588584a9db2cdc0d0-40066078',
   'function' => 
   array (
     'renderMenuItem' => 
@@ -180,24 +180,24 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5846ace51183f3_49886075',
+  'unifunc' => 'content_584a9db407ffe0_95378571',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5846ace51183f3_49886075')) {function content_5846ace51183f3_49886075($_smarty_tpl) {?><!DOCTYPE html><html lang="<?php if ($_smarty_tpl->tpl_vars['wa']->value->locale()){?><?php $_smarty_tpl->tpl_vars['locale'] = new Smarty_variable(explode('_',$_smarty_tpl->tpl_vars['wa']->value->locale()), null, 0);?><?php echo $_smarty_tpl->tpl_vars['locale']->value[0];?>
+<?php if ($_valid && !is_callable('content_584a9db407ffe0_95378571')) {function content_584a9db407ffe0_95378571($_smarty_tpl) {?><!DOCTYPE html><html lang="<?php if ($_smarty_tpl->tpl_vars['wa']->value->locale()){?><?php $_smarty_tpl->tpl_vars['locale'] = new Smarty_variable(explode('_',$_smarty_tpl->tpl_vars['wa']->value->locale()), null, 0);?><?php echo $_smarty_tpl->tpl_vars['locale']->value[0];?>
 <?php }else{ ?>en<?php }?>"><head><meta charset="UTF-8" /><meta http-equiv="x-ua-compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1<?php if ($_smarty_tpl->tpl_vars['wa']->value->isMobile()){?>, maximum-scale=1, user-scalable=0<?php }?>" /><title><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['wa']->value->title(), ENT_QUOTES, 'UTF-8', true);?>
 </title><meta name="Keywords" content="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['wa']->value->meta('keywords'), ENT_QUOTES, 'UTF-8', true);?>
 " /><meta name="Description" content="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['wa']->value->meta('description'), ENT_QUOTES, 'UTF-8', true);?>
 " /><?php if (!empty($_smarty_tpl->tpl_vars['canonical']->value)){?><link rel="canonical" href="<?php echo $_smarty_tpl->tpl_vars['canonical']->value;?>
 "/><?php }?><link rel="shortcut icon" href="/favicon.ico"/><?php /*  Call merged included template "at.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("at.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '19631199795846ace3971011-95818508');
-content_5846ace39ba088_54496138($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("at.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1468033588584a9db2cdc0d0-40066078');
+content_584a9db2d063a9_04746555($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "at.html" */?><?php if ($_smarty_tpl->tpl_vars['wa']->value->blog){?><!-- rss --><?php $_smarty_tpl->tpl_vars['rss'] = new Smarty_variable($_smarty_tpl->tpl_vars['wa']->value->blog->rssUrl(), null, 0);?><?php if ($_smarty_tpl->tpl_vars['rss']->value){?><link rel="alternate" type="application/rss+xml" title="<?php echo $_smarty_tpl->tpl_vars['wa']->value->accountName();?>
 " href="<?php echo $_smarty_tpl->tpl_vars['rss']->value;?>
 "><?php }?><?php }?><?php if (!$_smarty_tpl->tpl_vars['at']->value['ie']||$_smarty_tpl->tpl_vars['at']->value['ie']>=9){?><?php if ($_smarty_tpl->tpl_vars['at']->value['speedup']){?><?php echo $_smarty_tpl->getSubTemplate ("profitbuy.critical.css.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 <?php }?><?php /*  Call merged included template "head.layout.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("head.layout.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '19631199795846ace3971011-95818508');
-ob_start(); content_5846ace3c202d6_07772892($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("head.layout.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1468033588584a9db2cdc0d0-40066078');
+ob_start(); content_584a9db2e54d05_19466981($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack);  $_smarty_tpl->tpl_vars["html"] = new Smarty_variable(ob_get_clean());/*  End of included template "head.layout.html" */?><?php if ($_smarty_tpl->tpl_vars['at']->value['speedup']){?><?php if (preg_match_all($_smarty_tpl->tpl_vars['at']->value['regex']['l'],$_smarty_tpl->tpl_vars['html']->value,$_smarty_tpl->tpl_vars['matches']->value)!==false&&count($_smarty_tpl->tpl_vars['matches']->value[0])){?><?php $_smarty_tpl->tpl_vars['html'] = new Smarty_variable(str_replace($_smarty_tpl->tpl_vars['matches']->value[0],'',$_smarty_tpl->tpl_vars['html']->value), null, 0);?><?php $_smarty_tpl->createLocalArrayVariable('at', null, 0);
 $_smarty_tpl->tpl_vars['at']->value['links'] = array_merge($_smarty_tpl->tpl_vars['at']->value['links'],$_smarty_tpl->tpl_vars['matches']->value[0]);?><?php }?><?php if (preg_match_all($_smarty_tpl->tpl_vars['at']->value['regex']['s'],$_smarty_tpl->tpl_vars['html']->value,$_smarty_tpl->tpl_vars['matches']->value)!==false&&count($_smarty_tpl->tpl_vars['matches']->value[0])){?><?php  $_smarty_tpl->tpl_vars['script'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['script']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['matches']->value[0]; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -209,38 +209,38 @@ $_smarty_tpl->tpl_vars['at']->value['scripts'][] = $_smarty_tpl->tpl_vars['scrip
 " class="mobile-nav-button<?php if (!$_smarty_tpl->tpl_vars['cart_count']->value){?> empty<?php }?>"><i class="material-icons mi-3x cart-count" data-count="<?php echo $_smarty_tpl->tpl_vars['cart_count']->value;?>
 ">&#xE8CC;</i></a></div><?php }?></div></div><!-- DESKTOP NAV --><?php /*  Call merged included template "links.pages.top.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("links.pages.top.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '19631199795846ace3971011-95818508');
-ob_start(); content_5846ace46516f3_74965101($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("links.pages.top.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1468033588584a9db2cdc0d0-40066078');
+ob_start(); content_584a9db35c9ad7_77213492($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack);  $_smarty_tpl->tpl_vars["header1"] = new Smarty_variable(ob_get_clean());/*  End of included template "links.pages.top.html" */?><?php /*  Call merged included template "search.form.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("search.form.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '19631199795846ace3971011-95818508');
-ob_start(); content_5846ace46d32c7_59379872($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("search.form.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1468033588584a9db2cdc0d0-40066078');
+ob_start(); content_584a9db362c754_13514914($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack);  $_smarty_tpl->tpl_vars["header2"] = new Smarty_variable(ob_get_clean());/*  End of included template "search.form.html" */?><?php /*  Call merged included template "links.auth.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("links.auth.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '19631199795846ace3971011-95818508');
-ob_start(); content_5846ace46e4f61_39637313($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("links.auth.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1468033588584a9db2cdc0d0-40066078');
+ob_start(); content_584a9db3639430_98298261($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack);  $_smarty_tpl->tpl_vars["header3"] = new Smarty_variable(ob_get_clean());/*  End of included template "links.auth.html" */?><div class="row-grid hide-on-med-and-down"><div class="table-grid"><?php if (!empty($_smarty_tpl->tpl_vars['header1']->value)){?><div class="col-grid max-width"><?php echo $_smarty_tpl->tpl_vars['header1']->value;?>
 </div><?php }?><?php if (!empty($_smarty_tpl->tpl_vars['header2']->value)){?><div class="col-grid"><?php echo $_smarty_tpl->tpl_vars['header2']->value;?>
 </div><?php }?><?php if (!empty($_smarty_tpl->tpl_vars['header3']->value)){?><div class="col-grid min-width"><?php echo $_smarty_tpl->tpl_vars['header3']->value;?>
 </div><?php }?></div></div></div></nav><?php /*  Call merged included template "logo.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("logo.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '19631199795846ace3971011-95818508');
-ob_start(); content_5846ace47461b4_63601589($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("logo.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1468033588584a9db2cdc0d0-40066078');
+ob_start(); content_584a9db3680858_47731461($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack);  $_smarty_tpl->tpl_vars["header4"] = new Smarty_variable(ob_get_clean());/*  End of included template "logo.html" */?><?php /*  Call merged included template "phones.top.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("phones.top.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '19631199795846ace3971011-95818508');
-ob_start(); content_5846ace4795207_47100458($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("phones.top.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1468033588584a9db2cdc0d0-40066078');
+ob_start(); content_584a9db36c3067_92322193($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack);  $_smarty_tpl->tpl_vars["header5"] = new Smarty_variable(ob_get_clean());/*  End of included template "phones.top.html" */?><?php /*  Call merged included template "offline.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("offline.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '19631199795846ace3971011-95818508');
-ob_start(); content_5846ace47df512_48647663($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("offline.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1468033588584a9db2cdc0d0-40066078');
+ob_start(); content_584a9db37123c3_41495277($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack);  $_smarty_tpl->tpl_vars["header6"] = new Smarty_variable(ob_get_clean());/*  End of included template "offline.html" */?><div class="header-line alfa-background"><div class="container"><div class="row-grid"><div class="table-grid"><?php if (!empty($_smarty_tpl->tpl_vars['header4']->value)){?><div class="col-grid s12 m6 align-center-on-small-and-down"><?php echo $_smarty_tpl->tpl_vars['header4']->value;?>
 </div><?php }?><?php if (!empty($_smarty_tpl->tpl_vars['header5']->value)){?><div class="col-grid m6 hide-on-small-and-down align-<?php if (!empty($_smarty_tpl->tpl_vars['header6']->value)){?>center<?php }else{ ?>right<?php }?> align-right-on-med-and-down"><?php echo $_smarty_tpl->tpl_vars['header5']->value;?>
 </div><?php }?><?php if (!empty($_smarty_tpl->tpl_vars['header6']->value)){?><div class="col-grid hide-on-med-and-down align-right"><?php echo $_smarty_tpl->tpl_vars['header6']->value;?>
 </div><?php }?></div></div></div></div><?php /*  Call merged included template "tree.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("tree.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '19631199795846ace3971011-95818508');
-content_5846ace4873ff7_22071052($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("tree.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1468033588584a9db2cdc0d0-40066078');
+content_584a9db3840fd4_33519996($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "tree.html" */?><?php if (0&&!$_smarty_tpl->tpl_vars['wa']->value->isMobile()){?><?php $_smarty_tpl->tpl_vars["html"] = new Smarty_variable($_smarty_tpl->getSubTemplate ("alphacat.plugin.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0));?>
 <?php if ($_smarty_tpl->tpl_vars['at']->value['speedup']&&preg_match_all($_smarty_tpl->tpl_vars['at']->value['regex']['s'],$_smarty_tpl->tpl_vars['html']->value,$_smarty_tpl->tpl_vars['matches']->value)!==false&&count($_smarty_tpl->tpl_vars['matches']->value[0])){?><?php $_smarty_tpl->tpl_vars['html'] = new Smarty_variable(str_replace($_smarty_tpl->tpl_vars['matches']->value[0],'',$_smarty_tpl->tpl_vars['html']->value), null, 0);?><?php $_smarty_tpl->createLocalArrayVariable('at', null, 0);
 $_smarty_tpl->tpl_vars['at']->value['scripts'] = array_merge($_smarty_tpl->tpl_vars['at']->value['scripts'],$_smarty_tpl->tpl_vars['matches']->value[0]);?><?php }?><?php echo $_smarty_tpl->tpl_vars['html']->value;?>
@@ -254,32 +254,32 @@ $_smarty_tpl->tpl_vars['script']->_loop = true;
 $_smarty_tpl->tpl_vars['at']->value['scripts'][] = $_smarty_tpl->tpl_vars['script']->value;?><?php }?><?php } ?><?php }?><?php }?><?php echo $_smarty_tpl->tpl_vars['html']->value;?>
 </div></main><!-- FOOTER --><?php /*  Call merged included template "links.pages.bottom.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("links.pages.bottom.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '19631199795846ace3971011-95818508');
-ob_start(); content_5846ace4982368_95059593($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("links.pages.bottom.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1468033588584a9db2cdc0d0-40066078');
+ob_start(); content_584a9db396e9b1_36018839($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack);  $_smarty_tpl->tpl_vars["footer1"] = new Smarty_variable(ob_get_clean());/*  End of included template "links.pages.bottom.html" */?><?php /*  Call merged included template "links.apps.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("links.apps.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '19631199795846ace3971011-95818508');
-ob_start(); content_5846ace4a1a422_08336501($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("links.apps.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1468033588584a9db2cdc0d0-40066078');
+ob_start(); content_584a9db39faff4_68682553($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack);  $_smarty_tpl->tpl_vars["footer2"] = new Smarty_variable(ob_get_clean());/*  End of included template "links.apps.html" */?><?php /*  Call merged included template "payment.logo.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("payment.logo.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '19631199795846ace3971011-95818508');
-ob_start(); content_5846ace4a538a4_20833583($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("payment.logo.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1468033588584a9db2cdc0d0-40066078');
+ob_start(); content_584a9db3a26212_68941990($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack);  $_smarty_tpl->tpl_vars["footer3"] = new Smarty_variable(ob_get_clean());/*  End of included template "payment.logo.html" */?><?php /*  Call merged included template "links.social.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("links.social.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '19631199795846ace3971011-95818508');
-ob_start(); content_5846ace4ac5f34_52683454($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("links.social.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1468033588584a9db2cdc0d0-40066078');
+ob_start(); content_584a9db3ab5312_53756006($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack);  $_smarty_tpl->tpl_vars["footer4"] = new Smarty_variable(ob_get_clean());/*  End of included template "links.social.html" */?><?php /*  Call merged included template "copyright.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("copyright.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '19631199795846ace3971011-95818508');
-ob_start(); content_5846ace4b32738_58937592($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("copyright.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1468033588584a9db2cdc0d0-40066078');
+ob_start(); content_584a9db3b2b729_05340892($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack);  $_smarty_tpl->tpl_vars["footer5"] = new Smarty_variable(ob_get_clean());/*  End of included template "copyright.html" */?><?php /*  Call merged included template "e.address.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("e.address.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '19631199795846ace3971011-95818508');
-ob_start(); content_5846ace4b7c667_53190049($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("e.address.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1468033588584a9db2cdc0d0-40066078');
+ob_start(); content_584a9db3b60f34_79373268($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack);  $_smarty_tpl->tpl_vars["footer6"] = new Smarty_variable(ob_get_clean());/*  End of included template "e.address.html" */?><?php /*  Call merged included template "phones.bottom.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("phones.bottom.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '19631199795846ace3971011-95818508');
-ob_start(); content_5846ace4bc4594_23777184($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("phones.bottom.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1468033588584a9db2cdc0d0-40066078');
+ob_start(); content_584a9db3ba1437_97725965($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack);  $_smarty_tpl->tpl_vars["footer7"] = new Smarty_variable(ob_get_clean());/*  End of included template "phones.bottom.html" */?><?php $_smarty_tpl->tpl_vars['footer8'] = new Smarty_variable($_smarty_tpl->tpl_vars['wa']->value->block(((string)$_smarty_tpl->tpl_vars['at']->value['theme_id']).".counters"), null, 0);?><footer class="globalfooter"><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['wa_active_theme_path']->value)."/footer.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 <div class="footer-line"><div class="container"><div class="row-grid"><div class="table-grid"><?php if (!empty($_smarty_tpl->tpl_vars['footer1']->value)){?><div class="col-grid hide-on-med-and-down"><?php echo $_smarty_tpl->tpl_vars['footer1']->value;?>
 </div><?php }?><?php if (!empty($_smarty_tpl->tpl_vars['footer2']->value)){?><div class="col-grid hide-on-med-and-down<?php if (!empty($_smarty_tpl->tpl_vars['footer1']->value)){?> align-center<?php }?>"><?php echo $_smarty_tpl->tpl_vars['footer2']->value;?>
@@ -294,12 +294,12 @@ $_smarty_tpl = array_pop($_tpl_stack);  $_smarty_tpl->tpl_vars["footer7"] = new 
 $_smarty_tpl->tpl_vars['at']->value['scripts'] = array_merge($_smarty_tpl->tpl_vars['at']->value['scripts'],$_smarty_tpl->tpl_vars['matches']->value[0]);?><?php }?><?php echo $_smarty_tpl->tpl_vars['html']->value;?>
 <?php }?><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['desktop_pane'])){?><?php /*  Call merged included template "desktop.pane.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("desktop.pane.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '19631199795846ace3971011-95818508');
-content_5846ace4cabd45_92819832($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("desktop.pane.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1468033588584a9db2cdc0d0-40066078');
+content_584a9db3c96778_33381486($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "desktop.pane.html" */?><?php }?><?php /*  Call merged included template "mobile.pane.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("mobile.pane.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '19631199795846ace3971011-95818508');
-content_5846ace4ea7714_99204681($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("mobile.pane.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1468033588584a9db2cdc0d0-40066078');
+content_584a9db3e183b2_66225596($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "mobile.pane.html" */?><?php if (!$_smarty_tpl->tpl_vars['wa']->value->isMobile()){?><div id="back-top-wrapper"><div class="container"><a id="back-top" href="#" rel="nofollow">Наверх</a></div></div><?php }?><div id="dialog" class="dialog"><div class="dialog-background"></div><div class="dialog-window"><div class="cart"></div></div></div><?php if ($_smarty_tpl->tpl_vars['at']->value['speedup']){?><script type="text/javascript">;(function(d){var t = <?php echo json_encode($_smarty_tpl->tpl_vars['at']->value['links']);?>
 ,df = d.createDocumentFragment();t.forEach(function(e) {var t = d.createElement('div');t.innerHTML = e;e = t.firstChild;df.appendChild(e);});d.getElementsByTagName('head')[0].appendChild(df);})(document);</script><?php  $_smarty_tpl->tpl_vars['script'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['script']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['at']->value['scripts']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -308,9 +308,9 @@ $_smarty_tpl->tpl_vars['script']->_loop = true;
 ?><?php echo $_smarty_tpl->tpl_vars['script']->value;?>
 <?php } ?><?php }?><?php }else{ ?><?php echo $_smarty_tpl->getSubTemplate ("lt.ie9.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 <?php }?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['wa_active_theme_path']->value)."/footer_prime.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-</body></html><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:47
+</body></html><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:02
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/site/themes/profitbuy/at.html" */ ?>
-<?php if ($_valid && !is_callable('content_5846ace39ba088_54496138')) {function content_5846ace39ba088_54496138($_smarty_tpl) {?><?php $_smarty_tpl->tpl_vars['at'] = new Smarty_variable(array(), null, 0);?><?php $_smarty_tpl->createLocalArrayVariable('at', null, 0);
+<?php if ($_valid && !is_callable('content_584a9db2d063a9_04746555')) {function content_584a9db2d063a9_04746555($_smarty_tpl) {?><?php $_smarty_tpl->tpl_vars['at'] = new Smarty_variable(array(), null, 0);?><?php $_smarty_tpl->createLocalArrayVariable('at', null, 0);
 $_smarty_tpl->tpl_vars['at']->value['ie'] = preg_match("/(MSIE)(?:\/| )([0-9.]+)/",$_smarty_tpl->tpl_vars['wa']->value->userAgent(),$_smarty_tpl->tpl_vars['matches']->value);?><?php if ($_smarty_tpl->tpl_vars['at']->value['ie']){?><?php $_smarty_tpl->createLocalArrayVariable('at', null, 0);
 $_smarty_tpl->tpl_vars['at']->value['ie'] = $_smarty_tpl->tpl_vars['matches']->value[2];?><?php }?><?php $_smarty_tpl->createLocalArrayVariable('at', null, 0);
 $_smarty_tpl->tpl_vars['at']->value['speedup'] = !empty($_smarty_tpl->tpl_vars['theme_settings']->value['speedup'])&&!waRequest::isXMLHttpRequest();?><?php $_smarty_tpl->createLocalArrayVariable('at', null, 0);
@@ -352,9 +352,9 @@ $_smarty_tpl->tpl_vars['submenu']->_loop = true;
 <?php } ?></ul><?php }?></li><?php }?><?php $_smarty_tpl->tpl_vars = $saved_tpl_vars;
 foreach (Smarty::$global_tpl_vars as $key => $value) if(!isset($_smarty_tpl->tpl_vars[$key])) $_smarty_tpl->tpl_vars[$key] = $value;}}?>
 <?php $_smarty_tpl->tpl_vars['at'] = new Smarty_variable($_smarty_tpl->tpl_vars['at']->value, null, 2);
-$_ptr = $_smarty_tpl->parent; while ($_ptr != null) {$_ptr->tpl_vars['at'] = clone $_smarty_tpl->tpl_vars['at']; $_ptr = $_ptr->parent; }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:47
+$_ptr = $_smarty_tpl->parent; while ($_ptr != null) {$_ptr->tpl_vars['at'] = clone $_smarty_tpl->tpl_vars['at']; $_ptr = $_ptr->parent; }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:02
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/site/themes/profitbuy/head.layout.html" */ ?>
-<?php if ($_valid && !is_callable('content_5846ace3c202d6_07772892')) {function content_5846ace3c202d6_07772892($_smarty_tpl) {?><link href='//fonts.googleapis.com/css?family=Roboto:500,400italic,700italic,300,700,500italic,300italic,400&amp;subset=cyrillic,latin' rel='stylesheet' type='text/css'><link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type='text/css'><?php if ($_smarty_tpl->tpl_vars['wa']->value->shop&&$_smarty_tpl->tpl_vars['wa']->value->shop->currency()=='RUB'){?><link href="<?php echo $_smarty_tpl->tpl_vars['wa_url']->value;?>
+<?php if ($_valid && !is_callable('content_584a9db2e54d05_19466981')) {function content_584a9db2e54d05_19466981($_smarty_tpl) {?><link href='//fonts.googleapis.com/css?family=Roboto:500,400italic,700italic,300,700,500italic,300italic,400&amp;subset=cyrillic,latin' rel='stylesheet' type='text/css'><link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type='text/css'><?php if ($_smarty_tpl->tpl_vars['wa']->value->shop&&$_smarty_tpl->tpl_vars['wa']->value->shop->currency()=='RUB'){?><link href="<?php echo $_smarty_tpl->tpl_vars['wa_url']->value;?>
 wa-content/font/ruble/arial/fontface.css" rel="stylesheet" type="text/css"><?php }?><link href="<?php echo $_smarty_tpl->tpl_vars['wa_theme_url']->value;?>
 profitbuy.min.css?v<?php echo $_smarty_tpl->tpl_vars['wa_theme_version']->value;?>
 " rel="stylesheet" type="text/css"/><?php echo $_smarty_tpl->tpl_vars['wa']->value->css();?>
@@ -363,8 +363,8 @@ matchMedia.js?v0.2.0" ></script><?php }?><script type="text/javascript" src="<?p
 wa-content/js/jquery/jquery-1.11.1.min.js" ></script><script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['wa_static_url']->value;?>
 wa-content/js/jquery/jquery-migrate-1.2.1.min.js"></script><?php /*  Call merged included template "theme.script.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("theme.script.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '19631199795846ace3971011-95818508');
-content_5846ace3c63664_15417315($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("theme.script.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1468033588584a9db2cdc0d0-40066078');
+content_584a9db2e7bde3_64812992($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "theme.script.html" */?><script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['wa_theme_url']->value;?>
 profitbuy.min.js?v<?php echo $_smarty_tpl->tpl_vars['wa_theme_version']->value;?>
 "></script><?php echo $_smarty_tpl->tpl_vars['wa']->value->js();?>
@@ -372,13 +372,13 @@ profitbuy.min.js?v<?php echo $_smarty_tpl->tpl_vars['wa_theme_version']->value;?
 <?php echo $_smarty_tpl->tpl_vars['wa']->value->head();?>
  <?php /*  Call merged included template "theme.css.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("theme.css.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '19631199795846ace3971011-95818508');
-ob_start(); content_5846ace3d51d05_04788294($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("theme.css.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1468033588584a9db2cdc0d0-40066078');
+ob_start(); content_584a9db2ef80a2_77584574($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack);  $_smarty_tpl->tpl_vars["theme_css"] = new Smarty_variable(ob_get_clean());/*  End of included template "theme.css.html" */?><?php if ($_smarty_tpl->tpl_vars['at']->value['speedup']){?><script id="at-theme-css">;( function (d) {var t = d.createElement('div'),df = d.createDocumentFragment();t.innerHTML = <?php echo json_encode($_smarty_tpl->tpl_vars['theme_css']->value);?>
 ;t = t.childNodes;t = Array.prototype.slice.call(t);t.forEach( function (e) {df.appendChild(e);});d.getElementsByTagName('head')[0].appendChild(df);var s = d.getElementById('at-theme-css');s.parentNode.removeChild(s);})(document);</script><?php }else{ ?><?php echo $_smarty_tpl->tpl_vars['theme_css']->value;?>
-<?php }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:47
+<?php }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:02
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/site/themes/profitbuy/theme.script.html" */ ?>
-<?php if ($_valid && !is_callable('content_5846ace3c63664_15417315')) {function content_5846ace3c63664_15417315($_smarty_tpl) {?><script type="text/javascript">( function ($, undefined) {$.at = {urls: {wa_url: "<?php echo $_smarty_tpl->tpl_vars['wa_url']->value;?>
+<?php if ($_valid && !is_callable('content_584a9db2e7bde3_64812992')) {function content_584a9db2e7bde3_64812992($_smarty_tpl) {?><script type="text/javascript">( function ($, undefined) {$.at = {urls: {wa_url: "<?php echo $_smarty_tpl->tpl_vars['wa_url']->value;?>
 ",wa_theme_url: "<?php echo $_smarty_tpl->tpl_vars['wa_theme_url']->value;?>
 ",wa_static_url: "<?php echo $_smarty_tpl->tpl_vars['wa_static_url']->value;?>
 ",wa_app_static_url: "<?php echo $_smarty_tpl->tpl_vars['wa_app_static_url']->value;?>
@@ -406,9 +406,9 @@ cslider/jquery.cslider.css",src: "<?php echo $_smarty_tpl->tpl_vars['wa_theme_ur
 cslider/jquery.cslider.js"},"jquery.nivoslider": {is_done: function () {return !!$.fn.nivoSlider;},href: "<?php echo $_smarty_tpl->tpl_vars['wa_theme_url']->value;?>
 nivoslider/nivo.slider.css",src: "<?php echo $_smarty_tpl->tpl_vars['wa_theme_url']->value;?>
 nivoslider/jquery.nivo.slider.min.js"}};$.at.messages = {'ru_RU': {'More': 'Еще','Show more': 'Показать еще','More categories': 'Еще категории','Remove from cart': 'Удалить из корзины','pcs.': 'шт.','Expand description': 'Развернуть описание','Collapse description': 'Свернуть описание','Back to home page': 'Вернуться на главную','or': 'или','back to current page': 'остаться на текущей странице','Congratulations!': 'Поздравляем!','Authorization was successful!': 'Авторизация прошла успешно!','Much product is no longer available!': 'Столько товара нет в наличии!'}};})(jQuery);</script><script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['wa_theme_url']->value;?>
-at.min.js?v0.0.1"></script><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:47
+at.min.js?v0.0.1"></script><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:02
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/site/themes/profitbuy/theme.css.html" */ ?>
-<?php if ($_valid && !is_callable('content_5846ace3d51d05_04788294')) {function content_5846ace3d51d05_04788294($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include '/home/almamed/web/almamed.su/public_html/wa-system/vendors/smarty3/plugins/modifier.replace.php';
+<?php if ($_valid && !is_callable('content_584a9db2ef80a2_77584574')) {function content_584a9db2ef80a2_77584574($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include '/home/almamed/web/almamed.su/public_html/wa-system/vendors/smarty3/plugins/modifier.replace.php';
 ?><?php if (empty($_smarty_tpl->tpl_vars['theme_settings']->value['color_scheme'])){?><?php $_smarty_tpl->createLocalArrayVariable('theme_settings', null, 0);
 $_smarty_tpl->tpl_vars['theme_settings']->value['color_scheme'] = 'scheme1';?><?php }else{ ?><?php $_smarty_tpl->createLocalArrayVariable('theme_settings', null, 0);
 $_smarty_tpl->tpl_vars['theme_settings']->value['color_scheme'] = str_replace('img/backgrounds/themesettings/','',str_replace('.png','',$_smarty_tpl->tpl_vars['theme_settings']->value['color_scheme']));?><?php }?><?php if ($_smarty_tpl->tpl_vars['theme_settings']->value['color_scheme']=='scheme1'){?><?php $_smarty_tpl->createLocalArrayVariable('scheme', null, 0);
@@ -793,25 +793,25 @@ $_smarty_tpl->tpl_vars['scheme']->value['background_button2_active'] = $_smarty_
 ;}<?php }?><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['badge_bestseller_color'])){?>.badge.bestseller span {color: <?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['badge_bestseller_color'];?>
 ;}<?php }?><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['addition_added_color'])){?>.addition-wrapper .addition-button.added {color: <?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['addition_added_color'];?>
 ;}<?php }?><?php }?></style><?php if (!isset($_smarty_tpl->tpl_vars['user_css'])) $_smarty_tpl->tpl_vars['user_css'] = new Smarty_Variable(null);if ($_smarty_tpl->tpl_vars['user_css']->value = $_smarty_tpl->tpl_vars['wa']->value->block(((string)$_smarty_tpl->tpl_vars['at']->value['theme_id']).".user.css")){?><?php echo $_smarty_tpl->tpl_vars['user_css']->value;?>
-<?php }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:48
+<?php }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:03
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/site/themes/profitbuy/links.pages.top.html" */ ?>
-<?php if ($_valid && !is_callable('content_5846ace46516f3_74965101')) {function content_5846ace46516f3_74965101($_smarty_tpl) {?><?php $_smarty_tpl->tpl_vars['source'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['theme_settings']->value['pages_top'])===null||$tmp==='' ? '' : $tmp), null, 0);?><?php if ($_smarty_tpl->tpl_vars['source']->value=='site'){?><?php $_smarty_tpl->tpl_vars['menu'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['site']['pages'])===null||$tmp==='' ? array() : $tmp), null, 0);?><?php $_smarty_tpl->tpl_vars['selected'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['site']['selected_page'])===null||$tmp==='' ? null : $tmp), null, 0);?><?php }elseif($_smarty_tpl->tpl_vars['source']->value=='shop'){?><?php $_smarty_tpl->tpl_vars['menu'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['shop']['pages'])===null||$tmp==='' ? array() : $tmp), null, 0);?><?php $_smarty_tpl->tpl_vars['selected'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['shop']['selected_page'])===null||$tmp==='' ? null : $tmp), null, 0);?><?php }elseif($_smarty_tpl->tpl_vars['source']->value=='blog'){?><?php $_smarty_tpl->tpl_vars['menu'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['blog']['pages'])===null||$tmp==='' ? array() : $tmp), null, 0);?><?php $_smarty_tpl->tpl_vars['selected'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['blog']['selected_page'])===null||$tmp==='' ? null : $tmp), null, 0);?><?php }elseif($_smarty_tpl->tpl_vars['source']->value=='photos'){?><?php $_smarty_tpl->tpl_vars['menu'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['photos']['pages'])===null||$tmp==='' ? array() : $tmp), null, 0);?><?php $_smarty_tpl->tpl_vars['selected'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['photos']['selected_page'])===null||$tmp==='' ? null : $tmp), null, 0);?><?php }elseif($_smarty_tpl->tpl_vars['source']->value=='apps'){?><?php $_smarty_tpl->tpl_vars['menu'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['apps'])===null||$tmp==='' ? array() : $tmp), null, 0);?><?php $_smarty_tpl->tpl_vars['selected'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['selected_app'])===null||$tmp==='' ? null : $tmp), null, 0);?><?php }?><?php if (!empty($_smarty_tpl->tpl_vars['menu']->value)){?><ul class="base-menu type1 pages-top" style="display: none;"><?php  $_smarty_tpl->tpl_vars['branch'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['branch']->_loop = false;
+<?php if ($_valid && !is_callable('content_584a9db35c9ad7_77213492')) {function content_584a9db35c9ad7_77213492($_smarty_tpl) {?><?php $_smarty_tpl->tpl_vars['source'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['theme_settings']->value['pages_top'])===null||$tmp==='' ? '' : $tmp), null, 0);?><?php if ($_smarty_tpl->tpl_vars['source']->value=='site'){?><?php $_smarty_tpl->tpl_vars['menu'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['site']['pages'])===null||$tmp==='' ? array() : $tmp), null, 0);?><?php $_smarty_tpl->tpl_vars['selected'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['site']['selected_page'])===null||$tmp==='' ? null : $tmp), null, 0);?><?php }elseif($_smarty_tpl->tpl_vars['source']->value=='shop'){?><?php $_smarty_tpl->tpl_vars['menu'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['shop']['pages'])===null||$tmp==='' ? array() : $tmp), null, 0);?><?php $_smarty_tpl->tpl_vars['selected'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['shop']['selected_page'])===null||$tmp==='' ? null : $tmp), null, 0);?><?php }elseif($_smarty_tpl->tpl_vars['source']->value=='blog'){?><?php $_smarty_tpl->tpl_vars['menu'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['blog']['pages'])===null||$tmp==='' ? array() : $tmp), null, 0);?><?php $_smarty_tpl->tpl_vars['selected'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['blog']['selected_page'])===null||$tmp==='' ? null : $tmp), null, 0);?><?php }elseif($_smarty_tpl->tpl_vars['source']->value=='photos'){?><?php $_smarty_tpl->tpl_vars['menu'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['photos']['pages'])===null||$tmp==='' ? array() : $tmp), null, 0);?><?php $_smarty_tpl->tpl_vars['selected'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['photos']['selected_page'])===null||$tmp==='' ? null : $tmp), null, 0);?><?php }elseif($_smarty_tpl->tpl_vars['source']->value=='apps'){?><?php $_smarty_tpl->tpl_vars['menu'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['apps'])===null||$tmp==='' ? array() : $tmp), null, 0);?><?php $_smarty_tpl->tpl_vars['selected'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['selected_app'])===null||$tmp==='' ? null : $tmp), null, 0);?><?php }?><?php if (!empty($_smarty_tpl->tpl_vars['menu']->value)){?><ul class="base-menu type1 pages-top" style="display: none;"><?php  $_smarty_tpl->tpl_vars['branch'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['branch']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['menu']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['branch']->key => $_smarty_tpl->tpl_vars['branch']->value){
 $_smarty_tpl->tpl_vars['branch']->_loop = true;
 ?><?php smarty_template_function_renderMenuItem($_smarty_tpl,array('menu'=>$_smarty_tpl->tpl_vars['branch']->value,'selected'=>$_smarty_tpl->tpl_vars['selected']->value,'exclude'=>'not_top'));?>
-<?php } ?></ul><?php }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:48
+<?php } ?></ul><?php }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:03
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/site/themes/profitbuy/search.form.html" */ ?>
-<?php if ($_valid && !is_callable('content_5846ace46d32c7_59379872')) {function content_5846ace46d32c7_59379872($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['wa_active_theme_path']->value)."/searchform.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-<?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:48
+<?php if ($_valid && !is_callable('content_584a9db362c754_13514914')) {function content_584a9db362c754_13514914($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['wa_active_theme_path']->value)."/searchform.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:03
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/site/themes/profitbuy/links.auth.html" */ ?>
-<?php if ($_valid && !is_callable('content_5846ace46e4f61_39637313')) {function content_5846ace46e4f61_39637313($_smarty_tpl) {?><?php if ($_smarty_tpl->tpl_vars['wa']->value->isAuthEnabled()){?><ul class="base-menu"><li<?php if ($_smarty_tpl->tpl_vars['wa']->value->globals('isMyAccount')){?> class="selected"<?php }?>><?php if ($_smarty_tpl->tpl_vars['wa']->value->user()->isAuth()){?><?php if ($_smarty_tpl->tpl_vars['wa']->value->myUrl()){?><a href="<?php echo $_smarty_tpl->tpl_vars['wa']->value->myUrl();?>
+<?php if ($_valid && !is_callable('content_584a9db3639430_98298261')) {function content_584a9db3639430_98298261($_smarty_tpl) {?><?php if ($_smarty_tpl->tpl_vars['wa']->value->isAuthEnabled()){?><ul class="base-menu"><li<?php if ($_smarty_tpl->tpl_vars['wa']->value->globals('isMyAccount')){?> class="selected"<?php }?>><?php if ($_smarty_tpl->tpl_vars['wa']->value->user()->isAuth()){?><?php if ($_smarty_tpl->tpl_vars['wa']->value->myUrl()){?><a href="<?php echo $_smarty_tpl->tpl_vars['wa']->value->myUrl();?>
 "><i class="icon16 userpic20" style="background-image: url('<?php echo $_smarty_tpl->tpl_vars['wa']->value->user()->getPhoto2x(20);?>
 ');"></i>Личный кабинет</a><?php }else{ ?><span><?php echo $_smarty_tpl->tpl_vars['wa']->value->user('firstname');?>
 </span><?php }?><?php }else{ ?><a href="<?php echo $_smarty_tpl->tpl_vars['wa']->value->loginUrl();?>
-"<?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['authpopup'])){?> class="authpopup"<?php }?>><i class="material-icons mi-lg">&#xE7FD;</i>Вход</a><?php }?></li></ul><?php }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:48
+"<?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['authpopup'])){?> class="authpopup"<?php }?>><i class="material-icons mi-lg">&#xE7FD;</i>Вход</a><?php }?></li></ul><?php }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:03
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/site/themes/profitbuy/logo.html" */ ?>
-<?php if ($_valid && !is_callable('content_5846ace47461b4_63601589')) {function content_5846ace47461b4_63601589($_smarty_tpl) {?><a id="logo" href="<?php echo $_smarty_tpl->tpl_vars['wa_url']->value;?>
+<?php if ($_valid && !is_callable('content_584a9db3680858_47731461')) {function content_584a9db3680858_47731461($_smarty_tpl) {?><a id="logo" href="<?php echo $_smarty_tpl->tpl_vars['wa_url']->value;?>
 "><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['logo'])){?><img src="<?php echo $_smarty_tpl->tpl_vars['wa_theme_url']->value;?>
 <?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['logo'];?>
 ?v<?php echo $_smarty_tpl->tpl_vars['wa_theme_version']->value;?>
@@ -820,26 +820,26 @@ $_smarty_tpl->tpl_vars['branch']->_loop = true;
 img/wm_site.png" alt="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['theme_settings']->value['logo_title'])===null||$tmp==='' ? '' : $tmp);?>
 "/><?php }?><?php if (empty($_smarty_tpl->tpl_vars['theme_settings']->value['logo_image_only'])&&(!empty($_smarty_tpl->tpl_vars['theme_settings']->value['logo_title'])||!empty($_smarty_tpl->tpl_vars['theme_settings']->value['logo_tagline']))){?><div class="logo-text"><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['logo_title'])){?><div class="account-name"><?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['logo_title'];?>
 </div><?php }?><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['logo_tagline'])){?><span class="hint"><?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['logo_tagline'];?>
-</span><?php }?></div><?php }?></a><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:48
+</span><?php }?></div><?php }?></a><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:03
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/site/themes/profitbuy/phones.top.html" */ ?>
-<?php if ($_valid && !is_callable('content_5846ace4795207_47100458')) {function content_5846ace4795207_47100458($_smarty_tpl) {?><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['phone_1'])||!empty($_smarty_tpl->tpl_vars['theme_settings']->value['phone_2'])){?><ul class="phones-wrapper"><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['phone_1'])){?><li><a href="tel:<?php echo str_replace(array('(',')','-',' '),'',$_smarty_tpl->tpl_vars['theme_settings']->value['phone_1']);?>
+<?php if ($_valid && !is_callable('content_584a9db36c3067_92322193')) {function content_584a9db36c3067_92322193($_smarty_tpl) {?><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['phone_1'])||!empty($_smarty_tpl->tpl_vars['theme_settings']->value['phone_2'])){?><ul class="phones-wrapper"><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['phone_1'])){?><li><a href="tel:<?php echo str_replace(array('(',')','-',' '),'',$_smarty_tpl->tpl_vars['theme_settings']->value['phone_1']);?>
 "><?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['phone_1'];?>
 </a><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['phone_hint_1'])){?><span class="hint"><?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['phone_hint_1'];?>
 </span><?php }?></li><?php }?><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['phone_2'])){?><li><a href="tel:<?php echo str_replace(array('(',')','-',' '),'',$_smarty_tpl->tpl_vars['theme_settings']->value['phone_2']);?>
 "><?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['phone_2'];?>
 </a><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['phone_hint_2'])){?><span class="hint"><?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['phone_hint_2'];?>
-</span><?php }?></li><?php }?></ul><?php }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:48
+</span><?php }?></li><?php }?></ul><?php }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:03
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/site/themes/profitbuy/offline.html" */ ?>
-<?php if ($_valid && !is_callable('content_5846ace47df512_48647663')) {function content_5846ace47df512_48647663($_smarty_tpl) {?><?php $_smarty_tpl->tpl_vars['wh'] = new Smarty_variable(null, null, 0);?><?php if ($_smarty_tpl->tpl_vars['wa']->value->shop){?><?php $_smarty_tpl->tpl_vars['wh'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['wa']->value->shop->settings("workhours"))===null||$tmp==='' ? "24/7, семь дней в неделю" : $tmp), null, 0);?><?php }?><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['address'])||!empty($_smarty_tpl->tpl_vars['wh']->value)){?><ul class="offline-wrapper"><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['address'])){?><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['address_map_url'])){?><li class="address"><a href="<?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['address_map_url'];?>
+<?php if ($_valid && !is_callable('content_584a9db37123c3_41495277')) {function content_584a9db37123c3_41495277($_smarty_tpl) {?><?php $_smarty_tpl->tpl_vars['wh'] = new Smarty_variable(null, null, 0);?><?php if ($_smarty_tpl->tpl_vars['wa']->value->shop){?><?php $_smarty_tpl->tpl_vars['wh'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['wa']->value->shop->settings("workhours"))===null||$tmp==='' ? "24/7, семь дней в неделю" : $tmp), null, 0);?><?php }?><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['address'])||!empty($_smarty_tpl->tpl_vars['wh']->value)){?><ul class="offline-wrapper"><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['address'])){?><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['address_map_url'])){?><li class="address"><a href="<?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['address_map_url'];?>
 " class="map-wrapper" rel="nofollow" target="_blank" title="Посмотреть на карте"><i class="material-icons mi-2x">&#xE55F;</i><span><?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['address'];?>
 </span></a></li><?php }else{ ?><li class="address no-hover"><i class="material-icons mi-2x">&#xE55F;</i><?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['address'];?>
 </li><?php }?><?php }?><?php if (!empty($_smarty_tpl->tpl_vars['wh']->value)){?><li class="workhours no-hover hint"><?php if (is_array($_smarty_tpl->tpl_vars['wh']->value)){?><?php echo $_smarty_tpl->tpl_vars['wh']->value['days_from_to'];?>
 <?php if ($_smarty_tpl->tpl_vars['wh']->value['hours_from']&&$_smarty_tpl->tpl_vars['wh']->value['hours_to']){?> <?php echo $_smarty_tpl->tpl_vars['wh']->value['hours_from'];?>
 —<?php echo $_smarty_tpl->tpl_vars['wh']->value['hours_to'];?>
 <?php }?><?php }else{ ?><?php echo $_smarty_tpl->tpl_vars['wh']->value;?>
-<?php }?></li><?php }?></ul><?php }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:48
+<?php }?></li><?php }?></ul><?php }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:03
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/site/themes/profitbuy/tree.html" */ ?>
-<?php if ($_valid && !is_callable('content_5846ace4873ff7_22071052')) {function content_5846ace4873ff7_22071052($_smarty_tpl) {?><?php if (!empty($_smarty_tpl->tpl_vars['at']->value['shop']['categories'])){?><nav class="tree-wrapper hide-on-large-only"><div class="container"><div class="tree-title">Категории<button class="toggle-menu"><i class="material-icons mi-2x">&#xE5D2;</i></button></div><div class="sidebar-box"><ul class="base-menu"><?php  $_smarty_tpl->tpl_vars['branch'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['branch']->_loop = false;
+<?php if ($_valid && !is_callable('content_584a9db3840fd4_33519996')) {function content_584a9db3840fd4_33519996($_smarty_tpl) {?><?php if (!empty($_smarty_tpl->tpl_vars['at']->value['shop']['categories'])){?><nav class="tree-wrapper hide-on-large-only"><div class="container"><div class="tree-title">Категории<button class="toggle-menu"><i class="material-icons mi-2x">&#xE5D2;</i></button></div><div class="sidebar-box"><ul class="base-menu"><?php  $_smarty_tpl->tpl_vars['branch'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['branch']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['at']->value['shop']['categories']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['branch']->key => $_smarty_tpl->tpl_vars['branch']->value){
 $_smarty_tpl->tpl_vars['branch']->_loop = true;
@@ -850,24 +850,24 @@ $_smarty_tpl->tpl_vars['branch']->_loop = true;
 foreach ($_from as $_smarty_tpl->tpl_vars['branch']->key => $_smarty_tpl->tpl_vars['branch']->value){
 $_smarty_tpl->tpl_vars['branch']->_loop = true;
 ?><?php smarty_template_function_renderMenuItem($_smarty_tpl,array('menu'=>$_smarty_tpl->tpl_vars['branch']->value,'icon'=>$_smarty_tpl->tpl_vars['icon']->value,'selected'=>$_smarty_tpl->tpl_vars['selected']->value,'exclude'=>'not_top'));?>
-<?php } ?></ul></div></div></nav><?php }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:48
+<?php } ?></ul></div></div></nav><?php }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:03
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/site/themes/profitbuy/links.pages.bottom.html" */ ?>
-<?php if ($_valid && !is_callable('content_5846ace4982368_95059593')) {function content_5846ace4982368_95059593($_smarty_tpl) {?><?php $_smarty_tpl->tpl_vars['source'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['theme_settings']->value['pages_bottom'])===null||$tmp==='' ? '' : $tmp), null, 0);?><?php if ($_smarty_tpl->tpl_vars['source']->value=='site'){?><?php $_smarty_tpl->tpl_vars['menu'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['site']['pages'])===null||$tmp==='' ? array() : $tmp), null, 0);?><?php $_smarty_tpl->tpl_vars['selected'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['site']['selected_page'])===null||$tmp==='' ? null : $tmp), null, 0);?><?php }elseif($_smarty_tpl->tpl_vars['source']->value=='shop'){?><?php $_smarty_tpl->tpl_vars['menu'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['shop']['pages'])===null||$tmp==='' ? array() : $tmp), null, 0);?><?php $_smarty_tpl->tpl_vars['selected'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['shop']['selected_page'])===null||$tmp==='' ? null : $tmp), null, 0);?><?php }elseif($_smarty_tpl->tpl_vars['source']->value=='blog'){?><?php $_smarty_tpl->tpl_vars['menu'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['blog']['pages'])===null||$tmp==='' ? array() : $tmp), null, 0);?><?php $_smarty_tpl->tpl_vars['selected'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['blog']['selected_page'])===null||$tmp==='' ? null : $tmp), null, 0);?><?php }elseif($_smarty_tpl->tpl_vars['source']->value=='photos'){?><?php $_smarty_tpl->tpl_vars['menu'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['photos']['pages'])===null||$tmp==='' ? array() : $tmp), null, 0);?><?php $_smarty_tpl->tpl_vars['selected'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['photos']['selected_page'])===null||$tmp==='' ? null : $tmp), null, 0);?><?php }elseif($_smarty_tpl->tpl_vars['source']->value=='apps'){?><?php $_smarty_tpl->tpl_vars['menu'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['apps'])===null||$tmp==='' ? array() : $tmp), null, 0);?><?php $_smarty_tpl->tpl_vars['selected'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['selected_app'])===null||$tmp==='' ? null : $tmp), null, 0);?><?php }?><?php if (!empty($_smarty_tpl->tpl_vars['menu']->value)){?><ul class="base-menu type1 dt pages-bottom"><li class="parent"><a href="#" onclick="return false;" rel="nofollow">Информация</a><ul><?php  $_smarty_tpl->tpl_vars['branch'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['branch']->_loop = false;
+<?php if ($_valid && !is_callable('content_584a9db396e9b1_36018839')) {function content_584a9db396e9b1_36018839($_smarty_tpl) {?><?php $_smarty_tpl->tpl_vars['source'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['theme_settings']->value['pages_bottom'])===null||$tmp==='' ? '' : $tmp), null, 0);?><?php if ($_smarty_tpl->tpl_vars['source']->value=='site'){?><?php $_smarty_tpl->tpl_vars['menu'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['site']['pages'])===null||$tmp==='' ? array() : $tmp), null, 0);?><?php $_smarty_tpl->tpl_vars['selected'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['site']['selected_page'])===null||$tmp==='' ? null : $tmp), null, 0);?><?php }elseif($_smarty_tpl->tpl_vars['source']->value=='shop'){?><?php $_smarty_tpl->tpl_vars['menu'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['shop']['pages'])===null||$tmp==='' ? array() : $tmp), null, 0);?><?php $_smarty_tpl->tpl_vars['selected'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['shop']['selected_page'])===null||$tmp==='' ? null : $tmp), null, 0);?><?php }elseif($_smarty_tpl->tpl_vars['source']->value=='blog'){?><?php $_smarty_tpl->tpl_vars['menu'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['blog']['pages'])===null||$tmp==='' ? array() : $tmp), null, 0);?><?php $_smarty_tpl->tpl_vars['selected'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['blog']['selected_page'])===null||$tmp==='' ? null : $tmp), null, 0);?><?php }elseif($_smarty_tpl->tpl_vars['source']->value=='photos'){?><?php $_smarty_tpl->tpl_vars['menu'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['photos']['pages'])===null||$tmp==='' ? array() : $tmp), null, 0);?><?php $_smarty_tpl->tpl_vars['selected'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['photos']['selected_page'])===null||$tmp==='' ? null : $tmp), null, 0);?><?php }elseif($_smarty_tpl->tpl_vars['source']->value=='apps'){?><?php $_smarty_tpl->tpl_vars['menu'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['apps'])===null||$tmp==='' ? array() : $tmp), null, 0);?><?php $_smarty_tpl->tpl_vars['selected'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['selected_app'])===null||$tmp==='' ? null : $tmp), null, 0);?><?php }?><?php if (!empty($_smarty_tpl->tpl_vars['menu']->value)){?><ul class="base-menu type1 dt pages-bottom"><li class="parent"><a href="#" onclick="return false;" rel="nofollow">Информация</a><ul><?php  $_smarty_tpl->tpl_vars['branch'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['branch']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['menu']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['branch']->key => $_smarty_tpl->tpl_vars['branch']->value){
 $_smarty_tpl->tpl_vars['branch']->_loop = true;
 ?><?php smarty_template_function_renderMenuItem($_smarty_tpl,array('menu'=>$_smarty_tpl->tpl_vars['branch']->value,'selected'=>$_smarty_tpl->tpl_vars['selected']->value,'exclude'=>'not_bottom'));?>
-<?php } ?></ul></li></ul><?php }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:48
+<?php } ?></ul></li></ul><?php }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:03
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/site/themes/profitbuy/links.apps.html" */ ?>
-<?php if ($_valid && !is_callable('content_5846ace4a1a422_08336501')) {function content_5846ace4a1a422_08336501($_smarty_tpl) {?><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['show_apps_links'])&&!empty($_smarty_tpl->tpl_vars['at']->value['apps'])){?><ul class="base-menu type1 apps"><?php  $_smarty_tpl->tpl_vars['app'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['app']->_loop = false;
+<?php if ($_valid && !is_callable('content_584a9db39faff4_68682553')) {function content_584a9db39faff4_68682553($_smarty_tpl) {?><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['show_apps_links'])&&!empty($_smarty_tpl->tpl_vars['at']->value['apps'])){?><ul class="base-menu type1 apps"><?php  $_smarty_tpl->tpl_vars['app'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['app']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['at']->value['apps']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['app']->key => $_smarty_tpl->tpl_vars['app']->value){
 $_smarty_tpl->tpl_vars['app']->_loop = true;
 ?><li<?php if ($_smarty_tpl->tpl_vars['app']->value['url']==$_smarty_tpl->tpl_vars['wa_app_url']->value){?> class="selected"<?php }?>><a href="<?php echo $_smarty_tpl->tpl_vars['app']->value['url'];?>
 "><?php echo $_smarty_tpl->tpl_vars['app']->value['name'];?>
-</a></li><?php } ?></ul><?php }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:48
+</a></li><?php } ?></ul><?php }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:03
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/site/themes/profitbuy/payment.logo.html" */ ?>
-<?php if ($_valid && !is_callable('content_5846ace4a538a4_20833583')) {function content_5846ace4a538a4_20833583($_smarty_tpl) {?><?php if ($_smarty_tpl->tpl_vars['wa']->value->shop){?><?php $_smarty_tpl->tpl_vars['count'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['theme_settings']->value['show_payments_count'])===null||$tmp==='' ? 5 : $tmp), null, 0);?><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['show_payment'])){?><div class="payments-wrapper"><?php $_smarty_tpl->tpl_vars['availabe_options'] = new Smarty_variable($_smarty_tpl->tpl_vars['wa']->value->shop->payment(), null, 0);?><?php if (1&&count($_smarty_tpl->tpl_vars['availabe_options']->value)){?><?php $_smarty_tpl->tpl_vars['_cnt'] = new Smarty_variable(0, null, 0);?><?php  $_smarty_tpl->tpl_vars['option'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['option']->_loop = false;
+<?php if ($_valid && !is_callable('content_584a9db3a26212_68941990')) {function content_584a9db3a26212_68941990($_smarty_tpl) {?><?php if ($_smarty_tpl->tpl_vars['wa']->value->shop){?><?php $_smarty_tpl->tpl_vars['count'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['theme_settings']->value['show_payments_count'])===null||$tmp==='' ? 5 : $tmp), null, 0);?><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['show_payment'])){?><div class="payments-wrapper"><?php $_smarty_tpl->tpl_vars['availabe_options'] = new Smarty_variable($_smarty_tpl->tpl_vars['wa']->value->shop->payment(), null, 0);?><?php if (1&&count($_smarty_tpl->tpl_vars['availabe_options']->value)){?><?php $_smarty_tpl->tpl_vars['_cnt'] = new Smarty_variable(0, null, 0);?><?php  $_smarty_tpl->tpl_vars['option'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['option']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['availabe_options']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['option']->key => $_smarty_tpl->tpl_vars['option']->value){
 $_smarty_tpl->tpl_vars['option']->_loop = true;
@@ -877,9 +877,9 @@ $_smarty_tpl->tpl_vars['option']->_loop = true;
 foreach ($_from as $_smarty_tpl->tpl_vars['option']->key => $_smarty_tpl->tpl_vars['option']->value){
 $_smarty_tpl->tpl_vars['option']->_loop = true;
 ?><?php if ($_smarty_tpl->tpl_vars['_cnt']->value==$_smarty_tpl->tpl_vars['count']->value){?><?php break 1?><?php }?><?php if ($_smarty_tpl->tpl_vars['option']->value['logo']){?><i class="payments-logo" style="background-image: url('<?php echo $_smarty_tpl->tpl_vars['option']->value['logo'];?>
-'); width: 60px;"></i><?php $_smarty_tpl->tpl_vars['_cnt'] = new Smarty_variable($_smarty_tpl->tpl_vars['_cnt']->value+1, null, 0);?><?php }?><?php } ?></div><?php }?><?php }?><?php }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:48
+'); width: 60px;"></i><?php $_smarty_tpl->tpl_vars['_cnt'] = new Smarty_variable($_smarty_tpl->tpl_vars['_cnt']->value+1, null, 0);?><?php }?><?php } ?></div><?php }?><?php }?><?php }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:03
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/site/themes/profitbuy/links.social.html" */ ?>
-<?php if ($_valid && !is_callable('content_5846ace4ac5f34_52683454')) {function content_5846ace4ac5f34_52683454($_smarty_tpl) {?><div class="social-wrapper"><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['vk'])){?><a href="<?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['vk'];?>
+<?php if ($_valid && !is_callable('content_584a9db3ab5312_53756006')) {function content_584a9db3ab5312_53756006($_smarty_tpl) {?><div class="social-wrapper"><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['vk'])){?><a href="<?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['vk'];?>
 " title="ВКонтакте" rel="nofollow"><i class="<?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['size_social_icon'];?>
  vk"></i></a><?php }?><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['gplus'])){?><a href="<?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['gplus'];?>
 " title="Google+" rel="nofollow"><i class="<?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['size_social_icon'];?>
@@ -895,29 +895,29 @@ $_smarty_tpl->tpl_vars['option']->_loop = true;
 " title="Youtube" rel="nofollow"><i class="<?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['size_social_icon'];?>
  youtube"></i></a><?php }?><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['instagram'])){?><a href="<?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['instagram'];?>
 " title="Инстаграм" rel="nofollow"><i class="<?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['size_social_icon'];?>
- instagram"></i></a><?php }?></div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:48
+ instagram"></i></a><?php }?></div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:03
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/site/themes/profitbuy/copyright.html" */ ?>
-<?php if ($_valid && !is_callable('content_5846ace4b32738_58937592')) {function content_5846ace4b32738_58937592($_smarty_tpl) {?><div class="copyright-wrapper"><div class="copyright" role="complementary">&copy; <a href="<?php echo $_smarty_tpl->tpl_vars['wa_url']->value;?>
+<?php if ($_valid && !is_callable('content_584a9db3b2b729_05340892')) {function content_584a9db3b2b729_05340892($_smarty_tpl) {?><div class="copyright-wrapper"><div class="copyright" role="complementary">&copy; <a href="<?php echo $_smarty_tpl->tpl_vars['wa_url']->value;?>
 "><?php echo $_smarty_tpl->tpl_vars['wa']->value->accountName();?>
 </a><br>Вся информация на сайте представлена для ознакомления и не является публичной офертой.</div><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['powered_by'])){?><div class="copyright"><?php if ($_smarty_tpl->tpl_vars['wa_app']->value=='shop'){?><a href="<?php if ($_smarty_tpl->tpl_vars['wa']->value->locale()=='ru_RU'){?>//www.shop-script.ru/<?php }else{ ?>//www.shop-script.com/<?php }?>" title="Мы используем Shop-Script 6"><img src="<?php echo $_smarty_tpl->tpl_vars['wa_theme_url']->value;?>
 img/all-dots-default-order.png" alt="Shop-Script 6"></a><span class="hint"> — Shop-Script 6</span><?php }else{ ?><a href="<?php if ($_smarty_tpl->tpl_vars['wa']->value->locale()=='ru_RU'){?>//www.webasyst.ru/<?php }else{ ?>//www.webasyst.com/<?php }?>" title="Мы используем Webasyst"><img src="<?php echo $_smarty_tpl->tpl_vars['wa_theme_url']->value;?>
-img/all-dots-default-order.png" alt="Webasyst"></a><span class="hint"> — Webasyst</span><?php }?></div><?php }?></div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:48
+img/all-dots-default-order.png" alt="Webasyst"></a><span class="hint"> — Webasyst</span><?php }?></div><?php }?></div><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:03
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/site/themes/profitbuy/e.address.html" */ ?>
-<?php if ($_valid && !is_callable('content_5846ace4b7c667_53190049')) {function content_5846ace4b7c667_53190049($_smarty_tpl) {?><?php $_smarty_tpl->tpl_vars['email'] = new Smarty_variable($_smarty_tpl->tpl_vars['theme_settings']->value['address_email'], null, 0);?><?php if ($_smarty_tpl->tpl_vars['wa']->value->shop&&empty($_smarty_tpl->tpl_vars['email']->value)){?><?php $_smarty_tpl->tpl_vars['email'] = new Smarty_variable($_smarty_tpl->tpl_vars['wa']->value->shop->settings("email"), null, 0);?><?php }?><?php if (!empty($_smarty_tpl->tpl_vars['email']->value)||!empty($_smarty_tpl->tpl_vars['theme_settings']->value['address_skype'])){?><ul class="e-address-wrapper"><?php if (!empty($_smarty_tpl->tpl_vars['email']->value)){?><li><a href="mailto:<?php echo $_smarty_tpl->tpl_vars['email']->value;?>
+<?php if ($_valid && !is_callable('content_584a9db3b60f34_79373268')) {function content_584a9db3b60f34_79373268($_smarty_tpl) {?><?php $_smarty_tpl->tpl_vars['email'] = new Smarty_variable($_smarty_tpl->tpl_vars['theme_settings']->value['address_email'], null, 0);?><?php if ($_smarty_tpl->tpl_vars['wa']->value->shop&&empty($_smarty_tpl->tpl_vars['email']->value)){?><?php $_smarty_tpl->tpl_vars['email'] = new Smarty_variable($_smarty_tpl->tpl_vars['wa']->value->shop->settings("email"), null, 0);?><?php }?><?php if (!empty($_smarty_tpl->tpl_vars['email']->value)||!empty($_smarty_tpl->tpl_vars['theme_settings']->value['address_skype'])){?><ul class="e-address-wrapper"><?php if (!empty($_smarty_tpl->tpl_vars['email']->value)){?><li><a href="mailto:<?php echo $_smarty_tpl->tpl_vars['email']->value;?>
 "><i class="material-icons mi-lg">&#xE0BE;</i><?php echo $_smarty_tpl->tpl_vars['email']->value;?>
 </a></li><?php }?><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['address_skype'])){?><li><a href="skype:<?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['address_skype'];?>
 ?call"><i class="icon16 skype16"></i><?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['address_skype'];?>
-</a></li><?php }?></ul><?php }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:48
+</a></li><?php }?></ul><?php }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:03
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/site/themes/profitbuy/phones.bottom.html" */ ?>
-<?php if ($_valid && !is_callable('content_5846ace4bc4594_23777184')) {function content_5846ace4bc4594_23777184($_smarty_tpl) {?><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['phone_1'])||!empty($_smarty_tpl->tpl_vars['theme_settings']->value['phone_2'])){?><ul class="phones-wrapper"><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['phone_1'])){?><li><a href="tel:<?php echo str_replace(array('(',')','-',' '),'',$_smarty_tpl->tpl_vars['theme_settings']->value['phone_1']);?>
+<?php if ($_valid && !is_callable('content_584a9db3ba1437_97725965')) {function content_584a9db3ba1437_97725965($_smarty_tpl) {?><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['phone_1'])||!empty($_smarty_tpl->tpl_vars['theme_settings']->value['phone_2'])){?><ul class="phones-wrapper"><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['phone_1'])){?><li><a href="tel:<?php echo str_replace(array('(',')','-',' '),'',$_smarty_tpl->tpl_vars['theme_settings']->value['phone_1']);?>
 "><?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['phone_1'];?>
 </a><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['phone_hint_1'])){?><span class="hint"><?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['phone_hint_1'];?>
 </span><?php }?></li><?php }?><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['phone_2'])){?><li><a href="tel:<?php echo str_replace(array('(',')','-',' '),'',$_smarty_tpl->tpl_vars['theme_settings']->value['phone_2']);?>
 "><?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['phone_2'];?>
 </a><?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['phone_hint_2'])){?><span class="hint"><?php echo $_smarty_tpl->tpl_vars['theme_settings']->value['phone_hint_2'];?>
-</span><?php }?></li><?php }?></ul><?php }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:48
+</span><?php }?></li><?php }?></ul><?php }?><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:03
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/site/themes/profitbuy/desktop.pane.html" */ ?>
-<?php if ($_valid && !is_callable('content_5846ace4cabd45_92819832')) {function content_5846ace4cabd45_92819832($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include '/home/almamed/web/almamed.su/public_html/wa-system/vendors/smarty3/plugins/modifier.replace.php';
+<?php if ($_valid && !is_callable('content_584a9db3c96778_33381486')) {function content_584a9db3c96778_33381486($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include '/home/almamed/web/almamed.su/public_html/wa-system/vendors/smarty3/plugins/modifier.replace.php';
 ?><?php $_smarty_tpl->tpl_vars['bookmark_p'] = new Smarty_variable(waRequest::cookie('shop_bookmark',array(),waRequest::TYPE_ARRAY_INT), null, 0);?><?php $_smarty_tpl->tpl_vars['compare_p'] = new Smarty_variable(waRequest::cookie('shop_compare',array(),waRequest::TYPE_ARRAY_INT), null, 0);?><?php $_smarty_tpl->tpl_vars['viewed_p'] = new Smarty_variable(waRequest::cookie('shop_viewed',array(),waRequest::TYPE_ARRAY_INT), null, 0);?><aside id="footer-pane" class="hide-on-med-and-down"><div class="container"><div class="row-grid"><div class="table-grid"><div class="col-grid"><a id="bookmark-link" href="<?php echo $_smarty_tpl->tpl_vars['wa']->value->getUrl('shop/frontend');?>
 search/?addition=bookmark" rel="nofollow" class="addition-link <?php if (!count($_smarty_tpl->tpl_vars['bookmark_p']->value)){?>gray<?php }else{ ?>added<?php }?>" data-hint="В закладках"><i class="material-icons mi-2x">&#xE838;</i><span class="text">Товары в закладках</span> (<span class="count"><?php echo count($_smarty_tpl->tpl_vars['bookmark_p']->value);?>
 </span>)</a></div><div class="col-grid"><a id="compare-link" data-href="<?php echo $_smarty_tpl->tpl_vars['wa']->value->getUrl('shop/frontend');?>
@@ -957,9 +957,9 @@ $_smarty_tpl->tpl_vars['item']->value['compare_price'] = $_smarty_tpl->tpl_vars[
 " class="flying-cart-qty"> шт.</div><div class="flying-cart-delete"><a href="#" class="flying-cart-del" title="Удалить из корзины" rel="nofollow"><i class="material-icons mi-2x">&#xE5CD;</i></a></div></li><?php } ?></ul></div><div class="flying-cart-block align-left clear-both">Общая сумма (с учетом скидки)<span class="bold cart-total"><?php echo wa_currency_html($_smarty_tpl->tpl_vars['cart_total']->value,$_smarty_tpl->tpl_vars['wa']->value->shop->currency());?>
 </span></div><div class="flying-cart-block align-center"><?php if (0&&$_smarty_tpl->tpl_vars['wa_app']->value=='shop'&&class_exists('shopQuickorderPlugin')){?><?php echo smarty_modifier_replace(smarty_modifier_replace(shopQuickorderPlugin::submitCart(),'quickorder-button-cart','button'),'quickorder-button','button');?>
 <?php }?><a class="button second-type" href="<?php echo $_smarty_tpl->tpl_vars['wa']->value->getUrl('shop/frontend/cart');?>
-">Перейти в корзину</a></div><div class="flying-cart-block-empty align-center"><span class="bold">Ваша корзина пуста.</span></div></div><?php }?></div></div><?php }?></div></div></div></aside><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:48
+">Перейти в корзину</a></div><div class="flying-cart-block-empty align-center"><span class="bold">Ваша корзина пуста.</span></div></div><?php }?></div></div><?php }?></div></div></div></aside><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:03
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/site/themes/profitbuy/mobile.pane.html" */ ?>
-<?php if ($_valid && !is_callable('content_5846ace4ea7714_99204681')) {function content_5846ace4ea7714_99204681($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include '/home/almamed/web/almamed.su/public_html/wa-system/vendors/smarty3/plugins/modifier.replace.php';
+<?php if ($_valid && !is_callable('content_584a9db3e183b2_66225596')) {function content_584a9db3e183b2_66225596($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include '/home/almamed/web/almamed.su/public_html/wa-system/vendors/smarty3/plugins/modifier.replace.php';
 ?><div class="mobile-nav-wrapper nav-all"><div class="mobile-nav-block-wrapper"><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['wa_active_theme_path']->value)."/searchform.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('mobile_search'=>true), 0);?>
 <nav class="mobile-nav-box-wrapper"><!-- APPS --><?php if (!empty($_smarty_tpl->tpl_vars['at']->value['apps'])){?><?php $_smarty_tpl->tpl_vars['selected'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['selected_app'])===null||$tmp==='' ? null : $tmp), null, 0);?><div class="mobile-nav-group"><div class="mobile-nav-header">Приложения</div><ul class="mobile-nav-list"><?php  $_smarty_tpl->tpl_vars['app'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['app']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['at']->value['apps']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -1002,14 +1002,14 @@ $_smarty_tpl->tpl_vars['page']->_loop = true;
 ">Вход</a></li><li><a href="<?php echo $_smarty_tpl->tpl_vars['wa']->value->signupUrl();?>
 ">Регистрация</a></li><?php }?></ul></div><?php }?></nav></div></div><div class="mobile-nav-wrapper nav-contacts"><div class="mobile-nav-block-wrapper"><div class="mobile-nav-group"><div class="mobile-nav-header">Контакты</div></div><div class="mobile-nav-group hide-on-large-only"><?php /*  Call merged included template "phones.top.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("phones.top.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '19631199795846ace3971011-95818508');
-content_5846ace4795207_47100458($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("phones.top.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1468033588584a9db2cdc0d0-40066078');
+content_584a9db36c3067_92322193($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "phones.top.html" */?></div><div class="mobile-nav-group"><div class="mobile-nav-header hide-on-large-only"></div><?php /*  Call merged included template "e.address.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("e.address.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '19631199795846ace3971011-95818508');
-content_5846ace4b7c667_53190049($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("e.address.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1468033588584a9db2cdc0d0-40066078');
+content_584a9db3b60f34_79373268($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "e.address.html" */?></div><div class="mobile-nav-group"><div class="mobile-nav-header"></div><?php /*  Call merged included template "offline.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("offline.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '19631199795846ace3971011-95818508');
-content_5846ace47df512_48647663($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("offline.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1468033588584a9db2cdc0d0-40066078');
+content_584a9db37123c3_41495277($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "offline.html" */?></div></div></div><?php }} ?>

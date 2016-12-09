@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:49
+<?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:04
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/shop/themes/profitbuy/my.nav.html" */ ?>
-<?php /*%%SmartyHeaderCode:5101046095846ace5b0fe49-61693906%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:877108759584a9db482f437-79538933%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '5101046095846ace5b0fe49-61693906',
+  'nocache_hash' => '877108759584a9db482f437-79538933',
   'function' => 
   array (
   ),
@@ -26,9 +26,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5846ace5b6e114_06990072',
+  'unifunc' => 'content_584a9db487bae2_43866046',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5846ace5b6e114_06990072')) {function content_5846ace5b6e114_06990072($_smarty_tpl) {?><li class="shop <?php if ($_smarty_tpl->tpl_vars['my_nav_selected']->value=='orders'){?>selected<?php }?>"><a href="<?php echo $_smarty_tpl->tpl_vars['wa']->value->getUrl('/frontend/myOrders');?>
+<?php if ($_valid && !is_callable('content_584a9db487bae2_43866046')) {function content_584a9db487bae2_43866046($_smarty_tpl) {?><li class="shop <?php if ($_smarty_tpl->tpl_vars['my_nav_selected']->value=='orders'){?>selected<?php }?>"><a href="<?php echo $_smarty_tpl->tpl_vars['wa']->value->getUrl('/frontend/myOrders');?>
 ">Мои заказы</a></li><?php if (shopAffiliate::isEnabled()){?><li class="shop <?php if ($_smarty_tpl->tpl_vars['my_nav_selected']->value=='affiliate'){?>selected<?php }?>"><a href="<?php echo $_smarty_tpl->tpl_vars['wa']->value->getUrl('/frontend/myAffiliate');?>
 ">Партнерская программа</a></li><?php }?><?php if ($_smarty_tpl->tpl_vars['my_app']->value==$_smarty_tpl->tpl_vars['wa']->value->app()){?><li class="shop <?php if ($_smarty_tpl->tpl_vars['my_nav_selected']->value=='profile'){?>selected<?php }?>"><a href="<?php echo $_smarty_tpl->tpl_vars['wa']->value->getUrl('/frontend/myProfile');?>
 ">Мой профиль</a></li><?php }?><!-- plugin hook: 'frontend_my_nav' --><?php  $_smarty_tpl->tpl_vars['_'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['_']->_loop = false;

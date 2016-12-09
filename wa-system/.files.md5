@@ -17,7 +17,7 @@ a1dcf4eaa6532df08ec82c563f4a3662 *auth/waAuth.class.php
 b8b869df4b74c3f13d3bcba8b3c95825 *auth/waAuthAdapter.class.php
 9d9d9a4b04c23fe45191568355cb9747 *auth/waOAuth2Adapter.class.php
 952a2dd489775ed42e7bb89bf7e8942e *auth/waiAuth.interface.php
-c9d7beb609b561322bcdba6e43bd4bed *autoload/waAutoload.class.php
+30ad4477f5d1825b5c1200e32b9a7431 *autoload/waAutoload.class.php
 f2ada2c6b3d1d486c253d5ceee00a10e *cache/adapters/waFileCacheAdapter.class.php
 b911034999dec2d01782dca1b2649172 *cache/adapters/waMemcachedCacheAdapter.class.php
 aa644d4507434b39812411d978c17427 *cache/adapters/waXcacheCacheAdapter.class.php
@@ -84,7 +84,7 @@ e7d238b10f14052227785235368e2f78 *contact/waContactStorage.class.php
 cc98cbdf08fe830f980a364ec26c938a *contact/waContactTextField.class.php
 fac776b367320a9efb345223e27f9bf8 *contact/waContactTimezoneField.class.php
 2527f8f3ac252fd7aa2a7d4e38fa410c *contact/waContactUrlField.class.php
-019b78dd2a5660a4f7611689d115cff0 *contact/waContactsCollection.class.php
+80c96cbc7f4be0c5286ea80a67ef4f4d *contact/waContactsCollection.class.php
 a47636abcddacdb04ee1af097837356d *controller/waAction.class.php
 3d384ac876a519116f3824f0a87c77d7 *controller/waActions.class.php
 981cc8359ad8ff94e725866a39c7180c *controller/waCliController.class.php
@@ -290,7 +290,7 @@ d4ac9c7d7369b3eb68c6f4e01ee61ac6 *payment/waOrder.class.php
 50a7b18011d31a61a27723e29a088c88 *payment/waPayment.class.php
 4c2089a6fb5b72670de1739ace5c72e5 *payment/waPaymentException.class.php
 357a8fd4c4b6e4fb8e72edfac0710545 *plugin/actions/waPlugins.actions.php
-3cc9225468dfa4cb5be4b5e4854f7573 *plugin/templates/Plugins.html
+23793aa5400aa46bb8414546875d1035 *plugin/templates/Plugins.html
 c5114f4a25dee917864bbab0f717744b *plugin/templates/Settings.html
 0a992dd1e136714970b1aed4d2f6dbb1 *plugin/waPlugin.class.php
 caf6fc108d54c99778de8975dde1080d *plugin/waPlugins.class.php
@@ -689,8 +689,8 @@ ba45e54a365d81fe26639d1b7abc609b *webasyst/lib/cli/webasystCreateModel.cli.php
 d6417b61e2dc3ca091ac0718ef86a87f *webasyst/lib/cli/webasystCreateWidget.cli.php
 71adba3633d6354f3089593e00e8757c *webasyst/lib/cli/webasystGenerateDb.cli.php
 de76c81f6d82345b850f2f88ed45a404 *webasyst/lib/cli/webasystHelp.cli.php
-cf26e445a47bd507611f0ea44d55e2a5 *webasyst/lib/config/app.php
-e25a39c79dcb651ce8fa98b972b588cb *webasyst/lib/config/build.php
+dadabbbba14a87a2fb18025044913275 *webasyst/lib/config/app.php
+5f41ab72719c07c00a67376207836a4b *webasyst/lib/config/build.php
 a94500015402a6ec40899ffe4819015e *webasyst/lib/config/db.php
 5e002d802e7f081f1cc0d6039e87cc66 *webasyst/lib/config/init_widgets.php
 d2f41e6c5bd5ac9d009247198af3a938 *webasyst/lib/config/install.php

@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:49
+<?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:04
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/shop/themes/profitbuy/searchform.html" */ ?>
-<?php /*%%SmartyHeaderCode:3194372615846ace539cd89-00951851%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1330536568584a9db424aa21-11789461%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3194372615846ace539cd89-00951851',
+  'nocache_hash' => '1330536568584a9db424aa21-11789461',
   'function' => 
   array (
   ),
@@ -24,8 +24,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5846ace53ca0b6_42272261',
+  'unifunc' => 'content_584a9db4265329_44786114',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5846ace53ca0b6_42272261')) {function content_5846ace53ca0b6_42272261($_smarty_tpl) {?><!-- product search --><form method="get" action="<?php echo $_smarty_tpl->tpl_vars['wa']->value->getUrl('shop/frontend/search');?>
+<?php if ($_valid && !is_callable('content_584a9db4265329_44786114')) {function content_584a9db4265329_44786114($_smarty_tpl) {?><!-- product search --><form method="get" action="<?php echo $_smarty_tpl->tpl_vars['wa']->value->getUrl('shop/frontend/search');?>
 "><div class="search-wrapper"><button type="submit"><i class="material-icons mi-2x">&#xE8B6;</i></button><input<?php if (empty($_smarty_tpl->tpl_vars['mobile_search']->value)){?> id="search"<?php }?> type="search" name="query" <?php if (!empty($_smarty_tpl->tpl_vars['query']->value)){?>value="<?php echo $_smarty_tpl->tpl_vars['query']->value;?>
 "<?php }?> placeholder="Найти товары"<?php if (!empty($_smarty_tpl->tpl_vars['theme_settings']->value['autofit'])){?> class="autofit"<?php }?>></div></form><?php }} ?>

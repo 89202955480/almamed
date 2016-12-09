@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:49
+<?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:04
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/shop/themes/profitbuy/main.html" */ ?>
-<?php /*%%SmartyHeaderCode:11160179425846ace55138a7-59234004%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:865945732584a9db436ccd7-49020966%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '11160179425846ace55138a7-59234004',
+  'nocache_hash' => '865945732584a9db436ccd7-49020966',
   'function' => 
   array (
   ),
@@ -34,9 +34,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5846ace5628599_70428142',
+  'unifunc' => 'content_584a9db4440a51_70851071',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5846ace5628599_70428142')) {function content_5846ace5628599_70428142($_smarty_tpl) {?><!-- plugin hook: 'frontend_header' --><?php  $_smarty_tpl->tpl_vars['_'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['_']->_loop = false;
+<?php if ($_valid && !is_callable('content_584a9db4440a51_70851071')) {function content_584a9db4440a51_70851071($_smarty_tpl) {?><!-- plugin hook: 'frontend_header' --><?php  $_smarty_tpl->tpl_vars['_'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['_']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['frontend_header']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['_']->key => $_smarty_tpl->tpl_vars['_']->value){
 $_smarty_tpl->tpl_vars['_']->_loop = true;

@@ -1398,3 +1398,11 @@ msgstr ""
 #: /wa-apps/installer/templates/actions/featured/Featured.html:107
 msgid "See all"
 msgstr ""
+
+#: /wa-apps/installer/templates/actions/plugins/Plugins.html:25
+msgid "Search"
+msgstr ""
+
+#: /wa-apps/installer/templates/actions/themes/ThemesInfo.html:237
+msgid "View theme demo"
+msgstr ""

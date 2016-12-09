@@ -1,10 +1,10 @@
 a1751e1f10a3b96b05d0401c97e72008 *.htaccess
 610f6ce2a2f085776c3b824f712db17c *css/wa-installer.css
-8f2c6dbf4400f80dfe4a30ecefffecfd *install.php
+1293adbf1b364727543e182f8fe14385 *install.php
 60ec3bc8380a07943ab0e3d1e2b1c8bc *js/wa-installer.js
 a285da79a1cf95556e4eb1fd40059097 *lib/.htaccess
-17316424541fad1a9df01cfcdf9cb683 *lib/classes/wainstaller.class.php
-4023bb737a492b8fc9f8425941ed6477 *lib/classes/wainstallerapps.class.php
+d13b6bdf9e5f7630b20aeee3534f14c1 *lib/classes/wainstaller.class.php
+d74bdb43c49dd7d34dda2e53f572d482 *lib/classes/wainstallerapps.class.php
 8b65f4bef80980e1a3be90e670c78c58 *lib/classes/wainstallerfile.class.php
 21718f8598761a4ce704e95b11aef988 *lib/classes/wainstallerlocale.class.php
 cb1e429f56903346bf58a3bf252d9fb6 *lib/classes/wainstallerrequirements.class.php

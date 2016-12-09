@@ -343,6 +343,7 @@ HTML;
             $local_path = dirname(__FILE__).'/../wa-sources/';
             $apps = array();
             $plugins = array();
+            $widgets = array();
             if (!isset($_POST['complete']) || !$_POST['complete']) {
                 if (file_exists($local_path) && is_dir($local_path)) {
                     $cwd = getcwd();
@@ -361,13 +362,23 @@ HTML;
                                 'target' => $decoded,
                                 'slug'   => $decoded,
                             );
-                            if (preg_match('@wa-(apps|widgets)/([\\w\\d\\-]+)$@', $decoded, $matches)) {
-                                $apps[] = $matches[2];
+                            if (preg_match('@wa-apps/([\\w\\d\\-]+)$@', $decoded, $matches)) {
+                                $apps[] = $matches[1];
                             } elseif (preg_match('@wa-apps/([\\w\\d\\-]+)/plugins/([\\w\\d\\-]+)$@', $decoded, $matches)) {
                                 if (!isset($plugins[$matches[1]])) {
                                     $plugins[$matches[1]] = array();
                                 }
                                 $plugins[$matches[1]][] = $matches[2];
+                            } elseif (preg_match('@wa-apps/([\\w\\d\\-]+)/widgets/([\\w\\d\\-]+)$@', $decoded, $matches)) {
+                                if (!isset($widgets[$matches[1]])) {
+                                    $widgets[$matches[1]] = array();
+                                }
+                                $widgets[$matches[1]][] = $matches[2];
+                            } elseif (preg_match('@wa-widgets/([\\w\\d\\-]+)$@', $decoded, $matches)) {
+                                if (!isset($widgets['installer'])) {
+                                    $widgets['installer'] = array();
+                                }
+                                $widgets['installer'][] = $matches[1];
                             }
                         }
                     }
@@ -522,6 +533,14 @@ HTACCESS;
                                 $db_options['port'] = '';
                                 list($db_options['host'], $db_options['port']) = explode(':', $db_options['host'], 2);
                             }
+
+                            if ($result = mysqli_query($link, 'SELECT VERSION()')) {
+                                $mysql_version = mysqli_fetch_row($result);
+                                if ($mysql_version && version_compare(reset($mysql_version), '5.7', '>=')) {
+                                    $db_options['sql_mode'] = 'NO_ENGINE_SUBSTITUTION';
+                                }
+                            }
+
                             $installer_apps->updateDbConfig($db_options);
                             mysqli_close($link);
 
@@ -535,8 +554,8 @@ HTACCESS;
                         }
 
                     } else {
-                        $error_text = htmlentities(mysqli_error(null), ENT_QUOTES, 'utf-8');
-                        $error_no = mysqli_errno(null);
+                        $error_text = htmlentities(mysqli_connect_error(), ENT_QUOTES, 'utf-8');
+                        $error_no = mysqli_connect_errno();
                         throw new Exception($t->_('Failed to connect to "%s" MySQL database server. (%s)', $db_options['host'], "#{$error_no}: {$error_text}"));
                     }
                 } else {
@@ -569,6 +588,14 @@ HTACCESS;
                                 $db_options['port'] = '';
                                 list($db_options['host'], $db_options['port']) = explode(':', $db_options['host'], 2);
                             }
+
+                            if ($result = mysql_query('SELECT VERSION()', $link)) {
+                                $mysql_version = mysql_fetch_row($result);
+                                if ($mysql_version && version_compare(reset($mysql_version), '5.7', '>=')) {
+                                    $db_options['sql_mode'] = 'NO_ENGINE_SUBSTITUTION';
+                                }
+                            }
+
                             $installer_apps->updateDbConfig($db_options);
                             mysql_close($link);
 

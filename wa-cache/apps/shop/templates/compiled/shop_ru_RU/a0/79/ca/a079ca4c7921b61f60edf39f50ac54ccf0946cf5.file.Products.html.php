@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:20:04
+<?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:03:34
          compiled from "/home/almamed/web/almamed.su/public_html/wa-apps/shop/templates/actions/products/Products.html" */ ?>
-<?php /*%%SmartyHeaderCode:1568006295846acf4a86a98-61417902%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:83178596584a9d965c7ad7-10513114%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1568006295846acf4a86a98-61417902',
+  'nocache_hash' => '83178596584a9d965c7ad7-10513114',
   'function' => 
   array (
   ),
@@ -58,9 +58,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5846acf5085905_96183689',
+  'unifunc' => 'content_584a9d96a03934_48193907',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5846acf5085905_96183689')) {function content_5846acf5085905_96183689($_smarty_tpl) {?><?php if (!is_callable('smarty_function_wa_pagination')) include '/home/almamed/web/almamed.su/public_html/wa-system/vendors/smarty-plugins/function.wa_pagination.php';
+<?php if ($_valid && !is_callable('content_584a9d96a03934_48193907')) {function content_584a9d96a03934_48193907($_smarty_tpl) {?><?php if (!is_callable('smarty_function_wa_pagination')) include '/home/almamed/web/almamed.su/public_html/wa-system/vendors/smarty-plugins/function.wa_pagination.php';
 ?><?php if ($_smarty_tpl->tpl_vars['collection_hash']->value!==null){?><?php $_smarty_tpl->tpl_vars['id'] = new Smarty_variable(ifset($_smarty_tpl->tpl_vars['collection_hash']->value[1]), null, 0);?><?php }else{ ?><?php $_smarty_tpl->tpl_vars['id'] = new Smarty_variable(null, null, 0);?><?php }?><?php if ($_smarty_tpl->tpl_vars['info']->value&&(($_smarty_tpl->tpl_vars['info']->value['hash']=='set'&&$_smarty_tpl->tpl_vars['info']->value['type']==shopSetModel::TYPE_STATIC)||($_smarty_tpl->tpl_vars['info']->value['hash']=='category'&&$_smarty_tpl->tpl_vars['info']->value['type']==shopCategoryModel::TYPE_STATIC))){?><?php $_smarty_tpl->tpl_vars['manual'] = new Smarty_variable(true, null, 0);?><?php }else{ ?><?php $_smarty_tpl->tpl_vars['manual'] = new Smarty_variable(false, null, 0);?><?php }?><?php $_smarty_tpl->tpl_vars['default_sort'] = new Smarty_variable($_smarty_tpl->tpl_vars['sort']->value, null, 0);?><?php $_smarty_tpl->tpl_vars['default_order'] = new Smarty_variable($_smarty_tpl->tpl_vars['order']->value, null, 0);?><?php if (!empty($_smarty_tpl->tpl_vars['info']->value)&&array_key_exists('sort_products',$_smarty_tpl->tpl_vars['info']->value)){?><?php if (empty($_smarty_tpl->tpl_vars['info']->value['type'])){?><?php $_smarty_tpl->tpl_vars['default_sort'] = new Smarty_variable(explode(' ',ifempty($_smarty_tpl->tpl_vars['info']->value['sort_products'],'sort asc'),2), null, 0);?><?php }else{ ?><?php $_smarty_tpl->tpl_vars['default_sort'] = new Smarty_variable(explode(' ',ifempty($_smarty_tpl->tpl_vars['info']->value['sort_products'],'create_datetime desc'),2), null, 0);?><?php }?><?php $_smarty_tpl->tpl_vars['default_order'] = new Smarty_variable(strtolower($_smarty_tpl->tpl_vars['default_sort']->value[1]), null, 0);?><?php $_smarty_tpl->tpl_vars['default_sort'] = new Smarty_variable($_smarty_tpl->tpl_vars['default_sort']->value[0], null, 0);?><?php }?>
 
 <div class="sidebar right200px" id="s-product-list-toolbar">
@@ -416,8 +416,8 @@ $_smarty_tpl->tpl_vars['frontend_url']->_loop = true;
     <?php if ($_smarty_tpl->tpl_vars['info']->value['hash']=='set'){?>
         <?php /*  Call merged included template "../dialog/DialogProductListEmbed.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate('../dialog/DialogProductListEmbed.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '1568006295846acf4a86a98-61417902');
-content_5846acf4efcd28_34437667($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate('../dialog/DialogProductListEmbed.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '83178596584a9d965c7ad7-10513114');
+content_584a9d96980821_63160404($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "../dialog/DialogProductListEmbed.html" */?>
     <?php }?>
 
@@ -472,9 +472,9 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "../dialog/D
         <?php }?>
     });
 </script>
-<?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:20:04
+<?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:03:34
          compiled from "/home/almamed/web/almamed.su/public_html/wa-apps/shop/templates/actions/dialog/DialogProductListEmbed.html" */ ?>
-<?php if ($_valid && !is_callable('content_5846acf4efcd28_34437667')) {function content_5846acf4efcd28_34437667($_smarty_tpl) {?><div  id="s-product-list-embed-dialog" class="dialog">
+<?php if ($_valid && !is_callable('content_584a9d96980821_63160404')) {function content_584a9d96980821_63160404($_smarty_tpl) {?><div  id="s-product-list-embed-dialog" class="dialog">
     <div class="dialog-background"></div>
     <div class="dialog-window">
         <div class="dialog-content">

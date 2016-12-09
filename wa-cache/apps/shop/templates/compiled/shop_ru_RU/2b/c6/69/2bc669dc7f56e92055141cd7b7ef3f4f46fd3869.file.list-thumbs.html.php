@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:54
+<?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:10
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/shop/themes/profitbuy/list-thumbs.html" */ ?>
-<?php /*%%SmartyHeaderCode:16197210405846acea1bbba6-00238973%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1835979160584a9dba488526-22496181%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '16197210405846acea1bbba6-00238973',
+  'nocache_hash' => '1835979160584a9dba488526-22496181',
   'function' => 
   array (
   ),
@@ -53,9 +53,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5846acea5d4cf5_77730287',
+  'unifunc' => 'content_584a9dba7a5592_70018330',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5846acea5d4cf5_77730287')) {function content_5846acea5d4cf5_77730287($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include '/home/almamed/web/almamed.su/public_html/wa-system/vendors/smarty3/plugins/modifier.replace.php';
+<?php if ($_valid && !is_callable('content_584a9dba7a5592_70018330')) {function content_584a9dba7a5592_70018330($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include '/home/almamed/web/almamed.su/public_html/wa-system/vendors/smarty3/plugins/modifier.replace.php';
 if (!is_callable('smarty_modifier_regex_replace')) include '/home/almamed/web/almamed.su/public_html/wa-system/vendors/smarty3/plugins/modifier.regex_replace.php';
 if (!is_callable('smarty_function_wa_pagination')) include '/home/almamed/web/almamed.su/public_html/wa-system/vendors/smarty-plugins/function.wa_pagination.php';
 ?><!-- products thumbnail list view --><?php $_smarty_tpl->tpl_vars['add2cart_label'] = new Smarty_variable('В корзину', null, 0);?><?php $_smarty_tpl->tpl_vars['compare_p'] = new Smarty_variable(waRequest::cookie('shop_compare',array(),waRequest::TYPE_ARRAY_INT), null, 0);?><?php $_smarty_tpl->tpl_vars['bookmark_p'] = new Smarty_variable(waRequest::cookie('shop_bookmark',array(),waRequest::TYPE_ARRAY_INT), null, 0);?><?php if (!empty($_smarty_tpl->tpl_vars['plp']->value)){?><div class="row-grid plp"><div class="table-grid"><?php if (!empty($_smarty_tpl->tpl_vars['sorting']->value)){?><!-- sorting --><?php $_smarty_tpl->tpl_vars['sort_fields'] = new Smarty_variable(array('name'=>'Название','price'=>'Цена','total_sales'=>'Хиты продаж','rating'=>'Оценка покупателей','create_datetime'=>'Дата добавления','stock'=>'В наличии'), null, 0);?><?php if (!isset($_smarty_tpl->tpl_vars['active_sort']->value)){?><?php $_smarty_tpl->tpl_vars['active_sort'] = new Smarty_variable($_smarty_tpl->tpl_vars['wa']->value->get('sort','create_datetime'), null, 0);?><?php }?><div class="col-grid <?php if ($_smarty_tpl->tpl_vars['theme_settings']->value['pagination']=='paging'){?>s12<?php }else{ ?>s6<?php }?>"><span id="sort-name">Сортировать:</span><select id="sorting"><?php if (!empty($_smarty_tpl->tpl_vars['category']->value)&&!$_smarty_tpl->tpl_vars['category']->value['sort_products']){?><option value="<?php echo $_smarty_tpl->tpl_vars['wa']->value->currentUrl(0,1);?>

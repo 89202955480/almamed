@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:49
+<?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:04
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/site/themes/profitbuy/links.categories.sidebar.html" */ ?>
-<?php /*%%SmartyHeaderCode:20771175585846ace57c4075-71794293%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:480365576584a9db4562919-95267684%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '20771175585846ace57c4075-71794293',
+  'nocache_hash' => '480365576584a9db4562919-95267684',
   'function' => 
   array (
   ),
@@ -27,9 +27,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5846ace581d927_99942312',
+  'unifunc' => 'content_584a9db45d5879_48008843',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5846ace581d927_99942312')) {function content_5846ace581d927_99942312($_smarty_tpl) {?><?php $_smarty_tpl->tpl_vars['menu'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['shop']['categories'])===null||$tmp==='' ? array() : $tmp), null, 0);?><?php if (!empty($_smarty_tpl->tpl_vars['menu']->value)){?><?php $_smarty_tpl->tpl_vars['icon'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['shop']['plugins']['wmimageincat'])===null||$tmp==='' ? array() : $tmp), null, 0);?><?php $_smarty_tpl->tpl_vars['selected'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['shop']['selected_category'])===null||$tmp==='' ? null : $tmp), null, 0);?><?php $_smarty_tpl->tpl_vars['type'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['theme_settings']->value['category_tree_sidebar_type'])===null||$tmp==='' ? 'type1' : $tmp), null, 0);?><div class="sidebar-group fill-background hide-on-med-and-down"><div class="sidebar-title">Категории<button class="toggle-menu"><i class="material-icons mi-2x">&#xE5D2;</i></button></div><div class="sidebar-box"><ul class="base-menu <?php echo $_smarty_tpl->tpl_vars['type']->value;?>
+<?php if ($_valid && !is_callable('content_584a9db45d5879_48008843')) {function content_584a9db45d5879_48008843($_smarty_tpl) {?><?php $_smarty_tpl->tpl_vars['menu'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['shop']['categories'])===null||$tmp==='' ? array() : $tmp), null, 0);?><?php if (!empty($_smarty_tpl->tpl_vars['menu']->value)){?><?php $_smarty_tpl->tpl_vars['icon'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['shop']['plugins']['wmimageincat'])===null||$tmp==='' ? array() : $tmp), null, 0);?><?php $_smarty_tpl->tpl_vars['selected'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['at']->value['shop']['selected_category'])===null||$tmp==='' ? null : $tmp), null, 0);?><?php $_smarty_tpl->tpl_vars['type'] = new Smarty_variable((($tmp = @$_smarty_tpl->tpl_vars['theme_settings']->value['category_tree_sidebar_type'])===null||$tmp==='' ? 'type1' : $tmp), null, 0);?><div class="sidebar-group fill-background hide-on-med-and-down"><div class="sidebar-title">Категории<button class="toggle-menu"><i class="material-icons mi-2x">&#xE5D2;</i></button></div><div class="sidebar-box"><ul class="base-menu <?php echo $_smarty_tpl->tpl_vars['type']->value;?>
 "><?php  $_smarty_tpl->tpl_vars['branch'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['branch']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['menu']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['branch']->key => $_smarty_tpl->tpl_vars['branch']->value){

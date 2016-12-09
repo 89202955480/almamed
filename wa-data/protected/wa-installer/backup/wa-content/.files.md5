@@ -119,7 +119,8 @@ bb32737c297f0355adb0ac423c1e011a *css/jquery-wa/images/ui-icons_2e83ff_256x240.p
 dc92ab7b4db7c188a7dab7860089a7e4 *css/jquery-wa/images/ui-icons_454545_256x240.png
 e6a92b732b2dcd7d35552ba0d33e29ae *css/jquery-wa/images/ui-icons_888888_256x240.png
 5d8808d43cefca6f6781a5316d176632 *css/jquery-wa/images/ui-icons_cd0a0a_256x240.png
-494e14693d681a02205e414c44c9c667 *css/jquery-wa/wa.ui.editor.css
+36058049815a117e65019a2cc1179041 *css/jquery-wa/wa.ui.editor.css
+a03ff0f848dc9b97ff5d1b0732789141 *css/profile/profile-layout.css
 e30eb14b54096b3f38230399f24d9bbc *css/wa/design.css
 9b0d8a0550362e511cc32ee92f9e743d *css/wa/wa-1.0.css
 8554d6caae2f5ccce4924cafa7664b56 *css/wa/wa-1.0.ie7.css
@@ -768,11 +769,11 @@ aadc5c561d800cd74117f05b778a3b6f *js/jquery-wa/dashboard-tv.js
 45de5026a5c9e2254ee3b002b4812731 *js/jquery-wa/dashboard.js
 7555d60862108854ee72e552e5c8209a *js/jquery-wa/editor.js
 efe096a5dbcb8b4681f3bc23d852f4c7 *js/jquery-wa/jquery.autocomplete.js
-55a12fa2027a5eddd878e2f9e934843e *js/jquery-wa/wa.core.js
-1e07fd66980576e67f42e75c710ae2d2 *js/jquery-wa/wa.dialog.js
+f1904e24ce40e7e5f9c913de78fd24e0 *js/jquery-wa/wa.core.js
+7bc08bf8bdb2723e63e053945619d8fc *js/jquery-wa/wa.dialog.js
 cc6e5c7174cf572b8a20b71f1e017685 *js/jquery-wa/wa.editor.js
 38c0d4201eb28aec23708fa33d201243 *js/jquery-wa/wa.elrte.ace.js
-9e67b10d6de7606e188df886b3b7bf53 *js/jquery-wa/wa.header.js
+fe964135736dcb7aca4f2bcaf7b694de *js/jquery-wa/wa.header.js
 7519912e2f821bb9e78221342f807ccb *js/jquery-wa/wa.ui.colorpicker.js
 903e8b29d4508c987ad414d6dd90d7c8 *js/jquery-wa/wa.ui.editor.js
 bca382b56701aa4f09cc430e76e45b95 *js/jquery-wa/wa.ui.menu.js
@@ -782,6 +783,7 @@ ddb84c1587287b2df08966081ef063bf *js/jquery/jquery-1.7.1.min.js
 a9a0cc296e96bbeaa0f82498e2da0917 *js/jquery/jquery-1.8.1.min.js
 cfa9051cc0b05eb519f1e16b2a6645d7 *js/jquery/jquery-1.8.2.min.js
 eb05d8d73b5b13d8d84308a4751ece96 *js/jquery/jquery-migrate-1.2.1.min.js
+c5c2bec24ef1cc1a1020ecaa5f8f3fad *js/jstz/jstz.min.js
 d913f0db1da084fbd516c04020758e84 *js/prettify/prettify.css
 dfcf2a933d40406363096ba4d1829047 *js/prettify/prettify.js
 4ce565cff66f959abc3933ef98014bd2 *js/redactor/README.md

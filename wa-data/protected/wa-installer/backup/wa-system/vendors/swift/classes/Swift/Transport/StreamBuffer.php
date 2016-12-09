@@ -55,7 +55,6 @@ class Swift_Transport_StreamBuffer extends Swift_ByteStream_AbstractFilterableIn
     public function initialize(array $params)
     {
         $this->_params = $params;
-
         switch ($params['type']) {
             case self::TYPE_PROCESS:
                 $this->_establishProcessConnection();
@@ -280,7 +279,6 @@ class Swift_Transport_StreamBuffer extends Swift_ByteStream_AbstractFilterableIn
             stream_set_blocking($this->_stream, 0);
         }
         stream_set_timeout($this->_stream, $timeout);
-
         $this->_in =& $this->_stream;
         $this->_out =& $this->_stream;
     }

@@ -83,11 +83,8 @@ class Swift_Mailer
         $sent = 0;
 
         try {
-
             $sent = $this->_transport->send($message, $failedRecipients);
-
         } catch (Swift_RfcComplianceException $e) {
-
             foreach ($message->getTo() as $address => $name) {
                 $failedRecipients[] = $address;
             }

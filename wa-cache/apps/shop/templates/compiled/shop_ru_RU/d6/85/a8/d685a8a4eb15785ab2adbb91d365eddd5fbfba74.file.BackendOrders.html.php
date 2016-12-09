@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:57
+<?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:03:16
          compiled from "/home/almamed/web/almamed.su/public_html/wa-apps/shop/templates/actions/backend/BackendOrders.html" */ ?>
-<?php /*%%SmartyHeaderCode:18621949005846aced9b0af4-83551113%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1885566453584a9d84c849d0-86916230%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '18621949005846aced9b0af4-83551113',
+  'nocache_hash' => '1885566453584a9d84c849d0-86916230',
   'function' => 
   array (
   ),
@@ -38,9 +38,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5846aceda88c58_61087551',
+  'unifunc' => 'content_584a9d84da46d0_64651459',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5846aceda88c58_61087551')) {function content_5846aceda88c58_61087551($_smarty_tpl) {?><?php if (!is_callable('smarty_block_wa_js')) include '/home/almamed/web/almamed.su/public_html/wa-system/vendors/smarty-plugins/block.wa_js.php';
+<?php if ($_valid && !is_callable('content_584a9d84da46d0_64651459')) {function content_584a9d84da46d0_64651459($_smarty_tpl) {?><?php if (!is_callable('smarty_block_wa_js')) include '/home/almamed/web/almamed.su/public_html/wa-system/vendors/smarty-plugins/block.wa_js.php';
 if (!is_callable('smarty_modifier_replace')) include '/home/almamed/web/almamed.su/public_html/wa-system/vendors/smarty3/plugins/modifier.replace.php';
 ?><?php $_smarty_tpl->smarty->_tag_stack[] = array('wa_js', array('file'=>"js/order/order.min.js")); $_block_repeat=true; echo smarty_block_wa_js(array('file'=>"js/order/order.min.js"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
 

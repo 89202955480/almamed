@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:21
+<?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:03:01
          compiled from "/home/almamed/web/almamed.su/public_html/wa-apps/installer/templates/actions/update/Update.html" */ ?>
-<?php /*%%SmartyHeaderCode:16905237775846acc97b0898-47456983%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:556709065584a9d75a00ce6-44324677%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -23,7 +23,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '16905237775846acc97b0898-47456983',
+  'nocache_hash' => '556709065584a9d75a00ce6-44324677',
   'function' => 
   array (
   ),
@@ -46,9 +46,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5846acc9a90a41_90229322',
+  'unifunc' => 'content_584a9d75cf1060_24810688',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5846acc9a90a41_90229322')) {function content_5846acc9a90a41_90229322($_smarty_tpl) {?><div class="shadowed">
+<?php if ($_valid && !is_callable('content_584a9d75cf1060_24810688')) {function content_584a9d75cf1060_24810688($_smarty_tpl) {?><div class="shadowed">
     <?php if ($_smarty_tpl->tpl_vars['error']->value){?>
         <div class="ui-error"><i class="icon16 error"></i><?php echo $_smarty_tpl->tpl_vars['error']->value;?>
 </div>
@@ -135,8 +135,8 @@ $_smarty_tpl->tpl_vars['app']->_loop = true;
                     <?php if (isset($_smarty_tpl->tpl_vars['app']->value['applicable'])||!empty($_smarty_tpl->tpl_vars['app']->value['plugins'])||!empty($_smarty_tpl->tpl_vars['app']->value['themes'])||!empty($_smarty_tpl->tpl_vars['app']->value['widgets'])){?>
                         <?php /*  Call merged included template "../update/Update.row.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("../update/Update.row.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('item'=>$_smarty_tpl->tpl_vars['app']->value,'item_id'=>$_smarty_tpl->tpl_vars['app_id']->value,'item_type'=>'app'), 0, '16905237775846acc97b0898-47456983');
-content_5846acc98514a2_79964979($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("../update/Update.row.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('item'=>$_smarty_tpl->tpl_vars['app']->value,'item_id'=>$_smarty_tpl->tpl_vars['app_id']->value,'item_type'=>'app'), 0, '556709065584a9d75a00ce6-44324677');
+content_584a9d75abc537_25211369($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "../update/Update.row.html" */?>
                     <?php }?>
 
@@ -150,8 +150,8 @@ $_smarty_tpl->tpl_vars['plugin']->_loop = true;
 ?>
                             <?php /*  Call merged included template "../update/Update.row.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("../update/Update.row.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('item'=>$_smarty_tpl->tpl_vars['plugin']->value,'item_id'=>$_smarty_tpl->tpl_vars['item_id']->value,'item_type'=>'plugin'), 0, '16905237775846acc97b0898-47456983');
-content_5846acc98514a2_79964979($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("../update/Update.row.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('item'=>$_smarty_tpl->tpl_vars['plugin']->value,'item_id'=>$_smarty_tpl->tpl_vars['item_id']->value,'item_type'=>'plugin'), 0, '556709065584a9d75a00ce6-44324677');
+content_584a9d75abc537_25211369($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "../update/Update.row.html" */?>
                         <?php } ?>
                     <?php }?>
@@ -166,8 +166,8 @@ $_smarty_tpl->tpl_vars['theme']->_loop = true;
 ?>
                             <?php /*  Call merged included template "../update/Update.row.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("../update/Update.row.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('item'=>$_smarty_tpl->tpl_vars['theme']->value,'item_id'=>$_smarty_tpl->tpl_vars['item_id']->value,'item_type'=>'theme'), 0, '16905237775846acc97b0898-47456983');
-content_5846acc98514a2_79964979($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("../update/Update.row.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('item'=>$_smarty_tpl->tpl_vars['theme']->value,'item_id'=>$_smarty_tpl->tpl_vars['item_id']->value,'item_type'=>'theme'), 0, '556709065584a9d75a00ce6-44324677');
+content_584a9d75abc537_25211369($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "../update/Update.row.html" */?>
                         <?php } ?>
                     <?php }?>
@@ -182,8 +182,8 @@ $_smarty_tpl->tpl_vars['widget']->_loop = true;
 ?>
                             <?php /*  Call merged included template "../update/Update.row.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("../update/Update.row.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('item'=>$_smarty_tpl->tpl_vars['widget']->value,'item_id'=>$_smarty_tpl->tpl_vars['item_id']->value,'item_type'=>'widget','app'=>$_smarty_tpl->tpl_vars['app']->value), 0, '16905237775846acc97b0898-47456983');
-content_5846acc98514a2_79964979($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("../update/Update.row.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('item'=>$_smarty_tpl->tpl_vars['widget']->value,'item_id'=>$_smarty_tpl->tpl_vars['item_id']->value,'item_type'=>'widget','app'=>$_smarty_tpl->tpl_vars['app']->value), 0, '556709065584a9d75a00ce6-44324677');
+content_584a9d75abc537_25211369($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "../update/Update.row.html" */?>
                         <?php } ?>
                     <?php }?>
@@ -240,9 +240,9 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "../update/U
     });
     
 </script>
-<?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:21
+<?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:03:01
          compiled from "/home/almamed/web/almamed.su/public_html/wa-apps/installer/templates/actions/update/Update.row.html" */ ?>
-<?php if ($_valid && !is_callable('content_5846acc98514a2_79964979')) {function content_5846acc98514a2_79964979($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_wa_date')) include '/home/almamed/web/almamed.su/public_html/wa-system/vendors/smarty-plugins/modifier.wa_date.php';
+<?php if ($_valid && !is_callable('content_584a9d75abc537_25211369')) {function content_584a9d75abc537_25211369($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_wa_date')) include '/home/almamed/web/almamed.su/public_html/wa-system/vendors/smarty-plugins/modifier.wa_date.php';
 if (!is_callable('smarty_modifier_replace')) include '/home/almamed/web/almamed.su/public_html/wa-system/vendors/smarty3/plugins/modifier.replace.php';
 ?><tr>
 
@@ -413,15 +413,15 @@ installer/#/<?php echo $_smarty_tpl->tpl_vars['link']->value;?>
 
         <?php /*  Call merged included template "../../includes/requirements.html" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("../../includes/requirements.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '16905237775846acc97b0898-47456983');
-content_5846acc99fdbd9_35661071($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("../../includes/requirements.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '556709065584a9d75a00ce6-44324677');
+content_584a9d75c3a591_36449231($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "../../includes/requirements.html" */?>
     </td>
 
 </tr>
-<?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:21
+<?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:03:01
          compiled from "/home/almamed/web/almamed.su/public_html/wa-apps/installer/templates/includes/requirements.html" */ ?>
-<?php if ($_valid && !is_callable('content_5846acc99fdbd9_35661071')) {function content_5846acc99fdbd9_35661071($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_584a9d75c3a591_36449231')) {function content_584a9d75c3a591_36449231($_smarty_tpl) {?>
 <?php if (!empty($_smarty_tpl->tpl_vars['item']->value['requirements'])){?>
     <?php $_smarty_tpl->_capture_stack[0][] = array('warning', null, null); ob_start(); ?>
         <?php $_smarty_tpl->tpl_vars['warning_meets'] = new Smarty_variable(false, null, 0);?>

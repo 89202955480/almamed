@@ -275,7 +275,6 @@ abstract class Swift_Transport_AbstractSmtpTransport implements Swift_Transport
         $failures = (array) $failures;
         $seq = $this->_buffer->write($command);
         $response = $this->_getFullResponse($seq);
-
         if ($evt = $this->_eventDispatcher->createCommandEvent($this, $command, $codes)) {
             $this->_eventDispatcher->dispatchEvent($evt, 'commandSent');
         }
@@ -353,6 +352,7 @@ abstract class Swift_Transport_AbstractSmtpTransport implements Swift_Transport
             reset($from); // Reset Pointer to first pos
             $path = key($from); // Get key
         }
+
         return $path;
     }
 

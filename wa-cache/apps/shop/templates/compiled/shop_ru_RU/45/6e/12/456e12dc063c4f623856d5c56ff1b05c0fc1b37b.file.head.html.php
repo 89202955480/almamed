@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:49
+<?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:04
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/shop/themes/profitbuy/head.html" */ ?>
-<?php /*%%SmartyHeaderCode:3945670585846ace52d3735-70223377%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2036512612584a9db419e289-54217844%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3945670585846ace52d3735-70223377',
+  'nocache_hash' => '2036512612584a9db419e289-54217844',
   'function' => 
   array (
   ),
@@ -30,9 +30,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5846ace5370870_67626230',
+  'unifunc' => 'content_584a9db4229ab6_70790890',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5846ace5370870_67626230')) {function content_5846ace5370870_67626230($_smarty_tpl) {?><link href="<?php echo $_smarty_tpl->tpl_vars['wa_active_theme_url']->value;?>
+<?php if ($_valid && !is_callable('content_584a9db4229ab6_70790890')) {function content_584a9db4229ab6_70790890($_smarty_tpl) {?><link href="<?php echo $_smarty_tpl->tpl_vars['wa_active_theme_url']->value;?>
 profitbuy.shop.min.css?v<?php echo $_smarty_tpl->tpl_vars['wa_theme_version']->value;?>
 " rel="stylesheet" type="text/css" /><link href="<?php echo $_smarty_tpl->tpl_vars['wa_active_theme_url']->value;?>
 owl.carousel.css?v2.0.0" rel="stylesheet" type="text/css" /><script type="text/javascript">( function ($, undefined) {$.at = $.at || { };$.at.plugins["jquery.countdowntimer"] = {is_done: function () {return !!$.fn.countdowntimer;},href: "<?php echo $_smarty_tpl->tpl_vars['wa_active_theme_url']->value;?>

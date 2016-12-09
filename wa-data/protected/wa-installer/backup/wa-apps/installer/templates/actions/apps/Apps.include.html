@@ -2,7 +2,7 @@
     <div class="image">
         <a href="#/apps/{$app.slug}{if !empty($app.edition)}.{$app.edition}{/if}/">
             <div class="i-image-wrapper">
-                <img src="{$app.icons.96}" alt="{$app.name|truncate:15|escape}">
+                <img src="{$app.icons.96}" alt="{$app.name|truncate:15|escape}" height="96" width="96">
                 {if empty($hide_product_badge)}
                 {if !empty($app.publish_datetime) && strtotime($app.publish_datetime) > $smarty.now - 86400*14}
                     <!-- NEW -->

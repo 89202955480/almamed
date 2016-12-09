@@ -34,11 +34,11 @@ return array (
       16 => 'wa-apps/installer/img/installer.png',
     ),
     'mobile' => false,
-    'version' => '1.6.3',
-    'critical' => '1.6.3',
+    'version' => '1.6.4',
+    'critical' => '1.6.4',
     'system' => true,
     'vendor' => 'webasyst',
-    'build' => 97,
+    'build' => 99,
     'img' => 'wa-apps/installer/img/installer.png',
   ),
   'shop' => 
@@ -152,7 +152,7 @@ return array (
     'rights' => 1,
     'vendor' => 817747,
     'sash_color' => '#558FCE',
-    'build' => 1481026760,
+    'build' => 1481284975,
     'img' => 'wa-apps/logs/img/logs48.png',
   ),
   'blog' => 
@@ -191,10 +191,10 @@ return array (
     'id' => 'webasyst',
     'name' => 'Вебасист',
     'prefix' => 'webasyst',
-    'version' => '1.6.3',
-    'critical' => '1.6.3',
+    'version' => '1.6.4',
+    'critical' => '1.6.4',
     'vendor' => 'webasyst',
-    'build' => 97,
+    'build' => 99,
     'icon' => 
     array (
     ),

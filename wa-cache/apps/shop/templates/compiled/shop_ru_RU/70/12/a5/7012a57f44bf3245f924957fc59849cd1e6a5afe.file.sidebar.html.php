@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:49
+<?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:04
          compiled from "/home/almamed/web/almamed.su/public_html/wa-data/public/shop/themes/profitbuy/sidebar.html" */ ?>
-<?php /*%%SmartyHeaderCode:17523998525846ace562de81-51245216%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1451507899584a9db4446115-25533558%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '17523998525846ace562de81-51245216',
+  'nocache_hash' => '1451507899584a9db4446115-25533558',
   'function' => 
   array (
   ),
@@ -32,9 +32,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5846ace57bc792_87066323',
+  'unifunc' => 'content_584a9db455ce48_46041653',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5846ace57bc792_87066323')) {function content_5846ace57bc792_87066323($_smarty_tpl) {?><?php if (!empty($_smarty_tpl->tpl_vars['filters']->value)&&$_smarty_tpl->tpl_vars['theme_settings']->value['filter_pos']=='sidebar'){?><div class="sidebar-group fill-background"><div class="sidebar-title second-type">Фильтр<button class="toggle-menu"><i class="material-icons mi-2x">&#xE5D2;</i></button></div><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['wa_active_theme_path']->value)."/filter.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('filter_controls'=>true), 0);?>
+<?php if ($_valid && !is_callable('content_584a9db455ce48_46041653')) {function content_584a9db455ce48_46041653($_smarty_tpl) {?><?php if (!empty($_smarty_tpl->tpl_vars['filters']->value)&&$_smarty_tpl->tpl_vars['theme_settings']->value['filter_pos']=='sidebar'){?><div class="sidebar-group fill-background"><div class="sidebar-title second-type">Фильтр<button class="toggle-menu"><i class="material-icons mi-2x">&#xE5D2;</i></button></div><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['wa_active_theme_path']->value)."/filter.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('filter_controls'=>true), 0);?>
 </div><?php }?><?php if (!$_smarty_tpl->tpl_vars['wa']->value->isMobile()&&!empty($_smarty_tpl->tpl_vars['theme_settings']->value['category_tree_sidebar_show'])){?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['wa_parent_theme_path']->value)."/links.categories.sidebar.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 <?php }?><?php if (!$_smarty_tpl->tpl_vars['wa']->value->isMobile()&&!empty($_smarty_tpl->tpl_vars['theme_settings']->value['pages_sidebar'])){?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['wa_parent_theme_path']->value)."/links.pages.sidebar.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 <?php }?><!-- 'frontend_nav' plugins --><?php  $_smarty_tpl->tpl_vars['_'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['_']->_loop = false;

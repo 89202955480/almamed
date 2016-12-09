@@ -536,7 +536,7 @@ return array (
   array (
     'app_id' => 'shop',
     'name' => 'last_followup_cli',
-    'value' => '1481281201',
+    'value' => '1481284801',
   ),
   70 => 
   array (

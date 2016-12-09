@@ -153,7 +153,9 @@ class waInstaller
         try {
             $this->formatUpdateList($update_list, $update_path);
             $this->envSet();
-            $resume = false;
+
+            $state = $this->getState();
+            $resume = isset($state['stage']) ? $state['stage'] : false;
 
             self::$ob_skip = false;
 
@@ -1137,6 +1139,11 @@ class waInstaller
             }
             $this->cleanupPath($path, $skip_directory);
         }
+
+        if (function_exists('opcache_reset')) {
+            @opcache_reset();
+        }
+
         return true;
     }
 
@@ -1574,6 +1581,7 @@ class waInstaller
                 $memory_peak = function_exists('memory_get_peak_usage') ? sprintf('%0.2fMb', memory_get_peak_usage() / 1048576) : 'unknown';
                 if ($debug_data) {
                     $debug_data = "\n{".str_repeat('-', 60)."\n".var_export($debug_data, true)."\n}".str_repeat('-', 60);
+
                 }
                 $log = date('c');
                 $log .= sprintf('%05d', ++$log_counter);

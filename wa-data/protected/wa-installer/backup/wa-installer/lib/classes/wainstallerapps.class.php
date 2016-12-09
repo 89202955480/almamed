@@ -1681,6 +1681,10 @@ class waInstallerApps
         @flock($fp, LOCK_UN);
         @fclose($fp);
         self::$configs[$path] = $config;
+
+        if (function_exists('opcache_invalidate')) {
+            @opcache_invalidate($path, true);
+        }
         return $config;
     }
 

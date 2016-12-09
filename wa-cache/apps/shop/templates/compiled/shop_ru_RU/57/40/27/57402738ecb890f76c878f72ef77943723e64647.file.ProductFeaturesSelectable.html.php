@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:22
+<?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:03:39
          compiled from "/home/almamed/web/almamed.su/public_html/wa-apps/shop/templates/actions/product/ProductFeaturesSelectable.html" */ ?>
-<?php /*%%SmartyHeaderCode:5846340745846accaf21c59-33343590%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1883774354584a9d9b7a7233-49766426%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '5846340745846accaf21c59-33343590',
+  'nocache_hash' => '1883774354584a9d9b7a7233-49766426',
   'function' => 
   array (
   ),
@@ -31,9 +31,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5846accb0732e3_69474455',
+  'unifunc' => 'content_584a9d9b89fd30_01200337',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5846accb0732e3_69474455')) {function content_5846accb0732e3_69474455($_smarty_tpl) {?><?php if (!empty($_smarty_tpl->tpl_vars['features']->value)){?>
+<?php if ($_valid && !is_callable('content_584a9d9b89fd30_01200337')) {function content_584a9d9b89fd30_01200337($_smarty_tpl) {?><?php if (!empty($_smarty_tpl->tpl_vars['features']->value)){?>
     <div class="value s-product-feature-superposition" id="s-product-feature-superposition">
         <div class="sidebar left150px">
             <div class="block not-padded right-padded">

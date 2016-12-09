@@ -1449,3 +1449,11 @@ msgstr "Статус вашего аккаунта позволяет устан
 #: /wa-apps/installer/templates/actions/featured/Featured.html:107
 msgid "See all"
 msgstr "Смотреть все"
+
+#: /wa-apps/installer/templates/actions/plugins/Plugins.html:25
+msgid "Search"
+msgstr "Поиск"
+
+#: /wa-apps/installer/templates/actions/themes/ThemesInfo.html:237
+msgid "View theme demo"
+msgstr "Посмотреть демо-сайт"

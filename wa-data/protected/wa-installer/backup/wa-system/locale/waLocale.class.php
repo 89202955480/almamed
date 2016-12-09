@@ -38,10 +38,12 @@ class waLocale
             self::$init = true;
             // Alias to gettext
 
-            if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN' || !function_exists('gettext')) {
+            if ($adapter) {
+                self::$adapter = $adapter;
+            } else if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN' || !function_exists('gettext')) {
                 self::$adapter = new waLocalePHPAdapter();
             } else {
-                self::$adapter = $adapter ? $adapter :  new waLocaleAdapter();
+                 self::$adapter = new waLocaleAdapter();
             }
         }
     }
@@ -360,7 +362,7 @@ function _w($msgid1, $msgid2 = null, $n = null, $sprintf = true)
         return waLocale::$adapter->ngettext($msgid1, $msgid2, $n === 'm' ? 1 : 2);
     } else {
         $str = waLocale::$adapter->ngettext($msgid1, $msgid2, $n);
-        if ($sprintf && ($i = strpos($str, '%')) !== false) {
+        if ($sprintf && strpos($str, '%') !== false) {
             return sprintf($str, $n);
         }
         return $str;
@@ -371,7 +373,7 @@ function _w($msgid1, $msgid2 = null, $n = null, $sprintf = true)
 function sprintf_wp()
 {
     $args = func_get_args();
-    array_unshift($args, _wp(array_shift($args)));
+    array_unshift($args, _wp(array_shift($args), null, null, false));
     return call_user_func_array('sprintf', $args);
 }
 
@@ -408,7 +410,7 @@ function _wd($domain, $msgid1, $msgid2 = null, $n = null, $sprintf = true)
         return waLocale::$adapter->dgettext($domain, $msgid1);
     } else {
         $str = waLocale::$adapter->dngettext($domain, $msgid1, $msgid2, $n);
-        if ($sprintf && strpos($str, '%d') !== false) {
+        if ($sprintf && strpos($str, '%') !== false) {
             return sprintf($str, $n);
         }
         return $str;

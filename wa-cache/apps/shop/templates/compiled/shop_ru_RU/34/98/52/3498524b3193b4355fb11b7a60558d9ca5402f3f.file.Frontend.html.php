@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:47
+<?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:02
          compiled from "/home/almamed/web/almamed.su/public_html/wa-apps/shop/plugins/yoss/templates/Frontend.html" */ ?>
-<?php /*%%SmartyHeaderCode:7006272045846ace38e3bf0-55061169%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:365779404584a9db2c0ec11-00093528%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '7006272045846ace38e3bf0-55061169',
+  'nocache_hash' => '365779404584a9db2c0ec11-00093528',
   'function' => 
   array (
   ),
@@ -27,13 +27,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5846ace38f5b67_81874714',
+  'unifunc' => 'content_584a9db2c21f71_57793981',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5846ace38f5b67_81874714')) {function content_5846ace38f5b67_81874714($_smarty_tpl) {?><style type="text/css">
+<?php if ($_valid && !is_callable('content_584a9db2c21f71_57793981')) {function content_584a9db2c21f71_57793981($_smarty_tpl) {?><style type="text/css">
 	<?php /*  Call merged included template "../css/yoss.css" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("../css/yoss.css", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '7006272045846ace38e3bf0-55061169');
-content_5846ace38e8233_74818358($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("../css/yoss.css", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0, '365779404584a9db2c0ec11-00093528');
+content_584a9db2c14283_09191471($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "../css/yoss.css" */?> 
 	<?php echo $_smarty_tpl->tpl_vars['yoss_settings']->value['result_css'];?>
 
@@ -48,9 +48,9 @@ $_smarty_tpl = array_pop($_tpl_stack); /*  End of included template "../css/yoss
 	(function ($) {
 	    yossFrontend.initModule();
 	})(jQuery);
-</script><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-06 15:19:47
+</script><?php }} ?><?php /* Smarty version Smarty-3.1.14, created on 2016-12-09 15:04:02
          compiled from "/home/almamed/web/almamed.su/public_html/wa-apps/shop/plugins/yoss/css/yoss.css" */ ?>
-<?php if ($_valid && !is_callable('content_5846ace38e8233_74818358')) {function content_5846ace38e8233_74818358($_smarty_tpl) {?>.yoss-result.loading { background: url("<?php echo $_smarty_tpl->tpl_vars['wa_url']->value;?>
+<?php if ($_valid && !is_callable('content_584a9db2c14283_09191471')) {function content_584a9db2c14283_09191471($_smarty_tpl) {?>.yoss-result.loading { background: url("<?php echo $_smarty_tpl->tpl_vars['wa_url']->value;?>
 wa-apps/shop/plugins/yoss/img/loading-blue.gif") no-repeat scroll center 15px #fff; }
 .yoss-result .loading { background: url("<?php echo $_smarty_tpl->tpl_vars['wa_url']->value;?>
 wa-apps/shop/plugins/yoss/img/loading-blue.gif") no-repeat scroll center 15px #fff; height: 35px; width: 100%; }<?php }} ?>
