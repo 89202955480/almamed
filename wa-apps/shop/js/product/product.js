@@ -1393,8 +1393,11 @@ editClick:(function ($) {
             if (path.id == 'new') {
                 if ($.product_list && $.isArray($.product_list.collection_hash)) {
                     if ($.product_list.collection_hash[0] == 'category') {
-                        main_tab_content.find('select.s-product-categories').val(
+                        main_tab_content.find('input.product-categories-json').val(
                             $.product_list.collection_hash[1]
+                        );
+                        main_tab_content.find('.name_category_first').text(
+                            'Текущая категория: ' + $.product_list.collection_hash[2]
                         );
                     } else if ($.product_list.collection_hash[0] == 'set') {
                         main_tab_content.find('.add-set-button').click().closest('.field').find('select:first').val($.product_list.collection_hash[1]);
@@ -1991,7 +1994,7 @@ editClick:(function ($) {
         },
 
         editTabMainCategoriesAdd: function () {
-            var control = $('#s-product-edit-forms .s-product-form.main select.s-product-categories:last').parent('div');
+            var control = $('#s-product-edit-forms .s-product-form.main input.product-categories-json:first').parent('div');
             var clone = control.clone(false);
             clone.find('select').val('select').attr('disabled', false).show();
             clone.find('input.val').val(0).attr('disabled', true).parent().hide();
@@ -1999,6 +2002,7 @@ editClick:(function ($) {
             clone.find('.s-storefront-map').html('');
             clone.show();
             control.after(clone);
+            product_categories_json();
         },
 
         editTabMainSkuStock: function (sku_id, $el) {

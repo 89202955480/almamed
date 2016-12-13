@@ -458,25 +458,35 @@
                 <div class="field">
                     <input type="text" name="product[categories.deleted]" value="" style="display:none;">
                     <div class="name">[`Categories`]</div>
+                    <style>
+                        .field .value input[type="text"], .field .value input[type="password"], .field .value textarea{
+                            width: 600px;
+                        }
+                        .ac_button{
+                            bottom: -9px;
+                        }
+                        .ac_container{
+                            width: 700px!important;
+                        }
+
+
+                    </style>
 
                     {function categories_select category_id=0}
-                        <select name="product[categories][]" class="s-product-categories">
-                            {if !empty($categories)}
-                                <option value="select" {if !$category_id}selected="selected"{/if}>
-                                    [`Please select a category`]
-                                </option>
-                                <option value="create">[`Create new category...`]</option>
-                                <option class="separator" value="---" disabled="disabled">---</option>
-                                {foreach $categories as $category}
-                                    <option class="category" value="{$category.id}" {if $category_id == $category.id} selected="selected"{/if}>{"-"|str_repeat:$category.depth}{$category.name|escape}</option>
-                                {/foreach}
-                            {else}
-                                <option value=""></option>
-                                <option value="create">[`Create new category...`]</option>
-                                <option class="separator" value="---" disabled="disabled" style="display:none;">---</option>
-                            {/if}
-                        </select>
-                        <a href="#" class="s-product-delete-from-category" title="[`Remove product from this category`]" {if !$category_id}style="display:none;"{/if}><i class="icon10 delete-bw no-overhanging"></i></a>
+                    <span class="name_category_first">
+                    Текущая категория: {$category_name}
+                    </span>
+                    <br>
+                    ID:
+                    <input class="product-categories-json" value="{if $category_id != 0}{$category_id}{/if}" name="product[categories][]" type="text">
+
+
+                    <!--
+                    <a href="javascript:void(0)">
+                        <i class="icon10 delete-bw s-product-delete-json"></i>
+                    </a>
+                    -->
+
                     {/function}
 
                     {$_show_selects=(count($product.categories)*count($categories) < 200)}
@@ -514,7 +524,7 @@
                     </div>
                     <div class="value s-product-categories">
                         <ul class="menu-v s-category-action s-inline-links">
-                            <li><a href="#/product/{$product.id}/edit/main/categories/add/" class="small inline-link js-action"><i class="icon10 add"></i> <b><i>[`Additional category`]</i></b></a></li>
+                            <li><a href="javascript:void(0)" class="small add_category_json"><i class="icon10 add"></i> <b><i>[`Additional category`]</i></b></a></li>
                             {* @event backend_product.%plugin_id%.category_action_li *}
                             {if !empty($backend_product)}{foreach $backend_product as $_}{ifset($_.category_action_li)}{/foreach}{/if}
                         </ul>
@@ -1044,6 +1054,80 @@
 {/foreach}
 
 {$title_suffix = " — "|cat:{$wa->accountName(false)}|escape:'javascript'}
+
+<!--//////////////////////////////-->
+{literal}
+<script>
+    $(function(){
+
+        $('.add_category_json').click(function(){
+
+
+            var control = $('#s-product-edit-forms .s-product-form.main input.product-categories-json:first').parent('div');
+
+
+            for (var i = 1; i < 1000; i++) {
+
+                // console.log($('.product-categories-json'+i+'').val());
+
+                if($('.product-categories-json'+i+'').val() === undefined){
+
+                    var clone = '<input class="product-categories-json'+i+'" name="product[categories][]" type="text"></i>';
+                    control.after(clone);
+
+                    $('.product-categories-json'+i+'').ajaxComboBox (
+                            {/literal}
+                {$jsonCategoryData}
+                {literal},
+                {
+                    lang: 'en',
+                            sub_info: true,
+                        sub_as: {
+                    id: 'Employer ID',
+                            post: 'Post',
+                            position: 'Position'
+                },
+                    select_only: true,
+                            show_field: 'id',
+                        categories: 'id',
+                }
+            ) ;
+                break;
+
+            }
+
+
+        }
+
+    })
+
+
+
+
+
+
+
+    $('.product-categories-json').ajaxComboBox (
+            {/literal}
+    {$jsonCategoryData}
+    {literal},
+    {
+        lang: 'en',
+                sub_info: true,
+            sub_as: {
+        id: 'Employer ID',
+                post: 'Post',
+                position: 'Position'
+    },
+        select_only: true,
+                show_field: 'id',
+            categories: 'id',
+    }
+    ) ;
+    });
+</script>
+{/literal}
+<!--//////////////////////////////-->
 
 <script type="text/javascript">
     var wa_url = '{$wa_url}';
