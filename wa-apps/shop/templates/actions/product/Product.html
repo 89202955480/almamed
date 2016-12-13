@@ -360,6 +360,7 @@
                 </div>
                 <div class="field">
                     <div class="value no-shift">
+
                         <div class="s-product-status">
                             <i class="icon10 {if $product.status}yes{else}no-bw{/if}"></i>
                             <select name="product[status]">
@@ -382,9 +383,8 @@
                                             <span class="slash">/</span>
                                         </a>
                                         <input type="text" class="s-product-url-input" id="s-product-frontend-url-input"
-                                                                    value="{$product.url|escape}"
-                                                                    name="product[url]" style="display:none;"
-                                                                >
+                                            value="{$product.url|escape}"
+                                            name="product[url]" style="display:none;">
                                     {/strip}
                                     <a href="javascript:void(0);" class="small gray inline-link" id="s-product-frontend-url-edit-link">
                                         <i class="icon10 edit"></i><b><i>[`edit`]</i></b>
@@ -408,6 +408,14 @@
                             [`Hidden products are not shown among other products in the storefront, are not available for purchase, and can be viewed by the direct URL only.`]
                         </span>
                     </div>
+
+                    <div class="value no-shift s-product-url-in-use-block" id="s-product-url-in-use-block" {if !$url_in_use}style="display: none"{/if}>
+                        <p class="small italic">
+                            <i class="icon10 exclamation"></i>
+                            <span class="s-text">{$url_in_use}</span>
+                        </p>
+                    </div>
+
                 </div>
             </div>
             <div class="field-group">
@@ -451,38 +459,25 @@
                     <input type="text" name="product[categories.deleted]" value="" style="display:none;">
                     <div class="name">[`Categories`]</div>
 
-
-                    <style>
-                        .field .value input[type="text"], .field .value input[type="password"], .field .value textarea{
-                             width: 600px;
-                        }
-                        .ac_button{
-                            bottom: -9px;
-                        }
-                        .ac_container{
-                            width: 700px!important;
-                        }
-
-
-                    </style>
-
                     {function categories_select category_id=0}
-                    <span class="name_category_first">
-                    Текущая категория: {$category_name}
-                    </span>
-                    <br>
-                    ID:
-                    <input class="product-categories-json" value="{if $category_id != 0}{$category_id}{/if}" name="product[categories][]" type="text">
-
-
-                    <!--
-                    <a href="javascript:void(0)">
-                        <i class="icon10 delete-bw s-product-delete-json"></i>
-                    </a>
-                    -->
-
+                        <select name="product[categories][]" class="s-product-categories">
+                            {if !empty($categories)}
+                                <option value="select" {if !$category_id}selected="selected"{/if}>
+                                    [`Please select a category`]
+                                </option>
+                                <option value="create">[`Create new category...`]</option>
+                                <option class="separator" value="---" disabled="disabled">---</option>
+                                {foreach $categories as $category}
+                                    <option class="category" value="{$category.id}" {if $category_id == $category.id} selected="selected"{/if}>{"-"|str_repeat:$category.depth}{$category.name|escape}</option>
+                                {/foreach}
+                            {else}
+                                <option value=""></option>
+                                <option value="create">[`Create new category...`]</option>
+                                <option class="separator" value="---" disabled="disabled" style="display:none;">---</option>
+                            {/if}
+                        </select>
+                        <a href="#" class="s-product-delete-from-category" title="[`Remove product from this category`]" {if !$category_id}style="display:none;"{/if}><i class="icon10 delete-bw no-overhanging"></i></a>
                     {/function}
-
 
                     {$_show_selects=(count($product.categories)*count($categories) < 200)}
                     {foreach $product.categories as $category_id => $c}
@@ -518,13 +513,11 @@
                         </span>
                     </div>
                     <div class="value s-product-categories">
-
                         <ul class="menu-v s-category-action s-inline-links">
-                            <li><a href="javascript:void(0)" class="small add_category_json"><i class="icon10 add"></i> <b><i>[`Additional category`]</i></b></a></li>
+                            <li><a href="#/product/{$product.id}/edit/main/categories/add/" class="small inline-link js-action"><i class="icon10 add"></i> <b><i>[`Additional category`]</i></b></a></li>
                             {* @event backend_product.%plugin_id%.category_action_li *}
                             {if !empty($backend_product)}{foreach $backend_product as $_}{ifset($_.category_action_li)}{/foreach}{/if}
                         </ul>
-
                     </div>
                 </div>
 
@@ -674,7 +667,7 @@
                                             {/if}
                                         {/if}
                                         {if count($stocks) >= 1}
-                                        <div{if empty($sku.stock)} style="display: none;{/if}" id="s-product-sku-stock-{$sku_id}">
+                                        <div{if empty($sku.stock)} style="display: none;"{/if} id="s-product-sku-stock-{$sku_id}">
 
                                         {foreach $stocks as $stock_id => $stock}
                                             {if isset($sku.stock[$stock_id])}
@@ -759,7 +752,7 @@
                                         {% } %}
 
                                         {% if(!$.isEmptyObject(stocks)) { %}
-                                        <div{% if($.isEmptyObject(sku.stock)) { %} style="display: none;{% } %}" id="s-product-sku-stock-{%=sku_id%}">
+                                        <div{% if($.isEmptyObject(sku.stock)) { %} style="display: none;"{% } %} id="s-product-sku-stock-{%=sku_id%}">
 
                                             {% for (var i = 0, n = stock_ids.length; i < n; i += 1) { %}
                                                 {% var stock_id = stock_ids[i]; %}
@@ -830,7 +823,7 @@
                 <div class="field">
                     <div class="name">[`Tags`]</div>
                     <div class="value">
-                        <input id="product-tags" value="{implode(',', $product.tags)}" name="product[tags]">
+                        <input id="product-tags" value="{implode(',', $product.tags)|escape}" name="product[tags]">
                         <span class="hint">[`Separate tags with comma (,).`]</span>
 
                         <div id="s-product-popular-tags" class="tags small">
@@ -982,7 +975,6 @@
         </div>{/literal}{/capture}
 
 
-
         <div id="s-product-edit-save-panel">
             <div class="block bordered-top">
                 <input type="submit" class="button green" value="[`Save`]" id="s-product-save-button">
@@ -1053,86 +1045,10 @@
 
 {$title_suffix = " — "|cat:{$wa->accountName(false)}|escape:'javascript'}
 
-<!--//////////////////////////////-->
-{literal}
-<script>
-    $(function(){
-
-        $('.add_category_json').click(function(){
-
-
-            var control = $('#s-product-edit-forms .s-product-form.main input.product-categories-json:first').parent('div');
-
-
-            for (var i = 1; i < 1000; i++) {
-
-               // console.log($('.product-categories-json'+i+'').val());
-
-                if($('.product-categories-json'+i+'').val() === undefined){
-
-                    var clone = '<input class="product-categories-json'+i+'" name="product[categories][]" type="text"></i>';
-                    control.after(clone);
-
-                    $('.product-categories-json'+i+'').ajaxComboBox (
-                            {/literal}
-                {$jsonCategoryData}
-                {literal},
-                {
-                    lang: 'en',
-                            sub_info: true,
-                        sub_as: {
-                    id: 'Employer ID',
-                            post: 'Post',
-                            position: 'Position'
-                },
-                    select_only: true,
-                            show_field: 'id',
-                        categories: 'id',
-                }
-            ) ;
-                    break;
-
-                }
-
-
-            }
-
-    })
-
-
-
-
-
-
-
-        $('.product-categories-json').ajaxComboBox (
-                {/literal}
-                {$jsonCategoryData}
-                {literal},
-                {
-                    lang: 'en',
-                    sub_info: true,
-                    sub_as: {
-                        id: 'Employer ID',
-                        post: 'Post',
-                        position: 'Position'
-                    },
-                    select_only: true,
-                    show_field: 'id',
-                    categories: 'id',
-                }
-        ) ;
-    });
-</script>
-{/literal}
-<!--//////////////////////////////-->
-
-
 <script type="text/javascript">
     var wa_url = '{$wa_url}';
     var wa_app = 'shop';
     var wa_lang = '{$lang}';
-
 
 
     $(function() {

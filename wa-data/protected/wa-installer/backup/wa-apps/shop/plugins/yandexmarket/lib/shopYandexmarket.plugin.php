@@ -172,7 +172,7 @@ class shopYandexmarketPlugin extends shopPlugin
         $icon = shopHelper::getIcon($this->getPluginStaticUrl().'img/yandexmarket.png');
 
         $html = <<<HTML
- <li data-action="export" data-plugin="yandexmarket" title="Экспорт выбранных товаров в Яндекс.Маркет">
+ <li data-action="export" data-plugin="yandexmarket" title="Экспорт выбранных товаров в «Яндекс.Маркет»">
     <a href="#">{$icon}Яндекс.Маркет</a>
  </li>
 HTML;
@@ -181,9 +181,60 @@ HTML;
         );
     }
 
+
     /**
      * UI event handler
+     * @param array $order
      * @return array
+     */
+    public function backendOrderEvent($order)
+    {
+        if (!empty($order['params']['yandexmarket.id'])) {
+            $error = null;
+            if (!empty($order['params']['yandexmarket.status'])) {
+                try {
+                    $data = json_decode($order['params']['yandexmarket.status'], true);
+                    $this->changeOrderState($order['id'], $order['params'], $data);
+                    $model = new shopOrderParamsModel();
+                    $model->deleteByField(array('id' => $order['id'], 'name' => 'yandexmarket.status'));
+                } catch (waException $ex) {
+                    $code = $ex->getCode();
+                    $message = sprintf("Возникла ошибка с кодом %s при выполнении API-запроса для заказа %s:\n%s", $code, $order['id'], $ex->getMessage());
+                    waLog::log($message, 'shop/plugins/yandexmarket/api.order.status.error.log');
+                    $message = htmlentities($ex->getMessage(), ENT_NOQUOTES, 'utf-8');
+                    $error = <<<HTML
+<br/>
+<i class="icon16 exclamation"></i>
+При обновлении статуса заказа №{$order['params']['yandexmarket.id']} на «Яндекс.Маркет» произошла ошибка <b>$code</b>: {$message}
+HTML;
+                }
+            }
+
+            if (!empty($order['params']['shipping_est_delivery'])) {
+                $template = <<<HTML
+Дата доставки, указанная для программы «Заказ на Маркете»: <b>%s</b>
+HTML;
+                $shipping = sprintf($template, htmlentities($order['params']['shipping_est_delivery'], ENT_NOQUOTES, 'utf-8'));
+            }
+
+            if (!empty($error) || !empty($shipping)) {
+                $info_section = <<<HTML
+<div class="block not-padded">
+{$error}
+{$shipping}
+</div>
+HTML;
+                return compact('info_section');
+            }
+
+
+        }
+        return null;
+    }
+
+    /**
+     * UI event handler
+     * @param array $params
      */
     public function backendReportsChannelsEvent(&$params)
     {
@@ -199,7 +250,7 @@ HTML;
     public function backendReportsEvent()
     {
         //check access via API
-        if (!$this->checkApi() || !class_exists('shopYandexmarketPluginReportsAction')) {
+        if (true || !$this->checkApi() || !class_exists('shopYandexmarketPluginReportsAction')) {
             return null;
         }
         $menu_item = <<<HTML
@@ -243,7 +294,10 @@ HTML;
             'value'               => !empty($params['yandexmarket_group_skus']),
             'title'               => 'Яндекс.Маркет',
             'description'         => <<<HTML
-При экспорте в Яндекс.Маркет группировать все артикулы товаров <span class="hint">Настройка учитывается только для случая экспорта каждого артикула товара как отдельной товарной позиции на Яндекс.Маркете (настраивается в профиле экспорта)</span>
+При экспорте в «Яндекс.Маркет» группировать все артикулы товаров
+<span class="hint">
+Настройка учитывается только для случая экспорта каждого артикула товара в виде отдельной товарной позиции на «Яндекс.Маркете» (настраивается в профиле экспорта).
+</span>
 HTML
             ,
             'title_wrapper'       => '%s',
@@ -364,6 +418,43 @@ HTML;
         return array($path, $profile_id, $campaign_id);
     }
 
+    public function getCampaignByProfile($profile)
+    {
+        if (is_array($profile)) {
+            $profile = ifset($profile['profile_id']);
+        }
+        if ($profile) {
+            if ($feed_map = $this->getSettings('feed_map')) {
+                foreach ($feed_map as $feed_id => $item) {
+                    list($profile_id, $campaign_id) = explode(':', $item, 2);
+                    if ($profile_id == $profile) {
+                        return $campaign_id;
+                        break;
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
+    public function getAddress(&$profile)
+    {
+        $address = null;
+        if (!empty($profile['home_region_id'])) {
+            $region = $this->getRegion($profile['home_region_id']);
+        } elseif ($campaign_id = $this->getCampaignByProfile($profile)) {
+            if ($region = $this->getCampaignRegion($campaign_id)) {
+                $profile['home_region_id'] = $region['id'];
+                $profile['campaign_id'] = $campaign_id;
+            }
+        }
+        if (!empty($region)) {
+            $address = shopYandexmarketPluginOrder::parseAddress($region, null, true);
+        }
+
+        return $address;
+    }
+
     public function getHash($profile = 0)
     {
         $uuid = $this->getSettings('uuid');
@@ -428,7 +519,7 @@ HTML;
             if (isset($available_currencies[$default])) {
                 $currencies['auto'] = array(
                     'value' => 'auto',
-                    'title' => $default.' - Основная валюта магазина.',
+                    'title' => $default.' — основная валюта магазина',
                     'rate'  => 0,
 
                 );
@@ -436,7 +527,7 @@ HTML;
 
             $currencies['front'] = array(
                 'value' => 'front',
-                'title' => 'Использовать валюту витрины.',
+                'title' => 'Использовать валюту витрины',
                 'rate'  => 0,
 
             );
@@ -444,7 +535,7 @@ HTML;
             foreach ($available_currencies as $currency) {
                 $currencies[$currency['code']] = array(
                     'value' => $currency['code'],
-                    'title' => $currency['code'].' - '.$currency['title'],
+                    'title' => $currency['code'].' — '.$currency['title'],
                     'rate'  => $currency['rate'],
 
                 );
@@ -468,7 +559,7 @@ HTML;
     public function apiRequest($method, $params = array(), $data = array())
     {
         if (!class_exists('waNet')) {
-            throw new waException('class waNet required. Please update Webasyst framework');
+            throw new waException('Отсутствует PHP-класс waNet. Обновите фреймворк Webasyst.');
         }
 
         //TODO check api limits before run request
@@ -480,7 +571,7 @@ HTML;
         $type = 'GET';
 
         if (count(array_filter($query, 'strlen')) < 2) {
-            throw new waException('Empty plugin api settings');
+            throw new waException('Не указаны настройки API.');
         }
         //TODO detect by $method request type
 
@@ -528,7 +619,6 @@ HTML;
             }
         }
 
-
         return $response;
     }
 
@@ -547,6 +637,16 @@ HTML;
 
         //TODO check real access
         return true;
+    }
+
+    public function checkCpa()
+    {
+        /**
+         * @var shopConfig $config ;
+         */
+        $config = wa('shop')->getConfig();
+        $app_info = $config->getInfo();
+        return version_compare($app_info['version'], '7.1.1.60', '>=');
     }
 
     private function updateApiLimits($method, $headers)
@@ -617,7 +717,7 @@ HTML;
                 'reason' => array(
                     5  => 'кампания проверяется',
                     6  => 'требуется проверка кампании',
-                    7  => 'кампания выключена или выкчается менеджером',
+                    7  => 'кампания выключена или выключается менеджером',
                     9  => 'кампания выключена или выключается из-за финансовых проблем',
                     11 => 'кампания выключена или выключается из-за ошибок в прайс-листе кампании',
                     12 => 'кампания выключена или выключается пользователем',
@@ -646,22 +746,34 @@ HTML;
                     'CPA_QUALITY_AUTO'  => 'программа отключена автоматически за ошибки качества',
                     'CPA_API_NEED_INFO' => 'предоставлено недостаточно информации для участия в программе',
                     'CPA_QUALITY_OTHER' => 'программа отключена за прочие проблемы качества',
-                    'CPA_CONTRACT'      => 'отсутствует договор об участии в программе либо истек срок его действия',
-                    'CPA_CPC'           => 'программа отключена в связи с тем, что соответствующая кампания выключена (размещение магазина на Яндекс.Маркете приостановлено)',
+                    'CPA_CONTRACT'      => 'отсутствует договор об участии в программе, либо истек срок его действия',
+                    'CPA_CPC'           => 'программа отключена в связи с тем, что соответствующая кампания выключена (размещение магазина на «Яндекс.Маркете» приостановлено)',
                     'CPA_FEED'          => 'в прайс-листе отсутствуют товарные предложения, участвующие в программе',
                     'CPA_PARTNER'       => 'программа отключена по инициативе пользователя',
                 ),
-            )
+            ),
         );
 
         $settlements = array();
 
         $domain_routes = wa()->getRouting()->getByApp('shop');
+
         foreach ($domain_routes as $domain => $routes) {
             foreach ($routes as $route) {
                 $domain = preg_replace('@^www\.@', '', $domain);
                 $settlement = $domain.'/'.$route['url'];
                 $settlements[] = compact('domain', 'settlement');
+            }
+        }
+
+        $routes = wa()->getConfig()->getConfigFile('routing');
+        foreach ($routes as $domain => $alias) {
+            if (!is_array($alias) && isset($domain_routes[$alias])) {
+                foreach ($domain_routes[$alias] as $route) {
+                    $domain = preg_replace('@^www\.@', '', $domain);
+                    $settlement = $domain.'/'.$route['url'];
+                    $settlements[] = compact('alias', 'domain', 'settlement');
+                }
             }
         }
 
@@ -680,8 +792,24 @@ HTML;
             #add settlement info
             $campaign['settlements'] = array();
             foreach ($settlements as $settlement) {
-                if (preg_replace('@/.*$@', '', $settlement['domain']) == preg_replace('@^www\.@', '', $campaign['domain'])) {
+                $settlement_domain = preg_replace('@^www\.@', '', preg_replace('@/.*$@', '', $settlement['domain']));
+                $campaign_domain = preg_replace('@^www\.@', '', $campaign['domain']);
+                $l = strlen($campaign_domain) + 1;
+                $settlement_parent_domain = substr($settlement_domain, -$l);
+                if (($settlement_domain == $campaign_domain)
+                    || ('.'.$campaign_domain == $settlement_parent_domain)
+                ) {
                     $campaign['settlements'][] = $settlement['settlement'];
+                } elseif (!empty($settlement['alias'])) {
+                    $settlement_domain = preg_replace('@^www\.@', '', preg_replace('@/.*$@', '', $settlement['alias']));
+                    $campaign_domain = preg_replace('@^www\.@', '', $campaign['domain']);
+                    $l = strlen($campaign_domain) + 1;
+                    $settlement_parent_domain = substr($settlement_domain, -$l);
+                    if (($settlement_domain == $campaign_domain)
+                        || ('.'.$campaign_domain == $settlement_parent_domain)
+                    ) {
+                        $campaign['settlements'][] = $settlement['settlement'];
+                    }
                 }
             }
             if (!empty($campaign['settlements'])) {
@@ -731,7 +859,6 @@ HTML;
                     $data = $this->apiRequest(sprintf('campaigns/%d/orders', $campaign['id']), $params);
                     $campaign['orders_count'] = ifset($data['pager']['total'], '-');
                 }
-
 
                 if (false) {
                     $data = $this->apiRequest(sprintf('campaigns/%d/bids', $campaign['id']));
@@ -857,17 +984,137 @@ HTML;
 
     /**
      * @param $campaign_id
-     * @param bool $cache
-     * @return null
+     * @param bool $flush
+     * @return array
      * @throws waException
      * @see https://tech.yandex.ru/market/partner/doc/dg/reference/get-campaigns-id-outlets-docpage/
      */
-    public function getOutlets($campaign_id, $cache = false)
+    public function getOutlets($campaign_id, $flush = false)
     {
-        $data = $this->apiRequest(sprintf('campaigns/%d/outlets', $campaign_id));
-        $pager = ifset($data['pager'], array());
-        return ifset($data['outlets'], null);
+        $key = sprintf('outlets/%s', $campaign_id);
+        $cache = new waVarExportCache($key, 3600, 'shop/plugins/yandexmarket');
+        $outlets = $cache ? $cache->get() : null;
+        if ($outlets == null) {
+            $params = array(
+                'page'     => 0,
+                'pageSize' => 50,
+            );
+            $outlets = array();
+            do {
+                $data = $this->apiRequest(sprintf('campaigns/%d/outlets', $campaign_id), $params);
+                $pager = ifset($data['pager'], array());
+                if (!empty($data['outlets'])) {
+                    $outlets = array_merge($outlets, $data['outlets']);
+                    ++$params['page'];
+                }
+            } while (!empty($data['outlets']) && ifset($pager['pageSize']) == $params['pageSize']);
+            if ($cache && ($outlets !== null)) {
+                $cache->set($outlets);
+            }
+        }
+
+        $map = array(
+            'status'     => array(
+                'name' => array(
+                    'AT_MODERATION' => 'проверяется',
+                    'FAILED'        => 'не прошла проверку и отклонена модератором',
+                    'MODERATED'     => 'проверена и одобрена',
+                    'NONMODERATED'  => 'новая точка, нуждается в проверке',
+                ),
+                'icon' => array(
+                    'AT_MODERATION' => 'yes-bw',
+                    'FAILED'        => 'no',
+                    'MODERATED'     => 'yes',
+                    'NONMODERATED'  => 'no-bw',
+                ),
+            ),
+            'visibility' => array(
+                'name' => array(
+                    'HIDDEN'  => 'точка продаж выключена',
+                    'UNKNOWN' => 'состояние точки продаж неизвестно',
+                    'VISIBLE' => 'точка продаж включена',
+                ),
+                'icon' => array(
+                    'HIDDEN'  => 'status-red',
+                    'UNKNOWN' => 'status-gray',
+                    'VISIBLE' => 'status-green',
+                ),
+            ),
+            'type'       => array(
+                'name' => array(
+                    'DEPOT'       => 'пункт выдачи заказов',
+                    'MIXED'       => 'смешанный тип точки продаж (торговый зал и пункт выдачи заказов)',
+                    'NOT_DEFINED' => 'тип точки продаж не определен',
+                    'RETAIL'      => 'розничная точка продаж (торговый зал)',
+                ),
+                'icon' => array(
+                    'DEPOT'       => 'ss pt box',
+                    'MIXED'       => 'ss pt building',
+                    'NOT_DEFINED' => 'status-gray',
+                    'RETAIL'      => 'ss shop',
+                ),
+            )
+        );
+
+
+        foreach ($outlets as &$outlet) {
+            foreach (array_keys($map) as $field) {
+                $outlet[$field.'Icon'] = ifset($map[$field]['icon'][$outlet[$field]]);
+                $outlet[$field.'Name'] = ifset($map[$field]['name'][$outlet[$field]]);
+            }
+            if ($outlet['status'] == 'FAILED') {
+                $outlet['statusName'] .= ' '.$outlet['reason'];
+            }
+            unset($outlet);
+        }
+        return $outlets;
     }
+
+    /**
+     * @param $campaign_id
+     * @param bool $flush
+     * @return array
+     * @throws waException
+     * @see https://tech.yandex.ru/market/partner/doc/dg/reference/get-campaigns-id-region-docpage/
+     */
+    public function getCampaignRegion($campaign_id, $flush = false)
+    {
+        $key = sprintf('region/%s', $campaign_id);
+        $cache = new waVarExportCache($key, 3600, 'shop/plugins/yandexmarket');
+        $region = $cache ? $cache->get($key, 'yandexmarket') : null;
+        if ($flush || ($region == null)) {
+            $data = $this->apiRequest(sprintf('campaigns/%d/region', $campaign_id));
+            $region = ifset($data['region'], null);
+            if ($cache && ($region !== null)) {
+                $cache->set($region);
+            }
+        }
+        return $region;
+    }
+
+    /**
+     * @param $region_id
+     * @param bool $flush
+     * @return array
+     * @throws waException
+     * @see https://tech.yandex.ru/market/partner/doc/dg/reference/get-regions-id-docpage/
+     */
+    public function getRegion($region_id, $flush = false)
+    {
+        $key = sprintf('regions/%s', $region_id);
+        $cache = new waVarExportCache($key, 3600, 'shop/plugins/yandexmarket');
+        $region = $cache ? $cache->get() : null;
+        if ($flush || ($region == null)) {
+            $data = $this->apiRequest(sprintf('regions/%d', $region_id));
+            $regions = ifset($data['regions'], null);
+            $region = reset($regions);
+            if ($cache && ($region !== null)) {
+                $cache->set($region);
+            }
+        }
+        return $region;
+    }
+
 
     private function setSettings($name, $value)
     {
@@ -878,65 +1125,237 @@ HTML;
     }
 
     /**
-     * @param $data [order_id] int Номер заказа
-     * @param $data [action_id] int ID действия
-     * @param $data [before_state_id] int ID статуса до выполнения действия
-     * @param $data [after_state_id] int ID статуса после выполнения действия
-     * @param $data [id] int ID записи в логе истории заказа
+     * @throws waException
+     * @param mixed [string] $data
+     * @param int [string] $data[order_id]        Номер заказа
+     * @param string [string] $data[action_id]       ID действия
+     * @param string [string] $data[before_state_id] ID статуса до выполнения действия
+     * @param string [string] $data[after_state_id]  ID статуса после выполнения действия
+     * @param int [string] $data[id]              ID записи в логе истории заказа
+     * @param string $event_name
+     * @link https://tech.yandex.ru/market/partner/doc/dg/reference/put-campaigns-id-orders-id-status-docpage/
      */
-    public function orderStatus($data)
+    public function orderActionHandler($data, $event_name = null)
     {
-        $params_model = new shopOrderParamsModel();
-        $search = array(
-            'order_id' => $data['order_id'],
-            'name'     => array('yandexmarket.id', 'yandexmarket.campaign_id'),
-        );
-        $params = $params_model->getByField($search, 'name');
-        if ($params && (count($params) == 2)) {
-            $method = 'campaigns/%d/orders/%d/status';
-            $method = sprintf($method, $params['yandexmarket.campaign_id']['value'], $params['yandexmarket.id']['value']);
-
-            switch ($data['action_id']) {
-                case 'ship':
-                    $order = array(
-                        'status' => 'DELIVERY',
-                    );
-                    $this->apiRequest($method, array(), compact('order'));
-                    break;
-                case 'complete':
-                    $order = array(
-                        'status' => 'DELIVERED',
-                    );
-                    $this->apiRequest($method, array(), compact('order'));
-                    break;
-                case 'delete':
-                    if (wa()->getEnv() == 'backend') {
-                        $order = array(
-                            'status'    => 'CANCELLED',
-                            'substatus' => 'USER_CHANGED_MIND',
-                        );
-                        $this->apiRequest($method, array(), compact('order'));
+        $params = null;
+        $action = null;
+        if ($this->checkApi()) {
+            $available_actions = array('ship', 'complete', 'delete');
+            if (in_array($data['action_id'], $available_actions)) {
+                $action = $data['action_id'];
+            } else {
+                foreach ($available_actions as $available_action) {
+                    $settings = $this->getSettings('order_action_'.$available_action);
+                    $matched_actions = array_keys(array_filter($settings));
+                    $matched = in_array($data['action_id'], $matched_actions);
+                    if ($matched) {
+                        $action = $available_action;
+                        break;
                     }
-                    /**
-                     *
-                     *
-                     * USER_UNREACHABLE — не удалось связаться с покупателем;
-                     *
-                     * USER_CHANGED_MIND — покупатель отменил заказ по собственным причинам;
-                     *
-                     * USER_REFUSED_DELIVERY — покупателя не устраивают условия доставки;
-                     *
-                     * USER_REFUSED_PRODUCT — покупателю не подошел товар;
-                     *
-                     * USER_REFUSED_QUALITY — покупателя не устраивает качество товара;
-                     *
-                     * SHOP_FAILED — магазин не может выполнить заказ.
-                     */
-
-
-                    break;
+                }
             }
         }
+        if ($action && !empty($data['order_id'])) {
+            $params_model = new shopOrderParamsModel();
+            $search = array(
+                'order_id' => $data['order_id'],
+                'name'     => array('yandexmarket.id', 'yandexmarket.campaign_id'),
+            );
+            $params = $params_model->getByField($search, 'name');
 
+
+            if ($params && (count($params) == 2)) {
+                $result = null;
+                try {
+                    switch ($action) {
+                        case 'ship':
+                            $order = array(
+                                'status' => 'DELIVERY',
+                            );
+                            break;
+                        case 'complete':
+                            $order = array(
+                                'status' => 'DELIVERED',
+                            );
+                            break;
+                        case 'pickup':
+                            $order = array(
+                                'status' => 'PICKUP',
+                            );
+                            break;
+                        case 'delete':
+                            if (wa()->getEnv() == 'backend') {
+                                $post = waRequest::post('plugins');
+                                $substatus = 'USER_CHANGED_MIND';
+                                if (!empty($post['yandexmarket']['substatus'])) {
+                                    $substatus = $post['yandexmarket']['substatus'];
+                                    $available = self::getCancelSubstatus();
+                                    if (!isset($available[$substatus])) {
+                                        $substatus = 'USER_CHANGED_MIND';
+                                    }
+                                }
+                                $order = array(
+                                    'status'    => 'CANCELLED',
+                                    'substatus' => $substatus,
+                                );
+
+                            }
+                            break;
+                    }
+                    if (!empty($order)) {
+                        $this->changeOrderState($data['order_id'], $params, $order);
+                    }
+                } catch (waException $ex) {
+                    if (!empty($order)) {
+                        $params_model->set($data['order_id'], array('yandexmarket.status' => json_encode($order)), false);
+                    }
+                    $message = sprintf("Возникла ошибка с кодом %s при выполнении API-запроса для заказа %s:\n%s", $ex->getCode(), $data['order_id'], $ex->getMessage());
+                    waLog::log($message, 'shop/plugins/yandexmarket/api.order.status.error.log');
+                    throw $ex;
+                }
+            }
+        }
+    }
+
+    private function changeOrderState($order_id, $params, $order)
+    {
+        $method = 'campaigns/%d/orders/%d/status';
+        $method = sprintf($method, $params['yandexmarket.campaign_id']['value'], $params['yandexmarket.id']['value']);
+        $result = $this->apiRequest($method, array(), compact('order'));
+        if ($result) {
+            if ($result['order']) {
+                $o = $result['order'];
+                $template = 'Статус заказа в «Яндекс.Маркете» был обновлен на %s %s';
+                $comment = sprintf($template, self::describeStatus($o['status']), self::describeSubStatus(ifset($o['sub_status'])));
+
+                $message = sprintf('Заказ %s(%s) обновлен в «Яндекс.Маркете»: %s', $order_id, $o['id'], $comment);
+                waLog::log($message, 'shop/plugins/yandexmarket/api.order.status.log');
+            }
+
+        }
+    }
+
+    public static function getActions($default_id = null)
+    {
+        static $actions = null;
+        if ($actions === null) {
+            $actions = array();
+            $workflow = new shopWorkflow();
+            $available_actions = $workflow->getAvailableActions();
+            foreach ($available_actions as $id => $available_action) {
+                $actions[$id] = $available_action['name'];
+            }
+        }
+        if (!empty($default_id) && isset($actions[$default_id])) {
+            $result = $actions;
+            $result[$default_id] = array(
+                'title'    => $actions[$default_id],
+                'value'    => $default_id,
+                'disabled' => true,
+                'checked'  => true,
+            );
+            return $result;
+
+        }
+
+        return $actions;
+    }
+
+    public static function getShipActions()
+    {
+        return self::getActions('ship');
+    }
+
+    public static function getCompleteActions()
+    {
+        return self::getActions('complete');
+    }
+
+    public static function getDeleteActions()
+    {
+        return self::getActions('delete');
+    }
+
+    private static function getCancelSubstatus()
+    {
+        return array(
+            'USER_UNREACHABLE'      => 'не удалось связаться с покупателем',
+            'USER_CHANGED_MIND'     => 'покупатель отменил заказ по собственным причинам',
+            'USER_REFUSED_DELIVERY' => 'покупателя не устраивают условия доставки',
+            'USER_REFUSED_PRODUCT'  => 'покупателю не подошел товар',
+            'USER_REFUSED_QUALITY'  => 'покупателя не устраивает качество товара',
+            'SHOP_FAILED'           => 'магазин не может выполнить заказ',
+        );
+    }
+
+    public static function describeSubStatus($sub_status)
+    {
+        $description = array(
+            'RESERVATION_EXPIRED'   => 'покупатель не завершил оформление зарезервированного заказа вовремя',
+            'USER_NOT_PAID'         => 'покупатель не оплатил заказ (для типа оплаты PREPAID)',
+            'USER_UNREACHABLE'      => 'не удалось связаться с покупателем',
+            'USER_CHANGED_MIND'     => 'покупатель отменил заказ по собственным причинам',
+            'USER_REFUSED_DELIVERY' => 'покупателя не устраивают условия доставки',
+            'USER_REFUSED_PRODUCT'  => 'покупателю не подошел товар',
+            'SHOP_FAILED'           => 'магазин не может выполнить заказ',
+            'USER_REFUSED_QUALITY'  => 'покупателя не устраивает качество товара',
+            'REPLACING_ORDER'       => 'покупатель изменяет состав заказа',
+            'PROCESSING_EXPIRED'    => 'магазин не обработал заказ вовремя',
+        );
+        return ifset($description[$sub_status], $sub_status);
+    }
+
+    public static function describeStatus($status)
+    {
+        $description = array(
+            'CANCELLED'  => 'заказ отменен',
+            'DELIVERED'  => 'заказ получен покупателем',
+            'DELIVERY'   => 'заказ передан в доставку',
+            'PICKUP'     => 'заказ доставлен в пункт самовывоза',
+            'PROCESSING' => 'заказ находится в обработке',
+            'RESERVED'   => 'заказ в резерве (ожидается подтверждение от пользователя)',
+            'UNPAID'     => 'заказ оформлен, но еще не оплачен (если выбрана плата при оформлении)',
+        );
+        return ifset($description[$status], $status);
+    }
+
+    public static function getDays($string)
+    {
+        return array_map('intval', array_filter(preg_split('@\D+@', trim($string), 2), 'strlen'));
+    }
+
+    public function orderDeleteFormHandler($data, $event_name = null)
+    {
+        $raw_id = null;
+        if ($this->checkApi()) {
+            if (empty($event_name)) {
+                $matched = true;
+            } else {
+                $action = str_replace('order_action_form.', '', $event_name);
+                $settings = $this->getSettings('order_action_delete');
+                $matched = in_array($action, array_keys(array_filter($settings)));
+            }
+            if ($matched && !empty($data['order_id'])) {
+                $order_params_model = new shopOrderParamsModel();
+                $raw_id = $order_params_model->getOne($data['order_id'], 'yandexmarket.id');
+            }
+        }
+        if (empty($raw_id)) {
+            return null;
+        } else {
+            $sub_status = self::getCancelSubstatus();
+            $html = <<<HTML
+        Причина отмены заказа:
+        <select name="plugins[yandexmarket][substatus]">
+HTML;
+            foreach ($sub_status as $id => $description) {
+                $html .= <<<HTML
+<option value="{$id}">{$description}</option>
+HTML;
+
+            }
+            $html .= "</select>";
+            return $html;
+        }
     }
 }

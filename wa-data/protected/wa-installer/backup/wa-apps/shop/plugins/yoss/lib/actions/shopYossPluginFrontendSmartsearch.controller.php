@@ -5,12 +5,10 @@
  * @author Max Severin <makc.severin@gmail.com>
  */
 class shopYossPluginFrontendSmartsearchController extends waJsonController {
-
+    
     public function execute() {
         $app_settings_model = new waAppSettingsModel();
         $settings = $app_settings_model->get(array('shop', 'yoss'));
-
-
 
         if ( $settings['status'] === 'on' ) {
 
@@ -29,7 +27,7 @@ class shopYossPluginFrontendSmartsearchController extends waJsonController {
             }
 
             $products = $collection->getProducts('*', ($page-1)*$product_limit, $product_limit);
-
+            
             if ($products) {
 
                 $brands = array();
@@ -37,8 +35,7 @@ class shopYossPluginFrontendSmartsearchController extends waJsonController {
                 $feature_model = new shopFeatureModel();
                 $result['searh_all_url'] = (wa()->getRouteUrl('/frontend/search/query=')) . '?query='.$query;
 
-
-                foreach ($products as $p) {
+                foreach ($products as $p) {         
                     $brand_feature = $feature_model->getByCode('brand');
                     $brand = '';
                     if ($brand_feature) {
@@ -53,7 +50,7 @@ class shopYossPluginFrontendSmartsearchController extends waJsonController {
                                 'id' => $brand_id,
                                 'brand' => '<a href="' . wa()->getRouteUrl('shop/frontend/brand', array('brand' => str_replace('%2F', '/', urlencode($v)))) . '">' . $v . '</a>',
                             );
-                        }
+                        }   
                     }
 
                     $category_model = new shopCategoryModel();
@@ -61,13 +58,21 @@ class shopYossPluginFrontendSmartsearchController extends waJsonController {
                     $res_category = '';
                     if ($category) {
                         $res_category = '<a href="' . wa()->getRouteUrl('/frontend/category', array('category_url' => waRequest::param('url_type') == 1 ? $category['url'] : $category['full_url'])) . '">' .$category['name'] . '</a>';
-                    }
+                    }    
+
+                    $use_filename = wa('shop')->getConfig()->getOption('image_filename');
+
+                    if (!$use_filename) {
+                        $image = ($p['image_id'] ? "<img src='" . shopImage::getUrl(array("product_id" => $p['id'], "id" => $p['image_id'], "ext" => $p['ext']), "48x48") . "' />" : "");
+                    } else {
+                        $image = ($p['image_filename'] ? "<img src='" . shopImage::getUrl(array("product_id" => $p['id'], "filename" => $p['image_filename'], "id" => $p['image_id'], "ext" => $p['ext']), "48x48") . "' />" : "");
+                    }          
 
                     $result['products'][] = array(
                         "name" => $p['name'],
                         "url" => $p['frontend_url'],
-                        "image" => ($p['image_id'] ? "<img src='" . shopImage::getUrl(array("product_id" => $p['id'], "id" => $p['image_id'], "ext" => $p['ext']), "48x48") . "' />" : ""),
-                        "price" => shop_currency_html($p['price'], true),
+                        "image" => $image,
+                        "price" => shop_currency_html($p['price'], $p['currency']),
                         "brands" => $brands,
                         "category" => $res_category,
                     );

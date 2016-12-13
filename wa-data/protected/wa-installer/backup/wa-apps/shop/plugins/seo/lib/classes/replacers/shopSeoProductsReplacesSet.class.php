@@ -2,6 +2,40 @@
 
 class shopSeoProductsReplacesSet extends shopSeoReplacesSet
 {
+    public function fetch($template)
+    {
+        $template = parent::fetch($template);
+
+        $m_product = new shopProductModel();
+        $product_response = new shopSeoProductResponse();
+        $product = $m_product->getById($product_response->getID());
+        // very bad patch
+        $search = array('{$name}', '{$price}', '{$summary}');
+        $replace = array();
+        foreach ($search as $i => $s)
+        {
+            $r = substr($s, 2, -1);
+            if (isset($product[$r]))
+            {
+                if ($r == 'price')
+                {
+                    $replace[] = shop_currency_html($product[$r], null, null, true);
+                } else
+                {
+                    $replace[] = $product[$r];
+                }
+            }
+            else
+            {
+                unset($search[$i]);
+            }
+        }
+
+        $template = str_replace($search, $replace, $template);
+
+        return $template;
+    }
+
     public function getReplaces()
     {
 	    $product_response = new shopSeoProductResponse();

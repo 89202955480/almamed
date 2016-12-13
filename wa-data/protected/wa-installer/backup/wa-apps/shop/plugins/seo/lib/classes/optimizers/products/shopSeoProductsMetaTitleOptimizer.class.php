@@ -74,6 +74,14 @@ class shopSeoProductsMetaTitleOptimizer extends shopSeoMetaTitleOptimizer
 	{
 		parent::optimize();
 		$this->product_response->setMetaTitle($this->getText());
+
+		$product_og_model = new shopProductOgModel();
+		$og = $product_og_model->getData(new shopProduct($this->product_response->getID()));
+
+		if (empty($og['title']))
+		{
+			$this->product_response->updateOg('title', $this->getText());
+		}
 	}
 
     private $product_response;

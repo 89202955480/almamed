@@ -1,7 +1,11 @@
-# yoss
+# yoss - Smart search
+
+![yoss-frontend](https://www.webasyst.com/wa-data/public/updates/img/80/1580/4506/4506.970.png)
+
+![yoss-settings](https://www.webasyst.com/wa-data/public/updates/img/80/1580/4507/4507.970.png)
 
 ## Description
-Smart search plugin for Shop-Script 6
+Smart search plugin for Shop-Script
 
 ## Features
 Product search with ajax-loading of the results.
@@ -9,6 +13,10 @@ Product search with ajax-loading of the results.
 Dynamically displays a list of products, their categories and brands.
 
 You can enable lazy-loading scrolling of products in the search results. Or you can customize the number of displayed products in the settings.
+
+It is possible to make the plugin worked not only in the shop app but also in blog, site and other apps.  
+To use the plugin in other apps it is necessary switch off «Status of frontend_head hook» plugin setting and insert in the template of your application to the end of the tag &lt;head&gt; the next code:  
+**{if $wa->shop}{shopYossPlugin::display()}{/if}**
 
 ## Installing
 ### Auto

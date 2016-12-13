@@ -7,7 +7,6 @@ return array(
         'summary' => array('varchar', 255, 'null' => 1),
         'description' => array('text', 'null' => 1),
         'title' => array('varchar', 255, 'null' => 1),
-        'h1' => array('varchar', 255, 'null' => 1),
         'meta_keywords' => array('text', 'null' => 1),
         'meta_description' => array('text', 'null' => 1),
         'seo_description' => array('text', 'null' => 1),

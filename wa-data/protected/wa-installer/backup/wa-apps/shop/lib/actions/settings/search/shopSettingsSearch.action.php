@@ -14,6 +14,8 @@ class shopSettingsSearchAction extends waViewAction
             //'other' => _w('Other fields'),
         );
         $this->view->assign('fields', $fields);
+
+        var_dump($fields);
         
         $config = $this->getConfig();
         

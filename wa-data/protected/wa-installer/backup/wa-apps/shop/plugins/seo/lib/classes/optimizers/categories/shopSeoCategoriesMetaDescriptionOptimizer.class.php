@@ -72,6 +72,14 @@ class shopSeoCategoriesMetaDescriptionOptimizer extends shopSeoMetaDescriptionOp
     {
         parent::optimize();
         $this->category_response->setMetaDescription($this->getText());
+
+	    $category_og_model = new shopCategoryOgModel();
+	    $og = $category_og_model->get($this->category_response->getID());
+
+	    if (empty($og['description']))
+	    {
+		    $this->category_response->updateOg('description', $this->getText());
+	    }
     }
 
     private $category_response;

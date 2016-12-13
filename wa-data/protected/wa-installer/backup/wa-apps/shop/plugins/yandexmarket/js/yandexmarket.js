@@ -138,8 +138,29 @@ $.extend($.importexport.plugins, {
                 /**
                  * @this HTMLInputElement
                  */
-                self.helpers.toggle(self.$form.find('div.js-delivery-options'), event, !this.checked);
+                self.helpers.toggle(self.$form.find('div.js-delivery-included'), event, !this.checked);
             }).change();
+
+            this.$form.find('div.js-shipping-method :input[type="checkbox"][name$="\\[enabled\\]"]').change(function (event) {
+                /**
+                 * @this HTMLInputElement
+                 */
+                var checked = this.checked;
+
+
+                self.helpers.toggle($(this).parents('div.js-shipping-method').find('>div.value:not(:first)'), event, checked);
+            }).change();
+
+            this.$form.find('a.js-cheatsheet:first').click(function (event) {
+                var show = self.helpers.toggle(self.$form.find('div.js-cheatsheet:first'), event, null);
+                var $icon = $(this).find('.icon10');
+                if (show) {
+                    $icon.addClass('darr').removeClass('rarr');
+                } else {
+                    $icon.addClass('rarr').removeClass('darr');
+                }
+                return false;
+            });
 
             /**
              * type map helper
@@ -234,6 +255,28 @@ $.extend($.importexport.plugins, {
             }
         },
 
+        reloadShipping: function () {
+            /**
+             * delivery settings control
+             */
+            this.$form.find(':input[name$="\\[delivery\\]"]').change();
+
+            /**
+             * delivery price control
+             */
+            this.$form.find(':input[name$="\\[deliveryIncluded\\]"]').change();
+
+            var self = this;
+            this.$form.find('div.js-shipping-method :input[type="checkbox"][name$="\\[enabled\\]"]').change(function (event) {
+                /**
+                 * @this HTMLInputElement
+                 */
+                var checked = this.checked;
+                self.helpers.toggle($(this).parents('div.js-shipping-method').find('>div.value:not(:first)'), event, checked);
+            }).change();
+        },
+
+
         initFormLazy: function ($scope) {
             var self = this;
             /**
@@ -263,6 +306,36 @@ $.extend($.importexport.plugins, {
 
         onInit: function () {
             this.initForm();
+        },
+
+        regionEdit: function () {
+            this.$form.find('div.js-edit-region').slideDown();
+            this.$form.find('div.js-edit-region:first').html('<i class="icon16 loading"></i>').load('?plugin=yandexmarket&action=region');
+            $(el).hide();
+        },
+
+        regionApply: function () {
+            var region_id = this.$form.find(':input.js-home-region-id:first').val();
+
+            var profile_id = this.$form.find(':input[name="profile\[id\]"]:first').val();
+
+            var region = this.$form.find('span.js-home-region-name:last').html();
+            this.$form.find('span.js-home-region-name:first').html(region);
+            $.shop.trace('region_id', [region_id, region]);
+            this.$form.find(':input[name="home_region_id"]').val(region_id);
+
+            this.$form.find('a.js-edit-region').show();
+            this.$form.find('div.js-edit-region').slideUp();
+            this.$form.find('div.js-edit-region:first').html('');
+            var self = this;
+            this.$form.find('div.field-group.js-delivery-options:first').html('<i class="icon16 loading"></i>').load('?plugin=yandexmarket&action=shipping&profile=' + profile_id + '&region_id=' + region_id, function () {
+                self.reloadShipping();
+            });
+        },
+        regionCancel: function () {
+            this.$form.find('a.js-edit-region').show();
+            this.$form.find('div.js-edit-region').slideUp();
+            this.$form.find('div.js-edit-region:first').html('');
         },
         /**
          *
@@ -567,6 +640,7 @@ $.extend($.importexport.plugins, {
                         $item.hide();
                     }
                 }
+                return show;
             }
         }
     }

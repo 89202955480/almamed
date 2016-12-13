@@ -11,5 +11,6 @@ return array (
   'productbrands' => true,
   'seo' => true,
   'watermark' => true,
+  'directedit' => true,
 );
 //EOF

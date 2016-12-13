@@ -63,6 +63,7 @@ class shopFrontendProductAction extends shopFrontendAction
         } else {
             $root_category_id = null;
         }
+
         $this->view->assign('root_category_id', $root_category_id);
     }
 
@@ -163,10 +164,18 @@ class shopFrontendProductAction extends shopFrontendAction
         wa('shop')->event('frontend_products', $event_params);
         $product['skus'] = $skus;
 
+
+
+
+
+
+
+
         $this->view->assign('product', $product);
 
         if ($product->sku_type == shopProductModel::SKU_TYPE_SELECTABLE) {
             $features_selectable = $product->features_selectable;
+
             $this->view->assign('features_selectable', $features_selectable);
 
             $product_features_model = new shopProductFeaturesModel();
@@ -196,6 +205,7 @@ class shopFrontendProductAction extends shopFrontendAction
                 }
             }
             $product['sku_features'] = ifset($sku_features[$product->sku_id], array());
+
             $this->view->assign('sku_features_selectable', $sku_selectable);
         }
 
@@ -215,6 +225,7 @@ class shopFrontendProductAction extends shopFrontendAction
             throw new waException(_w('Product not found'), 404);
         }
 
+
         if ($types = waRequest::param('type_id')) {
             if (!in_array($product['type_id'], (array)$types)) {
                 throw new waException(_w('Product not found'), 404);
@@ -226,8 +237,8 @@ class shopFrontendProductAction extends shopFrontendAction
             $this->setLayout(null);
         }
 
-        $product = new shopProduct($product, true);
 
+        $product = new shopProduct($product, true);
         // check url
         if ($product['url'] !== urldecode(waRequest::param('product_url'))) {
             $url_params = array('product_url' => $product['url']);
@@ -243,22 +254,37 @@ class shopFrontendProductAction extends shopFrontendAction
             $this->getBreadcrumbs($product);
         }
 
+
+
+
         $this->addCanonical();
 
         // get services
         list($services, $skus_services) = $this->getServiceVars($product);
+
         $this->view->assign('sku_services', $skus_services);
         $this->view->assign('services', $services);
 
         $compare = waRequest::cookie('shop_compare', array(), waRequest::TYPE_ARRAY_INT);
+
         $this->view->assign('compare', in_array($product['id'], $compare) ? $compare : array());
 
+
+
+
         if (!$is_cart) {
+
+
+
             $this->view->assign('reviews', $this->getTopReviews($product['id']));
             $this->view->assign('rates', $this->reviews_model->getProductRates($product['id']));
             $this->view->assign('reviews_total_count', $this->getReviewsTotalCount($product['id']));
 
+
             $meta_fields = $this->getMetafields($product);
+
+
+
             wa()->getResponse()->setTitle($meta_fields['meta_title']);
             wa()->getResponse()->setMeta('keywords', $meta_fields['meta_keywords']);
             wa()->getResponse()->setMeta('description', $meta_fields['meta_description']);
@@ -270,14 +296,34 @@ class shopFrontendProductAction extends shopFrontendAction
                 wa()->getResponse()->setOgMeta('og:video', $product['video_url']);
             }
 
+
             $feature_codes = array_keys($product->features);
+
+
+
+
+
             $feature_model = new shopFeatureModel();
+
+
+
             $features = $feature_model->getByCode($feature_codes);
 
+
+
             $this->view->assign('features', $features);
+
         }
 
+
+
+
+
+
+
         $product->tags = array_map('htmlspecialchars', $product->tags);
+
+
 
         $this->view->assign('currency_info', $this->getCurrencyInfo());
 
@@ -289,6 +335,7 @@ class shopFrontendProductAction extends shopFrontendAction
          * @return array[string][string]string $return[%plugin_id%]['block_aux'] html output
          * @return array[string][string]string $return[%plugin_id%]['block'] html output
          */
+
         $this->view->assign('frontend_product', wa()->event('frontend_product', $product, array('menu', 'cart', 'block_aux', 'block')));
 
         $this->view->assign('stocks', shopHelper::getStocks(true));

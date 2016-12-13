@@ -55,17 +55,20 @@ class shopBackendWelcomeAction extends waViewAction
                 #currency
                 if (!empty($country_data['currency'])) {
                     $currency_model = new shopCurrencyModel();
-                    $sort = 0;
+                    $sort = $currency_model->countAll();
                     foreach ($country_data['currency'] as $code => $rate) {
 
-                        // delete old currency info is exists
-                        $currency_model->deleteById($code);
+                        // Ignore if currency already exists
+                        if ($currency_model->getById($code)) {
+                            continue;
+                        }
 
                         $currency_model->insert(array('code' => $code, 'rate' => $rate, 'sort' => $sort++), 2);
                         if ($sort == 1) {
                             $model->set('shop', 'currency', $code);
                         }
                     }
+                    $currency_model->deleteCache();
 
                 }
 

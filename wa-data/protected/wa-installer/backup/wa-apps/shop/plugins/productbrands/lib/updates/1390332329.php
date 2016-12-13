@@ -6,7 +6,7 @@ $model = new waModel();
 try {
     $model->query("SELECT url FROM shop_productbrands WHERE 0");
 } catch (waDbException $e) {
-    $model->exec("ALTER TABLE shop_productbrands ADD url VARCHAR (255) NULL");
+    $model->exec("ALTER TABLE shop_productbrands ADD url VARCHAR (255)NULL");
 }
 
 

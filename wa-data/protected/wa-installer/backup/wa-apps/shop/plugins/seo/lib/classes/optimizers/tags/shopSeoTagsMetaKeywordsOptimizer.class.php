@@ -2,6 +2,11 @@
 
 class shopSeoTagsMetaKeywordsOptimizer extends shopSeoMetaKeywordsOptimizer
 {
+	protected function getRequestMetaKeywords()
+	{
+		return wa()->getResponse()->getMeta('keywords');
+	}
+
     protected function preCheck()
     {
         $keywords = $this->getRequestMetaKeywords();

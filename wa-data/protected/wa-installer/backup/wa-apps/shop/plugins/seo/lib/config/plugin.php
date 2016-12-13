@@ -7,7 +7,7 @@ return array(
     'vendor' => '934303',
     'frontend' => false,
     'shop_settings' => true,
-    'version' => '1.7',
+    'version' => '1.7.1.5',
     'handlers' => array(
         'frontend_head' => 'frontendHead',
         'frontend_category' => 'frontendCategory',

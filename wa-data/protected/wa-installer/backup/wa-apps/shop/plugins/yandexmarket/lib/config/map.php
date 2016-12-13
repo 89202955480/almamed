@@ -20,6 +20,7 @@ return array(
                 'pickup'                => false,
                 'delivery'              => false,
                 'local_delivery_cost'   => false,
+                'local_delivery_days'   => false,
                 'name'                  => true,
                 'vendor'                => false,
                 'vendorCode'            => false,
@@ -31,6 +32,7 @@ return array(
                 'age'                   => false,
                 'barcode'               => false,
                 'cpa'                   => false,
+                'fee'                   => false,
                 'param.*'               => false,
             ),
         ),
@@ -60,6 +62,7 @@ return array(
                 'pickup'                => false,
                 'delivery'              => false,
                 'local_delivery_cost'   => false,
+                'local_delivery_days'   => false,
                 'typePrefix'            => false,
                 /**
                  *
@@ -80,6 +83,7 @@ return array(
                 'age'                   => false,
                 'barcode'               => false,
                 'cpa'                   => false,
+                'fee'                   => false,
                 /**
                  *
                  * Элемент предназначен для управления участием товарных предложений в программе «Покупка на Маркете».
@@ -122,6 +126,7 @@ return array(
                 'pickup'              => false,
                 'delivery'            => false,
                 'local_delivery_cost' => false,
+                'local_delivery_days' => false,
                 'author'              => false,
                 'name'                => true,
                 'publisher'           => false,
@@ -139,6 +144,38 @@ return array(
                 'downloadable'        => false,
                 'age'                 => false,
                 'cpa'                 => false,
+                'fee'                 => false,
+            ),
+        ),
+        'medicine'         => array(
+            'name'   => 'Лекарства (medicine)',
+            'fields' => array(
+                'available'             => true,
+                'id'                    => true,
+                'url'                   => true,
+                'price'                 => true,
+                'oldprice'              => true,
+                'currencyId'            => true,
+                'categoryId'            => true,
+                'market_category'       => false,
+                'picture'               => false,
+                'store'                 => false,
+                'pickup'                => false,
+                'delivery'              => false,
+                'local_delivery_cost'   => false,
+                'local_delivery_days'   => false,
+                'name'                  => true,
+                'vendor'                => false,
+                'vendorCode'            => false,
+                'description'           => false,
+                'sales_notes'           => false,
+                'country_of_origin'     => false,
+                'adult'                 => false,
+                'age'                   => false,
+                'barcode'               => false,
+                'cpa'                   => false,
+                'fee'                   => false,
+                'param.*'               => false,
             ),
         ),
         'audiobook'    => array(
@@ -173,6 +210,7 @@ return array(
                 'downloadable'      => false,
                 'age'               => false,
                 'cpa'               => false,
+                'fee'               => false,
             ),
         ),
         'artist.title' => array(
@@ -217,6 +255,7 @@ return array(
                 'age'         => false,
                 'barcode'     => false,
                 'cpa'         => false,
+                'fee'         => false,
             ),
         ),
         'tour'         => array(
@@ -299,10 +338,20 @@ return array(
         /**
          * 'field_id'              => array(
          * 'type'        => 'fixed|adjustable|custom',
-         * 'name'        => '',
-         * 'description' => '',
+         * 'name'        => 'Field name for settings screen',
+         * 'description' => 'Field description',
+         * 'help'=>'Explained field description with possible html tags',
          * 'attribute'=>true, //(if it dom attribute only)
-         * 'field'       => 'offer',(if it dom attribute only specify dom element name)
+         * 'field'       => 'offer',(if it dom attribute only specify dom element name),
+         * 'source'=>'',
+         * 'format'=>'%d',//field value format for sprintf PHP method
+         * 'callback'=>true,
+         * 'sources'=>array(
+         *      'feature',
+         *      'custom',
+         * ),
+         * 'values'=>array(
+         * ),
          * ),
          */
         'id'              => array(
@@ -333,27 +382,28 @@ return array(
         'price'           => array(
             'type'        => 'fixed',
             'name'        => 'Цена',
-            'description' => 'Цена товарного предложения округляеся и выводится в зависимости от настроек пользователя',
+            'description' => 'Цена товарного предложения округляется и выводится в зависимости от настроек пользователя.',
             'format'      => '%0.2f',
             'source'      => 'field:price',
         ),
         'oldprice'        => array(
             'type'        => 'fixed',
             'name'        => 'Старая цена',
-            'description' => 'Старая цена товарного предложения округляеся и выводится в зависимости от настроек пользователя',
+            'description' => 'Старая цена товарного предложения округляется и выводится в зависимости от настроек пользователя.',
             'format'      => '%0.2f',
             'source'      => 'field:compare_price',
         ),
         'currencyId'      => array(
             'type'        => 'fixed',
             'name'        => 'Идентификатор валюты товара',
-            'description' => 'Для корректного отображения цены в национальной валюте необходимо использовать идентификатор с соответствующим значением цены',
+            'description' => 'Для корректного отображения цены в национальной валюте необходимо использовать идентификатор с соответствующим значением цены.',
             'values'      => array(
                 'RUB',
                 'USD',
                 'UAH',
                 'KZT',
                 'BYR',
+                'BYN',
                 'EUR',
             ),
             'source'      => 'field:currency',
@@ -361,16 +411,18 @@ return array(
         'categoryId'      => array(
             'type'        => 'fixed',
             'name'        => 'Идентификатор категории товара ',
-            'description' => '(целое число не более 18 знаков). Товарное предложение может принадлежать только к одной категории',
+            'description' => '(целое число не более 18 знаков). Товарное предложение может принадлежать только к одной категории.',
             'source'      => 'field:category_id',
         ),
         'market_category' => array(
             'type'        => 'adjustable',
             'name'        => 'Категория/раздел размещения',
             'description' => 'Категория/раздел размещения в Яндекс.Маркете.',
-            'help'        => 'Допустимо указывать названия категорий только из товарного дерева категорий <a href="https://help.yandex.ru/partnermarket/guides/classification.xml#market-category" target="_blank">Яндекс.Маркета<i class="icon16 new-window"></i></a>.',
+            'help'        => 'Допустимо указывать названия категорий только из'
+                .' <a href="https://help.yandex.ru/partnermarket/guides/classification.xml#market-category" target="_blank">товарного дерева категорий Яндекс.Маркета<i class="icon16 new-window"></i></a>.',
             'source'      => '',
             'sources'     => array('feature', 'custom'),
+            'params'      => true,
         ),
         'picture'         => array(
             'type'   => 'fixed',
@@ -385,6 +437,7 @@ return array(
             'values'      => array(
                 true => 'true',
             ),
+            'params'      => true,
         ),
         /**
          * adjustable
@@ -456,9 +509,13 @@ return array(
         'available'             => array(
             'type'        => 'adjustable',
             'name'        => 'Наличие',
-            'description' => 'Статус доступности товара в наличии/на заказ',
+            'description' => 'Статус доступности товара: в наличии или «на заказ».',
+            'help'        => 'Положительное целочисленное значение означает наличие товара в указанном количестве, в том числе для программы «Заказ на Маркете».
+Значения <tt>true</tt> и <tt>false</tt> означают соответственно доступность в наличии (без указания количества) либо «на заказ».
+Другие значения означают доступность товара только «на заказ».',
             'source'      => 'field:count',
             'attribute'   => true,
+            'callback'    => true,
             'field'       => 'offer',
             'values'      => array(
                 /**
@@ -498,12 +555,13 @@ return array(
             'name'        => 'Гарантия производителя',
             'description' => 'Информация об официальной гарантии производителя',
             'help'        => 'Возможные пользовательские значения:
-1) false — товар не имеет официальной гарантии;
-2) true — товар имеет официальную гарантию;
-3) указание срока гарантии в формате <a href="https://ru.wikipedia.org/wiki/ISO_8601" class="inline-link" target="_blank">ISO 8601<i class="icon16 new-window"></i></a>, например: <i>P1Y2M10DT2H30M</i>
+1) <b>false</b> — товар не имеет официальной гарантии;
+2) <b>true</b> — товар имеет официальную гарантию;
+3) указание срока гарантии в формате'
+                .' <a href="https://ru.wikipedia.org/wiki/ISO_8601" class="inline-link" target="_blank">ISO 8601<i class="icon16 new-window"></i></a>, например: <i>P1Y2M10DT2H30M</i>
 4) указание срока гарантии в числе дней;
-Поддерживаются числовые данные — простое число определяет срок гарантии в днях, либо с учетом размерности характеристики типа «Время».
-Остальные типы данных приводятся к значениям true/false.',
+Поддерживаются числовые данные — простое число определяет срок гарантии в днях, либо с учетом размерности характеристики типа «время».
+Остальные типы данных приводятся к значениям <b>true</b>/<b>false</b>.',
             'values'      => array(
                 false => 'false',
                 true  => 'true',
@@ -514,12 +572,13 @@ return array(
             'name'        => 'Гарантия продавца',
             'description' => '',
             'help'        => 'Возможные пользовательские значения:
-1) false — товар не имеет гарантию продавца;
-2) true — товар имеет гарантию продавца;
-3) указание срока гарантии в формате <a href="https://ru.wikipedia.org/wiki/ISO_8601" class="inline-link" target="_blank">ISO 8601<i class="icon16 new-window"></i></a>, например: <i>P1Y2M10DT2H30M</i>
+1) <b>false</b> — товар не имеет гарантию продавца;
+2) <b>true</b> — товар имеет гарантию продавца;
+3) указание срока гарантии в формате <a href="https://ru.wikipedia.org/wiki/ISO_8601" class="inline-link" target="_blank">ISO 8601<i class="icon16 new-window"></i></a>, например:'
+                .' <i>P1Y2M10DT2H30M</i>
 4) указание срока гарантии в числе дней;
-Поддерживаются числовые данные — простое число определяет срок гарантии в днях, либо с учетом размерности характеристики типа «Время».
-Остальные типы данных приводятся к значениям true/false.',
+Поддерживаются числовые данные — простое число определяет срок гарантии в днях, либо с учетом размерности характеристики типа «время».
+Остальные типы данных приводятся к значениям <b>true</b>/<b>false</b>.',
             'values'      => array(
                 false => 'false',
                 true  => 'true',
@@ -530,20 +589,21 @@ return array(
             'name'        => 'Срок годности/службы',
             'description' => '',
             'help'        => 'Возможные пользовательские значения:
-1) указание срока гарантии в формате <a href="https://ru.wikipedia.org/wiki/ISO_8601" class="inline-link" target="_blank">ISO 8601<i class="icon16 new-window"></i></a>, например: <i>P1Y2M10DT2H30M</i>
+1) указание срока гарантии в формате <a href="https://ru.wikipedia.org/wiki/ISO_8601" class="inline-link" target="_blank">ISO 8601<i class="icon16 new-window"></i></a>, например:'
+                .'<i>P1Y2M10DT2H30M</i>
 2) указание числа дней
-Поддерживаются числовые данные — простое число определяет срок гарантии в днях, либо с учетом размерности характеристики типа «Время».',
+Поддерживаются числовые данные — простое число определяет срок гарантии в днях, либо с учетом размерности характеристики типа «время».',
             'source'      => 'feature:expiry',
         ),
         'country_of_origin'     => array(
             'type'        => 'adjustable',
-            'name'        => 'Страна производитель',
+            'name'        => 'Страна-производитель',
             'description' => '',
         ),
         'adult'                 => array(
             'type'        => 'adjustable',
             'name'        => 'Товары для взрослых',
-            'description' => 'Обязателен для обозначения товара, имеющего отношение к удовлетворению сексуальных потребностей либо иным образом эксплуатирующего интерес к сексу',
+            'description' => 'Обязателен для обозначения товара, имеющего отношение к удовлетворению сексуальных потребностей либо иным образом эксплуатирующего интерес к сексу.',
             'values'      => array(
                 false => 'false',
                 true  => 'true',
@@ -559,6 +619,12 @@ return array(
             'type'        => 'adjustable',
             'name'        => 'CPA',
             'description' => 'Участие товара в программе «Заказ на Маркете»',
+            'help'        => 'Элемент может принимать следующие значения:
+1) <b>0</b> — товар не участвует в программе «Заказ на Маркете»;
+2) <b>1</b> — товар участвует в программе «Заказ на Маркете».
+Если элемент не указан, то значение автоматически принимается равным 1 (то есть предложение без элемента <tt>cpa</tt> участвует в программе).
+Добавить дополнительный параметр <tt>yandexmarket.cpa</tt> возможно при редактировании товара, вкладка «Описание и SEO», поле «Дополнительные параметры».
+В текстовое поле добавьте строку вида <b>yandexmarket.cpa=0</b> или <b>yandexmarket.cpa=1</b>',
             'source'      => 'skip:',
             'values'      => array(
                 0 => 'Нет',
@@ -567,6 +633,24 @@ return array(
             'params'      => array(
                 'cpa' => 'cpa',
             ),
+        ),
+        'fee'                   => array(
+            'type'        => 'adjustable',
+            'attribute'   => true,
+            'field'       => 'offer',
+            'name'        => 'Комиссия',
+            'description' => 'Комиссия на товарное предложение в рамках программы «Заказ на Маркете»',
+            'help'        => 'Значение должно быть целым положительным числом, при этом две последние цифры — это сотая и десятая часть процентов.
+Таким образом, 1% комиссии соответствует значение 100. Примеры:
+&nbsp;&nbsp;— Значение 220 соответствует комиссии 2,2% стоимости товара.
+&nbsp;&nbsp;— Значение 1220 соответствует комиссии 12,2%.
+&nbsp;&nbsp;— Значение 22 соответствует комиссии 0,22%.
+Если для элемента указано некорректное значение либо значение меньше минимальной комиссии, списывается минимальная комиссия.',
+            'source'      => 'skip:',
+            'params'      => array(
+                'fee' => 'fee',
+            ),
+            'format'      => '%d',
         ),
         'series'                => array(
             'type' => 'adjustable',
@@ -740,7 +824,7 @@ return array(
         'is_premiere'           => array(
             'type'        => 'adjustable',
             'name'        => 'Премьера',
-            'description' => 'Признак примьерности мероприятия',
+            'description' => 'Признак премьерности мероприятия',
             'format'      => '',
             'source'      => '',
         ),
@@ -784,24 +868,32 @@ return array(
             'type'        => 'adjustable',
             'name'        => 'Покупка в офлайне',
             'description' => 'Возможность приобрести товар в точке продаж без предварительного заказа через интернет',
+            'help'        => 'Добавить дополнительный параметр <tt>yandexmarket.store</tt> возможно при редактировании товара, вкладка «Описание и SEO», поле'
+                .' «Дополнительные параметры». В текстовое поле добавьте строку вида <b>yandexmarket.store=1</b> или <b>yandexmarket.store=0</b>.',
             'values'      => array(
                 false => 'false',
                 true  => 'true',
             ),
+            'params'      => true,
         ),
         'pickup'                => array(
             'type'        => 'adjustable',
             'name'        => 'Самовывоз',
             'description' => 'Возможность предварительно заказать товар и забрать его в точке продаж',
+            'help'        => 'Добавить дополнительный параметр <tt>yandexmarket.pickup</tt> возможно при редактировании товара, вкладка «Описание и SEO», поле'
+                .' «Дополнительные параметры». В текстовое поле добавьте строку вида <b>yandexmarket.pickup=1</b> или <b>yandexmarket.pickup=0</b>.',
             'values'      => array(
                 false => 'false',
                 true  => 'true',
             ),
+            'params'      => true,
         ),
         'delivery'              => array(
             'type'        => 'adjustable',
             'name'        => 'Доставка',
             'description' => 'Осуществляет ли ваш магазин доставку',
+            'help'        => 'Добавить дополнительный параметр <tt>yandexmarket.delivery</tt> возможно при редактировании товара, вкладка «Описание и SEO», поле'
+                .' «Дополнительные параметры». В текстовое поле добавьте строку вида <b>yandexmarket.delivery=1</b> или <b>yandexmarket.delivery=0</b>.',
             'values'      => array(
                 /**
                  * данный товар не может быть доставлен
@@ -813,21 +905,45 @@ return array(
                  **/
                 true  => 'true',
             ),
+            'params'      => true,
 
+        ),
+        'local_delivery_days'   => array(
+            'type'        => 'adjustable',
+            'name'        => 'Сроки доставки',
+            'description' => 'Срок доставки данного товара в своем регионе (например, дополнительный параметр товара yandexmarket.local_delivery_days)',
+            'help'        => 'Добавить дополнительный параметр <tt>yandexmarket.local_delivery_days</tt> возможно при редактировании товара, вкладка «Описание и SEO», поле'
+                .' «Дополнительные параметры». В текстовое поле добавьте строку вида <b>yandexmarket.local_delivery_days=3</b>.',
+            'params'      => true,
+            'path'        => 'delivery-options/option',
+            'virtual'     => true,
         ),
         'local_delivery_cost'   => array(
             'type'        => 'adjustable',
             'name'        => 'Стоимость доставки',
             'plugins'     => array(
-                'shipping' => true,
+                //@future
+                // 'shipping' => true,
             ),
-            'description' => 'Стоимость доставки данного товара в своем регионе',
+            'description' => 'Стоимость доставки данного товара в своем регионе (например, дополнительный параметр товара yandexmarket.local_delivery_cost).'
+                .' Указывается в валюте предложения, если не включена опция конвертирования цен, иначе указывается в основной валюте, настроенной в плагине.',
+            'params'      => true,
+            'help'        => 'Следует указывать максимальную цену доставки по городу (своему региону), чтобы не возникло ошибок по качеству.
+Добавить дополнительный параметр <tt>yandexmarket.local_delivery_cost</tt> возможно при редактировании товара, вкладка «Описание и SEO», поле «Дополнительные параметры».'
+                .' В текстовое поле добавьте строку вида <b>yandexmarket.local_delivery_cost=100</b>.',
+            'path'        => 'delivery-options/option',
+            'callback'    => true,
+            'test'        => array(
+                array(null, ''),
+                array(null, false),
+            ),
         ),
         'param'                 => array(
             'type'        => 'adjustable',
             'name'        => '<param>',
             'description' => 'Дополнительные произвольные характеристики товара.',
-            'help'        => 'Если тип характеристики магазина не имеет единицы измерения, но ее необходимо передать в Яндекс.Маркет, то можно задать название единицы измерения (параметр unit) в названии характеристики в скобках, например, «Вес (кг)».',
+            'help'        => 'Если тип характеристики магазина не имеет единицы измерения, но ее необходимо передать в «Яндекс.Маркет», то можно задать название'
+                .' единицы измерения (параметр <tt>unit</tt>) в названии характеристики в скобках, например: «<b>Вес (кг)</b>».',
         ),
     ),
 );

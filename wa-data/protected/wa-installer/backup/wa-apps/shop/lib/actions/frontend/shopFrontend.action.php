@@ -55,7 +55,11 @@ class shopFrontendAction extends waViewAction
         }
         $offset = ($page - 1) * $limit;
 
+
+
+
         $products = $collection->getProducts('*', $offset, $limit);
+
         $count = $collection->count();
 
         $pages_count = ceil((float)$count / $limit);

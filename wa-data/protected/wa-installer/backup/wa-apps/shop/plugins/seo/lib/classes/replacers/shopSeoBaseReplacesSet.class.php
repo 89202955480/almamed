@@ -27,6 +27,7 @@ class shopSeoBaseReplacesSet extends shopSeoReplacesSet
             new shopSeoFieldsReplaceSet(),
             new shopSeoRandomSwitch(),
             new shopSeoConst(),
+	        new shopSeoRegionsReplacer(),
         );
     }
 }

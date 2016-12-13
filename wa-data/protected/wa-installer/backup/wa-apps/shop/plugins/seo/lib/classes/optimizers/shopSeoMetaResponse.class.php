@@ -10,6 +10,7 @@ class shopSeoMetaResponse
 
 	public function setResponseMetaTitle($meta_title)
 	{
+		$meta_title = preg_replace('/\s+/', ' ', $meta_title);
 		wa()->getResponse()->setTitle($meta_title);
 	}
 
@@ -20,6 +21,7 @@ class shopSeoMetaResponse
 
 	public function setResponseMetaKeywords($meta_keywords)
 	{
+		$meta_keywords = preg_replace('/\s+/', ' ', $meta_keywords);
 		wa()->getResponse()->setMeta('keywords', $meta_keywords);
 	}
 
@@ -30,6 +32,7 @@ class shopSeoMetaResponse
 
 	public function setResponseMetaDescription($meta_description)
 	{
+		$meta_description = preg_replace('/\s+/', ' ', $meta_description);
 		wa()->getResponse()->setMeta('description', $meta_description);
 	}
 }

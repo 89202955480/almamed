@@ -10,14 +10,7 @@ class shopSeoBrandsMetaTitleOptimizer extends shopSeoMetaTitleOptimizer
 
     protected function preCheck()
     {
-	    if ($this->brand_response->isExists())
-	    {
-		    $brand_title = $this->brand_response->getMetaTitle();
-
-		    return empty($brand_title);
-	    }
-
-        return empty($title);
+		return true;
     }
 
     protected function getTemplate()
@@ -29,6 +22,13 @@ class shopSeoBrandsMetaTitleOptimizer extends shopSeoMetaTitleOptimizer
 	    $settings = new shopSeoSettings();
 	    $template = new shopSeoTemplate();
 
+		$brand = wa()->getView()->getVars('brand');
+
+		if (!empty($brand['title']))
+		{
+			return $brand['title'];
+		}
+
 	    foreach (array($current_storefront, $general_storefront) as $storefront)
 	    {
 		    $_settings = $settings->get($storefront);
@@ -39,7 +39,7 @@ class shopSeoBrandsMetaTitleOptimizer extends shopSeoMetaTitleOptimizer
 		    {
 			    return $template->getContent();
 		    }
-	    }
+	    };
 
 	    return '';
     }

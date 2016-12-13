@@ -169,7 +169,7 @@
       <description locale="ru_RU"/>
     </file>
     <file path="copyright.html" custom="0" modified="1">
-      <description locale="ru_RU"></description>
+      <description locale="ru_RU"/>
     </file>
     <file path="links.pages.sidebar.html" custom="0">
       <description locale="ru_RU"/>
@@ -454,7 +454,7 @@
       <name locale="ru_RU">Skype</name>
     </setting>
     <setting var="address" control_type="text">
-      <value>г. Москва, Электролитный пр., д. 3</value>
+      <value><![CDATA[Доставка товаров по РФ]]></value>
       <name locale="en_US">Address</name>
       <name locale="ru_RU">Адрес</name>
     </setting>

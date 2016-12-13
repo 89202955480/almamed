@@ -2,12 +2,14 @@
 
 /**
  * @author wa-apps.ru <info@wa-apps.ru>
- * @copyright 2013-2016 wa-apps.ru
+ * @copyright 2013-2015 wa-apps.ru
  * @license Webasyst License http://www.webasyst.ru/terms/#eula
  * @link http://www.webasyst.ru/store/plugin/shop/productbrands/
  */
 class shopProductbrandsPlugin extends shopPlugin
 {
+
+
     /**
      * @var array
      */
@@ -21,6 +23,19 @@ class shopProductbrandsPlugin extends shopPlugin
     /**
      * @return string
      */
+
+
+    public function getAll(){
+
+        $model = new shopProductbrandAddModel();
+
+        $records = $model->order('id DESC')->fetchAll();
+
+        return $records;
+    }
+
+
+
     public function frontendNav()
     {
         if ($this->getSettings('hook') == 'frontend_nav') {
@@ -60,11 +75,13 @@ class shopProductbrandsPlugin extends shopPlugin
      */
     public function backendProducts($params)
     {
+        $brands = self::getBrands();
         if (!$params) {
             $view = wa()->getView();
+
             return array(
                 'sidebar_top_li' => '<li id="s-productbrands">
-                    <a href="#/brands/"><i class="icon16" style="background-image: url('.$this->getPluginStaticUrl().'img/brands.png);"></i>'._wp('Brands').'</a>
+                    <a href="#/brands/"><span class="count">'.count($brands).'</span><i class="icon16" style="background-image: url('.$this->getPluginStaticUrl().'img/brands.png);"></i>'._wp('Brands').'</a>
                     <script src="'.$this->getPluginStaticUrl().'js/productbrands.js"></script>
                     </li>',
                 'sidebar_section' => $view->fetch($this->path.'/templates/backendProducts.html')
@@ -107,36 +124,22 @@ class shopProductbrandsPlugin extends shopPlugin
 
     /**
      * Returns brands of the product
-     *
      * @param int $product_id
-     * @param bool $all
      * @return array
      */
-    public static function productBrand($product_id, $all = false)
+    public static function productBrand($product_id)
     {
+
         $feature = self::getFeature();
         if ($feature) {
             $product_features_model = new shopProductFeaturesModel();
-            $row = $product_features_model->getByField(array(
-                'product_id' => $product_id, 'feature_id' => $feature['id'], 'sku_id' => null
-            ), $all);
-            $brand_model = new shopProductbrandsModel();
+            $row = $product_features_model->getByField(array('product_id' => $product_id, 'feature_id' => $feature['id'], 'sku_id' => null));
             if ($row) {
-                if ($all) {
-                    $brands = array();
-                    foreach ($row as $r) {
-                        $brand = $brand_model->getBrand($r['feature_value_id']);
-                        $brand_url = $brand['url'] ? $brand['url'] : urlencode($brand['name']);
-                        $brand['url'] = wa()->getRouteUrl('shop/frontend/brand', array('brand' => $brand_url));
-                        $brands[] = $brand;
-                    }
-                    return $brands;
-                } else {
-                    $brand = $brand_model->getBrand($row['feature_value_id']);
-                    $brand_url = $brand['url'] ? $brand['url'] : urlencode($brand['name']);
-                    $brand['url'] = wa()->getRouteUrl('shop/frontend/brand', array('brand' => $brand_url));
-                    return $brand;
-                }
+                $brand_model = new shopProductbrandsModel();
+                $brand = $brand_model->getBrand($row['feature_value_id']);
+                $brand_url = $brand['url'] ? $brand['url'] : urlencode($brand['name']);
+                $brand['url'] = wa()->getRouteUrl('shop/frontend/brand', array('brand'=> $brand_url));
+                return $brand;
             }
         }
         return array();
@@ -174,6 +177,7 @@ class shopProductbrandsPlugin extends shopPlugin
             if ($feature) {
                 $feature_model = new shopFeatureModel();
                 $brands = $feature_model->getFeatureValues($feature);
+
                 $product_features_model = new shopProductFeaturesModel();
                 $types = array();
                 if (wa()->getEnv() == 'frontend' && waRequest::param('type_id') && is_array(waRequest::param('type_id'))) {
@@ -184,15 +188,20 @@ class shopProductbrandsPlugin extends shopPlugin
                         WHERE pf.feature_id = i:0 AND pf.sku_id IS NULL " . (wa()->getEnv() == 'frontend' ? "AND p.status = 1 " : '') .
                     ($types ? 'AND p.type_id IN (i:1) ' : '') .
                     "GROUP BY pf.feature_value_id";
+
                 $counts = $product_features_model->query($sql, $feature['id'], $types)->fetchAll('feature_value_id', true);
+
             } else {
                 $brands = array();
                 $counts = array();
             }
 
+
+
             if ($brands) {
                 $brands_model = new shopProductbrandsModel();
                 $rows = $brands_model->getById(array_keys($brands));
+
                 if (wa()->getEnv() == 'frontend') {
                     $path = wa()->getAppPath('plugins/productbrands/lib/config/routing.php', 'shop');
                     $routing = include($path);
@@ -204,11 +213,13 @@ class shopProductbrandsPlugin extends shopPlugin
                         }
                     }
                 }
+
                 foreach ($brands as $id => $name) {
-                    if (wa()->getEnv() == 'frontend' && !isset($counts[$id])) {
-                        unset($brands[$id]);
-                        continue;
-                    }
+                  //  if (wa()->getEnv() == 'frontend' && !isset($counts[$id])) {
+                  //      unset($brands[$id]);
+                  //      continue;
+                  //  }
+
                     if (isset($rows[$id])) {
                         $brands[$id] = $rows[$id];
                         $brands[$id]['name'] = $name;
@@ -226,22 +237,33 @@ class shopProductbrandsPlugin extends shopPlugin
                             'params' => array()
                         );
                     }
+
                     if (wa()->getEnv() == 'frontend') {
                         if ($brands[$id]['hidden']) {
                             unset($brands[$id]);
                             continue;
                         }
+
                         $brand_url = $brands[$id]['url'] ? $brands[$id]['url'] : urlencode($name);
                         $brands[$id]['url'] = str_replace('%BRAND%', $brand_url, $url);
                     }
+
+
                     $brands[$id]['count'] = isset($counts[$id]) ? $counts[$id] : 0;
                 }
+                //var_dump($brands);
+
             }
             if ($brands && wa()->getSetting('sort', null, array('shop', 'productbrands'))) {
                 uasort($brands, array('shopProductbrandsPlugin', 'sortBrands'));
+
             }
+
+
             self::$brands = $brands;
+
         }
+
         return self::$brands;
     }
 

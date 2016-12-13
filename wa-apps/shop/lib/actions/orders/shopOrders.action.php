@@ -33,7 +33,8 @@ class shopOrdersAction extends shopOrderListAction
                 'new' => $this->model->getStateCounters('new')
             )
         );
-        
+
+
         $filter_params = $this->getFilterParams();
         if (isset($filter_params['state_id'])) {
             $filter_params['state_id'] = (array) $filter_params['state_id'];
@@ -56,6 +57,12 @@ class shopOrdersAction extends shopOrderListAction
                 'all' => $this->model->countAll()
             );
         }
+
+        // courier filter
+        if (preg_match('/search\/params\.courier_id=([\d+])/', $this->hash, $m)) {
+            $counters['courier_counters'][$m[1]] = $this->getTotalCount();
+        }
+
         $this->assign(array(
             'orders' => array_values($orders),
             'total_count' => $this->getTotalCount(),
@@ -68,7 +75,8 @@ class shopOrdersAction extends shopOrderListAction
             'view' => $view,
             'timeout' => $config->getOption('orders_update_list'),
             'actions' => $actions,
-            'counters' => $counters
+            'counters' => $counters,
+            'sort' => $this->getSort()
         ));
     }
 

@@ -1213,6 +1213,7 @@ class shopProductsCollection
             $escape = $limit;
             $limit = null;
         }
+
         if ($limit === null) {
             if ($offset) {
                 $limit = $offset;
@@ -1221,9 +1222,11 @@ class shopProductsCollection
                 $limit = 50;
             }
         }
+
         if ($this->is_frontend && $fields == '*') {
             $fields .= ',frontend_url';
         }
+
         $split_fields = array_map('trim', explode(',', $fields));
         if (in_array('frontend_url', $split_fields) && !in_array('*', $split_fields)) {
             if ($dependent_fields = array_diff(array('url', 'category_id',), $split_fields)) {
@@ -1233,7 +1236,6 @@ class shopProductsCollection
 
         $sql = $this->getSQL();
 
-        // for dynamic set
         if ($this->hash[0] == 'set' && !empty($this->info['id']) && $this->info['type'] == shopSetModel::TYPE_DYNAMIC) {
             $this->count();
             if ($offset + $limit > $this->count) {
@@ -1242,6 +1244,7 @@ class shopProductsCollection
         }
 
         $sql = "SELECT ".($this->joins && !$this->group_by ? 'DISTINCT ' : '').$this->getFields($fields)." ".$sql;
+
         $sql .= $this->_getGroupBy();
         if ($this->having) {
             $sql .= " HAVING ".implode(' AND ', $this->having);

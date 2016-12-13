@@ -2,6 +2,11 @@
 
 class shopSeoTagsMetaDescriptionOptimizer extends shopSeoMetaDescriptionOptimizer
 {
+	protected function getRequestMetaDescription()
+	{
+		return wa()->getResponse()->getMeta('description');
+	}
+
     protected function preCheck()
     {
         $description = $this->getRequestMetaDescription();

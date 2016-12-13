@@ -25,6 +25,7 @@ if (preg_match('@(?:\d+/)(\d+)\.(\d+(?:x\d+)?)\.([a-z]{3,4})@i', $request_file, 
 
     if ($file) {
         $thumbnail_sizes = waSystem::getSetting('sizes', '', array('shop', 'productbrands'));
+
         if ($thumbnail_sizes) {
             $thumbnail_sizes = explode(';', $thumbnail_sizes);
             if (in_array($size, $thumbnail_sizes) === false) {

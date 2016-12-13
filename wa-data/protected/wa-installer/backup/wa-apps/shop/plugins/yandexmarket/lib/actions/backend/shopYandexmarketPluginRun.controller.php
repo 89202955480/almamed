@@ -18,8 +18,24 @@ class shopYandexmarketPluginRunController extends waLongActionController
         $this->getResponse()->sendHeaders();
     }
 
-    private function initRouting()
+    private function initRouting($profile_config = null)
     {
+        if ($profile_config) {
+            $this->data['domain'] = $profile_config['domain'];
+            $this->data['schema'] = empty($profile_config['ssl']) ? 'http://' : 'https://';
+            $this->data['utm'] = array();
+            foreach (array('utm_source', 'utm_medium', 'utm_campaign',) as $field) {
+                if (!empty($profile_config[$field])) {
+                    $this->data['utm'][$field] = $profile_config[$field];
+                }
+            }
+            if ($this->data['utm']) {
+                $this->data['utm'] = http_build_query(array_map('rawurlencode', $this->data['utm']));
+            }
+
+            $this->data['custom_url'] = ifset($profile_config['custom_url']);
+        }
+
         $routing = wa()->getRouting();
         $app_id = $this->getAppId();
         $domain_routes = $routing->getByApp($app_id);
@@ -65,11 +81,179 @@ class shopYandexmarketPluginRunController extends waLongActionController
         );
     }
 
+    /**
+     * @param array $items
+     * @param int $profile_id
+     * @param string $currency
+     * @param array $profile
+     * @return array
+     */
+    public static function getCartItems($items, $profile_id, $currency, &$profile)
+    {
+        $order_items = array();
+
+        $product_ids = array();
+        foreach ($items as $item) {
+            /**
+             * @var array[string]mixed $item
+             * @var array[string]int $item[feedId]
+             * @var array[string]string $item['offerId']
+             * @var array[string]string $item['offerName']
+             * @var array[string]int $item['count']
+             * @var array[string]string $item['feedCategoryId']
+             */
+
+            $product_ids[] = intval(preg_replace('@\D.*$@', '', $item['offerId']));
+        }
+
+
+        $self = new self();
+
+        $hash = sprintf('id/%s', implode(',', array_unique($product_ids)));
+
+        $profile = $self->initCartProfile($hash, $profile_id, $currency);
+        $collection = $self->getCollection();
+        $products = $collection->getProducts($self->getProductFields(), 0, count($product_ids));
+
+        $sku_ids = array();
+
+        foreach ($items as $item) {
+
+            /**
+             * @var int $item ['feedId']
+             */
+            $id = preg_split('@\D+@', $item['offerId'], 2);
+            $product_id = reset($id);
+            $product = ifset($products[$product_id]);
+            if (count($id) == 2) {
+                $sku_id = end($id);
+            } else {
+                $sku_id = $product['sku_id'];
+            }
+
+            $sku_ids[] = $sku_id;
+
+            $order_items[$item['offerId']] = array(
+                'create_datetime' => date('Y-m-d H:i:s'),
+                'type'            => 'product',
+                'product_id'      => $product_id,
+                'sku_id'          => $sku_id,
+                'sku_code'        => '',
+                'name'            => ifset($product['name'], ifset($item['offerName'])),
+                'quantity'        => 0,
+                'price'           => false,
+                'purchase_price'  => false,
+                'profile_id'      => $profile_id,
+                'currency'        => ifset($product['currency'], $currency),
+                'raw_data'        => $item,
+            );
+        }
+
+        $skus_model = new shopProductSkusModel();
+        if (!empty($sku_ids)) {
+            $skus = $skus_model->select('id,count,price,sku,purchase_price,compare_price,file_name')->where('id IN (i:sku_ids)', compact('sku_ids'))->fetchAll('id');
+        } else {
+            $skus = array();
+        }
+
+        $currency_model = new shopCurrencyModel();
+
+        foreach ($order_items as &$item) {
+            if (isset($products[$item['product_id']])) {
+                $product = $products[$item['product_id']];
+
+                $sku = $skus[$item['sku_id']];
+
+                $converted = false;
+
+                if (!empty($currency) && ($item['currency'] != $currency)) {
+                    if ($sku['purchase_price']) {
+                        $sku['purchase_price'] = $currency_model->convert($sku['purchase_price'], $item['currency'], $currency);
+                    }
+                    if ($sku['price']) {
+                        $sku['price'] = $currency_model->convert($sku['price'], $item['currency'], $currency);
+
+                    }
+                    $converted = true;
+                }
+
+                if (count($product['sku_count']) == 1) {
+                    $product['price'] = $sku['price'];
+                    $product['compare_price'] = $sku['compare_price'];
+                    $product['purchase_price'] = $sku['purchase_price'];
+                    $product['file_name'] = $sku['file_name'];
+                    $product['sku'] = $sku['sku'];
+                    $product['count'] = $sku['count'];
+                }
+
+                $offer = $self->addOffer($product, (count($product['sku_count']) == 1) ? null : $sku);
+
+                $item['purchase_price'] = ifset($sku['purchase_price']);
+                $item['price'] = ifset($offer['price'], false);
+
+                if (class_exists('shopRounding') && $converted) {
+                    $item['price'] = shopRounding::roundCurrency($item['price'], $currency);
+                }
+                $item['price'] = round($item['price']);
+                $item['currency'] = ifset($offer['currencyId'], $item['currency']);
+                $item['sku_code'] = $sku['sku'];
+
+                if (isset($offer['delivery-options/option'])) {
+                    $item['shipping'] = $offer['delivery-options/option'];
+                }
+
+                if (isset($offer['available.raw']['raw'])) {
+                    if (in_array($offer['available.raw']['raw'], array('true', true, null, ''), true)) {
+                        $item['quantity'] = $item['raw_data']['count'];
+                    } elseif (in_array($offer['available.raw']['raw'], array('false', false, '0'), true)) {
+                        $item['quantity'] = 0;
+                    } else {
+                        $item['quantity'] = max(0, min(intval($offer['available.raw']['raw']), $item['raw_data']['count']));
+                    }
+                } else {
+                    if ($offer['available'] !== 'true') {
+                        $item['quantity'] = 0;
+                    }
+                }
+
+                $item['delivery'] = !isset($offer['delivery']) || ($offer['delivery'] !== 'false');
+                $item['pickup'] = !isset($offer['pickup']) || ($offer['pickup'] !== 'false');
+
+                if (false) {
+                    //XXX debug option
+                    $item['debug'] = compact('product', 'sku', 'offer');
+                }
+            }
+            unset($item);
+        }
+
+        return array_values($order_items);
+    }
+
+    /**
+     * @param $hash
+     * @param $profile_id
+     * @param $currency
+     * @return shopProductsCollection
+     */
+    private function initCartProfile($hash, $profile_id, $currency = null)
+    {
+        $profile_config = $this->initProfile($profile_id);
+        $this->data['hash'] = $hash;
+        $this->data['currency'] = array($currency);
+        $this->data['primary_currency'] = reset($this->data['currency']);
+        /**
+         * @var shopConfig $config
+         */
+        $config = wa('shop')->getConfig();
+        $this->data['default_currency'] = $config->getCurrency();
+        $this->createDom($profile_config, true);
+        return $profile_config;
+    }
+
     protected function init()
     {
         try {
-            $backend = (wa()->getEnv() == 'backend');
-            $profiles = new shopImportexportHelper('yandexmarket');
             switch ($this->encoding) {
                 case 'windows-1251':
                     setlocale(LC_CTYPE, 'ru_RU.CP-1251', 'ru_RU.CP1251', 'ru_RU.win');
@@ -80,112 +264,9 @@ class shopYandexmarketPluginRunController extends waLongActionController
                 'offers' => 0,
             );
 
-
             $this->data['timestamp'] = time();
 
-            $default_export_config = array(
-                'zero_stock'        => 0,
-                'compare_price'     => 0,
-                'sku'               => 0,
-                'sku_group'         => '',
-                'hidden_categories' => 0,
-                'min_price'         => 0.5,
-            );
-
-            if ($backend) {
-                $hash = shopImportexportHelper::getCollectionHash();
-                $profile_config = array(
-                    'hash'         => $hash['hash'],
-                    'domain'       => waRequest::post('domain'),
-                    'map'          => array(),
-                    'types'        => array_filter((array)waRequest::post('types')),
-                    'export'       => (array)waRequest::post('export', array()) + $default_export_config,
-                    'company'      => waRequest::post('company'),
-                    'company_name' => waRequest::post('company_name'),
-                    'shop'         => waRequest::post('shop'),
-                    'lifetime'     => waRequest::post('lifetime', 0, waRequest::TYPE_INT),
-                    'force_update' => waRequest::post('force_update', 0, waRequest::TYPE_INT),
-                    'utm_source'   => waRequest::post('utm_source'),
-                    'utm_medium'   => waRequest::post('utm_medium'),
-                    'utm_campaign' => waRequest::post('utm_campaign'),
-                );
-                $this->data['map'] = $this->plugin()->map(waRequest::post('map', array()), $profile_config['types']);
-                foreach ($this->data['map'] as $type => $offer_map) {
-                    foreach ($offer_map['fields'] as $field => $info) {
-                        if (!empty($info['source']) && preg_match('@^\\w+:(.+)$@', $info['source'], $matches) && ($matches[1] != '%s')) {
-                            $profile_config['map'][$type][$field] = $info['source'];
-                        }
-                    }
-                    if (empty($profile_config['map'][$type])) {
-                        unset($profile_config['map'][$type]);
-                    }
-                }
-
-                $profile_id = $profiles->setConfig($profile_config);
-                $this->plugin()->getHash($profile_id);
-            } else {
-                $profile_id = waRequest::param('profile_id');
-                if (!$profile_id || !($profile = $profiles->getConfig($profile_id))) {
-                    throw new waException('Profile not found', 404);
-                }
-
-                $profile_config = $profile['config'];
-
-                $profile_config['export'] += $default_export_config;
-                $this->data['map'] = $this->plugin()->map($profile_config['map'], $profile_config['types']);
-
-                foreach ($this->data['map'] as $type => &$offer_map) {
-                    foreach ($offer_map['fields'] as $field => &$info) {
-                        $info['source'] = ifempty($profile_config['map'][$type][$field], 'skip:');
-                        unset($info);
-                    }
-                    unset($offer_map);
-                }
-            }
-
-            foreach ($this->data['map'] as $type => &$offer_map) {
-                if ($type != 'simple') {
-                    $offer_map['fields']['type'] = array(
-                        'source'    => 'value:'.$type,
-                        'attribute' => true,
-                    );
-                }
-                unset($offer_map);
-            }
-
-            $feature_model = new shopFeatureModel();
-
-            $setup_fields = array('name', 'description', 'help', 'required', 'function', 'sort', 'type', 'values', 'params');
-
-            foreach ($this->data['map'] as $type => &$offer_map) {
-                if (isset($offer_map['name'])) {
-                    unset($offer_map['name']);
-                }
-                foreach ($offer_map['fields'] as $field => &$info) {
-                    if (empty($info['source']) || ($info['source'] == 'skip:')) {
-                        unset($offer_map['fields'][$field]);
-                    } else {
-                        foreach ($setup_fields as $info_field) {
-                            if (isset($info[$info_field])) {
-                                unset($info[$info_field]);
-                            }
-                        }
-
-                        if ((strpos($field, 'param.') === 0) && isset($info['source'])) {
-                            switch (preg_replace('@:.+$@', '', $info['source'])) {
-                                case 'feature':
-                                    $feature_code = preg_replace('@^[^:]+:@', '', $info['source']);
-                                    if ($feature = $feature_model->getByCode($feature_code)) {
-                                        $info['source_name'] = $feature['name'];
-                                    }
-                                    break;
-                            }
-                        }
-                    }
-                    unset($info);
-                }
-                unset($offer_map);
-            }
+            $profile_config = $this->initProfile();
 
             $this->data['hash'] = $profile_config['hash'];
             if (!isset($this->data['categories'])) {
@@ -193,105 +274,257 @@ class shopYandexmarketPluginRunController extends waLongActionController
             }
 
             $this->data['export'] = $profile_config['export'];
-            $this->data['domain'] = $profile_config['domain'];
-            $this->data['utm'] = array();
-            foreach (array('utm_source', 'utm_medium', 'utm_campaign',) as $field) {
-                if (!empty($profile_config[$field])) {
-                    $this->data['utm'][$field] = $profile_config[$field];
-                }
-            }
-            if ($this->data['utm']) {
-                $this->data['utm'] = http_build_query(array_map('rawurlencode', $this->data['utm']));
-            }
-
-            $this->data['types'] = array();
-            foreach ($profile_config['types'] as $type => $type_map) {
-                $this->data['types'] += array_fill_keys(array_filter(array_map('intval', $type_map)), $type);
-            }
 
             $this->data['force_update'] = !empty($profile_config['force_update']);
 
-            $this->initRouting();
+            $this->initRouting($profile_config);
 
-            $model = new shopCategoryModel();
-            if (empty($this->data['export']['hidden_categories'])) {
-                $sql = <<<SQL
-SELECT COUNT(1) as `cnt`
-FROM shop_category c
-LEFT JOIN shop_category_routes cr ON (c.id = cr.category_id)
-WHERE
-  ((cr.route IS NULL) OR (cr.route = s:route))
-   AND
-  (`c`.`type`=i:type)
-  AND
-  (`c`.`status`=1)
+            $this->initCount();
 
-SQL;
-            } else {
-                $sql = <<<SQL
-SELECT COUNT(1) as `cnt`
-FROM shop_category c
-LEFT JOIN shop_category_routes cr ON (c.id = cr.category_id)
-WHERE
-  ((cr.route IS NULL) OR (cr.route = s:route))
-   AND
-  (`c`.`type`=i:type)
+            $this->checkDtdFile();
+            $this->createDom($profile_config);
+            $this->loadDom();
+        } catch (waException $ex) {
+            $this->error($ex->getMessage());
+            echo json_encode(array('error' => $ex->getMessage(),));
+            exit;
+        }
+    }
 
-SQL;
-            }
+    private function initProfile($profile_id = null)
+    {
+        $default_export_config = array(
+            'zero_stock'        => 0,
+            'compare_price'     => 0,
+            'sku'               => 0,
+            'sku_group'         => '',
+            'hidden_categories' => 0,
+            'min_price'         => 0.5,
+            'skip_ignored'      => false,
+            'shipping_methods'  => array(),
+        );
 
-            $params = array(
-                'route' => $this->data['domain'],
-                'type'  => shopCategoryModel::TYPE_STATIC,
+        $backend = (wa()->getEnv() == 'backend');
+        $profiles = new shopImportexportHelper('yandexmarket');
+        if ($backend && empty($profile_id)) {
+            $hash = shopImportexportHelper::getCollectionHash();
+            $profile_config = array(
+                'hash'             => $hash['hash'],
+                'domain'           => waRequest::post('domain'),
+                'ssl'              => waRequest::post('ssl'),
+                'map'              => array(),
+                'types'            => array_filter((array)waRequest::post('types')),
+                'export'           => (array)waRequest::post('export', array()) + $default_export_config,
+                'company'          => waRequest::post('company'),
+                'company_name'     => waRequest::post('company_name'),
+                'shop'             => waRequest::post('shop'),
+                'lifetime'         => waRequest::post('lifetime', 0, waRequest::TYPE_INT),
+                'force_update'     => waRequest::post('force_update', 0, waRequest::TYPE_INT),
+                'utm_source'       => waRequest::post('utm_source'),
+                'utm_medium'       => waRequest::post('utm_medium'),
+                'utm_campaign'     => waRequest::post('utm_campaign'),
+                'custom_url'       => waRequest::post('custom_url'),
+                'shipping_methods' => array(),
+                'home_region_id'   => waRequest::post('home_region_id', 0, waRequest::TYPE_INT),
             );
 
+            $shipping_methods = waRequest::post('shipping_methods');
 
-            $this->data['count'] = array(
-                'category'         => (int)$model->query($sql, $params)->fetchField('cnt'),
-                'delivery_options' => 0,//
-                'product'          => $this->getCollection()->count(),
-            );
-            $stages = array_keys($this->data['count']);
+            foreach ($shipping_methods as $id => $shipping_params) {
+                if (!empty($shipping_params['enabled'])) {
+                    $profile_config['shipping_methods'][$id] = array(
+                        'estimate' => $shipping_params['estimate'],
 
-            $this->data['current'] = array_fill_keys($stages, 0);
-            $this->data['processed_count'] = array_fill_keys($stages, 0);
-            $this->data['stage'] = reset($stages);
-            $this->data['stage_name'] = $this->getStageName($this->data['stage']);
-            $this->data['memory'] = memory_get_peak_usage();
-            $this->data['memory_avg'] = memory_get_usage();
+                    );
 
-            if (!class_exists('DOMDocument')) {
-                throw new waException('PHP extension DOM required');
+                    if (isset($shipping_params['cost']) && ($shipping_params['cost'] != '')) {
+                        $profile_config['shipping_methods'][$id]['cost'] = $shipping_params['cost'];
+                    }
+                }
             }
 
-            $this->dom = new DOMDocument("1.0", $this->encoding);
-            $this->dom->encoding = $this->encoding;
-            $this->dom->preserveWhiteSpace = false;
-            $this->dom->formatOutput = true;
+            $this->data['map'] = $this->plugin()->map(waRequest::post('map', array()), $profile_config['types']);
+            foreach ($this->data['map'] as $type => $offer_map) {
+                foreach ($offer_map['fields'] as $field => $info) {
+                    if (!empty($info['source']) && preg_match('@^\\w+:(.+)$@', $info['source'], $matches) && ($matches[1] != '%s')) {
+                        $profile_config['map'][$type][$field] = $info['source'];
+                    }
+                }
+                if (empty($profile_config['map'][$type])) {
+                    unset($profile_config['map'][$type]);
+                }
+            }
 
-            /**
-             * @var shopConfig $config
-             */
-            $config = wa('shop')->getConfig();
-            $xml = <<<XML
+            $profile_id = $profiles->setConfig($profile_config);
+            $this->plugin()->getHash($profile_id);
+        } else {
+            if (empty($profile_id)) {
+                $profile_id = waRequest::param('profile_id');
+            }
+            if (!$profile_id || !($profile = $profiles->getConfig($profile_id))) {
+                throw new waException('Profile not found', 404);
+            }
+
+            $profile_config = $profile['config'];
+
+            $profile_config['export'] += $default_export_config;
+            $this->data['map'] = $this->plugin()->map($profile_config['map'], $profile_config['types']);
+
+            foreach ($this->data['map'] as $type => &$offer_map) {
+                foreach ($offer_map['fields'] as $field => &$info) {
+                    $info['source'] = ifempty($profile_config['map'][$type][$field], 'skip:');
+                    unset($info);
+                }
+                unset($offer_map);
+            }
+        }
+
+        foreach ($this->data['map'] as $type => &$offer_map) {
+            if ($type != 'simple') {
+                $offer_map['fields']['type'] = array(
+                    'source'    => 'value:'.$type,
+                    'attribute' => true,
+                );
+            }
+            unset($offer_map);
+        }
+
+        $feature_model = new shopFeatureModel();
+
+        $setup_fields = array('name', 'description', 'help', 'required', 'function', 'sort', 'type', 'values', 'params', 'test');
+
+        foreach ($this->data['map'] as $type => &$offer_map) {
+            if (isset($offer_map['name'])) {
+                unset($offer_map['name']);
+            }
+            foreach ($offer_map['fields'] as $field => &$info) {
+                if (empty($info['source']) || ($info['source'] == 'skip:')) {
+                    unset($offer_map['fields'][$field]);
+                } else {
+                    foreach ($setup_fields as $info_field) {
+                        if (isset($info[$info_field])) {
+                            unset($info[$info_field]);
+                        }
+                    }
+
+                    if ((strpos($field, 'param.') === 0) && isset($info['source'])) {
+                        switch (preg_replace('@:.+$@', '', $info['source'])) {
+                            case 'feature':
+                                $feature_code = preg_replace('@^[^:]+:@', '', $info['source']);
+                                if ($feature = $feature_model->getByCode($feature_code)) {
+                                    $info['source_name'] = $feature['name'];
+                                }
+                                break;
+                        }
+                    }
+                }
+                unset($info);
+            }
+            unset($offer_map);
+        }
+
+        $this->data['types'] = array();
+        foreach ($profile_config['types'] as $type => $type_map) {
+            $this->data['types'] += array_fill_keys(array_filter(array_map('intval', $type_map)), $type);
+        }
+
+        $profile_config['profile_id'] = $profile_id;
+        return $profile_config;
+    }
+
+    private function getAvailableCurrencies()
+    {
+        $model = new shopCurrencyModel();
+        $this->data['currency'] = array();
+
+        $available_currencies = shopYandexmarketPlugin::settingsPrimaryCurrencies();
+        if (empty($available_currencies)) {
+            throw new waException('Экспорт не может быть выполнен: не задано ни одной валюты, которая могла бы использоваться в качестве основной.');
+        }
+        unset($available_currencies['auto']);
+        unset($available_currencies['front']);
+
+        $primary_currency = $this->plugin()->getSettings('primary_currency');
+        /**
+         * @var shopConfig $config
+         */
+        $config = wa('shop')->getConfig();
+        $this->data['default_currency'] = $config->getCurrency();
+        switch ($primary_currency) {
+            case 'auto':
+                $primary_currency = $this->data['default_currency'];
+                break;
+            case 'front':
+                if (waRequest::param('currency')) {
+                    $primary_currency = waRequest::param('currency');
+                } else {
+                    $primary_currency = $this->data['default_currency'];
+                }
+                break;
+        }
+
+        if (!isset($available_currencies[$primary_currency])) {
+            $primary_currency = $this->data['default_currency'];
+            if (!isset($available_currencies[$primary_currency])) {
+                reset($available_currencies);
+                $primary_currency = key($available_currencies);
+            }
+        }
+
+        $this->data['primary_currency'] = $primary_currency;
+
+        if ($this->plugin()->getSettings('convert_currency')) {
+            $available_currencies = $model->getCurrencies($primary_currency);
+        } else {
+            $available_currencies = $model->getCurrencies(shopYandexmarketPlugin::getConfigParam('currency'));
+        }
+
+        return $available_currencies;
+    }
+
+    private function checkDtdFile()
+    {
+        $original = shopYandexmarketPlugin::path('shops.dtd');
+
+        $target = $this->getTempPath('shops.dtd');
+        if (!file_exists($target)
+            ||
+            ((filesize($target) != filesize($original)) && waFiles::delete($target))
+        ) {
+            waFiles::copy($original, $target);
+        }
+    }
+
+    private function createDom($profile_config, $fast = false)
+    {
+        if (!class_exists('DOMDocument')) {
+            throw new waException('PHP extension DOM required');
+        }
+
+        $this->dom = new DOMDocument("1.0", $this->encoding);
+        $this->dom->encoding = $this->encoding;
+        $this->dom->preserveWhiteSpace = false;
+        $this->dom->formatOutput = true;
+
+        $xml = <<<XML
 <?xml version="1.0" encoding="{$this->encoding}"?>
 <!DOCTYPE yml_catalog SYSTEM "shops.dtd">
 <yml_catalog  date="%s">
 </yml_catalog>
 XML;
-            $original = shopYandexmarketPlugin::path('shops.dtd');
 
-            $target = $this->getTempPath('shops.dtd');
-            if (!file_exists($target)
-                ||
-                ((filesize($target) != filesize($original)) && waFiles::delete($target))
-            ) {
-                waFiles::copy($original, $target);
-            }
+        $this->dom->loadXML(sprintf($xml, date("Y-m-d H:i")));
 
-            $this->dom->loadXML(sprintf($xml, date("Y-m-d H:i")));
 
-            $this->dom->lastChild->appendChild($shop = $this->dom->createElement("shop"));
+        #create yml_catalog/shop
+        $shop = $this->dom->createElement("shop");
+        $this->dom->lastChild->appendChild($shop);
+
+        if (!$fast) {
+            /**
+             * @var shopConfig $config
+             */
+            $config = wa('shop')->getConfig();
             $name = ifempty($profile_config['company_name'], $config->getGeneralSettings('name'));
             $name = str_replace('&', '&amp;', $name);
             $name = str_replace("'", '&apos;', $name);
@@ -301,7 +534,8 @@ XML;
             $company = str_replace("'", '&apos;', $company);
             $this->addDomValue($shop, 'company', $company);
 
-            $this->addDomValue($shop, 'url', preg_replace('@^https@', 'http', wa()->getRouteUrl('shop/frontend', array(), true)));
+            $url = wa()->getRouteUrl('shop/frontend', array(), true);
+            $this->addDomValue($shop, 'url', preg_replace('@^https?://@', $this->data['schema'], $url));
             $phone = $config->getGeneralSettings('phone');
             if ($phone) {
                 $shop->appendChild($this->dom->createElement('phone', $phone));
@@ -310,50 +544,11 @@ XML;
             $this->addDomValue($shop, 'platform', 'Shop-Script');
             $this->addDomValue($shop, 'version', wa()->getVersion('shop'));
 
+
+            #create yml_catalog/currencies
             $currencies = $this->dom->createElement('currencies');
-
-            $model = new shopCurrencyModel();
-            $this->data['currency'] = array();
-
-            $available_currencies = shopYandexmarketPlugin::settingsPrimaryCurrencies();
-            if (empty($available_currencies)) {
-                throw new waException('Экспорт не может быть выполнен: не задано ни одной валюты, которая могла бы использоваться в качестве основной.');
-            }
-            unset($available_currencies['auto']);
-            unset($available_currencies['front']);
-
-            $primary_currency = $this->plugin()->getSettings('primary_currency');
-
-            $this->data['default_currency'] = $config->getCurrency();
-            switch ($primary_currency) {
-                case 'auto':
-                    $primary_currency = $this->data['default_currency'];
-                    break;
-                case 'front':
-                    if (waRequest::param('currency')) {
-                        $primary_currency = waRequest::param('currency');
-                    } else {
-                        $primary_currency = $this->data['default_currency'];
-                    }
-                    break;
-            }
-
-            if (!isset($available_currencies[$primary_currency])) {
-                $primary_currency = $this->data['default_currency'];
-                if (!isset($available_currencies[$primary_currency])) {
-                    reset($available_currencies);
-                    $primary_currency = key($available_currencies);
-                }
-            }
-
-            $this->data['primary_currency'] = $primary_currency;
-            $rate = $available_currencies[$primary_currency]['rate'];
-
-            if ($this->plugin()->getSettings('convert_currency')) {
-                $available_currencies = $model->getCurrencies($primary_currency);
-            } else {
-                $available_currencies = $model->getCurrencies(shopYandexmarketPlugin::getConfigParam('currency'));
-            }
+            $available_currencies = $this->getAvailableCurrencies();
+            $rate = $available_currencies[$this->data['primary_currency']]['rate'];
 
             foreach ($available_currencies as $info) {
                 if ($info['rate'] > 0) {
@@ -373,34 +568,120 @@ XML;
                     $this->addDomValue($currencies, 'currency', $value);
                 }
             }
+
+            if (!$this->data['currency']) {
+                throw new waException('Не задано ни одной поддерживаемой валюты');
+            }
+            if (!in_array($this->data['primary_currency'], $this->data['currency'])) {
+                $this->data['primary_currency'] = reset($this->data['currency']);
+            }
             $shop->appendChild($currencies);
 
+
+            #create yml_catalog/categories
             $shop->appendChild($this->dom->createElement('categories'));
 
-            $fields = array(
-                'store'               => true,
-                'pickup'              => true,
-                'delivery'            => true,
-                'deliveryIncluded'    => false,
-                'local_delivery_cost' => '%0.2f',
-                'adult'               => true,
-            );
+            $delivery_options = $this->dom->createElement('delivery-options');
+        }
 
-            if (!empty($profile_config['shop']['local_delivery_estimate'])) {
-                $delivery_options = $this->dom->createElement('delivery-options');
-                $delivery_option = array(
-                    //стоимость доставки в рублях (wtf? а как же мультивалютность и рынки UAH/KAZ/etc?)
-                    'cost' => sprintf('%0.2f', max(0, floatval($profile_config['shop']['local_delivery_cost']))),
+        $fields = array(
+            'store'               => true,
+            'pickup'              => true,
+            'delivery'            => true,
+            'deliveryIncluded'    => false,
+            'local_delivery_cost' => '%0.2f',
+            'adult'               => true,
+        );
 
-                    //срок доставки в рабочих днях;
-                    'days' => max(1, intval($profile_config['shop']['local_delivery_estimate'])),
+        $days = shopYandexmarketPlugin::getDays(ifset($profile_config['shop']['local_delivery_estimate']));
 
-                    // 'order-before'=>'16',//(необязательный) — время (только часы) оформления заказа, до наступления которого действуют указанные сроки и условия доставки.
+        if (count($days) == 2) {
+            sort($days);
+            $days = implode('-', $days);
+
+        } elseif (count($days) == 1) {
+            $days = max(0, $days);
+
+        } else {
+            $days = '';
+        }
+
+        $delivery_option = array(
+            //стоимость доставки в рублях (wtf? а как же мультивалютность и рынки UAH/KAZ/etc?)
+            'cost' => sprintf('%d', max(0, floatval($profile_config['shop']['local_delivery_cost']))),
+
+            //срок доставки в рабочих днях;
+            'days' => $days,
+        );
+
+        $order_before = null;
+
+        if (!empty($profile_config['shop']['local_delivery_order_before'])) {
+            //время (только часы) оформления заказа, до наступления которого действуют указанные сроки и условия доставки.
+            $order_before = $profile_config['shop']['local_delivery_order_before'];
+        }
+
+        if ($order_before !== null) {
+            $delivery_option['order-before'] = max(0, min(24, intval($order_before)));
+        }
+
+        $this->data['delivery-option'] = $delivery_option;
+
+        if (!$fast) {
+            $this->addDomValue($delivery_options, 'option', $delivery_option);
+            unset($delivery_option);
+
+            $api_available = $this->plugin()->checkApi();
+
+            if ($profile_config['shipping_methods'] && $api_available) {
+
+                try {
+                    $address = $this->plugin()->getAddress($profile_config);
+                } catch (waException $ex) {
+                    $this->error($ex->getMessage());
+                    $address = array('data' => array());
+                }
+
+                $items = array(
+                    array(
+                        'weight'   => 1.0,//base unit - kg
+                        'price'    => 0,
+                        'quantity' => 1,
+                    ),
                 );
-                $this->addDomValue($delivery_options, 'option', $delivery_option);
-                $shop->appendChild($delivery_options);
-                unset($fields['local_delivery_cost']);
+                $shipping_params = array(
+                    'no_external' => true,
+                );
+                if (!empty($address['data'])) {
+                    $shipping_methods = shopHelper::getShippingMethods($address['data'], $items, $shipping_params);
+                    foreach ($profile_config['shipping_methods'] as $id => $shipping_params) {
+                        if (isset($shipping_methods[$id])) {
+                            $shipping_params['estimate'] = array_map('intval', preg_split('@\D+@', trim(ifset($shipping_params['estimate'], '32')), 2));
+                            sort($shipping_params['estimate']);
+                            $cost = $shipping_methods[$id]['rate'];
+                            if (isset($shipping_params['cost']) && ($shipping_params['cost'] !== '')) {
+                                $cost = $shipping_params['cost'];
+                            }
+                            $delivery_option = array(
+                                'cost' => round(max(0, $cost)),
+                                'days' => implode('-', array_unique($shipping_params['estimate'])),
+                            );
+                            //XXX use rounding options for delivery cost
+
+                            if ($order_before !== null) {
+                                $delivery_option['order-before'] = max(0, min(24, intval($order_before)));
+                            }
+                            if ($delivery_option['cost'] !== '') {
+                                $this->addDomValue($delivery_options, 'option', $delivery_option);
+                            }
+                            unset($delivery_option);
+                        }
+                    }
+                }
             }
+            $shop->appendChild($delivery_options);
+
+            unset($fields['local_delivery_cost']);
 
             foreach ($fields as $field => $include_value) {
                 $value = ifset($profile_config['shop'][$field], '');
@@ -416,25 +697,67 @@ XML;
                 }
             }
 
-            $shop->appendChild($this->dom->createElement('offers'));
-            if (!$this->data['currency']) {
-                throw new waException('Не задано ни одной поддерживаемой валюты');
-            }
-            if (!in_array($this->data['primary_currency'], $this->data['currency'])) {
-                $this->data['primary_currency'] = reset($this->data['currency']);
-            }
+        }
+        // create yml_catalog/offers
+        $shop->appendChild($this->dom->createElement('offers'));
 
+        if (!$fast) {
             $this->data['path'] = array(
-                'offers' => shopYandexmarketPlugin::path($profile_id.'.xml'),
+                'offers' => shopYandexmarketPlugin::path($profile_config['profile_id'].'.xml'),
             );
             $this->save();
             $this->dom = null;
-            $this->loadDom();
-        } catch (waException $ex) {
-            $this->error($ex->getMessage());
-            echo json_encode(array('error' => $ex->getMessage(),));
-            exit;
         }
+    }
+
+    private function initCount()
+    {
+        $model = new shopCategoryModel();
+        if (empty($this->data['export']['hidden_categories'])) {
+            $sql = <<<SQL
+SELECT COUNT(1) as `cnt`
+FROM shop_category c
+LEFT JOIN shop_category_routes cr ON (c.id = cr.category_id)
+WHERE
+  ((cr.route IS NULL) OR (cr.route = s:route))
+   AND
+  (`c`.`type`=i:type)
+  AND
+  (`c`.`status`=1)
+
+SQL;
+        } else {
+            $sql = <<<SQL
+SELECT COUNT(1) as `cnt`
+FROM shop_category c
+LEFT JOIN shop_category_routes cr ON (c.id = cr.category_id)
+WHERE
+  ((cr.route IS NULL) OR (cr.route = s:route))
+   AND
+  (`c`.`type`=i:type)
+
+SQL;
+        }
+
+        $params = array(
+            'route' => $this->data['domain'],
+            'type'  => shopCategoryModel::TYPE_STATIC,
+        );
+
+
+        $this->data['count'] = array(
+            'category'         => (int)$model->query($sql, $params)->fetchField('cnt'),
+            'delivery_options' => 0,//
+            'product'          => $this->getCollection()->count(),
+        );
+        $stages = array_keys($this->data['count']);
+
+        $this->data['current'] = array_fill_keys($stages, 0);
+        $this->data['processed_count'] = array_fill_keys($stages, 0);
+        $this->data['stage'] = reset($stages);
+        $this->data['stage_name'] = $this->getStageName($this->data['stage']);
+        $this->data['memory'] = memory_get_peak_usage();
+        $this->data['memory_avg'] = memory_get_usage();
     }
 
     private function getStageName($stage)
@@ -783,20 +1106,25 @@ XML;
     {
         if (!$this->collection) {
             $options = array(
-                'frontend'     => true,
-                'round_prices' => false,
+                'frontend'              => true,
+                'round_prices'          => false,
+                'correct_category_urls' => true,
             );
 
-            foreach ($this->data['map'] as $map) {
-                foreach ($map['fields'] as $info) {
-                    if (!empty($info['source']) && !ifempty($info['category'])) {
-                        $value = null;
+            if (!empty($this->data['export']['skip_ignored'])) {
+                $options['params'] = true;
+            } else {
+                foreach ($this->data['map'] as $map) {
+                    foreach ($map['fields'] as $info) {
+                        if (!empty($info['source']) && !ifempty($info['category'])) {
+                            $value = null;
 
-                        list($source, $param) = explode(':', $info['source'], 2);
-                        switch ($source) {
-                            case 'params':
-                                $options['params'] = true;
-                                break;
+                            list($source, $param) = explode(':', $info['source'], 2);
+                            switch ($source) {
+                                case 'params':
+                                    $options['params'] = true;
+                                    break;
+                            }
                         }
                     }
                 }
@@ -823,25 +1151,6 @@ XML;
             $plugin = wa()->getPlugin('yandexmarket');
         }
         return $plugin;
-    }
-
-    private function stepDeliveryOptions(&$current_stage, &$count, &$processed)
-    {
-        //calculate delivery options for every method
-        $delivery_option = array(
-            //стоимость доставки в рублях (wtf? а как же мультивалютность и рынки UAH/KAZ/etc?)
-            'cost' => sprintf('%0.2f', max(0, floatval($profile_config['shop']['local_delivery_cost']))),
-
-            //срок доставки в рабочих днях;
-            'days' => max(1, intval($profile_config['shop']['local_delivery_estimate'])),
-
-            // 'order-before'=>'16',//(необязательный) — время (только часы) оформления заказа, до наступления которого действуют указанные сроки и условия доставки.
-        );
-
-        $nodes = $this->dom->getElementsByTagName('delivery-options');
-
-        $this->addDomValue($nodes->item(0), 'option', $delivery_option);
-        //TODO cache calculated data
     }
 
     /**
@@ -883,14 +1192,11 @@ SQL;
                 $categories = array_slice($categories, $current_stage);
             }
         }
+
         $chunk = 100;
         while ((--$chunk >= 0) && ($category = reset($categories))) {
-            if (
-                // это родительская категория
-                empty($category['parent_id'])
-                ||
-                // или родители этой категории попали в выборке
-                isset($this->data['categories'][$category['parent_id']])
+            if (empty($category['parent_id']) # это родительская категория
+                || isset($this->data['categories'][$category['parent_id']]) # или родители этой категории попали в выборке
             ) {
                 $category_xml = $this->dom->createElement("category", str_replace('&', '&amp;', $category['name']));
                 $category['id'] = intval($category['id']);
@@ -902,10 +1208,8 @@ SQL;
                 $nodes->item(0)->appendChild($category_xml);
 
                 $this->data['categories'][$category['id']] = $category['id'];
-                if (
-                    !empty($category['include_sub_categories'])
-                    &&
-                    (($category['right_key'] - $category['left_key']) > 1)//it's has descendants
+                if (!empty($category['include_sub_categories'])
+                    && (($category['right_key'] - $category['left_key']) > 1)//it's has descendants
                 ) {
                     //remap hidden subcategories
                     $descendants = $model
@@ -931,7 +1235,7 @@ SQL;
 
     protected function save()
     {
-        if ($this->dom) {
+        if ($this->dom && $this->processId) {
             $this->dom->save($this->getTempPath());
         }
     }
@@ -1117,37 +1421,80 @@ SQL;
         while ((--$chunk >= 0) && ($product = reset($products))) {
             $check_type = empty($this->data['type_id']) || in_array($product['type_id'], $this->data['type_id']);
 
-            $check_price = $this->checkMinPrice($product['price'], $product);
+            $check_price = $this->checkMinPrice($product['price']);
 
             $check_category = !empty($product['category_id']) && isset($this->data['categories'][$product['category_id']]);
+            if (empty($this->data['export']['skip_ignored'])) {
+                $check_filter = true;
+            } else {
+                $check_filter = (
+                    !isset($product['params']['yandexmarket.ignored'])
+                    || !intval($product['params']['yandexmarket.ignored'])
+                );
+            }
+
+
             if ($check_category && ($product['category_id'] != $this->data['categories'][$product['category_id']])) {
                 // remap product category
                 //TODO check available parent category
                 $product['category_id'] = $this->data['categories'][$product['category_id']];
             }
-            if (false && $check_type && $check_price && !$check_category) {
-                //debug option
+
+            if (!$check_category && $check_type && $check_price && $check_filter) {
+                // или проверять наличие урла, полученного из коллекции
+                // и по нему принимать решение о том, что товар доступен на витрине
+                // проверить доступность товара в других дополнительных категориях
+                if (!empty($product['frontend_url'])) {
+                    //     $check_category = true;
+                }
+            }
+
+            $export = $check_type && $check_price && $check_category && $check_filter;
+
+            if (false && !$export) { # DEBUG OPTION XXX make it adjustable
+                $export_params = compact('check_type', 'check_price', 'check_category', 'check_filter');
+                $export_params = array_keys(array_diff($export_params, array_filter($export_params)));
+                $export_extra_params = array();
+
+                if (!$check_type) {
+                    $export_extra_params['type'] = array(
+                        'product'  => $product['type_id'],
+                        'expected' => ifset($this->data['type_id']),
+                    );
+                }
+
+                if (!$check_category) {
+                    $export_extra_params['category'] = array(
+                        'product'  => $product['category_id'],
+                        'expected' => ifset($this->data['categories']),
+                    );
+                }
+
+                if (!$check_filter) {
+                    $export_extra_params['params'] = array(
+                        'product' => ifset($product['params'], array()),
+                    );
+                }
+
                 $this->error(
-                    "Product #%d [%s] skipped because it's category %s is not available",
+                    "TRACE: Product #%d [%s] skipped because it's not available (%s)\n\tPARAMS:%s",
                     $product['id'],
                     $product['name'],
-                    var_export(ifset($product['category_id']), true)
-
+                    implode(', ', $export_params),
+                    var_export($export_extra_params, true)
                 );
             }
 
-            if ($check_type && $check_price && $check_category) {
-                $type = ifempty($this->data['types'][$product['type_id']], 'simple');
+            if ($export) {
                 if (!empty($this->data['export']['sku'])) {
                     $skus = $product['skus'];
                     unset($product['skus']);
                     foreach ($skus as $sku) {
                         //TODO use min_price && convert into default currency
 
-                        $check_sku_price = $this->checkMinPrice($sku['primary_price'], $sku);
+                        $check_sku_price = $this->checkMinPrice($sku['primary_price']);
 
                         $check_available = !empty($sku['available']);
-                        //TODO use
 
                         $check_count = $check_stock || ($sku['count'] === null) || ($sku['count'] > 0);
                         if ($check_available && $check_sku_price && $check_count) {
@@ -1161,7 +1508,7 @@ SQL;
                             } else {
                                 $increment = true;
                             }
-                            $this->addOffer($product, $type, (count($skus) > 1) ? $sku : null);
+                            $this->addOffer($product, (count($skus) > 1) ? $sku : null);
                             ++$processed;
                             if ($increment) {
                                 ++$count['product'];
@@ -1172,7 +1519,7 @@ SQL;
                     $check_available = !empty($product['available']);
                     $check_count = $check_stock || ($product['count'] === null) || ($product['count'] > 0);
                     if ($check_available && $check_count) {
-                        $this->addOffer($product, $type);
+                        $this->addOffer($product);
                         ++$processed;
                     }
                 }
@@ -1209,12 +1556,12 @@ SQL;
                         case 'frontend_url':
                             if (!empty($sku['id']) && ($sku['id'] != $product['sku_id'])) {
                                 if (strpos($value, '?')) {
-                                    $value .= '&sku='.$sku['id'];
+                                    $value .= '&';
                                 } else {
-                                    $value .= '?sku='.$sku['id'];
+                                    $value .= '?';
                                 }
+                                $value .= 'sku='.$sku['id'];
                             }
-
                             break;
                         case 'file_name':
                             if (!empty($sku)) {
@@ -1254,9 +1601,10 @@ SQL;
 
                     $product['features'] = $features_model->getValues($product['id'], ifset($sku['id']));
                 }
-                $value = $this->format($field, ifempty($product['features'][$param]), $info, $product, $sku);
+                $value = $this->format($field, ifset($product['features'][$param]), $info, $product, $sku);
                 break;
             case 'params':
+
                 $value = $this->format($field, ifset($product['params']['yandexmarket.'.$param]), $info, $product, $sku);
                 break;
             case 'function':
@@ -1282,12 +1630,14 @@ SQL;
 
     /**
      * @param array $product
-     * @param string $type
      * @param array $sku
+     * @return array|null
      */
-    private function addOffer($product, $type, $sku = null)
+    private function addOffer($product, $sku = null)
     {
-
+        if (empty($type)) {
+            $type = ifempty($this->data['types'][$product['type_id']], 'simple');
+        }
         $offer_map = $this->data['map'][$type]['fields'];
         $offer = array();
         $map = array();
@@ -1302,14 +1652,20 @@ SQL;
                         'attribute' => !empty($info['attribute']),
                         'callback'  => !empty($info['callback']),
                     );
-
+                    if (!empty($info['path'])) {
+                        $map[$field_id]['path'] = $info['path'];
+                    }
+                    if (!empty($info['virtual'])) {
+                        $map[$field_id]['virtual'] = $info['virtual'];
+                    }
                 }
             }
         }
 
         if ($offer) {
-            $this->addOfferDom($offer, $map);
+            return $this->addOfferDom($offer, $map);
         }
+        return null;
     }
 
     private function addOfferDom($offer, $map)
@@ -1320,16 +1676,26 @@ SQL;
             $offers = $nodes->item(0);
         }
         $product_xml = $this->dom->createElement("offer");
+        $data = array();
         foreach ($offer as $field_id => $value) {
             $field = preg_replace('/\\..*$/', '', $field_id);
             if (!empty($map[$field_id]['callback'])) {
+                $data[$field.'.raw'] = $value;
                 $value = $this->format($field, $value, array(), $offer);
             }
-            if (!in_array($value, array(null, false, ''), true)) {
+            if (!in_array($value, array(null, false, ''), true) # non empty value
+                && empty($map[$field_id]['virtual']) # value should be exported
+            ) {
+                if (!empty($map[$field_id]['path']) && (is_array($value) && !empty($value['path']))) {
+                    $field = $map[$field_id]['path'];
+                    unset($value['path']);
+                }
                 $this->addDomValue($product_xml, $field, $value, $map[$field_id]['attribute']);
+                $data[$field] = $value;
             }
         }
         $offers->appendChild($product_xml);
+        return $data;
     }
 
     /**
@@ -1343,11 +1709,20 @@ SQL;
         if (is_array($value)) {
             reset($value);
             if (!preg_match('@^\d+$@', key($value))) {
+                $path = explode('/', $field);
+                $field = array_pop($path);
                 $element = $this->dom->createElement($field, trim(ifset($value['value'])));
                 unset($value['value']);
-
                 foreach ($value as $attribute => $attribute_value) {
+                    if (is_array($attribute_value)) {
+                        $attribute_value = reset($attribute_value);
+                    }
                     $element->setAttribute($attribute, $attribute_value);
+                }
+                while ($field = array_pop($path)) {
+                    $parent = $this->dom->createElement($field);
+                    $parent->appendChild($element);
+                    $element = $parent;
                 }
                 $dom->appendChild($element);
             } else {
@@ -1356,11 +1731,18 @@ SQL;
                 }
             }
         } elseif (!$is_attribute) {
-            $child = $this->dom->createElement($field, trim($value));
+            $path = explode('/', $field);
+            $field = array_pop($path);
+            $element = $this->dom->createElement($field, trim($value));
             if ($field == 'categoryId') {
-                $child->setAttribute('type', 'Own');
+                $element->setAttribute('type', 'Own');
             }
-            $dom->appendChild($child);
+            while ($field = array_pop($path)) {
+                $parent = $this->dom->createElement($field);
+                $parent->appendChild($element);
+                $element = $parent;
+            }
+            $dom->appendChild($element);
         } else {
             $dom->setAttribute($field, trim($value));
         }
@@ -1468,8 +1850,8 @@ SQL;
                 $value = strip_tags($value);
 
                 $value = trim($value);
-                if (mb_strlen($value) > 512) {
-                    $value = mb_substr($value, 0, 509).'...';
+                if (mb_strlen($value) > 3000) {
+                    $value = mb_substr($value, 0, 2997).'...';
                 }
                 break;
             case 'barcode':
@@ -1488,6 +1870,13 @@ SQL;
                     }
                 }
                 break;
+            case 'fee':
+                if (!in_array($value, array('', 0, '0', null), true)) {
+                    $value = round(100 * min(100, max(0, floatval($value))));
+                } else {
+                    $value = null;
+                }
+                break;
             case 'sales_notes':
                 $value = trim($value);
                 if (mb_strlen($value) > 50) {
@@ -1503,18 +1892,30 @@ SQL;
             case 'url':
                 //max 512
                 $value = preg_replace_callback('@([^\[\]a-zA-Z\d_/-\?=%&,\.]+)@i', array(__CLASS__, 'rawurlencode'), $value);
-                if ($this->data['utm']) {
+                if (isset($this->data['utm']) && !empty($this->data['utm'])) {
                     $value .= (strpos($value, '?') ? '&' : '?').$this->data['utm'];
                 }
-                $value = 'http://'.ifempty($this->data['base_url'], 'localhost').$value;
 
+
+                if (!empty($this->data['custom_url'])) {
+                    $custom_url = $this->data['custom_url'];
+                    if (preg_match_all('@%([a-z_]+)%@', $custom_url, $matches)) {
+                        foreach ($matches[1] as $match) {
+                            $replace = rawurlencode(ifset($sku_data[$match], ifset($data[$match])));
+                            $custom_url = str_replace('%'.$match.'%', $replace, $custom_url);
+                        }
+                    }
+                    $value .= (strpos($value, '?') ? '&' : '?').$custom_url;
+                }
+
+                $value = ifempty($this->data['schema'], 'http://').ifempty($this->data['base_url'], 'localhost').$value;
                 break;
             case 'oldprice':
                 if (empty($value) || empty($this->data['export']['compare_price'])) {
                     $value = null;
                     break;
                 }
-
+            //no-break
             case 'price':
                 $_currency_converted = false;
 
@@ -1533,16 +1934,15 @@ SQL;
                     if (!in_array($data['currency'], $this->data['currency'])) {
                         #value in default currency
                         if ($this->data['default_currency'] != $this->data['primary_currency']) {
-                            $_currency_converted = true;
                             $value = $currency_model->convert($value, $this->data['default_currency'], $this->data['primary_currency']);
                         }
+                        $_currency_converted = true;
                         $data['currency'] = $this->data['primary_currency'];
                     } elseif ($this->data['default_currency'] != $data['currency']) {
                         $_currency_converted = true;
                         $value = $currency_model->convert($value, $this->data['default_currency'], $data['currency']);
                     }
                 }
-
 
                 if ($value && class_exists('shopRounding') && !empty($_currency_converted)) {
                     $value = shopRounding::roundCurrency($value, $data['currency']);
@@ -1575,7 +1975,30 @@ SQL;
                             break;
                     }
                 }
-                $value = ((($value <= 0) || ($value === 'false') || empty($value)) && ($value !== null) && ($value !== 'true')) ? 'false' : 'true';
+                $count = false;
+                //XXX CPA bloody hack = used complex value
+                if (is_array($value) && isset($value['raw'])) {
+                    $value = $value['raw'];
+                } elseif (is_int($value) || (is_string($value) && preg_match('@^\d+$@', $value))) {
+                    $count = intval($value);
+                } elseif (in_array($value, array(null, 'true', ''), true)) {
+                    $count = 9999;// 100500;
+                } else {
+                    $count = 0;
+                }
+                if ($count === false) {
+                    $value = (
+                        (($value <= 0) || ($value === 'false') || empty($value))
+                        && ($value !== '')
+                        && ($value !== null)
+                        && ($value !== 'true')
+                    ) ? 'false' : 'true';
+                } else {
+                    $value = array(
+                        'raw'   => $count,
+                        'value' => $value,
+                    );
+                }
                 break;
             case 'store':
             case 'pickup':
@@ -1591,7 +2014,11 @@ SQL;
                             break;
                     }
                 }
-                $value = (empty($value) || ($value === 'false')) ? 'false' : 'true';
+                if (!in_array($value, array(null, ''))) {
+                    $value = (empty($value) || ($value === 'false')) ? 'false' : 'true';
+                } else {
+                    $value = null;
+                }
                 break;
             case 'picture':
                 //max 512
@@ -1608,8 +2035,7 @@ SQL;
                          */
                         $size = $shop_config->getImageSize('big');
                     }
-                    $values[] = 'http://'.ifempty($this->data['base_url'], 'localhost').shopImage::getUrl($image, $size);
-                    //TODO check SCHEMA
+                    $values[] = ifempty($this->data['schema'], 'http://').ifempty($this->data['base_url'], 'localhost').shopImage::getUrl($image, $size);
                 }
                 $value = $values;
                 break;
@@ -1828,12 +2254,36 @@ SQL;
                  */
                 break;
             case 'local_delivery_cost':
-                if ($value !== '') {
+                if (!in_array($value, array('', false, null), true)) {
                     $value = max(0, floatval($value));
+
+                    if (empty($info) && isset($this->data['delivery-option'])) {
+                        $value = array(
+                            'cost' => $value,
+                            'days' => ifset($data['local_delivery_days'], $this->data['delivery-option']['days']),
+                            'path' => true,
+                        );
+                    }
+                } else {
+                    $value = null;
+                }
+                break;
+            case 'local_delivery_days':
+                if (!in_array($value, array('', false, null), true)) {
+                    $value = shopYandexmarketPlugin::getDays($value);
+                    if (count($value) == 2) {
+                        sort($value);
+                        $value = implode('-', $value);
+
+                    } else {
+                        $value = max(0, $value);
+                    }
+                } else {
+                    $value = null;
                 }
                 break;
             case 'days':
-                $value = max(1, intval($value));
+                $value = max(0, intval($value));
                 break;
             case 'dataTour':
                 /**
@@ -1951,7 +2401,7 @@ SQL;
                 }
                 unset($item);
             }
-            if (!in_array($field, array('email', 'picture', 'dataTour', 'additional', 'barcode', 'param', 'related_offer'))) {
+            if (!in_array($field, array('email', 'picture', 'dataTour', 'additional', 'barcode', 'param', 'related_offer', 'local_delivery_cost', 'available'))) {
                 $value = implode(', ', $value);
             }
         } elseif ($value !== null) {
@@ -1965,10 +2415,9 @@ SQL;
         return $value;
     }
 
-    private function checkMinPrice($price, $raw = null)
+    private function checkMinPrice($price)
     {
         static $currency_model;
-        $original_price = $price;
         if ($this->data['default_currency'] != $this->data['primary_currency']) {
             if (empty($currency_model)) {
                 $currency_model = new shopCurrencyModel();
@@ -1997,13 +2446,14 @@ SQL;
     {
         if (func_num_args() > 1) {
             $args = func_get_args();
-            $message = call_user_func_array('sprintf', $args);
+            $format = array_shift($args);
+            $message = vsprintf($format, $args);
         } elseif (is_array($message)) {
             $message = var_export($message, true);
         }
         $path = wa()->getConfig()->getPath('log');
-        waFiles::create($path.'/shop/plugins/yandexmarket.log');
-        waLog::log($message, 'shop/plugins/yandexmarket.log');
+        waFiles::create($path.'/shop/plugins/yandexmarket/export.error.log');
+        waLog::log($message, 'shop/plugins/yandexmarket/export.error.log');
     }
 
     private static function rawurlencode($a)

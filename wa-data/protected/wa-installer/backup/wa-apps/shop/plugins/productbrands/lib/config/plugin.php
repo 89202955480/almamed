@@ -7,7 +7,7 @@
 return array(
     'name' => /*_wp*/('Brands'),
     'description' => /*_wp*/('Storefront’s product filtering by brand (manufacturer). You can upload image and add description for the brand.'),
-    'version' => '2.6',
+    'version' => '2.4',
     'vendor' => 809114,
     'img'=>'img/brands.png',
     'shop_settings' => true,

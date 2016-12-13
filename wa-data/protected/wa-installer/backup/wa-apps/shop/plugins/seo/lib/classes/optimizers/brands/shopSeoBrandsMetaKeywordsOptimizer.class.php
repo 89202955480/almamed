@@ -10,14 +10,7 @@ class shopSeoBrandsMetaKeywordsOptimizer extends shopSeoMetaKeywordsOptimizer
 
     protected function preCheck()
     {
-        if ($this->brand_response->isExists())
-        {
-            $brand_keywords = $this->brand_response->getMetaKeywords();
-
-            return empty($brand_keywords);
-        }
-
-        return empty($title);
+        return true;
     }
 
     protected function getTemplate()
@@ -28,6 +21,13 @@ class shopSeoBrandsMetaKeywordsOptimizer extends shopSeoMetaKeywordsOptimizer
 
         $settings = new shopSeoSettings();
         $template = new shopSeoTemplate();
+
+        $brand = wa()->getView()->getVars('brand');
+
+        if (!empty($brand['meta_keywords']))
+        {
+            return $brand['meta_keywords'];
+        }
 
         foreach (array($current_storefront, $general_storefront) as $storefront)
         {

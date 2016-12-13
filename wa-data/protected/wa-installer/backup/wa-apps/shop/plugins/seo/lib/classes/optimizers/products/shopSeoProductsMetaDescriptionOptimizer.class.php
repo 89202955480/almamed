@@ -74,6 +74,14 @@ class shopSeoProductsMetaDescriptionOptimizer extends shopSeoMetaDescriptionOpti
     {
         parent::optimize();
         $this->product_response->setMetaDescription($this->getText());
+
+	    $product_og_model = new shopProductOgModel();
+	    $og = $product_og_model->getData(new shopProduct($this->product_response->getID()));
+
+	    if (empty($og['description']))
+	    {
+		    $this->product_response->updateOg('description', $this->getText());
+	    }
     }
 
     private $product_response;

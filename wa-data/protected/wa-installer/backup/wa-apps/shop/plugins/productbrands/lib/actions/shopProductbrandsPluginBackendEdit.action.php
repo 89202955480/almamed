@@ -13,13 +13,10 @@ class shopProductbrandsPluginBackendEditAction extends waViewAction
         $feature_model = new shopFeatureModel();
         $features['price'] = array(
             'id' => 'price',
-            'name' => _w('Price')
+            'name' => 'Price'
         );
-        $features += $feature_model
-            ->select('*')
-            ->where("(selectable=1 OR type='boolean' OR type='double' OR type LIKE 'dimension\.%' OR type LIKE 'range\.%') AND parent_id IS NULL")
-            ->fetchAll('id');
-
+        $features += $feature_model->getFeatures('selectable', 1);
+        $features += $feature_model->getFeatures('type', 'boolean');
         if (!empty($filter)) {
             foreach ($filter as $feature_id) {
                 $feature_id = trim($feature_id);

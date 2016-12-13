@@ -10,14 +10,7 @@ class shopSeoBrandsMetaDescriptionOptimizer extends shopSeoMetaDescriptionOptimi
 
     protected function preCheck()
     {
-        if ($this->brand_response->isExists())
-        {
-            $brand_description = $this->brand_response->getMetaDescription();
-
-            return empty($brand_description);
-        }
-
-        return empty($title);
+        return true;
     }
 
     protected function getTemplate()
@@ -28,6 +21,13 @@ class shopSeoBrandsMetaDescriptionOptimizer extends shopSeoMetaDescriptionOptimi
 
         $settings = new shopSeoSettings();
         $template = new shopSeoTemplate();
+
+        $brand = wa()->getView()->getVars('brand');
+
+        if (!empty($brand['meta_description']))
+        {
+            return $brand['meta_description'];
+        }
 
         foreach (array($current_storefront, $general_storefront) as $storefront)
         {

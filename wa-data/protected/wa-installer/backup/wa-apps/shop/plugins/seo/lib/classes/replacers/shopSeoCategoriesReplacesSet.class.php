@@ -27,12 +27,12 @@ class shopSeoCategoriesReplacesSet extends shopSeoReplacesSet
 
 	    $category_name = $category['name'];
 	    $category_seo_name = ifempty($category_settings['category_name'], $category_name);
-	    $products_count = $category['count'];
 	    $page_number = waRequest::get('page', 1);
 
 		$products_collection = new shopProductsCollection('category/'.$category['id']);
 		$products_collection->addWhere('`min_price` <> 0');
 		$products_collection->orderBy('min_price');
+		$products_count = $products_collection->count();
 		$products = $products_collection->getProducts('*', 0, 1);
 		$min_price = 0;
 

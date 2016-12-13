@@ -13,7 +13,7 @@ var yossFrontend = (function () { 'use strict';
 
 	//--------------------- BEGIN DOM METHODS ---------------------
 	getProductBlock = function (product) {
-		var
+		var									
 			wrapperBlock, wrapperLeft, wrapperRight, productImg, productName, productBrands, productCategory, productPrice, productLink;
 
 		wrapperBlock    = $('<div/>').addClass('yoss-result-wrapper');
@@ -44,7 +44,6 @@ var yossFrontend = (function () { 'use strict';
 
 	//------------------- BEGIN EVENT HANDLERS --------------------
 	ajaxSendQuery = function (t, resultBlock) {
-
 		$.ajax({
 			type: 'POST',
 			url: '{$search_url}',
@@ -111,7 +110,7 @@ var yossFrontend = (function () { 'use strict';
 
 			if ($('.yoss-result').length > 0) {
 				$('.yoss-result').remove();
-			}
+			} 
 
 			{if $yoss_settings.result_width === 'auto'}
 				resultBlock.css({ 'width': inputParentWidth + 'px' });
@@ -125,8 +124,8 @@ var yossFrontend = (function () { 'use strict';
 				keyupTimeout = null;
 			}
 
-			keyupTimeout = setTimeout (function() { ajaxSendQuery(t, resultBlock); }, 700);
-
+			keyupTimeout = setTimeout (function() { ajaxSendQuery(t, resultBlock); }, 700);			
+			
 			{if $yoss_settings.lazy_loading === 'on'}
 				$('.yoss-result').scroll(onResultBlockScroll);
 			{/if}
@@ -137,7 +136,7 @@ var yossFrontend = (function () { 'use strict';
 	        $('.yoss-result').remove();
 			return false;
 
-		}
+		}	
 	};
 
 	onResultBlockScroll = function (event) {
@@ -155,7 +154,7 @@ var yossFrontend = (function () { 'use strict';
 				if (query.length > 0 && nextPage > 0 ) {
 					lastEl.after(loadingBlock);
 
-					$.ajax({
+					$.ajax({		            	
 						type: 'POST',
 						url: '{$search_url}',
 						data: 'query='+query+'&page='+nextPage,
@@ -164,7 +163,7 @@ var yossFrontend = (function () { 'use strict';
 
 							$('.yoss-result-wrapper.loading').remove();
 
-							if (result.status === 'ok' && result.data.products.length > 0) {
+							if (result.status === 'ok' && result.data.products.length > 0) {							
 
 								if (result.data.next_page !== false) {
 									resultBlock.find('#next_page').val(result.data.next_page);
@@ -176,7 +175,7 @@ var yossFrontend = (function () { 'use strict';
 									var productBlock = getProductBlock(result.data.products[key]);
 
 									lastEl.after(productBlock);
-								}
+								}	
 
 							}
 						}

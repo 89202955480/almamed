@@ -20,7 +20,7 @@ class shopError301Model extends waModel
 	public function index()
 	{
 		$this->exec("INSERT IGNORE INTO `".$this->table."` SELECT `id`, 'c' as `type`, `url`, `parent_id` as `parent` FROM `shop_category`;");
-		$this->exec("INSERT IGNORE INTO `".$this->table."` SELECT `id`, 'p' as `type`, `url`, `category_id` as `parent`FROM `shop_product`;");
+		$this->exec("INSERT IGNORE INTO `".$this->table."` SELECT `id`, 'p' as `type`, `url`, COALESCE(`category_id`, 0) as `parent` FROM `shop_product`;");
 		$this->exec("INSERT IGNORE INTO `".$this->table."` SELECT `id`, 'x' as `type`, `url`, `product_id` as `parent` FROM `shop_product_pages`;");
 	}
 	
@@ -38,6 +38,8 @@ class shopError301Model extends waModel
 		
 		$query = "SELECT 
 		A.`type`,
+		A.`id` as `id`,
+		A.`parent` as `parentID`,
 		CONCAT('/',E.full_url, '/', C.url,'/') as `parent`,
 		CONCAT(C.url,'/',B.url,'/') as `url0`,
 		CONCAT('product/', C.url,'/',B.url,'/') as `url1`,
@@ -52,6 +54,8 @@ class shopError301Model extends waModel
 		UNION
 		SELECT 
 		A.`type`,
+		A.`id` as `id`,
+		A.`parent` as `parentID`,
 		CONCAT('/', D.full_url,'/') as `parent`,
 		CONCAT(B.url,'/') as `url0`,
 		CONCAT('product/', B.url,'/') as `url1`,
@@ -65,6 +69,8 @@ class shopError301Model extends waModel
 		UNION
 		SELECT 
 		A.`type`,
+		A.`id` as `id`,
+		A.`parent` as `parentID`,
 		CONCAT('/', LEFT(B.full_url, LENGTH(B.full_url) - LENGTH(B.url))) as `parent`,
 		CONCAT('category/',B.full_url,'/') as `url0`,
 		CONCAT('category/',B.url,'/') as `url1`,

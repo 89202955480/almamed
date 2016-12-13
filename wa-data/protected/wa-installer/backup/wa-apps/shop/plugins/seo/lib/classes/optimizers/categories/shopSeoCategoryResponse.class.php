@@ -18,6 +18,28 @@ class shopSeoCategoryResponse
 		$this->setField('meta_title', $meta_title);
 	}
 
+	public function getOg()
+	{
+		return $this->getField('og');
+	}
+
+	public function updateOg($name, $value)
+	{
+		$og = $this->getOg();
+		$og[$name] = $value;
+		$this->setOg($og);
+	}
+
+	public function setOg(array $values)
+	{
+		$this->setField('og', $values);
+
+		foreach ($values as $key => $value)
+		{
+			wa()->getResponse()->setOGMeta('og:'.$key, $value);
+		}
+	}
+
 	public function getMetaKeywords()
 	{
 		return $this->getField('meta_keywords');

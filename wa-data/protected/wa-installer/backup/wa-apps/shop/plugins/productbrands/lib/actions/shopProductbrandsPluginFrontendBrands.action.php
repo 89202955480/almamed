@@ -13,9 +13,7 @@ class shopProductbrandsPluginFrontendBrandsAction extends shopFrontendAction
         $brands = shopProductbrandsPlugin::getBrands();
         $this->view->assign('brands', $brands);
 
-        $plugin = wa('shop')->getPlugin('productbrands');
-
-        $title = $plugin->getSettings('brands_name');
+        $title = wa()->getSetting('brands_name', '', array('shop', 'productbrands'));
         if (!$title) {
             $title = _w('Brands');
         }
@@ -30,13 +28,6 @@ class shopProductbrandsPluginFrontendBrandsAction extends shopFrontendAction
         ));
 
         $this->getResponse()->setTitle($title);
-
-        if ($tmp = $plugin->getSettings('brands_meta_description')) {
-            $this->getResponse()->setMeta('description', $tmp);
-        }
-        if ($tmp = $plugin->getSettings('brands_meta_keywords')) {
-            $this->getResponse()->setMeta('keywords', $tmp);
-        }
 
         waSystem::popActivePlugin();
     }

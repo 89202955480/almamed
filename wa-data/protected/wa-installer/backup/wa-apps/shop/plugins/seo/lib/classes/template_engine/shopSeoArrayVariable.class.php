@@ -17,25 +17,33 @@ class shopSeoArrayVariable implements shopSeoIReplacer
 			'sep_slash' => new shopSeoSepSlashModifier(),
 			'sep_space' => new shopSeoSepSpaceModifier(),
 			'reverse' => new shopSeoReverseModifier(),
+			'depth' => new shopSeoDepthModifier(),
 		);
 	}
 
 	public function fetch($template)
 	{
-		return preg_replace_callback('/\{'.preg_quote($this->name).'((?:\|[A-z0-9\_\-]+)*)\}/',
+		return preg_replace_callback('/\{'.preg_quote($this->name).'((?:\|[A-z0-9\_\-]+(?:\:([A-z0-9\_\-\,]+))?)*)\}/',
 			array($this, 'arrayReplace'), $template);
 	}
 
+	/**
+	 * @param array $matches
+	 *
+	 * @return array|string
+	 */
 	public function arrayReplace(array $matches)
 	{
 		$string_modifiers = ifset($matches[1]);
-		preg_match_all('/\|([A-z0-9\_\-]+)*/', $string_modifiers, $matches_modifiers);
+		preg_match_all('/\|([A-z0-9\_\-]+)(?:\:([A-z0-9\_\-\,]+))?/', $string_modifiers, $matches_modifiers);
+
 		$found_modifiers = ifset($matches_modifiers[1], array());
+		$args = ifset($matches_modifiers[2], array());
 		$modifiers = $this->getModifiers();
 		$value = $this->value;
-		$sep = ' / ';
+		$sep = ' ';
 
-		foreach ($found_modifiers as $modifier)
+		foreach ($found_modifiers as $i => $modifier)
 		{
 			$modifier = ifset($modifiers[$modifier]);
 
@@ -43,13 +51,13 @@ class shopSeoArrayVariable implements shopSeoIReplacer
 			{
 				$new_sep = $modifier->getSep();
 				$sep = ifset($new_sep, $sep);
-				$value = $modifier->modify($value);
+				$value = $modifier->modify($value, ifset($args[$i]));
 			}
 			elseif ($modifier instanceof shopSeoModifier)
 			{
 				$new_value = array();
 
-				foreach ($value as $i => $v)
+				foreach ($value as $v)
 				{
 					$new_v = $modifier->modify($v);
 

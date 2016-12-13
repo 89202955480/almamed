@@ -1,8 +1,9 @@
 <?php
 
-class shopOrderSearchMethod extends waAPIMethod
+class shopOrderSearchMethod extends shopApiMethod
 {
     protected $method = 'GET';
+    protected $courier_allowed = true;
 
     public function execute()
     {
@@ -21,10 +22,13 @@ class shopOrderSearchMethod extends waAPIMethod
         }
         $this->response['offset'] = $offset;
         $this->response['limit'] = $limit;
-        if (wa()->getUser()->getRights('shop', 'orders')) {
-            $collection = new shopOrdersCollection($hash);
+
+        if ($this->courier || wa()->getUser()->getRights('shop', 'orders')) {
+            $collection = new shopOrdersCollection($hash, !$this->courier ? array() : array(
+                'courier_id' => $this->courier['id'],
+            ));
             $this->response['count'] = $collection->count();
-            $this->response['orders'] = array_values($collection->getOrders(self::getColelctionFields(), $offset, $limit));
+            $this->response['orders'] = array_values($collection->getOrders(self::getCollectionFields(), $offset, $limit));
             if ($this->response['orders']) {
                 foreach ($this->response['orders'] as &$o) {
                     foreach (array('auth_code', 'auth_pin') as $k) {
@@ -41,12 +45,12 @@ class shopOrderSearchMethod extends waAPIMethod
         }
     }
 
-    protected static function getColelctionFields()
+    protected static function getCollectionFields()
     {
         $fields = array_fill_keys(array('*', 'items', 'params'), 1);
         $additional_fields = waRequest::request('fields', '', 'string');
         if ($additional_fields) {
-            foreach(explode(',', $additional_fields) as $f) {
+            foreach (explode(',', $additional_fields) as $f) {
                 $fields[$f] = 1;
             }
         }

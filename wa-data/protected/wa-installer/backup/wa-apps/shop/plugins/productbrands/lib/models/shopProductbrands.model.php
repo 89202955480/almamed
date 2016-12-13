@@ -4,7 +4,7 @@
  * Class shopProductbrandsModel
  *
  * @author wa-apps.ru <info@wa-apps.ru>
- * @copyright 2013-2016 wa-apps.ru
+ * @copyright 2013-2015 wa-apps.ru
  * @license Webasyst License http://www.webasyst.ru/terms/#eula
  * @link http://www.webasyst.ru/store/plugin/shop/productbrands/
  */
@@ -16,6 +16,10 @@ class shopProductbrandsModel extends waModel
      * @param int $id
      * @return array
      */
+
+
+
+
     public function getBrand($id)
     {
         $feature_values_model = new shopFeatureValuesVarcharModel();
@@ -33,7 +37,6 @@ class shopProductbrandsModel extends waModel
                 'description' => '',
                 'image' => null,
                 'title' => '',
-                'h1' => '',
                 'meta_keywords' => '',
                 'meta_description' => '',
                 'url' => null,
@@ -48,7 +51,7 @@ class shopProductbrandsModel extends waModel
     }
 
     /**
-     * @param string $params
+     * @param text $params
      * @return array
      */
     public static function getParams($params)

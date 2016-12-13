@@ -136,12 +136,6 @@ msgstr "Вы можете сортировать бренды вручную н�
 msgid "All brands page title"
 msgstr "Заголовок страницы всех брендов"
 
-msgid "All brands meta description"
-msgstr "Meta description страницы всех брендов"
-
-msgid "All brands meta keywords"
-msgstr "Meta keywords страницы всех брендов"
-
 #: /wa-apps/shop/plugins/productbrands/templates/actions/backend/BackendEdit.html:174
 msgid "Optional set of custom <em>key=value</em> parameters. Each key=value pair should be on a separate line."
 msgstr "Дополнительные параметры key=value. Каждое значение key=value должно быть на отдельной строке."

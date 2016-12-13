@@ -14,23 +14,23 @@
         {/if}
         {$category.name|escape}
     </nav>
-    
+
 </div>
 
 <div class="fill-background">
 
-    <h1 class="category-name">
+    <div class="category-name">
         {$category.name|escape}
-    </h1>
-    
+    </div>
+
     {if 0 && shopWmimageincatPlugin::getCategoryImage($category.id, 'banner')}{* PLUGIN WMIMAGEINCAT: replace 0 to 1 to enable *}
         <div class="image"><img src="{shopWmimageincatPlugin::getCategoryImage($category.id, 'banner')}" alt="{$category.name}" title="{$category.description|strip_tags}" /></div>
     {/if}
-    
+
     <!-- plugin hook: 'frontend_category' -->
     {* @event frontend_category.%plugin_id% *}
     {foreach $frontend_category as $_}{$_}{/foreach}
-    
+
     <!-- subcategories -->
     {if 0 && $category.subcategories}{* PLUGIN WMIMAGEINCAT: replace 0 to 1 to enable *}
         <ul class="piicsl">
@@ -52,7 +52,7 @@
             {/foreach}
         </ul>
     {/if}
-    
+
     <!-- description -->
     {if $category.description}
         <div class="category-description">{$category.description}</div>

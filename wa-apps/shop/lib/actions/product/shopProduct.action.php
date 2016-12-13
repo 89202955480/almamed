@@ -4,8 +4,6 @@ class shopProductAction extends waViewAction
 {
     public function execute()
     {
-
-
         $product = new shopProduct(waRequest::get('id', 0, waRequest::TYPE_INT));
         if (!$product->id) {
             if (waRequest::get('id') == 'new') {
@@ -178,13 +176,6 @@ class shopProductAction extends waViewAction
          */
         $this->view->assign('backend_product_edit', wa()->event('backend_product_edit', $product));
 
-        $jsonCategoryData = array();
-        foreach($categories as $c){
-            $jsonCategoryData[] = array('id' => $c['id'], 'name' => $c['name']);
-        }
-
-
-        $this->view->assign('jsonCategoryData', json_encode($jsonCategoryData));
         $this->view->assign('categories', $categories);
 
         $this->view->assign('counters', $counters);
@@ -195,6 +186,8 @@ class shopProductAction extends waViewAction
         $this->view->assign('sidebar_counters', $sidebar_counters);
         $this->view->assign('lang', substr(wa()->getLocale(), 0, 2));
         $this->view->assign('frontend_urls', $frontend_urls);
+        $this->view->assign('url_in_use', shopHelper::isProductUrlInUse($product));
+
 
         $tag_model = new shopTagModel();
         $this->view->assign('popular_tags', $tag_model->popularTags());

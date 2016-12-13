@@ -1,14 +1,11 @@
 <?php 
 class shopError301Plugin extends shopPlugin
 {
-	static public function index()
+	public function index()
 	{
 		$model = new shopError301Model();
 		$model->index();
-		
-		$plugin_id = array('shop', 'error301');
-		$application_settings_model = new waAppSettingsModel();
-        $application_settings_model->set($plugin_id, 'index', time());
+        $this->saveSettings(array('index' => time()));
 	}
 	
 	public function categorySave($category)
@@ -51,7 +48,7 @@ class shopError301Plugin extends shopPlugin
 					"id" => $get['id'],
 					"type" => "x",
 					"url" => $post['info']['url'],
-					"parent" => $get['product_id']
+					"parent" => (int)$get['product_id']
 				);
 				$model->insert($data, 1);
 			}
@@ -69,7 +66,7 @@ class shopError301Plugin extends shopPlugin
 			"id" => $params['data']['id'],
 			"type" => "p",
 			"url" => $params['data']['url'],
-			"parent" => $params['data']['category_id'],
+			"parent" => (int)$params['data']['category_id'],
 		);
 		$model->insert($data, 1);
 	}
@@ -86,15 +83,13 @@ class shopError301Plugin extends shopPlugin
 		if(waRequest::get('error301', 0, 'int'))
 			return false;
 		
-		$model_settings = new waAppSettingsModel();
-        $status = $model_settings->get($key = array('shop', 'error301'));
-		
+        $status = $this->getSettings();	
 		if(!isset($status['index']) OR (time() - $status['index'] > 86400)) //некоторые изменения невозможно отследить, поэтому не чаще 1 раза в сутки индексируем
 		{
-			shopError301Plugin::index();
+			$this->index();
 		}
 		
-		if ($params->getCode() == 404 AND isset($status['status']) AND $status['status']==1)
+		if ($params->getCode() == 404)
 		{
             $redirect = $this->getRedirect();		
 			if($redirect)
@@ -108,7 +103,11 @@ class shopError301Plugin extends shopPlugin
 						$val = str_replace(array(" "), array(""), mb_strtoupper($val));
 					}
 								
-					if(!(in_array('HTTP/0.9200OK', $file_headers) || in_array('HTTP/1.1200OK', $file_headers) || in_array('HTTP/1.0200OK', $file_headers) || in_array('HTTP/2200OK', $file_headers)))
+					if(!(
+						in_array('HTTP/0.9200OK', $file_headers) || in_array('HTTP/1.1200OK', $file_headers) || in_array('HTTP/1.0200OK', $file_headers) || in_array('HTTP/2200OK', $file_headers) ||
+						in_array('HTTP/0.9301MOVEDPERMANENTLY', $file_headers) || in_array('HTTP/1.1301MOVEDPERMANENTLY', $file_headers) || in_array('HTTP/1.0301MOVEDPERMANENTLY', $file_headers) || in_array('HTTP/2301MOVEDPERMANENTLY', $file_headers) ||
+						in_array('HTTP/0.9401UNAUTHORIZED', $file_headers) || in_array('HTTP/1.1401UNAUTHORIZED', $file_headers) || in_array('HTTP/1.0401UNAUTHORIZED', $file_headers) || in_array('HTTP/2401UNAUTHORIZED', $file_headers)
+					))
 					{
 						return false;
 					}
@@ -210,14 +209,36 @@ class shopError301Plugin extends shopPlugin
 		/*
 		$item = array(
 			'type' => 'x', //тип элемента (x - подстраница товара, p - продукт, с - категория)
+			'id' => 1, //id элемента
+			'parentID' => 1, //id родителя
 			'parent' => '', //родительская часть адреса
 			'url0' => '', //адрес для смешанной адресации
 			'url1' => '', //адрес для плоской адресации
-			'url0' => '', //адрес для естественной адресации
+			'url2' => '', //адрес для естественной адресации
 			'rating' => '', //релевантность найденного элемента
 		);*/
 
 		$item = $model->getItem($search);
+		if($item['type'] == 'x' && $item['rating'] == '' && $item['parentID'] > 0) //подстраница удалена, а товар еще есть
+		{
+			$productModel = new shopProductModel();
+			$product = $productModel->getById($item['parentID']);
+			if(!empty($product['category_id']))
+			{
+				$categoryModel = new shopCategoryModel();
+				$category = $categoryModel->getById($product['category_id']);
+			}	
+			if($product['id'] > 0)
+			{
+				$item['type'] = 'p';
+				$item['parentID'] = $product['category_id'];
+				$item['id'] = $product['id'];
+				$item['url0'] = $product['url'].'/';
+				$item['url1'] = 'product/'.$product['url'].'/';
+				$item['url2'] = (empty($category['full_url']) ? '' : $category['full_url']).$product['url'].'/';
+			}
+		}
+
 		if(empty($curRouting['url_type']))
 			$curRouting['url_type'] = 0;
 		if($item)

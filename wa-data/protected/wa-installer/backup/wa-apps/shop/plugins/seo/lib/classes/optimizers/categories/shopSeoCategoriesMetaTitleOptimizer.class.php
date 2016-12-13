@@ -71,7 +71,16 @@ class shopSeoCategoriesMetaTitleOptimizer extends shopSeoMetaTitleOptimizer
 	protected function optimize()
 	{
 		parent::optimize();
+
 		$this->category_response->setMetaTitle($this->getText());
+
+		$category_og_model = new shopCategoryOgModel();
+		$og = $category_og_model->get($this->category_response->getID());
+
+		if (empty($og['title']))
+		{
+			$this->category_response->updateOg('title', $this->getText());
+		}
 	}
 
 	private $category_response;
