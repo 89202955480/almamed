@@ -53,12 +53,10 @@
         </ul>
     {/if}
     
-    <!-- description -->
-    {if $category.description}
-        <div class="category-description">{$category.description}</div>
-    {/if}
+
 
 </div>
+
 
 {if !empty($filters) && ($theme_settings.filter_pos == 'content' || empty($theme_settings.sidebar))}
     {* optional view filters
@@ -79,6 +77,11 @@
         {if isset($category.params.select_view)}{$select_view = $select_view|default:$category.params.select_view}{/if}
         {$select_view = $select_view|default:$theme_settings.select_view}
         {include file='list-thumbs.html' sorting=!empty($category.params.enable_sorting) plp=true select_view=$select_view}
+    {/if}
+
+    <!-- description -->
+    {if $category.description}
+    <div class="category-description">{$category.description}</div>
     {/if}
 </div>
 
