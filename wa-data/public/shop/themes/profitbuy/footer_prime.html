@@ -1,5 +1,27 @@
 
 {literal}
+
+<div id="tooltip"></div>
+<script>
+    $("body").on('mousemove','.yoss-result .buy-box-product',function (eventObject) {
+        $data_tooltip = $(this).attr("data-tooltip");
+        $("#tooltip").text($data_tooltip)
+                .css({
+                    "top" : eventObject.pageY + 5,
+                    "left" : eventObject.pageX + 5
+                })
+                .show();
+    }).mouseout(function () {
+        $("#tooltip").hide()
+                .text("")
+                .css({
+                    "top" : 0,
+                    "left" : 0
+                });
+    });
+</script>
+
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function (d, w, c) {

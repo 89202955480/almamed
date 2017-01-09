@@ -652,3 +652,39 @@ h1{font-size:1.75em;}
 .video-container iframe{max-width:100%;}
 @media screen and (max-width:992px){ul.product-list.thumbs li .image img{max-height:200px;}
 }
+
+.buy-box-product{
+    cursor: pointer;
+    margin-left: 30%;
+    display: inline-block;
+    margin-top: 2%;
+}
+
+.buy-box-product span,i{
+    vertical-align: super;
+}
+
+.buy-box-product i{
+    background: #9A9A9A;
+    color: #FFF;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding: 2px 6px;
+    border-radius: 50px;
+}
+.buy-box-product span {
+    border-bottom: 1px dotted black;
+}
+#tooltip {
+    z-index: 9999;
+    position: absolute;
+    display: none;
+    top:0px;
+    left:0px;
+    background-color: #000;
+    padding: 5px 10px 5px 10px;
+    color: white;
+    opacity: 0.8;
+    border-radius: 5px;
+    max-width: 400px;
+}

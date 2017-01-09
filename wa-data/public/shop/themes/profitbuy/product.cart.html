@@ -264,7 +264,18 @@
                 <input type="submit" class="second-type" {if !$product_available}disabled="disabled"{/if} value="{$add2cart_label}">
                 <i class="adding2cart"></i>
             </div>
-            
+            {if shop_currency_html($product.price) == 0}
+            <div class="buy-box-product" data-tooltip="Цена зависит от комплектации прибора и/или наличия на складах в России.
+При заказе данного продукта Вам перезвонит менеджер и уточнит все детали.
+В случаи если Вас не устроит текущая цена или комплектация, Вы всегда сможете отказаться от товара до момента оплаты.">
+                <img src="/wa-data/public/shop/themes/profitbuy/box-buy.png">
+                &nbsp;<span>Купить упаковкой</span>&nbsp;
+                <i>?</i>
+            </div>
+            {/if}
+
+
+
             {* PLUGIN QUICKORDER: this *}
             {foreach $frontend_product as $k => $_}{if $k == 'quickorder-plugin'}{$_.cart|replace:'quickorder-button':'button'}{/if}{/foreach}
             
@@ -311,4 +322,25 @@
     });
 </script>
 
+{literal}
+<div id="tooltip"></div>
+<script>
+    $("[data-tooltip]").mousemove(function (eventObject) {
+        $data_tooltip = $(this).attr("data-tooltip");
+        $("#tooltip").text($data_tooltip)
+                .css({
+                    "top" : eventObject.pageY + 5,
+                    "left" : eventObject.pageX + 5
+                })
+                .show();
+    }).mouseout(function () {
+        $("#tooltip").hide()
+                .text("")
+                .css({
+                    "top" : 0,
+                    "left" : 0
+                });
+    });
+</script>
+{/literal}
 {/strip}
