@@ -14,7 +14,7 @@ var yossFrontend = (function () { 'use strict';
 	//--------------------- BEGIN DOM METHODS ---------------------
 	getProductBlock = function (product) {
 		var									
-			wrapperBlock, wrapperLeft, wrapperRight, productImg, productName, productBrands, productCategory, productPrice, productLink, buyBoxProduct;
+			wrapperBlock, wrapperLeft, wrapperRight, productImg, productName, productBrands, productCategory, productPrice, productLink;
 
 		wrapperBlock    = $('<div/>').addClass('yoss-result-wrapper');
 		wrapperLeft     = $('<div/>').addClass('yoss-result-left');
@@ -28,7 +28,7 @@ var yossFrontend = (function () { 'use strict';
 		productPrice    = $('<div/>').addClass('product-price').html(product.price);
 		productLink     = $('<a/>').addClass('product-link').attr('href', product.url).html('{_wp("to product")} &rarr;');
 		if(+product.price.replace(/\D+/g,"") == 0) {
-			buyBoxProduct = $('<div/>').addClass('buy-box-product').css('margin-left', '0%').attr('data-tooltip', 'Цена зависит от комплектации прибора и/или наличия на складах в России.При заказе данного продукта Вам перезвонит менеджер и уточнит все детали.В случаи если Вас не устроит текущая цена или комплектация, Вы всегда сможете отказаться от товара до момента оплаты.').html('<img src="/wa-data/public/shop/themes/profitbuy/box-buy.png">&nbsp;<span>Купить упаковкой</span>&nbsp;<i>?</i>');
+			productLink = $('<div/>').addClass('buy-box-product').css('margin-left', '0%').attr('data-tooltip', 'Цена зависит от комплектации прибора и/или наличия на складах в России.При заказе данного продукта Вам перезвонит менеджер и уточнит все детали.В случаи если Вас не устроит текущая цена или комплектация, Вы всегда сможете отказаться от товара до момента оплаты.').html('<span>Цена по запросу</span>&nbsp;<i>?</i>');
 		}
 		if (product.brands.length > 0) {
 			for(var b in product.brands) {
@@ -37,7 +37,7 @@ var yossFrontend = (function () { 'use strict';
 		}
 
 		wrapperLeft.append(productImg, productName, productBrands, productCategory);
-		wrapperRight.append(productPrice, productLink, buyBoxProduct);
+		wrapperRight.append(productPrice, productLink);
 		wrapperBlock.append(wrapperLeft, wrapperRight);
 
 		return wrapperBlock

@@ -497,6 +497,7 @@ class waSystem
 
     private function dispatchBackend($request_url)
     {
+
         // Publicly available dashboard?
         $url = explode("/", $request_url);
         if (ifset($url[1]) == 'dashboard') {

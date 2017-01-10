@@ -213,7 +213,16 @@
                             <form class="purchase addtocart" {if $p.sku_count > 1}data-url="{$p.frontend_url}{if strpos($p.frontend_url, '?')}&{else}?{/if}cart=1"{/if} method="post" action="{$wa->getUrl('shop/frontendCart/add')}">
                                 <div class="price-wrapper">
                                     {if $p.compare_price > 0}<span class="compare-at-price nowrap"> {shop_currency_html($p.compare_price)} </span>{/if}
+                                    {if shop_currency_html($p.price) == 0}
+                                    <div class="buy-box-product" data-tooltip="Цена зависит от комплектации прибора и/или наличия на складах в России.
+                                    При заказе данного продукта Вам перезвонит менеджер и уточнит все детали.
+                                    В случаи если Вас не устроит текущая цена или комплектация, Вы всегда сможете отказаться от товара до момента оплаты.">
+                                        <span>Цена по запросу</span>&nbsp;
+                                        <i>?</i>
+                                    </div>
+                                    {else}
                                     <span class="price nowrap">{shop_currency_html($p.price)}</span>
+                                    {/if}
                                 </div>
                                 {if empty($without_micro_markup)}
                                     <meta itemprop="price" content="{$p.price}">
@@ -232,15 +241,7 @@
                                         <i class="material-icons mi-2x">&#xE838;</i>
                                     </a>
                                 </div>
-                                {if shop_currency_html($p.price) == 0}
-                                <div class="buy-box-product" style="margin-left: 0%" data-tooltip="Цена зависит от комплектации прибора и/или наличия на складах в России.
-                                При заказе данного продукта Вам перезвонит менеджер и уточнит все детали.
-                                В случаи если Вас не устроит текущая цена или комплектация, Вы всегда сможете отказаться от товара до момента оплаты.">
-                                    <img src="/wa-data/public/shop/themes/profitbuy/box-buy.png">
-                                    &nbsp;<span>Купить упаковкой</span>&nbsp;
-                                    <i>?</i>
-                                </div>
-                                {/if}
+
                                 <span class="added2cart" style="display: none;">{sprintf('[`%s is now <a href="%s"><strong>in your shopping cart</strong></a>`]', $p.name, $wa->getUrl('shop/frontend/cart'))}</span>
                             </form>
                         {/if}

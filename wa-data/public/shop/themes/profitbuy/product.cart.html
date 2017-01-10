@@ -250,7 +250,16 @@
             {/if}
             <div class="price-wrapper">
                 {if $product.compare_price > 0}<span data-compare-price="{shop_currency($product.compare_price, null, null, 0)}" class="compare-at-price nowrap"> {shop_currency_html($product.compare_price)} </span>{/if}
+                {if shop_currency_html($product.price) == 0}
+                <div class="buy-box-product" data-tooltip="Цена зависит от комплектации прибора и/или наличия на складах в России.
+                При заказе данного продукта Вам перезвонит менеджер и уточнит все детали.
+                В случаи если Вас не устроит текущая цена или комплектация, Вы всегда сможете отказаться от товара до момента оплаты.">
+                    <span>Цена по запросу</span>&nbsp;
+                    <i>?</i>
+                </div>
+                {else}
                 <span data-price="{shop_currency($product.price, null, null, 0)}" class="price nowrap">{shop_currency_html($product.price)}</span>
+                {/if}
             </div>
             <input type="hidden" name="product_id" value="{$product.id}">
             
@@ -264,17 +273,6 @@
                 <input type="submit" class="second-type" {if !$product_available}disabled="disabled"{/if} value="{$add2cart_label}">
                 <i class="adding2cart"></i>
             </div>
-            {if shop_currency_html($product.price) == 0}
-            <div class="buy-box-product" data-tooltip="Цена зависит от комплектации прибора и/или наличия на складах в России.
-При заказе данного продукта Вам перезвонит менеджер и уточнит все детали.
-В случаи если Вас не устроит текущая цена или комплектация, Вы всегда сможете отказаться от товара до момента оплаты.">
-                <img src="/wa-data/public/shop/themes/profitbuy/box-buy.png">
-                &nbsp;<span>Купить упаковкой</span>&nbsp;
-                <i>?</i>
-            </div>
-            {/if}
-
-
 
             {* PLUGIN QUICKORDER: this *}
             {foreach $frontend_product as $k => $_}{if $k == 'quickorder-plugin'}{$_.cart|replace:'quickorder-button':'button'}{/if}{/foreach}
