@@ -92,7 +92,7 @@
       <description locale="en_US">Checkout: order confirmation</description>
       <description locale="ru_RU">Оформление заказа, шаг "подтверждение"</description>
     </file>
-    <file path="checkout.success.html" custom="0" modified="0">
+    <file path="checkout.success.html" custom="0" modified="1">
       <description locale="en_US">Checkout: thank you page</description>
       <description locale="ru_RU"/>
     </file>
@@ -198,7 +198,7 @@
       <description locale="ru_RU"/>
     </file>
     <file path="footer_prime.html" custom="1" modified="1">
-      <description locale="ru_RU"/>
+      <description locale="ru_RU"></description>
     </file>
   </files>
   <about locale="en_US">
@@ -355,12 +355,12 @@
       <name locale="ru_RU">Текст вкладки "оплата"</name>
     </setting>
     <setting var="homepage_bullet_title_3" control_type="text">
-      <value></value>
+      <value/>
       <name locale="en_US">Title tab "Contacts"</name>
       <name locale="ru_RU">Заголовок вкладки "контакты"</name>
     </setting>
     <setting var="homepage_bullet_body_3" control_type="text">
-      <value></value>
+      <value/>
       <name locale="en_US">Text tab "Contacts"</name>
       <name locale="ru_RU">Текст вкладки "контакты"</name>
     </setting>
@@ -400,7 +400,7 @@
       <name locale="ru_RU">Показывать баннер обратного звонка на главной</name>
     </setting>
     <setting var="callme_phone" control_type="text">
-      <value>+7 (495) 321-41-44</value>
+      <value>8-800-100-37-97</value>
       <name locale="en_US">Telephone banner</name>
       <name locale="ru_RU">Телефон баннера</name>
       <description locale="ru_RU">В случае пустого поля, будет отображен телефон указанный в настройках приложения "магазин" (магазин-настройки-общие настройки)</description>

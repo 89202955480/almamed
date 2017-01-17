@@ -2708,3 +2708,446 @@ Query: INSERT  INTO shop_feature_values_dimension
 #12 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
 #13 /home/almamed/web/almamed.su/public_html/index.php(7): waSystem->dispatch()
 #14 {main}
+
+2016-12-19 06:03:56 180.76.15.162
+Got error 28 from storage engine
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(280)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(156): waDbMysqliAdapter->exception()
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(171): waDbMysqliAdapter->schema('wa_app_settings', false)
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(127): waModel->describe()
+#3 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(93): waModel->getFields()
+#4 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(77): waModel->getMetadata()
+#5 /home/almamed/web/almamed.su/public_html/wa-system/contact/waContact.class.php(62): waModel->__construct()
+#6 /home/almamed/web/almamed.su/public_html/wa-system/user/waUser.class.php(22): waContact->init()
+#7 /home/almamed/web/almamed.su/public_html/wa-system/user/waAuthUser.class.php(34): waUser->init()
+#8 /home/almamed/web/almamed.su/public_html/wa-system/user/waAuthUser.class.php(28): waAuthUser->init()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(238): waAuthUser->__construct(NULL, Array)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(279): waSystem::getCommonFactory('auth_user', 'waAuthUser', Array, NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(935): waSystem->getUser()
+#12 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(1090): waSystem->getApps()
+#13 /home/almamed/web/almamed.su/public_html/wa-system/routing/waRouting.class.php(197): waSystem->appExists('shop')
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(617): waRouting->dispatch()
+#15 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(478): waSystem->dispatchFrontend(false)
+#16 /home/almamed/web/almamed.su/public_html/index.php(7): waSystem->dispatch()
+#17 {main}
+
+2016-12-19 06:03:57 180.76.15.162
+Got error 28 from storage engine
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(280)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(156): waDbMysqliAdapter->exception()
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(171): waDbMysqliAdapter->schema('wa_app_settings', false)
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(127): waModel->describe()
+#3 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(
+2016-12-19 18:06:28 194.154.75.198
+Query Error 1062: Duplicate entry '585-IЕС 601-1, IЕС 645-5, директивы СЕ-01-24, 93/' for key 'values'
+Query: INSERT  INTO shop_feature_values_varchar
+                   (`value`, `sort`, `feature_id`) VALUES ('IЕС 601-1, IЕС 645-5, директивы СЕ-01-24, 93/42/ЕЕС', 3, 585)
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('INSERT  INTO sh...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(565): waModel->query('INSERT  INTO sh...')
+#2 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopSortable.model.php(129): waModel->insert(Array, 0)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeatureValues.model.php(235): shopSortableModel->insert(Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeature.model.php(382): shopFeatureValuesModel->addValue(585, 'I\xD0\x95\xD0\xA1 601-1, I\xD0...', -18, 'varchar', 3)
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/settings/features/shopSettingsFeaturesFeatureSave.controller.php(38): shopFeatureModel->setValues(Array, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopSettingsFeaturesFeatureSaveController->execute()
+#7 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopSettingsFeaturesFeatureSaveController), NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'settings', 'featuresFeature...')
+#11 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(537): waFrontController->dispatch()
+#12 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#13 /home/almamed/web/almamed.su/public_html/index.php(7): waSystem->dispatch()
+#14 {main}
+
+2016-12-19 18:06:44 194.154.75.198
+Query Error 1062: Duplicate entry '585-IЕС 601-1, IЕС 645-5, директивы СЕ-01-24, 93/' for key 'values'
+Query: INSERT  INTO shop_feature_values_varchar
+                   (`value`, `sort`, `feature_id`) VALUES ('IЕС 601-1, IЕС 645-5, директивы СЕ-01-24, 93/42/ЕЕС', 3, 585)
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('INSERT  INTO sh...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(565): waModel->query('INSERT  INTO sh...')
+#2 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopSortable.model.php(129): waModel->insert(Array, 0)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeatureValues.model.php(235): shopSortableModel->insert(Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeature.model.php(382): shopFeatureValuesModel->addValue(585, 'I\xD0\x95\xD0\xA1 601-1, I\xD0...', -18, 'varchar', 3)
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/settings/features/shopSettingsFeaturesFeatureSave.controller.php(38): shopFeatureModel->setValues(Array, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopSettingsFeaturesFeatureSaveController->execute()
+#7 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopSettingsFeaturesFeatureSaveController), NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'settings', 'featuresFeature...')
+#11 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(537): waFrontController->dispatch()
+#12 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#13 /home/almamed/web/almamed.su/public_html/index.php(7): waSystem->dispatch()
+#14 {main}
+
+2016-12-22 06:27:57 194.154.75.198
+Got error 28 from storage engine
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(280)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(156): waDbMysqliAdapter->exception()
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(171): waDbMysqliAdapter->schema('wa_app_settings', false)
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(127): waModel->describe()
+#3 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(93): waModel->getFields()
+#4 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(77): waModel->getMetadata()
+#5 /home/almamed/web/almamed.su/public_html/wa-system/contact/waContact.class.php(62): waModel->__construct()
+#6 /home/almamed/web/almamed.su/public_html/wa-system/user/waUser.class.php(22): waContact->init()
+#7 /home/almamed/web/almamed.su/public_html/wa-system/user/waAuthUser.class.php(34): waUser->init()
+#8 /home/almamed/web/almamed.su/public_html/wa-system/user/waAuthUser.class.php(28): waAuthUser->init()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(238): waAuthUser->__construct(NULL, Array)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(279): waSystem::getCommonFactory('auth_user', 'waAuthUser', Array, NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(509): waSystem->getUser()
+#12 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/')
+#13 /home/almamed/web/almamed.su/public_html/index.php(7): waSystem->dispatch()
+#14 {main}
+
+2016-12-22 06:27:57 194.154.75.198
+Got error 28 from storage engine
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(280)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(156): waDbMysqliAdapter->exception()
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(171): waDbMysqliAdapter->schema('wa_app_settings', false)
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(127): waModel->describe()
+#3 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(93): waModel->getFields()
+#4 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(77): waModel->getMetadata()
+#5 /home/almamed/web/almamed.su/public_html/wa-system/contact/waContact.class.php(62): waModel->__construct()
+#6 /home/almamed/web/almamed.su/public_html/wa-system/user/waUser.class.php(22): waContact->init()
+#7 /home/almamed/web/almamed.su/public_html/wa-system/user/waAuthUser.class.php(34): waUser->init()
+#8 /home/almamed/web/almamed.su/public_html/wa-system/user/waAuthUser.class.php(28): waAuthUser->init()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(238): waAuthUser->__construct(NULL, Array)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(279): waSystem::getCommonFactory('auth_user', 'waAuthUser', Array, NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(509): waSystem->getUser()
+#12 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/')
+#13 /home/almamed/web/almamed.su/public_html/index.ph
+2017-01-16 11:49:51 194.154.75.198
+Query Error 1062: Duplicate entry 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/' for key 'full_url'
+Query: UPDATE shop_category
+                   SET `url` = 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/', `full_url` = 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/'
+                   WHERE `id` = 2281
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', 2281, Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(444): waModel->updateById(2281, Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(373): shopCategoryModel->updateUrl(2281, 'instrumentalnay...')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(102): shopCategoryModel->update(2281, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(64): shopProductsSaveListSettingsController->saveCategorySettings(2281, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(28): shopProductsSaveListSettingsController->saveSettings(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsSaveListSettingsController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsSaveListSettingsController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'saveListSetting...')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}
+
+2017-01-16 11:51:33 194.154.75.198
+Query Error 1062: Duplicate entry 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/' for key 'full_url'
+Query: UPDATE shop_category
+                   SET `url` = 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/', `full_url` = 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/'
+                   WHERE `id` = 2281
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', 2281, Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(444): waModel->updateById(2281, Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(373): shopCategoryModel->updateUrl(2281, 'instrumentalnay...')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(102): shopCategoryModel->update(2281, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(64): shopProductsSaveListSettingsController->saveCategorySettings(2281, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(28): shopProductsSaveListSettingsController->saveSettings(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsSaveListSettingsController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsSaveListSettingsController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'saveListSetting...')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}
+
+2017-01-16 11:51:58 194.154.75.198
+Query Error 1062: Duplicate entry 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/' for key 'full_url'
+Query: UPDATE shop_category
+                   SET `url` = 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/', `full_url` = 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/'
+                   WHERE `id` = 2281
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', 2281, Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(444): waModel->updateById(2281, Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(373): shopCategoryModel->updateUrl(2281, 'instrumentalnay...')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(102): shopCategoryModel->update(2281, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(64): shopProductsSaveListSettingsController->saveCategorySettings(2281, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(28): shopProductsSaveListSettingsController->saveSettings(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsSaveListSettingsController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsSaveListSettingsController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'saveListSetting...')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}
+
+2017-01-16 11:52:24 194.154.75.198
+Query Error 1062: Duplicate entry 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/' for key 'full_url'
+Query: UPDATE shop_category
+                   SET `url` = 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/', `full_url` = 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/'
+                   WHERE `id` = 2281
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', 2281, Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(444): waModel->updateById(2281, Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(373): shopCategoryModel->updateUrl(2281, 'instrumentalnay...')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(102): shopCategoryModel->update(2281, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(64): shopProductsSaveListSettingsController->saveCategorySettings(2281, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(28): shopProductsSaveListSettingsController->saveSettings(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsSaveListSettingsController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsSaveListSettingsController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'saveListSetting...')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}
+
+2017-01-16 11:53:26 194.154.75.198
+Query Error 1062: Duplicate entry 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/' for key 'full_url'
+Query: UPDATE shop_category
+                   SET `url` = 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/', `full_url` = 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/'
+                   WHERE `id` = 2281
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', 2281, Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(444): waModel->updateById(2281, Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(373): shopCategoryModel->updateUrl(2281, 'instrumentalnay...')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(102): shopCategoryModel->update(2281, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(64): shopProductsSaveListSettingsController->saveCategorySettings(2281, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(28): shopProductsSaveListSettingsController->saveSettings(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsSaveListSettingsController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsSaveListSettingsController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'saveListSetting...')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}
+
+2017-01-16 11:55:11 194.154.75.198
+Query Error 1062: Duplicate entry 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/' for key 'full_url'
+Query: UPDATE shop_category
+                   SET `url` = 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/', `full_url` = 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/'
+                   WHERE `id` = 2281
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', 2281, Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(444): waModel->updateById(2281, Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(373): shopCategoryModel->updateUrl(2281, 'instrumentalnay...')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(102): shopCategoryModel->update(2281, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(64): shopProductsSaveListSettingsController->saveCategorySettings(2281, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(28): shopProductsSaveListSettingsController->saveSettings(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsSaveListSettingsController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsSaveListSettingsController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'saveListSetting...')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}
+
+2017-01-16 11:55:19 194.154.75.198
+Query Error 1062: Duplicate entry 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/' for key 'full_url'
+Query: UPDATE shop_category
+                   SET `url` = 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/', `full_url` = 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/'
+                   WHERE `id` = 2281
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', 2281, Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(444): waModel->updateById(2281, Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(373): shopCategoryModel->updateUrl(2281, 'instrumentalnay...')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(102): shopCategoryModel->update(2281, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(64): shopProductsSaveListSettingsController->saveCategorySettings(2281, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(28): shopProductsSaveListSettingsController->saveSettings(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsSaveListSettingsController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsSaveListSettingsController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'saveListSetting...')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}
+
+2017-01-16 11:55:57 194.154.75.198
+Query Error 1062: Duplicate entry 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/' for key 'full_url'
+Query: UPDATE shop_category
+                   SET `url` = 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/', `full_url` = 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/'
+                   WHERE `id` = 2281
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', 2281, Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(444): waModel->updateById(2281, Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(373): shopCategoryModel->updateUrl(2281, 'instrumentalnay...')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(102): shopCategoryModel->update(2281, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(64): shopProductsSaveListSettingsController->saveCategorySettings(2281, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(28): shopProductsSaveListSettingsController->saveSettings(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsSaveListSettingsController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsSaveListSettingsController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'saveListSetting...')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}
+
+2017-01-16 11:57:33 194.154.75.198
+Query Error 1062: Duplicate entry 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/' for key 'full_url'
+Query: UPDATE shop_category
+                   SET `url` = 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/', `full_url` = 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/'
+                   WHERE `id` = 2281
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', 2281, Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(444): waModel->updateById(2281, Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(373): shopCategoryModel->updateUrl(2281, 'instrumentalnay...')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(102): shopCategoryModel->update(2281, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(64): shopProductsSaveListSettingsController->saveCategorySettings(2281, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(28): shopProductsSaveListSettingsController->saveSettings(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsSaveListSettingsController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsSaveListSettingsController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'saveListSetting...')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}
+
+2017-01-16 11:57:43 194.154.75.198
+Query Error 1062: Duplicate entry 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/' for key 'full_url'
+Query: UPDATE shop_category
+                   SET `url` = 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/', `full_url` = 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/'
+                   WHERE `id` = 2281
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', 2281, Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(444): waModel->updateById(2281, Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(373): shopCategoryModel->updateUrl(2281, 'instrumentalnay...')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(102): shopCategoryModel->update(2281, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(64): shopProductsSaveListSettingsController->saveCategorySettings(2281, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(28): shopProductsSaveListSettingsController->saveSettings(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsSaveListSettingsController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsSaveListSettingsController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'saveListSetting...')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}
+
+2017-01-16 11:58:02 194.154.75.198
+Query Error 1062: Duplicate entry 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/' for key 'full_url'
+Query: UPDATE shop_category
+                   SET `url` = 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/', `full_url` = 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/'
+                   WHERE `id` = 2281
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', 2281, Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(444): waModel->updateById(2281, Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(373): shopCategoryModel->updateUrl(2281, 'instrumentalnay...')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(102): shopCategoryModel->update(2281, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(64): shopProductsSaveListSettingsController->saveCategorySettings(2281, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(28): shopProductsSaveListSettingsController->saveSettings(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsSaveListSettingsController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsSaveListSettingsController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'saveListSetting...')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}
+
+2017-01-16 12:03:33 194.154.75.198
+Query Error 1062: Duplicate entry 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/' for key 'full_url'
+Query: UPDATE shop_category
+                   SET `url` = 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/', `full_url` = 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/'
+                   WHERE `id` = 2281
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', 2281, Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(444): waModel->updateById(2281, Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(373): shopCategoryModel->updateUrl(2281, 'instrumentalnay...')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(102): shopCategoryModel->update(2281, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(64): shopProductsSaveListSettingsController->saveCategorySettings(2281, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(28): shopProductsSaveListSettingsController->saveSettings(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsSaveListSettingsController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsSaveListSettingsController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'saveListSetting...')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}
+
+2017-01-16 12:23:32 194.154.75.198
+Query Error 1062: Duplicate entry 'anoskopy-italiya-r/' for key 'full_url'
+Query: UPDATE shop_category
+                   SET `url` = 'anoskopy-italiya-r/', `full_url` = 'anoskopy-italiya-r/'
+                   WHERE `id` = 2206
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', 2206, Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(444): waModel->updateById(2206, Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(373): shopCategoryModel->updateUrl(2206, 'anoskopy-italiy...')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(102): shopCategoryModel->update(2206, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(64): shopProductsSaveListSettingsController->saveCategorySettings(2206, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(28): shopProductsSaveListSettingsController->saveSettings(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsSaveListSettingsController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsSaveListSettingsController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'saveListSetting...')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}
+
+2017-01-16 13:14:05 194.154.75.198
+Query Error 1062: Duplicate entry 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/' for key 'full_url'
+Query: UPDATE shop_category
+                   SET `url` = 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/', `full_url` = 'instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r/'
+                   WHERE `id` = 2273
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', 2273, Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(444): waModel->updateById(2273, Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(373): shopCategoryModel->updateUrl(2273, 'instrumentalnay...')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(102): shopCategoryModel->update(2273, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(64): shopProductsSaveListSettingsController->saveCategorySettings(2273, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(28): shopProductsSaveListSettingsController->saveSettings(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsSaveListSettingsController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsSaveListSettingsController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'saveListSetting...')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}

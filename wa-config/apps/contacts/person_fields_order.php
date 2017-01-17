@@ -83,4 +83,10 @@ return array (
   'categories' => 
   array (
   ),
+  'rekvizity-organ' => 
+  array (
+    'allow_self_edit' => NULL,
+    'required' => '',
+    'unique' => NULL,
+  ),
 );

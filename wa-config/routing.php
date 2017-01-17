@@ -58,6 +58,7 @@ return array (
       'url_type' => '1',
       'type_id' => '0',
       'currency' => 'RUB',
+      'public_stocks' => '0',
       'drop_out_of_stock' => '0',
       'payment_id' => '0',
       'shipping_id' => '0',

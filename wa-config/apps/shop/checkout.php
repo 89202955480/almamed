@@ -5,11 +5,6 @@ return array (
     'name' => 'Контактная информация',
     'fields' => 
     array (
-      'company' => 
-      array (
-        'localized_names' => 'Компания',
-        'required' => '',
-      ),
       'firstname' => 
       array (
         'localized_names' => 'Имя',
@@ -29,6 +24,10 @@ return array (
       array (
         'localized_names' => 'Email',
         'required' => '1',
+      ),
+      'rekvizity-organ' => 
+      array (
+        'required' => '',
       ),
       'address' => 
       array (
@@ -64,7 +63,7 @@ return array (
       ),
       'address.shipping' => 
       array (
-        'localized_names' => 'Адрес',
+        'localized_names' => 'Адрес доставки',
         'fields' => 
         array (
           'street' => 
@@ -96,6 +95,9 @@ return array (
       ),
     ),
   ),
-  'payment' => true,
-  'confirmation' => true,
+  'confirmation' => 
+  array (
+    'name' => 'Подтверждение',
+    'terms' => '',
+  ),
 );

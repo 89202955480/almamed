@@ -31,3 +31,4 @@ php_value mbstring.func_overload 0
 </ifModule>
 
 Redirect 301 /category/apparat-ultrazvukovoy-nizkochastotnyy-ginekologicheskiy-ginyeton---mm-rossiya/ /product/apparat-ultrazvukovoynizkochastotnyyginekologicheskiy-ginyeton-mm/
+Redirect 301 /category/proktologicheskiy-nabor-welch-allyn-ssha/ /product/proktologicheskiy-nabor-welch-allyn-ssha/

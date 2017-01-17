@@ -420,7 +420,7 @@
       <name locale="ru_RU">Контактные данные</name>
     </setting>
     <setting var="phone_1" control_type="text">
-      <value>8 (800) 321-41-44</value>
+      <value>8-800-100-37-97</value>
       <name locale="en_US">Phone first</name>
       <name locale="ru_RU">Телефон первый</name>
     </setting>
@@ -454,7 +454,7 @@
       <name locale="ru_RU">Skype</name>
     </setting>
     <setting var="address" control_type="text">
-      <value><![CDATA[Доставка товаров по РФ]]></value>
+      <value>Доставка товаров по РФ</value>
       <name locale="en_US">Address</name>
       <name locale="ru_RU">Адрес</name>
     </setting>

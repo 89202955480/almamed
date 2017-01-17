@@ -102985,3 +102985,894 @@ waInstaller::__destruct called
 
 
 
+2017-01-12T20:14:53+03:0000001	98C	DEBUG	0,97Mb	1,00Mb	
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484241293,
+  'start_time_float' => 1484241293.7053809,
+  'elapsed_time' => 0,
+  'stage' => 0,
+  'stage_name' => 'unkown_none',
+  'state_heartbeat' => false,
+  'thread_id' => '98C',
+  'chunk_id' => NULL,
+  'stage_status' => 'none',
+  'timestamp' => 1484241293,
+  'timestamp_float' => 1484241293.7053909,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2017-01-12T20:14:53+03:0000002	98C	DEBUG	0,98Mb	1,07Mb	
+waInstaller::formatUpdateList tree
+{------------------------------------------------------------
+array (
+  'targets' => 
+  array (
+    0 => 'wa-apps/shop/plugins/currencyrates/',
+  ),
+  'update_list' => 
+  array (
+    'wa-apps/shop/plugins/currencyrates' => 
+    array (
+      'source' => 'http://www.webasyst.com/download/archive/wa-apps/shop/plugins/currencyrates/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+      'target' => 'wa-apps/shop/plugins/currencyrates/',
+      'slug' => 'wa-apps/shop/plugins/currencyrates',
+      'md5' => NULL,
+      'pass' => false,
+      'name' => 'Автоматическое обновление курса валют (Shop-Script 7)',
+      'icon' => '//www.webasyst.com/wa-data/public/updates/img/97/897/icon.ru_RU.png',
+      'update' => false,
+      'subject' => 'app_plugins',
+      'edition' => true,
+      'extract_path' => 'wa-data/protected/wa-installer/98C/update/wa-apps/shop/plugins/currencyrates/',
+      'skipped' => false,
+      'dependent' => false,
+    ),
+  ),
+)
+}------------------------------------------------------------
+2017-01-12T20:14:53+03:0000003	98C	DEBUG	0,99Mb	1,07Mb	
+callback
+{------------------------------------------------------------
+array (
+  0 => 
+  array (
+    'file' => '/wa-installer/lib/classes/wainstaller.class.php:155',
+    'function' => 'waInstaller->envSet()',
+  ),
+  1 => 
+  array (
+    'file' => '/wa-apps/installer/lib/actions/update/installerUpdateExecute.controller.php:49',
+    'function' => 'waInstaller->update(Array(1))',
+  ),
+  2 => 
+  array (
+    'file' => '/wa-system/controller/waController.class.php:21',
+    'function' => 'installerUpdateExecuteController->execute()',
+  ),
+  3 => 
+  array (
+    'file' => '/wa-system/controller/waJsonController.class.php:28',
+    'function' => 'installerUpdateExecuteController(waController)->run()',
+  ),
+  4 => 
+  array (
+    'file' => '/wa-system/controller/waFrontController.class.php:227',
+    'function' => 'installerUpdateExecuteController(waJsonController)->run()',
+  ),
+  5 => 
+  array (
+    'file' => '/wa-system/controller/waFrontController.class.php:162',
+    'function' => 'waFrontController->runController(installerUpdateExecuteController)',
+  ),
+  6 => 
+  array (
+    'file' => '/wa-system/controller/waFrontController.class.php:58',
+    'function' => 'waFrontController->execute()',
+  ),
+  7 => 
+  array (
+    'file' => '/wa-system/waSystem.class.php:538',
+    'function' => 'waFrontController->dispatch()',
+  ),
+  8 => 
+  array (
+    'file' => '/wa-system/waSystem.class.php:476',
+    'function' => 'waSystem->dispatchBackend()',
+  ),
+  9 => 
+  array (
+    'file' => '/index.php:10',
+    'function' => 'waSystem->dispatch()',
+  ),
+)
+}------------------------------------------------------------
+2017-01-12T20:14:53+03:0000004	98C	TRACE	0,99Mb	1,08Mb	
+Register ob error handler
+{------------------------------------------------------------
+true
+}------------------------------------------------------------
+2017-01-12T20:14:53+03:0000005	98C	TRACE	1,01Mb	1,10Mb	prepare_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484241293,
+  'start_time_float' => 1484241293.7053809,
+  'elapsed_time' => 0,
+  'stage' => 1,
+  'stage_name' => 'prepare',
+  'state_heartbeat' => 0.037521123886108398,
+  'thread_id' => '98C',
+  'chunk_id' => 'wa-apps/shop/plugins/currencyrates',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484241293,
+  'timestamp_float' => 1484241293.7428911,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1484241293.7428911,
+  'datetime' => 'Thu, 12 Jan 2017 20:14:53 +0300',
+  'stage_value' => 0,
+)
+}------------------------------------------------------------
+2017-01-12T20:14:53+03:0000006	98C	DEBUG	1,01Mb	1,11Mb	prepare_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/98C/update/wa-apps/shop/plugins/currencyrates/',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-01-12T20:14:53+03:0000007	98C	TRACE	1,01Mb	1,11Mb	prepare_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484241293,
+  'start_time_float' => 1484241293.7053809,
+  'elapsed_time' => 0,
+  'stage' => 1,
+  'stage_name' => 'prepare',
+  'state_heartbeat' => 0.020184040069580078,
+  'thread_id' => '98C',
+  'chunk_id' => 'wa-apps/shop/plugins/currencyrates',
+  'stage_status' => 'complete',
+  'timestamp' => 1484241293,
+  'timestamp_float' => 1484241293.763042,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1484241293.7428911,
+  'datetime' => 'Thu, 12 Jan 2017 20:14:53 +0300',
+  'stage_value' => 0,
+)
+}------------------------------------------------------------
+2017-01-12T20:14:53+03:0000008	98C	TRACE	1,02Mb	1,11Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484241293,
+  'start_time_float' => 1484241293.7053809,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0010111331939697266,
+  'thread_id' => '98C',
+  'chunk_id' => 'wa-apps/shop/plugins/currencyrates',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484241293,
+  'timestamp_float' => 1484241293.76403,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1484241293.76403,
+  'datetime' => 'Thu, 12 Jan 2017 20:14:53 +0300',
+  'stage_value' => 0,
+)
+}------------------------------------------------------------
+2017-01-12T20:14:53+03:0000009	98C	TRACE	1,02Mb	1,11Mb	download_heartbeat
+waInstaller::downloadCurl :download via cURL
+{------------------------------------------------------------
+array (
+  'source' => 'http://www.webasyst.com/download/archive/wa-apps/shop/plugins/currencyrates/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+  'target' => '/home/almamed/web/almamed.su/public_html/wa-data/protected/wa-installer/98C/download/e3ba1e5a695376aa55e24a2a16d38be4',
+)
+}------------------------------------------------------------
+2017-01-12T20:14:53+03:0000010	98C	DEBUG	1,02Mb	1,11Mb	download_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/98C/download/',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-01-12T20:14:53+03:0000011	98C	DEBUG	1,02Mb	1,11Mb	download_heartbeat
+waInstaller::curlHeaderHandler
+{------------------------------------------------------------
+array (
+  'header' => 'Content-Length: 23785
+',
+  'header_matches' => 
+  array (
+    0 => 'Content-Length: 23785',
+    1 => '23785',
+  ),
+  'value' => 23785,
+)
+}------------------------------------------------------------
+2017-01-12T20:14:53+03:0000012	98C	DEBUG	1,02Mb	1,11Mb	download_heartbeat
+waInstaller::curlHeaderHandler
+{------------------------------------------------------------
+array (
+  'header' => 'Content-MD5: VFpuJ2wmrVHe6tSjw08NZA==
+',
+  'header_matches' => 
+  array (
+    1 => '545a6e276c26ad51deead4a3c34f0d64',
+  ),
+  'value' => '545a6e276c26ad51deead4a3c34f0d64',
+)
+}------------------------------------------------------------
+2017-01-12T20:14:53+03:0000013	98C	DEBUG	1,04Mb	1,11Mb	download_heartbeat
+waInstaller::curlWriteHandler
+{------------------------------------------------------------
+array (
+  'url' => 'http://www.webasyst.com/download/archive/wa-apps/shop/plugins/currencyrates/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+  'content_type' => 'application/octet-stream',
+  'http_code' => 200,
+  'header_size' => 394,
+  'request_size' => 317,
+  'filetime' => -1,
+  'ssl_verify_result' => 0,
+  'redirect_count' => 0,
+  'total_time' => 0.043848999999999999,
+  'namelookup_time' => 4.1E-5,
+  'connect_time' => 0.043783999999999997,
+  'pretransfer_time' => 0.043787,
+  'size_upload' => 0,
+  'size_download' => 11190,
+  'speed_download' => 0,
+  'speed_upload' => 0,
+  'download_content_length' => 23785,
+  'upload_content_length' => 0,
+  'starttransfer_time' => 0.20813400000000001,
+  'redirect_time' => 0,
+  'certinfo' => 
+  array (
+  ),
+  'primary_ip' => '178.33.57.200',
+  'redirect_url' => '',
+)
+}------------------------------------------------------------
+2017-01-12T20:14:53+03:0000014	98C	DEBUG	1,04Mb	1,11Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484241293,
+  'start_time_float' => 1484241293.7053809,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.21262192726135254,
+  'thread_id' => '98C',
+  'chunk_id' => 'wa-apps/shop/plugins/currencyrates',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484241293,
+  'timestamp_float' => 1484241293.9765739,
+  'stage_performance' => 52647.931134278733,
+  'stage_current_value' => 11190,
+  'stage_start_time' => 1484241293.76403,
+  'datetime' => 'Thu, 12 Jan 2017 20:14:53 +0300',
+  'stage_value' => 23785,
+)
+}------------------------------------------------------------
+2017-01-12T20:14:53+03:0000015	98C	DEBUG	1,03Mb	1,13Mb	download_heartbeat
+waInstaller::curlWriteHandler
+{------------------------------------------------------------
+array (
+  'url' => 'http://www.webasyst.com/download/archive/wa-apps/shop/plugins/currencyrates/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+  'content_type' => 'application/octet-stream',
+  'http_code' => 200,
+  'header_size' => 394,
+  'request_size' => 317,
+  'filetime' => -1,
+  'ssl_verify_result' => 0,
+  'redirect_count' => 0,
+  'total_time' => 0.20976400000000001,
+  'namelookup_time' => 4.1E-5,
+  'connect_time' => 0.043783999999999997,
+  'pretransfer_time' => 0.043787,
+  'size_upload' => 0,
+  'size_download' => 14086,
+  'speed_download' => 53345,
+  'speed_upload' => 0,
+  'download_content_length' => 23785,
+  'upload_content_length' => 0,
+  'starttransfer_time' => 0.20813400000000001,
+  'redirect_time' => 0,
+  'certinfo' => 
+  array (
+  ),
+  'primary_ip' => '178.33.57.200',
+  'redirect_url' => '',
+)
+}------------------------------------------------------------
+2017-01-12T20:14:53+03:0000016	98C	DEBUG	1,03Mb	1,13Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484241293,
+  'start_time_float' => 1484241293.7053809,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0011031627655029297,
+  'thread_id' => '98C',
+  'chunk_id' => 'wa-apps/shop/plugins/currencyrates',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484241293,
+  'timestamp_float' => 1484241293.977669,
+  'stage_performance' => 2644612.3196168081,
+  'stage_current_value' => 14086,
+  'stage_start_time' => 1484241293.76403,
+  'datetime' => 'Thu, 12 Jan 2017 20:14:53 +0300',
+  'stage_value' => 23785,
+)
+}------------------------------------------------------------
+2017-01-12T20:14:54+03:0000017	98C	DEBUG	1,03Mb	1,13Mb	download_heartbeat
+waInstaller::curlWriteHandler
+{------------------------------------------------------------
+array (
+  'url' => 'http://www.webasyst.com/download/archive/wa-apps/shop/plugins/currencyrates/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+  'content_type' => 'application/octet-stream',
+  'http_code' => 200,
+  'header_size' => 394,
+  'request_size' => 317,
+  'filetime' => -1,
+  'ssl_verify_result' => 0,
+  'redirect_count' => 0,
+  'total_time' => 0.211675,
+  'namelookup_time' => 4.1E-5,
+  'connect_time' => 0.043783999999999997,
+  'pretransfer_time' => 0.043787,
+  'size_upload' => 0,
+  'size_download' => 18430,
+  'speed_download' => 66545,
+  'speed_upload' => 0,
+  'download_content_length' => 23785,
+  'upload_content_length' => 0,
+  'starttransfer_time' => 0.20813400000000001,
+  'redirect_time' => 0,
+  'certinfo' => 
+  array (
+  ),
+  'primary_ip' => '178.33.57.200',
+  'redirect_url' => '',
+)
+}------------------------------------------------------------
+2017-01-12T20:14:54+03:0000018	98C	DEBUG	1,03Mb	1,13Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484241293,
+  'start_time_float' => 1484241293.7053809,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.042228937149047852,
+  'thread_id' => '98C',
+  'chunk_id' => 'wa-apps/shop/plugins/currencyrates',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484241294,
+  'timestamp_float' => 1484241294.019872,
+  'stage_performance' => 102931.19435970443,
+  'stage_current_value' => 18430,
+  'stage_start_time' => 1484241293.76403,
+  'datetime' => 'Thu, 12 Jan 2017 20:14:53 +0300',
+  'stage_value' => 23785,
+)
+}------------------------------------------------------------
+2017-01-12T20:14:54+03:0000019	98C	DEBUG	1,03Mb	1,13Mb	download_heartbeat
+waInstaller::curlWriteHandler
+{------------------------------------------------------------
+array (
+  'url' => 'http://www.webasyst.com/download/archive/wa-apps/shop/plugins/currencyrates/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+  'content_type' => 'application/octet-stream',
+  'http_code' => 200,
+  'header_size' => 394,
+  'request_size' => 317,
+  'filetime' => -1,
+  'ssl_verify_result' => 0,
+  'redirect_count' => 0,
+  'total_time' => 0.25303500000000001,
+  'namelookup_time' => 4.1E-5,
+  'connect_time' => 0.043783999999999997,
+  'pretransfer_time' => 0.043787,
+  'size_upload' => 0,
+  'size_download' => 23785,
+  'speed_download' => 72835,
+  'speed_upload' => 0,
+  'download_content_length' => 23785,
+  'upload_content_length' => 0,
+  'starttransfer_time' => 0.20813400000000001,
+  'redirect_time' => 0,
+  'certinfo' => 
+  array (
+  ),
+  'primary_ip' => '178.33.57.200',
+  'redirect_url' => '',
+)
+}------------------------------------------------------------
+2017-01-12T20:14:54+03:0000020	98C	DEBUG	1,03Mb	1,13Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484241293,
+  'start_time_float' => 1484241293.7053809,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0011031627655029297,
+  'thread_id' => '98C',
+  'chunk_id' => 'wa-apps/shop/plugins/currencyrates',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484241294,
+  'timestamp_float' => 1484241294.0209651,
+  'stage_performance' => 4898690.9312977102,
+  'stage_current_value' => 23785,
+  'stage_start_time' => 1484241293.76403,
+  'datetime' => 'Thu, 12 Jan 2017 20:14:53 +0300',
+  'stage_value' => 23785,
+)
+}------------------------------------------------------------
+2017-01-12T20:14:54+03:0000021	98C	DEBUG	1,03Mb	1,13Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484241293,
+  'start_time_float' => 1484241293.7053809,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0074999332427978516,
+  'thread_id' => '98C',
+  'chunk_id' => 'wa-apps/shop/plugins/currencyrates',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484241294,
+  'timestamp_float' => 1484241294.0284491,
+  'stage_performance' => 0,
+  'stage_current_value' => 23785,
+  'stage_start_time' => 1484241293.76403,
+  'datetime' => 'Thu, 12 Jan 2017 20:14:53 +0300',
+  'stage_value' => 23785,
+)
+}------------------------------------------------------------
+2017-01-12T20:14:54+03:0000022	98C	TRACE	1,02Mb	1,13Mb	download_heartbeat
+MD5 hash 545a6e276c26ad51deead4a3c34f0d64 get from header
+2017-01-12T20:14:54+03:0000023	98C	TRACE	1,03Mb	1,13Mb	download_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484241293,
+  'start_time_float' => 1484241293.7053809,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0041120052337646484,
+  'thread_id' => '98C',
+  'chunk_id' => 'wa-apps/shop/plugins/currencyrates',
+  'stage_status' => 'complete',
+  'timestamp' => 1484241294,
+  'timestamp_float' => 1484241294.032553,
+  'stage_performance' => 0,
+  'stage_current_value' => 23785,
+  'stage_start_time' => 1484241293.76403,
+  'datetime' => 'Thu, 12 Jan 2017 20:14:53 +0300',
+  'stage_value' => 23785,
+)
+}------------------------------------------------------------
+2017-01-12T20:14:54+03:0000024	98C	TRACE	1,03Mb	1,13Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484241293,
+  'start_time_float' => 1484241293.7053809,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.0037939548492431641,
+  'thread_id' => '98C',
+  'chunk_id' => 'wa-apps/shop/plugins/currencyrates',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484241294,
+  'timestamp_float' => 1484241294.036329,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1484241294.036329,
+  'datetime' => 'Thu, 12 Jan 2017 20:14:54 +0300',
+  'stage_value' => 0,
+)
+}------------------------------------------------------------
+2017-01-12T20:14:54+03:0000025	98C	TRACE	1,03Mb	1,13Mb	extract_heartbeat
+waInstaller::stageExtract
+{------------------------------------------------------------
+array (
+  'compressed_file' => '/home/almamed/web/almamed.su/public_html/wa-data/protected/wa-installer/98C/download/e3ba1e5a695376aa55e24a2a16d38be4',
+  'target_path' => 'wa-data/protected/wa-installer/98C/update/wa-apps/shop/plugins/currencyrates/',
+  'base_path' => 'wa-apps/shop/plugins/currencyrates/',
+)
+}------------------------------------------------------------
+2017-01-12T20:14:54+03:0000026	98C	DEBUG	1,13Mb	1,53Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484241293,
+  'start_time_float' => 1484241293.7053809,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.056459903717041016,
+  'thread_id' => '98C',
+  'chunk_id' => 'wa-apps/shop/plugins/currencyrates',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484241294,
+  'timestamp_float' => 1484241294.0927689,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1484241294.036329,
+  'datetime' => 'Thu, 12 Jan 2017 20:14:54 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => NULL,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-12T20:14:54+03:0000027	98C	DEBUG	1,14Mb	1,53Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484241293,
+  'start_time_float' => 1484241293.7053809,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.0012731552124023438,
+  'thread_id' => '98C',
+  'chunk_id' => 'wa-apps/shop/plugins/currencyrates',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484241294,
+  'timestamp_float' => 1484241294.0940349,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1484241294.036329,
+  'datetime' => 'Thu, 12 Jan 2017 20:14:54 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 0,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-12T20:14:54+03:0000028	98C	DEBUG	1,15Mb	1,53Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484241293,
+  'start_time_float' => 1484241293.7053809,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.02063298225402832,
+  'thread_id' => '98C',
+  'chunk_id' => 'wa-apps/shop/plugins/currencyrates',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484241294,
+  'timestamp_float' => 1484241294.1146519,
+  'stage_performance' => 4271424.7919143327,
+  'stage_current_value' => 88064,
+  'stage_start_time' => 1484241294.036329,
+  'datetime' => 'Thu, 12 Jan 2017 20:14:54 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 172,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-12T20:14:54+03:0000029	98C	TRACE	1,12Mb	1,53Mb	extract_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484241293,
+  'start_time_float' => 1484241293.7053809,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.0028970241546630859,
+  'thread_id' => '98C',
+  'chunk_id' => 'wa-apps/shop/plugins/currencyrates',
+  'stage_status' => 'complete',
+  'timestamp' => 1484241294,
+  'timestamp_float' => 1484241294.1175439,
+  'stage_performance' => 0,
+  'stage_current_value' => 88064,
+  'stage_start_time' => 1484241294.036329,
+  'datetime' => 'Thu, 12 Jan 2017 20:14:54 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 172,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-12T20:14:54+03:0000030	98C	TRACE	1,12Mb	1,53Mb	replace_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484241293,
+  'start_time_float' => 1484241293.7053809,
+  'elapsed_time' => 0,
+  'stage' => 4,
+  'stage_name' => 'replace',
+  'state_heartbeat' => 0.0039441585540771484,
+  'thread_id' => '98C',
+  'chunk_id' => 'wa-apps/shop/plugins/currencyrates',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484241294,
+  'timestamp_float' => 1484241294.1214671,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1484241294.1214671,
+  'datetime' => 'Thu, 12 Jan 2017 20:14:54 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 172,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-12T20:14:54+03:0000031	98C	TRACE	1,12Mb	1,53Mb	replace_heartbeat
+waInstaller::stageReplace
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-data/protected/wa-installer/98C/update/wa-apps/shop/plugins/currencyrates',
+  'target_path' => 'wa-apps/shop/plugins/currencyrates',
+  'store_prev' => false,
+)
+}------------------------------------------------------------
+2017-01-12T20:14:54+03:0000032	98C	TRACE	1,12Mb	1,53Mb	replace_heartbeat
+waInstaller::rename replace current version code
+{------------------------------------------------------------
+array (
+  'oldname' => 'wa-data/protected/wa-installer/98C/update/wa-apps/shop/plugins/currencyrates',
+  'newname' => 'wa-apps/shop/plugins/currencyrates',
+)
+}------------------------------------------------------------
+2017-01-12T20:14:54+03:0000033	98C	TRACE	1,12Mb	1,53Mb	replace_heartbeat
+waInstaller::stageReplace replace current version code
+{------------------------------------------------------------
+array (
+  'target_path' => 'wa-apps/shop/plugins/currencyrates',
+)
+}------------------------------------------------------------
+2017-01-12T20:14:54+03:0000034	98C	TRACE	1,12Mb	1,53Mb	replace_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484241293,
+  'start_time_float' => 1484241293.7053809,
+  'elapsed_time' => 0,
+  'stage' => 4,
+  'stage_name' => 'replace',
+  'state_heartbeat' => 0.0045638084411621094,
+  'thread_id' => '98C',
+  'chunk_id' => 'wa-apps/shop/plugins/currencyrates',
+  'stage_status' => 'complete',
+  'timestamp' => 1484241294,
+  'timestamp_float' => 1484241294.1260209,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1484241294.1214671,
+  'datetime' => 'Thu, 12 Jan 2017 20:14:54 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 172,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-12T20:14:54+03:0000035	98C	TRACE	1,13Mb	1,53Mb	cleanup_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484241293,
+  'start_time_float' => 1484241293.7053809,
+  'elapsed_time' => 0,
+  'stage' => 5,
+  'stage_name' => 'cleanup',
+  'state_heartbeat' => 0.0034120082855224609,
+  'thread_id' => '98C',
+  'chunk_id' => 'wa-apps/shop/plugins/currencyrates',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484241294,
+  'timestamp_float' => 1484241294.1293919,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1484241294.1293919,
+  'datetime' => 'Thu, 12 Jan 2017 20:14:54 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 172,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-12T20:14:54+03:0000036	98C	TRACE	1,13Mb	1,53Mb	cleanup_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484241293,
+  'start_time_float' => 1484241293.7053809,
+  'elapsed_time' => 0,
+  'stage' => 5,
+  'stage_name' => 'cleanup',
+  'state_heartbeat' => 0.0047011375427246094,
+  'thread_id' => '98C',
+  'chunk_id' => 'wa-apps/shop/plugins/currencyrates',
+  'stage_status' => 'complete',
+  'timestamp' => 1484241294,
+  'timestamp_float' => 1484241294.1340849,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1484241294.1293919,
+  'datetime' => 'Thu, 12 Jan 2017 20:14:54 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 172,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-12T20:14:54+03:0000037	98C	TRACE	1,13Mb	1,53Mb	update_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484241293,
+  'start_time_float' => 1484241293.7053809,
+  'elapsed_time' => 0,
+  'stage' => 6,
+  'stage_name' => 'update',
+  'state_heartbeat' => 0.0033609867095947266,
+  'thread_id' => '98C',
+  'chunk_id' => 'wa-apps/shop/plugins/currencyrates',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484241294,
+  'timestamp_float' => 1484241294.1374249,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1484241294.1374249,
+  'datetime' => 'Thu, 12 Jan 2017 20:14:54 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 172,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-12T20:14:54+03:0000038	98C	TRACE	1,13Mb	1,53Mb	update_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484241293,
+  'start_time_float' => 1484241293.7053809,
+  'elapsed_time' => 0,
+  'stage' => 6,
+  'stage_name' => 'update',
+  'state_heartbeat' => 0.0042090415954589844,
+  'thread_id' => '98C',
+  'chunk_id' => 'wa-apps/shop/plugins/currencyrates',
+  'stage_status' => 'complete',
+  'timestamp' => 1484241294,
+  'timestamp_float' => 1484241294.1416271,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1484241294.1374249,
+  'datetime' => 'Thu, 12 Jan 2017 20:14:54 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 172,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-12T20:14:54+03:0000039	98C	DEBUG	1,13Mb	1,53Mb	update_complete
+waInstaller::update
+{------------------------------------------------------------
+array (
+  'update_list' => 
+  array (
+    'wa-apps/shop/plugins/currencyrates' => 
+    array (
+      'source' => 'http://www.webasyst.com/download/archive/wa-apps/shop/plugins/currencyrates/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+      'target' => 'wa-apps/shop/plugins/currencyrates/',
+      'slug' => 'wa-apps/shop/plugins/currencyrates',
+      'md5' => NULL,
+      'pass' => false,
+      'name' => 'Автоматическое обновление курса валют (Shop-Script 7)',
+      'icon' => '//www.webasyst.com/wa-data/public/updates/img/97/897/icon.ru_RU.png',
+      'update' => false,
+      'subject' => 'app_plugins',
+      'edition' => true,
+      'extract_path' => 'wa-data/protected/wa-installer/98C/update/wa-apps/shop/plugins/currencyrates/',
+      'skipped' => false,
+      'dependent' => false,
+      'current_size' => 0,
+      'archive' => '/home/almamed/web/almamed.su/public_html/wa-data/protected/wa-installer/98C/download/e3ba1e5a695376aa55e24a2a16d38be4',
+      'backup' => false,
+    ),
+  ),
+)
+}------------------------------------------------------------
+2017-01-12T20:14:55+03:0000040	98C	TRACE	1,21Mb	1,53Mb	update_complete
+waInstaller::__destruct called
+
+
+

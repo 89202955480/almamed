@@ -202,4 +202,43 @@ return array (
     ),
      '_type' => 'waContactAddressField',
   )),
+  1 => 
+  waContactStringField::__set_state(array(
+     'id' => 'rekvizity-organ',
+     'options' => 
+    array (
+      'app_id' => 'shop',
+      'storage' => 'waContactDataStorage',
+      'input_height' => 5,
+      'validators' => 
+      waStringValidator::__set_state(array(
+         'messages' => 
+        array (
+          'required' => 'Нужно заполнить',
+          'invalid' => 'Неверно',
+          'max_length' => 'Пожалуйста, не более 0 символов',
+          'min_length' => 'Пожалуйста, не менее 0 символов',
+        ),
+         'options' => 
+        array (
+          'required' => false,
+          'app_id' => 'shop',
+          'storage' => 'waContactDataStorage',
+          'input_height' => 5,
+        ),
+         'errors' => 
+        array (
+        ),
+         '_type' => 'waStringValidator',
+      )),
+      'required' => false,
+      'allow_self_edit' => false,
+      'unique' => false,
+    ),
+     'name' => 
+    array (
+      'en_US' => 'Реквизиты организации (Если ИП/ООО)',
+    ),
+     '_type' => 'waContactStringField',
+  )),
 );

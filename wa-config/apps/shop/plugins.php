@@ -12,5 +12,6 @@ return array (
   'seo' => true,
   'watermark' => true,
   'directedit' => true,
+  'currencyrates' => true,
 );
 //EOF
