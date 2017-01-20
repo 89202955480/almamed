@@ -687,3 +687,7 @@ h1{font-size:1.75em;}
     border-radius: 5px;
     max-width: 400px;
 }
+
+@media (max-width: 1000px) { /* это будет показано при разрешении монитора до 930 пикселей */
+    #zcwMiniButton {  display:none; } /* основное содержимое занимает всё пространство окна */
+}
