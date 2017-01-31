@@ -20,10 +20,13 @@
 {/if}
 
 {if !empty($menu)}
+{assign var="inc" value="0"}
 <ul class="base-menu type1 pages-top" style="display: none;">
-        <li class=" "><a href="{$menu[1]['url']}">{$menu[1]['name']}</a></li>
-        <li class=" "><a href="{$menu[3]['url']}">{$menu[3]['name']}</a></li>
-        <li class=" "><a href="{$menu[4]['url']}">{$menu[4]['name']}</a></li>
+    {foreach $menu as $k=>$branch}
+        {if $inc++ < 3}
+        <li class=" "><a href="{$branch['url']}">{$branch['name']}</a></li>
+        {/if}
+    {/foreach}
 </ul>
 {/if}
 
