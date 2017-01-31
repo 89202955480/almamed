@@ -84,16 +84,31 @@
                 </div></div>
             
                 <!-- DESKTOP NAV -->
+                {include file="logo.no.text.html" assign="header0" inline}
+                {include file="links.pages.top.fix.html" assign="header4" inline}
                 {include file="links.pages.top.html" assign="header1" inline}
                 {include file="search.form.html" assign="header2" inline}
                 {include file="links.auth.html" assign="header3" inline}
-                
-                <div class="row-grid hide-on-med-and-down"><div class="table-grid">
-                    {if !empty($header1)}<div class="col-grid max-width">{$header1}</div>{/if}
+
+
+                <div class="row-grid hide-on-med-and-down header-fix-top-menu-hidden" >
+                    <div class="table-grid">
+                    {if !empty($header1)}<div class="col-grid  max-width">{$header1}</div>{/if}
                     {if !empty($header2)}<div class="col-grid">{$header2}</div>{/if}
-                    {if !empty($header3)}<div class="col-grid min-width">{$header3}</div>{/if}
-                    {*<div class="col-grid min-width">{include file="cart.second.html" inline}</div>*}
-                </div></div>
+                        <div class="col-grid">{include file="cart.top.menu.fix.html" inline}</div>
+                    {if !empty($header3)}<div class="col-grid">{$header3}</div>{/if}
+                    </div>
+                </div>
+
+                <div class="row-grid hide-on-med-and-down header-fix-top-menu" style="display: none">
+                    <div class="table-grid">
+                        {if !empty($header0)}<div class="col-grid">{$header0}</div>{/if}
+                        {if !empty($header4)}<div class="col-grid  max-width">{$header4}</div>{/if}
+                        {if !empty($header2)}<div class="col-grid">{$header2}</div>{/if}
+                        <div class="col-grid">{include file="cart.top.menu.fix.html" inline}</div>
+                        {if !empty($header3)}<div class="col-grid">{$header3}</div>{/if}
+                    </div>
+                </div>
                 
             </div>
         </nav>

@@ -97,4 +97,17 @@
 </script>
 <script type="text/javascript" src="{$wa_theme_url}at.min.js?v0.0.1"></script>
 
+<script type="text/javascript">
+    $(window).scroll(function() {
+        if ( $(this).scrollTop()>=250) {
+            $(".nav-wrapper .header-fix-top-menu-hidden").css('display','none');
+            $(".nav-wrapper .header-fix-top-menu").show();
+            $(".nav-wrapper").addClass( "fixed" );
+        }else if ( $(this).scrollTop()<240 ) {
+            $(".nav-wrapper .header-fix-top-menu").css('display','none');
+            $(".nav-wrapper .header-fix-top-menu-hidden").show();
+            $(".nav-wrapper").removeClass( "fixed" );
+        }
+    });
+</script>
 {/strip}

@@ -715,7 +715,7 @@ $(document).ready(function() {
     });
     */
     if ( MatchMedia("only screen and (min-width: 993px)") ) {
-        
+
         $('.base-menu.pages-top').responsiveMenu({
             more_label: $.at.t('More')
         });
