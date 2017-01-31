@@ -13,5 +13,7 @@ return array (
   'watermark' => true,
   'directedit' => true,
   'currencyrates' => true,
+  'quickeditor' => true,
+  'vendorlink' => true,
 );
 //EOF

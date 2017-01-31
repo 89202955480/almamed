@@ -1,5 +1,6 @@
 <?php
 return array (
+  'lazy_loading' => 1,
   'notification_name' => 'general',
   'discount_description' => 1,
   'filters_features' => 'join',
@@ -36,15 +37,15 @@ return array (
   'search_weights' => 
   array (
     'name' => '90',
-    'summary' => '20',
-    'description' => '20',
-    'tag' => '30',
-    'feature' => '30',
+    'summary' => '0',
+    'description' => '0',
+    'tag' => '0',
+    'feature' => '0',
     'sku' => '40',
     'other' => '10',
   ),
   'search_ignore' => ',.!?«»"\'()[]<>|/',
-  'search_smart' => true,
+  'search_smart' => 1,
   'can_use_smarty' => false,
   'rounding_options' => 
   array (

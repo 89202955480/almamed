@@ -1,0 +1,258 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: shop/plugins/quickeditor\n"
+"POT-Creation-Date: 2015-02-26 13:16+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Alexander <alexander@web-developer.name>\n"
+"Language-Team: shop/plugins/quickeditor\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n"
+"%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: .\n"
+"Language: ru_RU\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:12
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:45
+msgid "Instructions for using the plugin"
+msgstr "Инструкция по использованию плагина"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:14
+msgid ""
+"Paste the plugin code into the template. Embed code is presented below (only "
+"works in «Store» application templates)"
+msgstr ""
+"Вставьте этот код плагина в шаблоне. Код для вставки представлен ниже "
+"(работает только в шаблонах приложения «Магазин»)"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:19
+msgid "Enable plugin"
+msgstr "Включить плагин"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:37
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:40
+msgid "Embed code for template (only for app «Shop»)"
+msgstr "Код для вставки в шаблон приложения «Магазин» "
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:48
+msgid "By default the plugin is disabled."
+msgstr "По умолчанию плагин отключен."
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:49
+msgid "First of all, set mark «Enable plugin»."
+msgstr "Прежде всего, установите галочку «Включить плагин»."
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:54
+msgid "where ID is product ID."
+msgstr "где ID это уникальный идентификатор товара."
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:76
+msgid ""
+"You can put the code other else application template, in a place where you "
+"want."
+msgstr "Код плагина, можно помещать в любые другие файлы шаблона."
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:77
+msgid "But only in «Shop» app."
+msgstr "Но только в шаблонах приложения «Магазин»."
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:87
+msgid "Save"
+msgstr "Сохранить"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/quickeditor/QuickeditorDefault.html:2
+msgid "Edit"
+msgstr "Редактировать"
+
+#: /wa-apps/shop/plugins/quickeditor/lib/actions/shopQuickeditorPluginBackendSave.controller.php:14
+msgid "Saved"
+msgstr "Сохранено"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:7
+msgid "Quick products editor"
+msgstr "Быстрый редактор товаров"
+
+#: /wa-apps/shop/plugins/quickeditor/lib/shopQuickeditor.plugin.php:10
+msgid "Save and update"
+msgstr "Сохранить и обновить"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:8
+msgid "Opens the edit product window from the frontend"
+msgstr "Открывает окно редактирования товара из фронтенда"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:31
+msgid "Show product descriptions on «Basics» tab"
+msgstr "Показывать описание товара во вкладке «Общие сведения»"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:37
+msgid "In main description area"
+msgstr "В основной части описания товара"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:40
+msgid "Usually in a sidebar"
+msgstr "В боковой части страницы"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:43
+msgid "Next to links to custom product pages"
+msgstr "Рядом с ссылками на дополнительные страницы товара"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:46
+msgid "Next to the «Add to cart» button"
+msgstr "Рядом с кнопкой «В корзину»"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:32
+msgid "Location of «Edit» button on a product page"
+msgstr "Положение кнопки «Редактировать» на странице товара"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:54
+msgid "Show «Edit» button on a category page"
+msgstr "Показать кнопку «Редактировать» на странице категории"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:76
+msgid "Automatic plugin output works only on the product page."
+msgstr "Автоматический вывод плагина работает только на странице товара."
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:77
+msgid ""
+"For display plugin on category page, insert plugin code in list-thumbs.html "
+"as shown below"
+msgstr ""
+"Для вывода плагина в категории, необходимо вставить код плагина в файл list-"
+"thumbs.html как показано ниже"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:49
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:74
+msgid "On the left side of the page"
+msgstr "На левой стороне страницы"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:52
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:77
+msgid "On the right side of the page"
+msgstr "На правой стороне страницы"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:80
+msgid "Hidden"
+msgstr "Скрыть"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/quickeditor/QuickeditorProductLink.html:2
+msgid "Edit product"
+msgstr "Редактировать товар"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/quickeditor/QuickeditorCategoryLink.html:2
+msgid "Edit category"
+msgstr "Редактировать категорию"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:60
+msgid "A fixed button for edit category"
+msgstr "Фиксированная кнопка редактирования категории"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:79
+msgid "Opening editor in the tab"
+msgstr "Открывать редактор во вкладке "
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:17
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:18
+msgid ".com"
+msgstr ".ru"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:18
+msgid "Ansvers"
+msgstr "Решение вопросов"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:136
+msgid ""
+"Also you can paste the code in the application template, in a place where "
+"you want the plugin will displayed"
+msgstr ""
+"Код плагина, можно помещать в любые другие файлы шаблона. В шаблоне "
+"приложения, в месте где вы хотите чтобы отображался плагин, поместите код"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:164
+msgid "On"
+msgstr "Вкл."
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:165
+msgid "Off"
+msgstr "Выкл."
+
+#: /wa-apps/shop/plugins/quickeditor/lib/shopQuickeditor.plugin.php:17
+msgid "Save and close"
+msgstr "Сохранить и закрыть"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:100
+msgid "Enable «Save and close» button"
+msgstr "Включить кнопку «Сохранить и закрыть»"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:128
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:130
+msgid "Paste code here"
+msgstr "Вставьте код здесь"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:82
+msgid "A fixed button for edit information pages"
+msgstr "Фиксированная кнопка редактирования информационных страниц"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/quickeditor/QuickeditorPageLink.html:2
+msgid "Edit page"
+msgstr "Редактировать страницу"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:32
+msgid "Enable «frontend_head» hook"
+msgstr "Включить «frontend_head» хук"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:72
+msgid "Always opening the product editing page"
+msgstr "Всегда открывать страницу редактирования товара"
+
+#: /wa-apps/shop/plugins/quickeditor/lib/actions/shopQuickeditorPluginBackendSave.controller.php:22
+msgid "Please enter a valid plugin parameters"
+msgstr "Пожалуйста, введите допустимые параметры плагина"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:99
+msgid "Show the text «Edit» at the edit button"
+msgstr "Показывать текст «Редактировать» на кнопке редактирования"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:18
+msgid "Answers to questions"
+msgstr "Ответы на вопросы"
+
+#: /wa-apps/shop/plugins/quickeditor/templates/actions/settings/Settings.html:146
+msgid "A fixed button<br>“Quick access”"
+msgstr "Фиксированная кнопка<br>«Быстрый доступ»"
+
+#: /wa-apps/shop/plugins/quickeditor/lib/shopQuickeditor.plugin.php:114
+msgid "Quick access"
+msgstr "«Быстрый доступ»"
+
+#: /wa-apps/shop/plugins/quickeditor/lib/shopQuickeditor.plugin.php:115
+msgid "Settings"
+msgstr "Настройки"
+
+#: /wa-apps/shop/plugins/quickeditor/lib/shopQuickeditor.plugin.php:116
+msgid "Plugins"
+msgstr "Плагины"
+
+#: /wa-apps/shop/plugins/quickeditor/lib/shopQuickeditor.plugin.php:117
+msgid "Qrders"
+msgstr "Заказы"
+
+#: /wa-apps/shop/plugins/quickeditor/lib/shopQuickeditor.plugin.php:118
+msgid "Products"
+msgstr "Товары"
+
+#: /wa-apps/shop/plugins/quickeditor/lib/shopQuickeditor.plugin.php:119
+msgid "Customers"
+msgstr "Покупатели"
+
+#: /wa-apps/shop/plugins/quickeditor/lib/shopQuickeditor.plugin.php:120
+msgid "Reports"
+msgstr "Отчеты"
+
+#: /wa-apps/shop/plugins/quickeditor/lib/shopQuickeditor.plugin.php:121
+msgid "Storefronts"
+msgstr "Витрина"

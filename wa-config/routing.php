@@ -6,6 +6,7 @@ return array (
     array (
       'url' => 'vystavki/*',
       'app' => 'blog',
+      '_name' => 'Выставки',
       'theme' => 'profitbuy',
       'theme_mobile' => 'profitbuy',
       'blog_url_type' => '2',
@@ -20,10 +21,11 @@ return array (
     array (
       'url' => 'blog/*',
       'app' => 'blog',
+      '_name' => 'Новости',
       'theme' => 'profitbuy',
       'theme_mobile' => 'profitbuy',
       'locale' => 'ru_RU',
-      'blog_url_type' => '1',
+      'blog_url_type' => '2',
       'post_url_type' => '0',
       'title_type' => 'blog_post',
       'title' => '',

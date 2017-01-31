@@ -103876,3 +103876,1626 @@ waInstaller::__destruct called
 
 
 
+2017-01-21T12:02:04+03:0000001	38A	DEBUG	0,95Mb	0,97Mb	
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484989324,
+  'start_time_float' => 1484989324.0824349,
+  'elapsed_time' => 0,
+  'stage' => 0,
+  'stage_name' => 'unkown_none',
+  'state_heartbeat' => false,
+  'thread_id' => '38A',
+  'chunk_id' => NULL,
+  'stage_status' => 'none',
+  'timestamp' => 1484989324,
+  'timestamp_float' => 1484989324.0824471,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2017-01-21T12:02:04+03:0000002	38A	DEBUG	0,95Mb	1,04Mb	
+waInstaller::formatUpdateList tree
+{------------------------------------------------------------
+array (
+  'targets' => 
+  array (
+    0 => 'wa-apps/shop/plugins/quickeditor/',
+  ),
+  'update_list' => 
+  array (
+    'wa-apps/shop/plugins/quickeditor' => 
+    array (
+      'source' => 'http://www.webasyst.com/download/archive/wa-apps/shop/plugins/quickeditor/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+      'target' => 'wa-apps/shop/plugins/quickeditor/',
+      'slug' => 'wa-apps/shop/plugins/quickeditor',
+      'md5' => NULL,
+      'pass' => false,
+      'name' => 'Быстрый редактор товаров (Shop-Script 7)',
+      'icon' => '//www.webasyst.com/wa-data/public/updates/img/57/1357/icon.ru_RU.png',
+      'update' => false,
+      'subject' => 'app_plugins',
+      'edition' => true,
+      'extract_path' => 'wa-data/protected/wa-installer/38A/update/wa-apps/shop/plugins/quickeditor/',
+      'skipped' => false,
+      'dependent' => false,
+    ),
+  ),
+)
+}------------------------------------------------------------
+2017-01-21T12:02:04+03:0000003	38A	DEBUG	0,96Mb	1,04Mb	
+callback
+{------------------------------------------------------------
+array (
+  0 => 
+  array (
+    'file' => '/wa-installer/lib/classes/wainstaller.class.php:155',
+    'function' => 'waInstaller->envSet()',
+  ),
+  1 => 
+  array (
+    'file' => '/wa-apps/installer/lib/actions/update/installerUpdateExecute.controller.php:49',
+    'function' => 'waInstaller->update(Array(1))',
+  ),
+  2 => 
+  array (
+    'file' => '/wa-system/controller/waController.class.php:21',
+    'function' => 'installerUpdateExecuteController->execute()',
+  ),
+  3 => 
+  array (
+    'file' => '/wa-system/controller/waJsonController.class.php:28',
+    'function' => 'installerUpdateExecuteController(waController)->run()',
+  ),
+  4 => 
+  array (
+    'file' => '/wa-system/controller/waFrontController.class.php:227',
+    'function' => 'installerUpdateExecuteController(waJsonController)->run()',
+  ),
+  5 => 
+  array (
+    'file' => '/wa-system/controller/waFrontController.class.php:162',
+    'function' => 'waFrontController->runController(installerUpdateExecuteController)',
+  ),
+  6 => 
+  array (
+    'file' => '/wa-system/controller/waFrontController.class.php:58',
+    'function' => 'waFrontController->execute()',
+  ),
+  7 => 
+  array (
+    'file' => '/wa-system/waSystem.class.php:538',
+    'function' => 'waFrontController->dispatch()',
+  ),
+  8 => 
+  array (
+    'file' => '/wa-system/waSystem.class.php:476',
+    'function' => 'waSystem->dispatchBackend()',
+  ),
+  9 => 
+  array (
+    'file' => '/index.php:10',
+    'function' => 'waSystem->dispatch()',
+  ),
+)
+}------------------------------------------------------------
+2017-01-21T12:02:04+03:0000004	38A	TRACE	0,97Mb	1,06Mb	
+Register ob error handler
+{------------------------------------------------------------
+true
+}------------------------------------------------------------
+2017-01-21T12:02:04+03:0000005	38A	TRACE	0,98Mb	1,07Mb	prepare_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484989324,
+  'start_time_float' => 1484989324.0824349,
+  'elapsed_time' => 0,
+  'stage' => 1,
+  'stage_name' => 'prepare',
+  'state_heartbeat' => 0.14102506637573242,
+  'thread_id' => '38A',
+  'chunk_id' => 'wa-apps/shop/plugins/quickeditor',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484989324,
+  'timestamp_float' => 1484989324.223393,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1484989324.223393,
+  'datetime' => 'Sat, 21 Jan 2017 12:02:04 +0300',
+  'stage_value' => 0,
+)
+}------------------------------------------------------------
+2017-01-21T12:02:04+03:0000006	38A	DEBUG	0,98Mb	1,08Mb	prepare_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/38A/update/wa-apps/shop/plugins/quickeditor/',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-01-21T12:02:04+03:0000007	38A	TRACE	0,99Mb	1,08Mb	prepare_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484989324,
+  'start_time_float' => 1484989324.0824349,
+  'elapsed_time' => 0,
+  'stage' => 1,
+  'stage_name' => 'prepare',
+  'state_heartbeat' => 0.66582798957824707,
+  'thread_id' => '38A',
+  'chunk_id' => 'wa-apps/shop/plugins/quickeditor',
+  'stage_status' => 'complete',
+  'timestamp' => 1484989324,
+  'timestamp_float' => 1484989324.8892009,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1484989324.223393,
+  'datetime' => 'Sat, 21 Jan 2017 12:02:04 +0300',
+  'stage_value' => 0,
+)
+}------------------------------------------------------------
+2017-01-21T12:02:04+03:0000008	38A	TRACE	0,99Mb	1,08Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484989324,
+  'start_time_float' => 1484989324.0824349,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.00092315673828125,
+  'thread_id' => '38A',
+  'chunk_id' => 'wa-apps/shop/plugins/quickeditor',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484989324,
+  'timestamp_float' => 1484989324.8901081,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1484989324.8901081,
+  'datetime' => 'Sat, 21 Jan 2017 12:02:04 +0300',
+  'stage_value' => 0,
+)
+}------------------------------------------------------------
+2017-01-21T12:02:05+03:0000009	38A	TRACE	0,99Mb	1,08Mb	download_heartbeat
+waInstaller::downloadCurl :download via cURL
+{------------------------------------------------------------
+array (
+  'source' => 'http://www.webasyst.com/download/archive/wa-apps/shop/plugins/quickeditor/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+  'target' => '/home/almamed/web/almamed.su/public_html/wa-data/protected/wa-installer/38A/download/c7051f8d2746aaea0f685f52aa8f5240',
+)
+}------------------------------------------------------------
+2017-01-21T12:02:05+03:0000010	38A	DEBUG	0,99Mb	1,08Mb	download_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/38A/download/',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-01-21T12:02:05+03:0000011	38A	DEBUG	0,99Mb	1,08Mb	download_heartbeat
+waInstaller::curlHeaderHandler
+{------------------------------------------------------------
+array (
+  'header' => 'Content-Length: 38315
+',
+  'header_matches' => 
+  array (
+    0 => 'Content-Length: 38315',
+    1 => '38315',
+  ),
+  'value' => 38315,
+)
+}------------------------------------------------------------
+2017-01-21T12:02:05+03:0000012	38A	DEBUG	0,99Mb	1,08Mb	download_heartbeat
+waInstaller::curlHeaderHandler
+{------------------------------------------------------------
+array (
+  'header' => 'Content-MD5: AysR8D7kvHGTLvoJTbFVcw==
+',
+  'header_matches' => 
+  array (
+    1 => '032b11f03ee4bc71932efa094db15573',
+  ),
+  'value' => '032b11f03ee4bc71932efa094db15573',
+)
+}------------------------------------------------------------
+2017-01-21T12:02:05+03:0000013	38A	DEBUG	1,00Mb	1,08Mb	download_heartbeat
+waInstaller::curlWriteHandler
+{------------------------------------------------------------
+array (
+  'url' => 'http://www.webasyst.com/download/archive/wa-apps/shop/plugins/quickeditor/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+  'content_type' => 'application/octet-stream',
+  'http_code' => 200,
+  'header_size' => 394,
+  'request_size' => 315,
+  'filetime' => -1,
+  'ssl_verify_result' => 0,
+  'redirect_count' => 0,
+  'total_time' => 0.063034000000000007,
+  'namelookup_time' => 0.00064499999999999996,
+  'connect_time' => 0.062970999999999999,
+  'pretransfer_time' => 0.062974000000000002,
+  'size_upload' => 0,
+  'size_download' => 1054,
+  'speed_download' => 0,
+  'speed_upload' => 0,
+  'download_content_length' => 38315,
+  'upload_content_length' => 0,
+  'starttransfer_time' => 0.24212900000000001,
+  'redirect_time' => 0,
+  'certinfo' => 
+  array (
+  ),
+  'primary_ip' => '178.33.57.200',
+  'redirect_url' => '',
+)
+}------------------------------------------------------------
+2017-01-21T12:02:05+03:0000014	38A	DEBUG	1,00Mb	1,08Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484989324,
+  'start_time_float' => 1484989324.0824349,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.52539396286010742,
+  'thread_id' => '38A',
+  'chunk_id' => 'wa-apps/shop/plugins/quickeditor',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484989325,
+  'timestamp_float' => 1484989325.4154789,
+  'stage_performance' => 2006.2019572828576,
+  'stage_current_value' => 1054,
+  'stage_start_time' => 1484989324.8901081,
+  'datetime' => 'Sat, 21 Jan 2017 12:02:04 +0300',
+  'stage_value' => 38315,
+)
+}------------------------------------------------------------
+2017-01-21T12:02:05+03:0000015	38A	DEBUG	1,01Mb	1,09Mb	download_heartbeat
+waInstaller::curlWriteHandler
+{------------------------------------------------------------
+array (
+  'url' => 'http://www.webasyst.com/download/archive/wa-apps/shop/plugins/quickeditor/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+  'content_type' => 'application/octet-stream',
+  'http_code' => 200,
+  'header_size' => 394,
+  'request_size' => 315,
+  'filetime' => -1,
+  'ssl_verify_result' => 0,
+  'redirect_count' => 0,
+  'total_time' => 0.24526400000000001,
+  'namelookup_time' => 0.00064499999999999996,
+  'connect_time' => 0.062970999999999999,
+  'pretransfer_time' => 0.062974000000000002,
+  'size_upload' => 0,
+  'size_download' => 14086,
+  'speed_download' => 4297,
+  'speed_upload' => 0,
+  'download_content_length' => 38315,
+  'upload_content_length' => 0,
+  'starttransfer_time' => 0.24212900000000001,
+  'redirect_time' => 0,
+  'certinfo' => 
+  array (
+  ),
+  'primary_ip' => '178.33.57.200',
+  'redirect_url' => '',
+)
+}------------------------------------------------------------
+2017-01-21T12:02:05+03:0000016	38A	DEBUG	1,01Mb	1,09Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484989324,
+  'start_time_float' => 1484989324.0824349,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0023870468139648438,
+  'thread_id' => '38A',
+  'chunk_id' => 'wa-apps/shop/plugins/quickeditor',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484989325,
+  'timestamp_float' => 1484989325.4178591,
+  'stage_performance' => 5475325.0253430828,
+  'stage_current_value' => 14086,
+  'stage_start_time' => 1484989324.8901081,
+  'datetime' => 'Sat, 21 Jan 2017 12:02:04 +0300',
+  'stage_value' => 38315,
+)
+}------------------------------------------------------------
+2017-01-21T12:02:05+03:0000017	38A	DEBUG	1,02Mb	1,11Mb	download_heartbeat
+waInstaller::curlWriteHandler
+{------------------------------------------------------------
+array (
+  'url' => 'http://www.webasyst.com/download/archive/wa-apps/shop/plugins/quickeditor/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+  'content_type' => 'application/octet-stream',
+  'http_code' => 200,
+  'header_size' => 394,
+  'request_size' => 315,
+  'filetime' => -1,
+  'ssl_verify_result' => 0,
+  'redirect_count' => 0,
+  'total_time' => 0.60582599999999998,
+  'namelookup_time' => 0.00064499999999999996,
+  'connect_time' => 0.062970999999999999,
+  'pretransfer_time' => 0.062974000000000002,
+  'size_upload' => 0,
+  'size_download' => 30470,
+  'speed_download' => 23250,
+  'speed_upload' => 0,
+  'download_content_length' => 38315,
+  'upload_content_length' => 0,
+  'starttransfer_time' => 0.24212900000000001,
+  'redirect_time' => 0,
+  'certinfo' => 
+  array (
+  ),
+  'primary_ip' => '178.33.57.200',
+  'redirect_url' => '',
+)
+}------------------------------------------------------------
+2017-01-21T12:02:05+03:0000018	38A	DEBUG	1,01Mb	1,11Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484989324,
+  'start_time_float' => 1484989324.0824349,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.36067080497741699,
+  'thread_id' => '38A',
+  'chunk_id' => 'wa-apps/shop/plugins/quickeditor',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484989325,
+  'timestamp_float' => 1484989325.778517,
+  'stage_performance' => 45428.087448412087,
+  'stage_current_value' => 30470,
+  'stage_start_time' => 1484989324.8901081,
+  'datetime' => 'Sat, 21 Jan 2017 12:02:04 +0300',
+  'stage_value' => 38315,
+)
+}------------------------------------------------------------
+2017-01-21T12:02:06+03:0000019	38A	DEBUG	1,01Mb	1,11Mb	download_heartbeat
+waInstaller::curlWriteHandler
+{------------------------------------------------------------
+array (
+  'url' => 'http://www.webasyst.com/download/archive/wa-apps/shop/plugins/quickeditor/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+  'content_type' => 'application/octet-stream',
+  'http_code' => 200,
+  'header_size' => 394,
+  'request_size' => 315,
+  'filetime' => -1,
+  'ssl_verify_result' => 0,
+  'redirect_count' => 0,
+  'total_time' => 0.85897500000000004,
+  'namelookup_time' => 0.00064499999999999996,
+  'connect_time' => 0.062970999999999999,
+  'pretransfer_time' => 0.062974000000000002,
+  'size_upload' => 0,
+  'size_download' => 38315,
+  'speed_download' => 35472,
+  'speed_upload' => 0,
+  'download_content_length' => 38315,
+  'upload_content_length' => 0,
+  'starttransfer_time' => 0.24212900000000001,
+  'redirect_time' => 0,
+  'certinfo' => 
+  array (
+  ),
+  'primary_ip' => '178.33.57.200',
+  'redirect_url' => '',
+)
+}------------------------------------------------------------
+2017-01-21T12:02:06+03:0000020	38A	DEBUG	1,01Mb	1,11Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484989324,
+  'start_time_float' => 1484989324.0824349,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.25314593315124512,
+  'thread_id' => '38A',
+  'chunk_id' => 'wa-apps/shop/plugins/quickeditor',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484989326,
+  'timestamp_float' => 1484989326.031651,
+  'stage_performance' => 30991.489176535077,
+  'stage_current_value' => 38315,
+  'stage_start_time' => 1484989324.8901081,
+  'datetime' => 'Sat, 21 Jan 2017 12:02:04 +0300',
+  'stage_value' => 38315,
+)
+}------------------------------------------------------------
+2017-01-21T12:02:06+03:0000021	38A	DEBUG	1,00Mb	1,11Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484989324,
+  'start_time_float' => 1484989324.0824349,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.35912394523620605,
+  'thread_id' => '38A',
+  'chunk_id' => 'wa-apps/shop/plugins/quickeditor',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484989326,
+  'timestamp_float' => 1484989326.390763,
+  'stage_performance' => 0,
+  'stage_current_value' => 38315,
+  'stage_start_time' => 1484989324.8901081,
+  'datetime' => 'Sat, 21 Jan 2017 12:02:04 +0300',
+  'stage_value' => 38315,
+)
+}------------------------------------------------------------
+2017-01-21T12:02:06+03:0000022	38A	TRACE	1,00Mb	1,11Mb	download_heartbeat
+MD5 hash 032b11f03ee4bc71932efa094db15573 get from header
+2017-01-21T12:02:06+03:0000023	38A	TRACE	1,00Mb	1,11Mb	download_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484989324,
+  'start_time_float' => 1484989324.0824349,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.20131206512451172,
+  'thread_id' => '38A',
+  'chunk_id' => 'wa-apps/shop/plugins/quickeditor',
+  'stage_status' => 'complete',
+  'timestamp' => 1484989326,
+  'timestamp_float' => 1484989326.592062,
+  'stage_performance' => 0,
+  'stage_current_value' => 38315,
+  'stage_start_time' => 1484989324.8901081,
+  'datetime' => 'Sat, 21 Jan 2017 12:02:04 +0300',
+  'stage_value' => 38315,
+)
+}------------------------------------------------------------
+2017-01-21T12:02:06+03:0000024	38A	TRACE	1,00Mb	1,11Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484989324,
+  'start_time_float' => 1484989324.0824349,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.29001808166503906,
+  'thread_id' => '38A',
+  'chunk_id' => 'wa-apps/shop/plugins/quickeditor',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484989326,
+  'timestamp_float' => 1484989326.881983,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1484989326.881983,
+  'datetime' => 'Sat, 21 Jan 2017 12:02:06 +0300',
+  'stage_value' => 0,
+)
+}------------------------------------------------------------
+2017-01-21T12:02:06+03:0000025	38A	TRACE	1,00Mb	1,11Mb	extract_heartbeat
+waInstaller::stageExtract
+{------------------------------------------------------------
+array (
+  'compressed_file' => '/home/almamed/web/almamed.su/public_html/wa-data/protected/wa-installer/38A/download/c7051f8d2746aaea0f685f52aa8f5240',
+  'target_path' => 'wa-data/protected/wa-installer/38A/update/wa-apps/shop/plugins/quickeditor/',
+  'base_path' => 'wa-apps/shop/plugins/quickeditor/',
+)
+}------------------------------------------------------------
+2017-01-21T12:02:07+03:0000026	38A	DEBUG	1,11Mb	1,50Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484989324,
+  'start_time_float' => 1484989324.0824349,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.92953896522521973,
+  'thread_id' => '38A',
+  'chunk_id' => 'wa-apps/shop/plugins/quickeditor',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484989327,
+  'timestamp_float' => 1484989327.8114991,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1484989326.881983,
+  'datetime' => 'Sat, 21 Jan 2017 12:02:06 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => NULL,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-21T12:02:07+03:0000027	38A	DEBUG	1,11Mb	1,50Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484989324,
+  'start_time_float' => 1484989324.0824349,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.0015468597412109375,
+  'thread_id' => '38A',
+  'chunk_id' => 'wa-apps/shop/plugins/quickeditor',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484989327,
+  'timestamp_float' => 1484989327.813036,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1484989326.881983,
+  'datetime' => 'Sat, 21 Jan 2017 12:02:06 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 0,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-21T12:02:08+03:0000028	38A	TRACE	1,09Mb	1,50Mb	extract_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484989324,
+  'start_time_float' => 1484989324.0824349,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.28306913375854492,
+  'thread_id' => '38A',
+  'chunk_id' => 'wa-apps/shop/plugins/quickeditor',
+  'stage_status' => 'complete',
+  'timestamp' => 1484989328,
+  'timestamp_float' => 1484989328.0960951,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1484989326.881983,
+  'datetime' => 'Sat, 21 Jan 2017 12:02:06 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 0,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-21T12:02:08+03:0000029	38A	TRACE	1,09Mb	1,50Mb	replace_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484989324,
+  'start_time_float' => 1484989324.0824349,
+  'elapsed_time' => 0,
+  'stage' => 4,
+  'stage_name' => 'replace',
+  'state_heartbeat' => 0.2415778636932373,
+  'thread_id' => '38A',
+  'chunk_id' => 'wa-apps/shop/plugins/quickeditor',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484989328,
+  'timestamp_float' => 1484989328.337647,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1484989328.337647,
+  'datetime' => 'Sat, 21 Jan 2017 12:02:08 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 0,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-21T12:02:08+03:0000030	38A	TRACE	1,09Mb	1,50Mb	replace_heartbeat
+waInstaller::stageReplace
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-data/protected/wa-installer/38A/update/wa-apps/shop/plugins/quickeditor',
+  'target_path' => 'wa-apps/shop/plugins/quickeditor',
+  'store_prev' => false,
+)
+}------------------------------------------------------------
+2017-01-21T12:02:08+03:0000031	38A	TRACE	1,09Mb	1,50Mb	replace_heartbeat
+waInstaller::rename replace current version code
+{------------------------------------------------------------
+array (
+  'oldname' => 'wa-data/protected/wa-installer/38A/update/wa-apps/shop/plugins/quickeditor',
+  'newname' => 'wa-apps/shop/plugins/quickeditor',
+)
+}------------------------------------------------------------
+2017-01-21T12:02:08+03:0000032	38A	TRACE	1,09Mb	1,50Mb	replace_heartbeat
+waInstaller::stageReplace replace current version code
+{------------------------------------------------------------
+array (
+  'target_path' => 'wa-apps/shop/plugins/quickeditor',
+)
+}------------------------------------------------------------
+2017-01-21T12:02:08+03:0000033	38A	TRACE	1,09Mb	1,50Mb	replace_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484989324,
+  'start_time_float' => 1484989324.0824349,
+  'elapsed_time' => 0,
+  'stage' => 4,
+  'stage_name' => 'replace',
+  'state_heartbeat' => 0.32569503784179688,
+  'thread_id' => '38A',
+  'chunk_id' => 'wa-apps/shop/plugins/quickeditor',
+  'stage_status' => 'complete',
+  'timestamp' => 1484989328,
+  'timestamp_float' => 1484989328.6633251,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1484989328.337647,
+  'datetime' => 'Sat, 21 Jan 2017 12:02:08 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 0,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-21T12:02:08+03:0000034	38A	TRACE	1,10Mb	1,50Mb	cleanup_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484989324,
+  'start_time_float' => 1484989324.0824349,
+  'elapsed_time' => 0,
+  'stage' => 5,
+  'stage_name' => 'cleanup',
+  'state_heartbeat' => 0.25264501571655273,
+  'thread_id' => '38A',
+  'chunk_id' => 'wa-apps/shop/plugins/quickeditor',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484989328,
+  'timestamp_float' => 1484989328.9158959,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1484989328.9158959,
+  'datetime' => 'Sat, 21 Jan 2017 12:02:08 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 0,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-21T12:02:09+03:0000035	38A	DEBUG	1,10Mb	1,50Mb	cleanup_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484989324,
+  'start_time_float' => 1484989324.0824349,
+  'elapsed_time' => 0,
+  'stage' => 5,
+  'stage_name' => 'cleanup',
+  'state_heartbeat' => 0.092050075531005859,
+  'thread_id' => '38A',
+  'chunk_id' => 'wa-apps/shop/plugins/quickeditor',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484989329,
+  'timestamp_float' => 1484989329.0079341,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1484989328.9158959,
+  'datetime' => 'Sat, 21 Jan 2017 12:02:08 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 0,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-21T12:02:09+03:0000036	38A	TRACE	1,10Mb	1,50Mb	cleanup_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484989324,
+  'start_time_float' => 1484989324.0824349,
+  'elapsed_time' => 0,
+  'stage' => 5,
+  'stage_name' => 'cleanup',
+  'state_heartbeat' => 0.29794692993164062,
+  'thread_id' => '38A',
+  'chunk_id' => 'wa-apps/shop/plugins/quickeditor',
+  'stage_status' => 'complete',
+  'timestamp' => 1484989329,
+  'timestamp_float' => 1484989329.305871,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1484989328.9158959,
+  'datetime' => 'Sat, 21 Jan 2017 12:02:08 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 0,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-21T12:02:09+03:0000037	38A	TRACE	1,10Mb	1,50Mb	update_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484989324,
+  'start_time_float' => 1484989324.0824349,
+  'elapsed_time' => 0,
+  'stage' => 6,
+  'stage_name' => 'update',
+  'state_heartbeat' => 0.26385402679443359,
+  'thread_id' => '38A',
+  'chunk_id' => 'wa-apps/shop/plugins/quickeditor',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1484989329,
+  'timestamp_float' => 1484989329.5696959,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1484989329.5696959,
+  'datetime' => 'Sat, 21 Jan 2017 12:02:09 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 0,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-21T12:02:09+03:0000038	38A	TRACE	1,10Mb	1,50Mb	update_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1484989324,
+  'start_time_float' => 1484989324.0824349,
+  'elapsed_time' => 0,
+  'stage' => 6,
+  'stage_name' => 'update',
+  'state_heartbeat' => 0.42446494102478027,
+  'thread_id' => '38A',
+  'chunk_id' => 'wa-apps/shop/plugins/quickeditor',
+  'stage_status' => 'complete',
+  'timestamp' => 1484989329,
+  'timestamp_float' => 1484989329.994149,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1484989329.5696959,
+  'datetime' => 'Sat, 21 Jan 2017 12:02:09 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 0,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-21T12:02:10+03:0000039	38A	DEBUG	1,10Mb	1,50Mb	update_complete
+waInstaller::update
+{------------------------------------------------------------
+array (
+  'update_list' => 
+  array (
+    'wa-apps/shop/plugins/quickeditor' => 
+    array (
+      'source' => 'http://www.webasyst.com/download/archive/wa-apps/shop/plugins/quickeditor/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+      'target' => 'wa-apps/shop/plugins/quickeditor/',
+      'slug' => 'wa-apps/shop/plugins/quickeditor',
+      'md5' => NULL,
+      'pass' => false,
+      'name' => 'Быстрый редактор товаров (Shop-Script 7)',
+      'icon' => '//www.webasyst.com/wa-data/public/updates/img/57/1357/icon.ru_RU.png',
+      'update' => false,
+      'subject' => 'app_plugins',
+      'edition' => true,
+      'extract_path' => 'wa-data/protected/wa-installer/38A/update/wa-apps/shop/plugins/quickeditor/',
+      'skipped' => false,
+      'dependent' => false,
+      'current_size' => 0,
+      'archive' => '/home/almamed/web/almamed.su/public_html/wa-data/protected/wa-installer/38A/download/c7051f8d2746aaea0f685f52aa8f5240',
+      'backup' => false,
+    ),
+  ),
+)
+}------------------------------------------------------------
+2017-01-21T12:02:19+03:0000040	38A	TRACE	1,18Mb	1,50Mb	update_complete
+waInstaller::__destruct called
+
+
+
+2017-01-22T14:52:45+03:0000001	D0B	DEBUG	0,95Mb	0,98Mb	
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1485085965,
+  'start_time_float' => 1485085965.2007,
+  'elapsed_time' => 0,
+  'stage' => 0,
+  'stage_name' => 'unkown_none',
+  'state_heartbeat' => false,
+  'thread_id' => 'D0B',
+  'chunk_id' => NULL,
+  'stage_status' => 'none',
+  'timestamp' => 1485085965,
+  'timestamp_float' => 1485085965.200711,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000002	D0B	DEBUG	0,96Mb	1,05Mb	
+waInstaller::formatUpdateList tree
+{------------------------------------------------------------
+array (
+  'targets' => 
+  array (
+    0 => 'wa-apps/shop/plugins/vendorlink/',
+  ),
+  'update_list' => 
+  array (
+    'wa-apps/shop/plugins/vendorlink' => 
+    array (
+      'source' => 'http://www.webasyst.com/download/archive/wa-apps/shop/plugins/vendorlink/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+      'target' => 'wa-apps/shop/plugins/vendorlink/',
+      'slug' => 'wa-apps/shop/plugins/vendorlink',
+      'md5' => NULL,
+      'pass' => false,
+      'name' => 'Ссылки на поставщиков (Shop-Script 7)',
+      'icon' => '//www.webasyst.com/wa-data/public/updates/img/49/1749/icon.ru_RU.png',
+      'update' => false,
+      'subject' => 'app_plugins',
+      'edition' => true,
+      'extract_path' => 'wa-data/protected/wa-installer/D0B/update/wa-apps/shop/plugins/vendorlink/',
+      'skipped' => false,
+      'dependent' => false,
+    ),
+  ),
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000003	D0B	DEBUG	0,96Mb	1,05Mb	
+callback
+{------------------------------------------------------------
+array (
+  0 => 
+  array (
+    'file' => '/wa-installer/lib/classes/wainstaller.class.php:155',
+    'function' => 'waInstaller->envSet()',
+  ),
+  1 => 
+  array (
+    'file' => '/wa-apps/installer/lib/actions/update/installerUpdateExecute.controller.php:49',
+    'function' => 'waInstaller->update(Array(1))',
+  ),
+  2 => 
+  array (
+    'file' => '/wa-system/controller/waController.class.php:21',
+    'function' => 'installerUpdateExecuteController->execute()',
+  ),
+  3 => 
+  array (
+    'file' => '/wa-system/controller/waJsonController.class.php:28',
+    'function' => 'installerUpdateExecuteController(waController)->run()',
+  ),
+  4 => 
+  array (
+    'file' => '/wa-system/controller/waFrontController.class.php:227',
+    'function' => 'installerUpdateExecuteController(waJsonController)->run()',
+  ),
+  5 => 
+  array (
+    'file' => '/wa-system/controller/waFrontController.class.php:162',
+    'function' => 'waFrontController->runController(installerUpdateExecuteController)',
+  ),
+  6 => 
+  array (
+    'file' => '/wa-system/controller/waFrontController.class.php:58',
+    'function' => 'waFrontController->execute()',
+  ),
+  7 => 
+  array (
+    'file' => '/wa-system/waSystem.class.php:538',
+    'function' => 'waFrontController->dispatch()',
+  ),
+  8 => 
+  array (
+    'file' => '/wa-system/waSystem.class.php:476',
+    'function' => 'waSystem->dispatchBackend()',
+  ),
+  9 => 
+  array (
+    'file' => '/index.php:10',
+    'function' => 'waSystem->dispatch()',
+  ),
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000004	D0B	TRACE	0,97Mb	1,06Mb	
+Register ob error handler
+{------------------------------------------------------------
+true
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000005	D0B	TRACE	0,99Mb	1,08Mb	prepare_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1485085965,
+  'start_time_float' => 1485085965.2007,
+  'elapsed_time' => 0,
+  'stage' => 1,
+  'stage_name' => 'prepare',
+  'state_heartbeat' => 0.0084600448608398438,
+  'thread_id' => 'D0B',
+  'chunk_id' => 'wa-apps/shop/plugins/vendorlink',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1485085965,
+  'timestamp_float' => 1485085965.209152,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1485085965.209152,
+  'datetime' => 'Sun, 22 Jan 2017 14:52:45 +0300',
+  'stage_value' => 0,
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000006	D0B	DEBUG	0,99Mb	1,09Mb	prepare_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/D0B/update/wa-apps/shop/plugins/vendorlink/',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000007	D0B	TRACE	0,99Mb	1,09Mb	prepare_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1485085965,
+  'start_time_float' => 1485085965.2007,
+  'elapsed_time' => 0,
+  'stage' => 1,
+  'stage_name' => 'prepare',
+  'state_heartbeat' => 0.0093851089477539062,
+  'thread_id' => 'D0B',
+  'chunk_id' => 'wa-apps/shop/plugins/vendorlink',
+  'stage_status' => 'complete',
+  'timestamp' => 1485085965,
+  'timestamp_float' => 1485085965.2185299,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1485085965.209152,
+  'datetime' => 'Sun, 22 Jan 2017 14:52:45 +0300',
+  'stage_value' => 0,
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000008	D0B	TRACE	0,99Mb	1,09Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1485085965,
+  'start_time_float' => 1485085965.2007,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.00043606758117675781,
+  'thread_id' => 'D0B',
+  'chunk_id' => 'wa-apps/shop/plugins/vendorlink',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1485085965,
+  'timestamp_float' => 1485085965.2189541,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1485085965.2189541,
+  'datetime' => 'Sun, 22 Jan 2017 14:52:45 +0300',
+  'stage_value' => 0,
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000009	D0B	TRACE	1,00Mb	1,09Mb	download_heartbeat
+waInstaller::downloadCurl :download via cURL
+{------------------------------------------------------------
+array (
+  'source' => 'http://www.webasyst.com/download/archive/wa-apps/shop/plugins/vendorlink/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+  'target' => '/home/almamed/web/almamed.su/public_html/wa-data/protected/wa-installer/D0B/download/6dccc5beccc01c9c7d3d3139229930d7',
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000010	D0B	DEBUG	1,00Mb	1,09Mb	download_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/D0B/download/',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000011	D0B	DEBUG	1,00Mb	1,09Mb	download_heartbeat
+waInstaller::curlHeaderHandler
+{------------------------------------------------------------
+array (
+  'header' => 'Content-Length: 6024
+',
+  'header_matches' => 
+  array (
+    0 => 'Content-Length: 6024',
+    1 => '6024',
+  ),
+  'value' => 6024,
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000012	D0B	DEBUG	1,00Mb	1,09Mb	download_heartbeat
+waInstaller::curlHeaderHandler
+{------------------------------------------------------------
+array (
+  'header' => 'Content-MD5: X0bnf5NIyWZlMKhqO5btdg==
+',
+  'header_matches' => 
+  array (
+    1 => '5f46e77f9348c9666530a86a3b96ed76',
+  ),
+  'value' => '5f46e77f9348c9666530a86a3b96ed76',
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000013	D0B	DEBUG	1,01Mb	1,09Mb	download_heartbeat
+waInstaller::curlWriteHandler
+{------------------------------------------------------------
+array (
+  'url' => 'http://www.webasyst.com/download/archive/wa-apps/shop/plugins/vendorlink/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+  'content_type' => 'application/octet-stream',
+  'http_code' => 200,
+  'header_size' => 392,
+  'request_size' => 314,
+  'filetime' => -1,
+  'ssl_verify_result' => 0,
+  'redirect_count' => 0,
+  'total_time' => 0.045823000000000003,
+  'namelookup_time' => 3.4999999999999997E-5,
+  'connect_time' => 0.045755999999999998,
+  'pretransfer_time' => 0.045759000000000001,
+  'size_upload' => 0,
+  'size_download' => 6024,
+  'speed_download' => 0,
+  'speed_upload' => 0,
+  'download_content_length' => 6024,
+  'upload_content_length' => 0,
+  'starttransfer_time' => 0.214118,
+  'redirect_time' => 0,
+  'certinfo' => 
+  array (
+  ),
+  'primary_ip' => '178.33.57.200',
+  'redirect_url' => '',
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000014	D0B	DEBUG	1,01Mb	1,09Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1485085965,
+  'start_time_float' => 1485085965.2007,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.22560596466064453,
+  'thread_id' => 'D0B',
+  'chunk_id' => 'wa-apps/shop/plugins/vendorlink',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1485085965,
+  'timestamp_float' => 1485085965.444521,
+  'stage_performance' => 26706.050227461063,
+  'stage_current_value' => 6024,
+  'stage_start_time' => 1485085965.2189541,
+  'datetime' => 'Sun, 22 Jan 2017 14:52:45 +0300',
+  'stage_value' => 6024,
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000015	D0B	DEBUG	1,00Mb	1,10Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1485085965,
+  'start_time_float' => 1485085965.2007,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.00075006484985351562,
+  'thread_id' => 'D0B',
+  'chunk_id' => 'wa-apps/shop/plugins/vendorlink',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1485085965,
+  'timestamp_float' => 1485085965.4452629,
+  'stage_performance' => 0,
+  'stage_current_value' => 6024,
+  'stage_start_time' => 1485085965.2189541,
+  'datetime' => 'Sun, 22 Jan 2017 14:52:45 +0300',
+  'stage_value' => 6024,
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000016	D0B	TRACE	1,00Mb	1,10Mb	download_heartbeat
+MD5 hash 5f46e77f9348c9666530a86a3b96ed76 get from header
+2017-01-22T14:52:45+03:0000017	D0B	TRACE	1,00Mb	1,10Mb	download_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1485085965,
+  'start_time_float' => 1485085965.2007,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0033609867095947266,
+  'thread_id' => 'D0B',
+  'chunk_id' => 'wa-apps/shop/plugins/vendorlink',
+  'stage_status' => 'complete',
+  'timestamp' => 1485085965,
+  'timestamp_float' => 1485085965.4486151,
+  'stage_performance' => 0,
+  'stage_current_value' => 6024,
+  'stage_start_time' => 1485085965.2189541,
+  'datetime' => 'Sun, 22 Jan 2017 14:52:45 +0300',
+  'stage_value' => 6024,
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000018	D0B	TRACE	1,00Mb	1,10Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1485085965,
+  'start_time_float' => 1485085965.2007,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.0011909008026123047,
+  'thread_id' => 'D0B',
+  'chunk_id' => 'wa-apps/shop/plugins/vendorlink',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1485085965,
+  'timestamp_float' => 1485085965.4497931,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1485085965.4497931,
+  'datetime' => 'Sun, 22 Jan 2017 14:52:45 +0300',
+  'stage_value' => 0,
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000019	D0B	TRACE	1,00Mb	1,10Mb	extract_heartbeat
+waInstaller::stageExtract
+{------------------------------------------------------------
+array (
+  'compressed_file' => '/home/almamed/web/almamed.su/public_html/wa-data/protected/wa-installer/D0B/download/6dccc5beccc01c9c7d3d3139229930d7',
+  'target_path' => 'wa-data/protected/wa-installer/D0B/update/wa-apps/shop/plugins/vendorlink/',
+  'base_path' => 'wa-apps/shop/plugins/vendorlink/',
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000020	D0B	DEBUG	1,11Mb	1,50Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1485085965,
+  'start_time_float' => 1485085965.2007,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.053161859512329102,
+  'thread_id' => 'D0B',
+  'chunk_id' => 'wa-apps/shop/plugins/vendorlink',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1485085965,
+  'timestamp_float' => 1485085965.5029371,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1485085965.4497931,
+  'datetime' => 'Sun, 22 Jan 2017 14:52:45 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => NULL,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000021	D0B	DEBUG	1,12Mb	1,50Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1485085965,
+  'start_time_float' => 1485085965.2007,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.0010089874267578125,
+  'thread_id' => 'D0B',
+  'chunk_id' => 'wa-apps/shop/plugins/vendorlink',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1485085965,
+  'timestamp_float' => 1485085965.5039389,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1485085965.4497931,
+  'datetime' => 'Sun, 22 Jan 2017 14:52:45 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 0,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000022	D0B	DEBUG	1,12Mb	1,50Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1485085965,
+  'start_time_float' => 1485085965.2007,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.01987004280090332,
+  'thread_id' => 'D0B',
+  'chunk_id' => 'wa-apps/shop/plugins/vendorlink',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1485085965,
+  'timestamp_float' => 1485085965.523787,
+  'stage_performance' => 1986285.0111833175,
+  'stage_current_value' => 39424,
+  'stage_start_time' => 1485085965.4497931,
+  'datetime' => 'Sun, 22 Jan 2017 14:52:45 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 77,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000023	D0B	TRACE	1,09Mb	1,50Mb	extract_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1485085965,
+  'start_time_float' => 1485085965.2007,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.0049009323120117188,
+  'thread_id' => 'D0B',
+  'chunk_id' => 'wa-apps/shop/plugins/vendorlink',
+  'stage_status' => 'complete',
+  'timestamp' => 1485085965,
+  'timestamp_float' => 1485085965.528682,
+  'stage_performance' => 0,
+  'stage_current_value' => 39424,
+  'stage_start_time' => 1485085965.4497931,
+  'datetime' => 'Sun, 22 Jan 2017 14:52:45 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 77,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000024	D0B	TRACE	1,10Mb	1,50Mb	replace_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1485085965,
+  'start_time_float' => 1485085965.2007,
+  'elapsed_time' => 0,
+  'stage' => 4,
+  'stage_name' => 'replace',
+  'state_heartbeat' => 0.00096106529235839844,
+  'thread_id' => 'D0B',
+  'chunk_id' => 'wa-apps/shop/plugins/vendorlink',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1485085965,
+  'timestamp_float' => 1485085965.5296299,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1485085965.5296299,
+  'datetime' => 'Sun, 22 Jan 2017 14:52:45 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 77,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000025	D0B	TRACE	1,10Mb	1,50Mb	replace_heartbeat
+waInstaller::stageReplace
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-data/protected/wa-installer/D0B/update/wa-apps/shop/plugins/vendorlink',
+  'target_path' => 'wa-apps/shop/plugins/vendorlink',
+  'store_prev' => false,
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000026	D0B	TRACE	1,10Mb	1,50Mb	replace_heartbeat
+waInstaller::rename replace current version code
+{------------------------------------------------------------
+array (
+  'oldname' => 'wa-data/protected/wa-installer/D0B/update/wa-apps/shop/plugins/vendorlink',
+  'newname' => 'wa-apps/shop/plugins/vendorlink',
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000027	D0B	TRACE	1,10Mb	1,50Mb	replace_heartbeat
+waInstaller::stageReplace replace current version code
+{------------------------------------------------------------
+array (
+  'target_path' => 'wa-apps/shop/plugins/vendorlink',
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000028	D0B	TRACE	1,10Mb	1,50Mb	replace_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1485085965,
+  'start_time_float' => 1485085965.2007,
+  'elapsed_time' => 0,
+  'stage' => 4,
+  'stage_name' => 'replace',
+  'state_heartbeat' => 0.0050859451293945312,
+  'thread_id' => 'D0B',
+  'chunk_id' => 'wa-apps/shop/plugins/vendorlink',
+  'stage_status' => 'complete',
+  'timestamp' => 1485085965,
+  'timestamp_float' => 1485085965.5347099,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1485085965.5296299,
+  'datetime' => 'Sun, 22 Jan 2017 14:52:45 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 77,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000029	D0B	TRACE	1,10Mb	1,50Mb	cleanup_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1485085965,
+  'start_time_float' => 1485085965.2007,
+  'elapsed_time' => 0,
+  'stage' => 5,
+  'stage_name' => 'cleanup',
+  'state_heartbeat' => 0.0028870105743408203,
+  'thread_id' => 'D0B',
+  'chunk_id' => 'wa-apps/shop/plugins/vendorlink',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1485085965,
+  'timestamp_float' => 1485085965.5375819,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1485085965.5375819,
+  'datetime' => 'Sun, 22 Jan 2017 14:52:45 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 77,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000030	D0B	TRACE	1,10Mb	1,50Mb	cleanup_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1485085965,
+  'start_time_float' => 1485085965.2007,
+  'elapsed_time' => 0,
+  'stage' => 5,
+  'stage_name' => 'cleanup',
+  'state_heartbeat' => 0.0022101402282714844,
+  'thread_id' => 'D0B',
+  'chunk_id' => 'wa-apps/shop/plugins/vendorlink',
+  'stage_status' => 'complete',
+  'timestamp' => 1485085965,
+  'timestamp_float' => 1485085965.539782,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1485085965.5375819,
+  'datetime' => 'Sun, 22 Jan 2017 14:52:45 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 77,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000031	D0B	TRACE	1,10Mb	1,50Mb	update_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1485085965,
+  'start_time_float' => 1485085965.2007,
+  'elapsed_time' => 0,
+  'stage' => 6,
+  'stage_name' => 'update',
+  'state_heartbeat' => 0.0013928413391113281,
+  'thread_id' => 'D0B',
+  'chunk_id' => 'wa-apps/shop/plugins/vendorlink',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1485085965,
+  'timestamp_float' => 1485085965.541162,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1485085965.541162,
+  'datetime' => 'Sun, 22 Jan 2017 14:52:45 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 77,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000032	D0B	TRACE	1,10Mb	1,50Mb	update_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1485085965,
+  'start_time_float' => 1485085965.2007,
+  'elapsed_time' => 0,
+  'stage' => 6,
+  'stage_name' => 'update',
+  'state_heartbeat' => 0.0087540149688720703,
+  'thread_id' => 'D0B',
+  'chunk_id' => 'wa-apps/shop/plugins/vendorlink',
+  'stage_status' => 'complete',
+  'timestamp' => 1485085965,
+  'timestamp_float' => 1485085965.5499101,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1485085965.541162,
+  'datetime' => 'Sun, 22 Jan 2017 14:52:45 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 77,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-01-22T14:52:45+03:0000033	D0B	DEBUG	1,10Mb	1,50Mb	update_complete
+waInstaller::update
+{------------------------------------------------------------
+array (
+  'update_list' => 
+  array (
+    'wa-apps/shop/plugins/vendorlink' => 
+    array (
+      'source' => 'http://www.webasyst.com/download/archive/wa-apps/shop/plugins/vendorlink/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+      'target' => 'wa-apps/shop/plugins/vendorlink/',
+      'slug' => 'wa-apps/shop/plugins/vendorlink',
+      'md5' => NULL,
+      'pass' => false,
+      'name' => 'Ссылки на поставщиков (Shop-Script 7)',
+      'icon' => '//www.webasyst.com/wa-data/public/updates/img/49/1749/icon.ru_RU.png',
+      'update' => false,
+      'subject' => 'app_plugins',
+      'edition' => true,
+      'extract_path' => 'wa-data/protected/wa-installer/D0B/update/wa-apps/shop/plugins/vendorlink/',
+      'skipped' => false,
+      'dependent' => false,
+      'current_size' => 0,
+      'archive' => '/home/almamed/web/almamed.su/public_html/wa-data/protected/wa-installer/D0B/download/6dccc5beccc01c9c7d3d3139229930d7',
+      'backup' => false,
+    ),
+  ),
+)
+}------------------------------------------------------------
+2017-01-22T14:52:46+03:0000034	D0B	TRACE	1,18Mb	1,50Mb	update_complete
+waInstaller::__destruct called
+
+
+

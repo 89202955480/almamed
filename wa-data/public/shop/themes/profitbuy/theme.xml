@@ -32,7 +32,7 @@
       <description locale="en_US">Wrapper for a category page</description>
       <description locale="ru_RU"/>
     </file>
-    <file path="list-thumbs.html" custom="0">
+    <file path="list-thumbs.html" custom="0" modified="1">
       <description locale="en_US">Product list thumbnail view</description>
       <description locale="ru_RU"/>
     </file>
@@ -198,7 +198,7 @@
       <description locale="ru_RU"/>
     </file>
     <file path="footer_prime.html" custom="1" modified="1">
-      <description locale="ru_RU"></description>
+      <description locale="ru_RU"/>
     </file>
   </files>
   <about locale="en_US">
@@ -301,7 +301,7 @@
       </options>
     </setting>
     <setting var="homepage_productset_promo" control_type="text">
-      <value>category</value>
+      <value><![CDATA[category]]></value>
       <name locale="en_US">Source products to the list in the main slider</name>
       <name locale="ru_RU">Источник товаров для списка сладера на главной</name>
       <description locale="ru_RU">В качестве источника могут служить: - список товаров магазина(пример: set/bestsellers), список товаров категории(пример: category/732), список товаров объеденных тегом(пример: tag/samsung). Товары из этого списка будут показаны в слайдере на главной, в случае если в настройке выше выбран параметр "товары из списка" и в данном списке будут присувствовать 1 или больше товаров.</description>
@@ -365,7 +365,7 @@
       <name locale="ru_RU">Текст вкладки "контакты"</name>
     </setting>
     <setting var="homepage_productset_bestsellers" control_type="text">
-      <value>set/bestsellers</value>
+      <value><![CDATA[]]></value>
       <name locale="en_US">Source products list «Bestsellers»</name>
       <name locale="ru_RU">Источник товаров для списка «Бестселлеры»</name>
       <description locale="ru_RU">В качестве источника могут служить: - список товаров магазина(пример: set/bestsellers), список товаров категории(пример: category/732), список товаров объеденных тегом(пример: tag/samsung). Товары из этого списка будут показаны на витрине магазина под слайдером в блоке лучших приложений на текущий день.</description>
@@ -380,15 +380,14 @@
       <description locale="ru_RU">Переменная &lt;b&gt;{$date}&lt;/b&gt; в заголовке (если указана) будет заменена на текущую дату</description>
     </setting>
     <setting var="homepage_productset_userset" control_type="text">
-      <value>set/promo</value>
+      <value>set/promo_almamed</value>
       <name locale="en_US">Source products list «User»</name>
       <name locale="ru_RU">Источник товаров для списка «Промо»</name>
       <description locale="ru_RU">В качестве источника могут служить: - список товаров магазина(пример: set/bestsellers), список товаров категории(пример: category/732), список товаров объеденных тегом(пример: tag/samsung).</description>
       <description locale="en_US">Source: - products shop(example: set/bestsellers), products categories(example: category/732), products unite tag(example: tag/samsung).</description>
     </setting>
     <setting var="homepage_userset_title" control_type="text">
-      <value locale="en_US">Sales up {$date}</value>
-      <value locale="ru_RU">Распродажа до {$date}</value>
+      <value><![CDATA[Распродажа до конца месяца]]></value>
       <name locale="en_US">Title above the «User» list</name>
       <name locale="ru_RU">Заголовок списка «Промо»</name>
       <description locale="en_US">If provided, &lt;b&gt;{$date}&lt;/b&gt; will be replaced with the current date</description>

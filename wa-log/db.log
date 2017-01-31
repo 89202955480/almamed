@@ -3151,3 +3151,767 @@ Query: UPDATE shop_category
 #14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
 #15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
 #16 {main}
+
+2017-01-21 22:52:14 188.130.162.127
+Query Error 1062: Duplicate entry 'shchiptsy-biopsiynye-rossiya-r/' for key 'full_url'
+Query: UPDATE shop_category
+                   SET `url` = 'shchiptsy-biopsiynye-rossiya-r/', `full_url` = 'shchiptsy-biopsiynye-rossiya-r/'
+                   WHERE `id` = 2287
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', 2287, Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(444): waModel->updateById(2287, Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(373): shopCategoryModel->updateUrl(2287, 'shchiptsy-biops...')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(102): shopCategoryModel->update(2287, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(64): shopProductsSaveListSettingsController->saveCategorySettings(2287, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(28): shopProductsSaveListSettingsController->saveSettings(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsSaveListSettingsController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsSaveListSettingsController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'saveListSetting...')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}
+
+2017-01-21 22:53:18 188.130.162.127
+Query Error 1062: Duplicate entry 'shchiptsy-biopsiynye-rossiya-r/' for key 'full_url'
+Query: UPDATE shop_category
+                   SET `url` = 'shchiptsy-biopsiynye-rossiya-r/', `full_url` = 'shchiptsy-biopsiynye-rossiya-r/'
+                   WHERE `id` = 2287
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', 2287, Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(444): waModel->updateById(2287, Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(373): shopCategoryModel->updateUrl(2287, 'shchiptsy-biops...')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(102): shopCategoryModel->update(2287, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(64): shopProductsSaveListSettingsController->saveCategorySettings(2287, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(28): shopProductsSaveListSettingsController->saveSettings(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsSaveListSettingsController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsSaveListSettingsController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'saveListSetting...')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}
+
+2017-01-22 00:19:10 188.130.162.127
+Query Error 1062: Duplicate entry 'anoskopy-odnorazovye-italiya-r' for key 'full_url'
+Query: UPDATE shop_category
+                   SET `url` = 'anoskopy-odnorazovye-italiya-r', `full_url` = 'anoskopy-odnorazovye-italiya-r'
+                   WHERE `id` = 1722
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', 1722, Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(444): waModel->updateById(1722, Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(373): shopCategoryModel->updateUrl(1722, 'anoskopy-odnora...')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(102): shopCategoryModel->update(1722, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(64): shopProductsSaveListSettingsController->saveCategorySettings(1722, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(28): shopProductsSaveListSettingsController->saveSettings(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsSaveListSettingsController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsSaveListSettingsController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'saveListSetting...')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}
+
+2017-01-22 00:19:51 188.130.162.127
+Query Error 1062: Duplicate entry 'anoskopy-odnorazovye-italiya-r' for key 'full_url'
+Query: UPDATE shop_category
+                   SET `url` = 'anoskopy-odnorazovye-italiya-r', `full_url` = 'anoskopy-odnorazovye-italiya-r'
+                   WHERE `id` = 1722
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', 1722, Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(444): waModel->updateById(1722, Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(373): shopCategoryModel->updateUrl(1722, 'anoskopy-odnora...')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(102): shopCategoryModel->update(1722, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(64): shopProductsSaveListSettingsController->saveCategorySettings(1722, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(28): shopProductsSaveListSettingsController->saveSettings(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsSaveListSettingsController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsSaveListSettingsController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'saveListSetting...')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}
+
+2017-01-22 00:20:04 188.130.162.127
+Query Error 1062: Duplicate entry 'anoskopy-odnorazovye-italiya' for key 'full_url'
+Query: UPDATE shop_category
+                   SET `url` = 'anoskopy-odnorazovye-italiya', `full_url` = 'anoskopy-odnorazovye-italiya'
+                   WHERE `id` = 1722
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', 1722, Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(444): waModel->updateById(1722, Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(373): shopCategoryModel->updateUrl(1722, 'anoskopy-odnora...')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(102): shopCategoryModel->update(1722, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(64): shopProductsSaveListSettingsController->saveCategorySettings(1722, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(28): shopProductsSaveListSettingsController->saveSettings(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsSaveListSettingsController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsSaveListSettingsController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'saveListSetting...')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}
+
+2017-01-22 00:20:22 188.130.162.127
+Query Error 1062: Duplicate entry 'anoskopy-odnorazovye-italiya-r' for key 'full_url'
+Query: UPDATE shop_category
+                   SET `url` = 'anoskopy-odnorazovye-italiya-r', `full_url` = 'anoskopy-odnorazovye-italiya-r'
+                   WHERE `id` = 1722
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', 1722, Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(444): waModel->updateById(1722, Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(373): shopCategoryModel->updateUrl(1722, 'anoskopy-odnora...')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(102): shopCategoryModel->update(1722, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(64): shopProductsSaveListSettingsController->saveCategorySettings(1722, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(28): shopProductsSaveListSettingsController->saveSettings(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsSaveListSettingsController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsSaveListSettingsController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'saveListSetting...')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}
+
+2017-01-22 00:20:34 188.130.162.127
+Query Error 1062: Duplicate entry 'anoskopy-odnorazovye-italiya-r' for key 'full_url'
+Query: UPDATE shop_category
+                   SET `url` = 'anoskopy-odnorazovye-italiya-r', `full_url` = 'anoskopy-odnorazovye-italiya-r'
+                   WHERE `id` = 1722
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', 1722, Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(444): waModel->updateById(1722, Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(373): shopCategoryModel->updateUrl(1722, 'anoskopy-odnora...')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(102): shopCategoryModel->update(1722, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(64): shopProductsSaveListSettingsController->saveCategorySettings(1722, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(28): shopProductsSaveListSettingsController->saveSettings(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsSaveListSettingsController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsSaveListSettingsController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'saveListSetting...')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}
+
+2017-01-22 00:21:00 188.130.162.127
+Query Error 1062: Duplicate entry 'anoskopy-odnorazovye-italiya-r' for key 'full_url'
+Query: UPDATE shop_category
+                   SET `url` = 'anoskopy-odnorazovye-italiya-r', `full_url` = 'anoskopy-odnorazovye-italiya-r'
+                   WHERE `id` = 1722
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', 1722, Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(444): waModel->updateById(1722, Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(373): shopCategoryModel->updateUrl(1722, 'anoskopy-odnora...')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(102): shopCategoryModel->update(1722, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(64): shopProductsSaveListSettingsController->saveCategorySettings(1722, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(28): shopProductsSaveListSettingsController->saveSettings(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsSaveListSettingsController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsSaveListSettingsController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'saveListSetting...')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}
+
+2017-01-22 00:22:14 188.130.162.127
+Query Error 1062: Duplicate entry 'anoskopy-odnorazovye-italiya-r' for key 'full_url'
+Query: UPDATE shop_category
+                   SET `url` = 'anoskopy-odnorazovye-italiya-r', `full_url` = 'anoskopy-odnorazovye-italiya-r'
+                   WHERE `id` = 1722
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', 1722, Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(444): waModel->updateById(1722, Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(373): shopCategoryModel->updateUrl(1722, 'anoskopy-odnora...')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(102): shopCategoryModel->update(1722, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(64): shopProductsSaveListSettingsController->saveCategorySettings(1722, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(28): shopProductsSaveListSettingsController->saveSettings(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsSaveListSettingsController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsSaveListSettingsController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'saveListSetting...')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}
+
+2017-01-22 00:22:52 188.130.162.127
+Query Error 1062: Duplicate entry 'anoskopy-odnorazovye-italiya-r' for key 'full_url'
+Query: UPDATE shop_category
+                   SET `url` = 'anoskopy-odnorazovye-italiya-r', `full_url` = 'anoskopy-odnorazovye-italiya-r'
+                   WHERE `id` = 1722
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', 1722, Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(444): waModel->updateById(1722, Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(373): shopCategoryModel->updateUrl(1722, 'anoskopy-odnora...')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(102): shopCategoryModel->update(1722, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(64): shopProductsSaveListSettingsController->saveCategorySettings(1722, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(28): shopProductsSaveListSettingsController->saveSettings(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsSaveListSettingsController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsSaveListSettingsController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'saveListSetting...')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}
+
+2017-01-22 16:15:22 188.130.162.127
+Query Error 1062: Duplicate entry 'osvetitelnaya-golovka-dlya-anoskopov-proktoskopov-heine-r' for key 'full_url'
+Query: UPDATE shop_category
+                   SET `url` = 'osvetitelnaya-golovka-dlya-anoskopov-proktoskopov-heine-r', `full_url` = 'osvetitelnaya-golovka-dlya-anoskopov-proktoskopov-heine-r'
+                   WHERE `id` = 2144
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', 2144, Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(444): waModel->updateById(2144, Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(373): shopCategoryModel->updateUrl(2144, 'osvetitelnaya-g...')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(102): shopCategoryModel->update(2144, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(64): shopProductsSaveListSettingsController->saveCategorySettings(2144, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(28): shopProductsSaveListSettingsController->saveSettings(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsSaveListSettingsController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsSaveListSettingsController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'saveListSetting...')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}
+
+2017-01-22 16:58:55 188.130.162.127
+Query Error 1062: Duplicate entry 'tuby-s-bokovym-obzorom' for key 'full_url'
+Query: UPDATE shop_category
+                   SET `url` = 'tuby-s-bokovym-obzorom', `full_url` = 'tuby-s-bokovym-obzorom'
+                   WHERE `id` = 2275
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', 2275, Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(444): waModel->updateById(2275, Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(373): shopCategoryModel->updateUrl(2275, 'tuby-s-bokovym-...')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(102): shopCategoryModel->update(2275, Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(64): shopProductsSaveListSettingsController->saveCategorySettings(2275, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsSaveListSettings.controller.php(28): shopProductsSaveListSettingsController->saveSettings(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsSaveListSettingsController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsSaveListSettingsController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'saveListSetting...')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}
+
+2017-01-27 12:23:30 194.154.75.198
+Query Error 1062: Duplicate entry 'linzy_stigmaticheskie_polozhitelnye_s_refraktsiey_ot_0_25_do_13_' for key 'code'
+Query: INSERT  INTO shop_feature
+                   (`name`, `type`, `selectable`, `multiple`, `code`) VALUES ('линзы стигматические положительные с рефракцией от + 0.25 до + 13.0 дптр', 'varchar', 0, 0, 'linzy_stigmaticheskie_polozhitelnye_s_refraktsiey_ot_0_25_do_13_0_dptr')
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('INSERT  INTO sh...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(565): waModel->query('INSERT  INTO sh...')
+#2 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeature.model.php(90): waModel->insert(Array)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopProductFeatures.model.php(437): shopFeatureModel->save(Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(437): shopProductFeaturesModel->setData(Object(shopProduct), Array)
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(334): shopProduct->saveData(Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/product/shopProductSave.controller.php(95): shopProduct->save(Array, true, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductSaveController->execute()
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductSaveController), NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'product', 'save')
+#12 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#14 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#15 {main}
+
+2017-01-27 12:23:36 194.154.75.198
+Query Error 1062: Duplicate entry 'linzy_stigmaticheskie_polozhitelnye_s_refraktsiey_ot_0_25_do_13_' for key 'code'
+Query: INSERT  INTO shop_feature
+                   (`name`, `type`, `selectable`, `multiple`, `code`) VALUES ('линзы стигматические положительные с рефракцией от + 0.25 до + 13.0 дптр', 'varchar', 0, 0, 'linzy_stigmaticheskie_polozhitelnye_s_refraktsiey_ot_0_25_do_13_0_dptr')
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('INSERT  INTO sh...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(565): waModel->query('INSERT  INTO sh...')
+#2 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeature.model.php(90): waModel->insert(Array)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopProductFeatures.model.php(437): shopFeatureModel->save(Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(437): shopProductFeaturesModel->setData(Object(shopProduct), Array)
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(334): shopProduct->saveData(Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/product/shopProductSave.controller.php(95): shopProduct->save(Array, true, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductSaveController->execute()
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductSaveController), NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'product', 'save')
+#12 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#14 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#15 {main}
+
+2017-01-27 12:24:02 194.154.75.198
+Query Error 1062: Duplicate entry 'linzy_stigmaticheskie_polozhitelnye_s_refraktsiey_ot_0_25_do_13_' for key 'code'
+Query: INSERT  INTO shop_feature
+                   (`name`, `type`, `selectable`, `multiple`, `code`) VALUES ('линзы стигматические положительные с рефракцией от + 0.25 до + 13.0 дптр', 'varchar', 0, 0, 'linzy_stigmaticheskie_polozhitelnye_s_refraktsiey_ot_0_25_do_13_0_dptr')
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('INSERT  INTO sh...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(565): waModel->query('INSERT  INTO sh...')
+#2 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeature.model.php(90): waModel->insert(Array)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopProductFeatures.model.php(437): shopFeatureModel->save(Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(437): shopProductFeaturesModel->setData(Object(shopProduct), Array)
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(367): shopProduct->saveData()
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/product/shopProductSave.controller.php(95): shopProduct->save(Array, true, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductSaveController->execute()
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductSaveController), NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'product', 'save')
+#12 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#14 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#15 {main}
+
+2017-01-27 12:24:25 194.154.75.198
+Query Error 1062: Duplicate entry 'linzy_stigmaticheskie_polozhitelnye_s_refraktsiey_ot_0_25_do_13_' for key 'code'
+Query: INSERT  INTO shop_feature
+                   (`name`, `type`, `selectable`, `multiple`, `code`) VALUES ('линзы стигматические положительные с рефракцией от + 0.25 до + 13.0 дптр', 'varchar', 0, 0, 'linzy_stigmaticheskie_polozhitelnye_s_refraktsiey_ot_0_25_do_13_0_dptr')
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('INSERT  INTO sh...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(565): waModel->query('INSERT  INTO sh...')
+#2 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeature.model.php(90): waModel->insert(Array)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopProductFeatures.model.php(437): shopFeatureModel->save(Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(437): shopProductFeaturesModel->setData(Object(shopProduct), Array)
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(334): shopProduct->saveData(Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/product/shopProductSave.controller.php(95): shopProduct->save(Array, true, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductSaveController->execute()
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductSaveController), NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'product', 'save')
+#12 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#14 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#15 {main}
+
+2017-01-27 12:24:31 194.154.75.198
+Query Error 1062: Duplicate entry 'linzy_stigmaticheskie_polozhitelnye_s_refraktsiey_ot_0_25_do_13_' for key 'code'
+Query: INSERT  INTO shop_feature
+                   (`name`, `type`, `selectable`, `multiple`, `code`) VALUES ('линзы стигматические положительные с рефракцией от + 0.25 до + 13.0 дптр', 'varchar', 0, 0, 'linzy_stigmaticheskie_polozhitelnye_s_refraktsiey_ot_0_25_do_13_0_dptr')
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('INSERT  INTO sh...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(565): waModel->query('INSERT  INTO sh...')
+#2 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeature.model.php(90): waModel->insert(Array)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopProductFeatures.model.php(437): shopFeatureModel->save(Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(437): shopProductFeaturesModel->setData(Object(shopProduct), Array)
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(334): shopProduct->saveData(Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/product/shopProductSave.controller.php(95): shopProduct->save(Array, true, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductSaveController->execute()
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductSaveController), NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'product', 'save')
+#12 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#14 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#15 {main}
+
+2017-01-27 12:33:45 194.154.75.198
+Query Error 1062: Duplicate entry '253-rukoyatki-welch-allyn-r/' for key 'url'
+Query: UPDATE shop_category
+                   SET `parent_id` = 253
+                   WHERE `id` = 1592
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(298): waModel->run('UPDATE shop_cat...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(421): waModel->exec('UPDATE shop_cat...')
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(362): waModel->updateByField('id', '1592', Array, NULL, false)
+#3 /home/almamed/web/almamed.su/public_html/wa-system/database/waNestedSetModel.class.php(199): waModel->updateById('1592', Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-system/database/waNestedSetModel.class.php(105): waNestedSetModel->_move('1592', '253')
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopCategory.model.php(195): waNestedSetModel->move('1592', '253', '1477')
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsMoveList.controller.php(45): shopCategoryModel->move('1592', '1477', '253')
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/products/shopProductsMoveList.controller.php(36): shopProductsMoveListController->move('category', '1592', '1477', '253')
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductsMoveListController->execute()
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductsMoveListController), NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'products', 'moveList')
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#14 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#15 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#16 {main}
+
+2017-01-27 13:10:21 194.154.75.198
+Query Error 1062: Duplicate entry 'linzy_ochkovye_stigmaticheskie_s_zadney_vershinnoy_refraktsiey_o' for key 'code'
+Query: INSERT  INTO shop_feature
+                   (`name`, `type`, `selectable`, `multiple`, `code`) VALUES ('Линзы очковые стигматические с задней вершинной рефракцией от –0.25 до –20.00 дптр ', 'varchar', 0, 0, 'linzy_ochkovye_stigmaticheskie_s_zadney_vershinnoy_refraktsiey_ot_0_25_do_20_00_dptr')
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('INSERT  INTO sh...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(565): waModel->query('INSERT  INTO sh...')
+#2 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeature.model.php(90): waModel->insert(Array)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopProductFeatures.model.php(437): shopFeatureModel->save(Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(437): shopProductFeaturesModel->setData(Object(shopProduct), Array)
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(334): shopProduct->saveData(Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/product/shopProductSave.controller.php(95): shopProduct->save(Array, true, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductSaveController->execute()
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductSaveController), NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'product', 'save')
+#12 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#14 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#15 {main}
+
+2017-01-27 13:10:58 194.154.75.198
+Query Error 1062: Duplicate entry 'linzy_ochkovye_stigmaticheskie_s_zadney_vershinnoy_refraktsiey_o' for key 'code'
+Query: INSERT  INTO shop_feature
+                   (`name`, `type`, `selectable`, `multiple`, `code`) VALUES ('Линзы очковые стигматические с задней вершинной рефракцией от +0.25 до +20.00 дптр ', 'varchar', 0, 0, 'linzy_ochkovye_stigmaticheskie_s_zadney_vershinnoy_refraktsiey_ot_0_25_do_20_00_dptr')
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('INSERT  INTO sh...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(565): waModel->query('INSERT  INTO sh...')
+#2 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeature.model.php(90): waModel->insert(Array)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopProductFeatures.model.php(437): shopFeatureModel->save(Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(437): shopProductFeaturesModel->setData(Object(shopProduct), Array)
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(334): shopProduct->saveData(Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/product/shopProductSave.controller.php(95): shopProduct->save(Array, true, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductSaveController->execute()
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductSaveController), NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'product', 'save')
+#12 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#14 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#15 {main}
+
+2017-01-27 13:14:27 194.154.75.198
+Query Error 1062: Duplicate entry 'linzy_ochkovye_stigmaticheskie_s_zadney_vershinnoy_refraktsiey_o' for key 'code'
+Query: INSERT  INTO shop_feature
+                   (`name`, `type`, `selectable`, `multiple`, `code`) VALUES ('Линзы очковые стигматические с задней вершинной рефракцией от +0.25 до +20.00 дптр ', 'varchar', 0, 0, 'linzy_ochkovye_stigmaticheskie_s_zadney_vershinnoy_refraktsiey_ot_0_25_do_20_00_dptr')
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('INSERT  INTO sh...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(565): waModel->query('INSERT  INTO sh...')
+#2 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeature.model.php(90): waModel->insert(Array)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopProductFeatures.model.php(437): shopFeatureModel->save(Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(437): shopProductFeaturesModel->setData(Object(shopProduct), Array)
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(334): shopProduct->saveData(Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/product/shopProductSave.controller.php(95): shopProduct->save(Array, true, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductSaveController->execute()
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductSaveController), NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'product', 'save')
+#12 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#14 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#15 {main}
+
+2017-01-27 13:15:51 194.154.75.198
+Query Error 1062: Duplicate entry 'linzy_ochkovye_stigmaticheskie_s_zadney_vershinnoy_refraktsiey_o' for key 'code'
+Query: INSERT  INTO shop_feature
+                   (`name`, `type`, `selectable`, `multiple`, `code`) VALUES ('Линзы очковые стигматические с задней вершинной рефракцией - от +0.25 до +20.00 дптр', 'varchar', 0, 0, 'linzy_ochkovye_stigmaticheskie_s_zadney_vershinnoy_refraktsiey_ot_0_25_do_20_00_dptr')
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('INSERT  INTO sh...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(565): waModel->query('INSERT  INTO sh...')
+#2 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeature.model.php(90): waModel->insert(Array)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopProductFeatures.model.php(437): shopFeatureModel->save(Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(437): shopProductFeaturesModel->setData(Object(shopProduct), Array)
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(334): shopProduct->saveData(Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/product/shopProductSave.controller.php(95): shopProduct->save(Array, true, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductSaveController->execute()
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductSaveController), NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'product', 'save')
+#12 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#14 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#15 {main}
+
+2017-01-27 13:20:27 194.154.75.198
+Query Error 1062: Duplicate entry 'linzy_ochkovye_stigmaticheskie_s_zadney_vershinnoy_refraktsiey_o' for key 'code'
+Query: INSERT  INTO shop_feature
+                   (`name`, `type`, `selectable`, `multiple`, `code`) VALUES ('Линзы очковые стигматические с задней вершинной рефракцией - от +0.25 до +20.00 дптр', 'varchar', 0, 0, 'linzy_ochkovye_stigmaticheskie_s_zadney_vershinnoy_refraktsiey_ot_0_25_do_20_00_dptr')
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('INSERT  INTO sh...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(565): waModel->query('INSERT  INTO sh...')
+#2 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeature.model.php(90): waModel->insert(Array)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopProductFeatures.model.php(437): shopFeatureModel->save(Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(437): shopProductFeaturesModel->setData(Object(shopProduct), Array)
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(334): shopProduct->saveData(Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/product/shopProductSave.controller.php(95): shopProduct->save(Array, true, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductSaveController->execute()
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductSaveController), NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'product', 'save')
+#12 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#14 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#15 {main}
+
+2017-01-27 13:20:34 194.154.75.198
+Query Error 1062: Duplicate entry 'linzy_ochkovye_stigmaticheskie_s_zadney_vershinnoy_refraktsiey_o' for key 'code'
+Query: INSERT  INTO shop_feature
+                   (`name`, `type`, `selectable`, `multiple`, `code`) VALUES ('Линзы очковые стигматические с задней вершинной рефракцией - от +0.25 до +20.00 дптр', 'varchar', 0, 0, 'linzy_ochkovye_stigmaticheskie_s_zadney_vershinnoy_refraktsiey_ot_0_25_do_20_00_dptr')
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('INSERT  INTO sh...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(565): waModel->query('INSERT  INTO sh...')
+#2 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeature.model.php(90): waModel->insert(Array)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopProductFeatures.model.php(437): shopFeatureModel->save(Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(437): shopProductFeaturesModel->setData(Object(shopProduct), Array)
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(334): shopProduct->saveData(Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/product/shopProductSave.controller.php(95): shopProduct->save(Array, true, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductSaveController->execute()
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductSaveController), NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'product', 'save')
+#12 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#14 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#15 {main}
+
+2017-01-27 13:20:48 194.154.75.198
+Query Error 1062: Duplicate entry 'linzy_ochkovye_stigmaticheskie_s_zadney_vershinnoy_refraktsiey_o' for key 'code'
+Query: INSERT  INTO shop_feature
+                   (`name`, `type`, `selectable`, `multiple`, `code`) VALUES ('Линзы очковые стигматические с задней вершинной рефракцией - от +0.25 до +20.00 дптр', 'varchar', 0, 0, 'linzy_ochkovye_stigmaticheskie_s_zadney_vershinnoy_refraktsiey_ot_0_25_do_20_00_dptr')
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('INSERT  INTO sh...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(565): waModel->query('INSERT  INTO sh...')
+#2 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeature.model.php(90): waModel->insert(Array)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopProductFeatures.model.php(437): shopFeatureModel->save(Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(437): shopProductFeaturesModel->setData(Object(shopProduct), Array)
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(334): shopProduct->saveData(Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/product/shopProductSave.controller.php(95): shopProduct->save(Array, true, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductSaveController->execute()
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductSaveController), NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'product', 'save')
+#12 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#14 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#15 {main}
+
+2017-01-27 13:21:05 194.154.75.198
+Query Error 1062: Duplicate entry 'linzy_ochkovye_stigmaticheskie_s_zadney_vershinnoy_refraktsiey_o' for key 'code'
+Query: INSERT  INTO shop_feature
+                   (`name`, `type`, `selectable`, `multiple`, `code`) VALUES ('Линзы очковые стигматические с задней вершинной рефракцией - от +0.25 до +20.00 дптр', 'varchar', 0, 0, 'linzy_ochkovye_stigmaticheskie_s_zadney_vershinnoy_refraktsiey_ot_0_25_do_20_00_dptr')
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('INSERT  INTO sh...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(565): waModel->query('INSERT  INTO sh...')
+#2 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeature.model.php(90): waModel->insert(Array)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopProductFeatures.model.php(437): shopFeatureModel->save(Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(437): shopProductFeaturesModel->setData(Object(shopProduct), Array)
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(334): shopProduct->saveData(Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/product/shopProductSave.controller.php(95): shopProduct->save(Array, true, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductSaveController->execute()
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductSaveController), NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'product', 'save')
+#12 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#14 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#15 {main}
+
+2017-01-27 13:22:10 194.154.75.198
+Query Error 1062: Duplicate entry 'linzy_ochkovye_stigmaticheskie_s_zadney_vershinnoy_refraktsiey_o' for key 'code'
+Query: INSERT  INTO shop_feature
+                   (`name`, `type`, `selectable`, `multiple`, `code`) VALUES ('Линзы очковые стигматические с задней вершинной рефракцией - от +0.25 до +20.00 дптр', 'varchar', 0, 0, 'linzy_ochkovye_stigmaticheskie_s_zadney_vershinnoy_refraktsiey_ot_0_25_do_20_00_dptr')
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('INSERT  INTO sh...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(565): waModel->query('INSERT  INTO sh...')
+#2 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeature.model.php(90): waModel->insert(Array)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopProductFeatures.model.php(437): shopFeatureModel->save(Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(437): shopProductFeaturesModel->setData(Object(shopProduct), Array)
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(334): shopProduct->saveData(Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/product/shopProductSave.controller.php(95): shopProduct->save(Array, true, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductSaveController->execute()
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductSaveController), NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'product', 'save')
+#12 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#14 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#15 {main}
+
+2017-01-27 13:22:31 194.154.75.198
+Query Error 1062: Duplicate entry 'linzy_ochkovye_stigmaticheskie_s_zadney_vershinnoy_refraktsiey_o' for key 'code'
+Query: INSERT  INTO shop_feature
+                   (`name`, `type`, `selectable`, `multiple`, `code`) VALUES ('Линзы очковые стигматические с задней вершинной рефракцией - от +0.25 до +20.00 дптр', 'varchar', 0, 0, 'linzy_ochkovye_stigmaticheskie_s_zadney_vershinnoy_refraktsiey_ot_0_25_do_20_00_dptr')
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('INSERT  INTO sh...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(565): waModel->query('INSERT  INTO sh...')
+#2 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeature.model.php(90): waModel->insert(Array)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopProductFeatures.model.php(437): shopFeatureModel->save(Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(437): shopProductFeaturesModel->setData(Object(shopProduct), Array)
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(334): shopProduct->saveData(Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/product/shopProductSave.controller.php(95): shopProduct->save(Array, true, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductSaveController->execute()
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductSaveController), NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'product', 'save')
+#12 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#14 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#15 {main}
+
+2017-01-27 13:22:39 194.154.75.198
+Query Error 1062: Duplicate entry 'linzy_ochkovye_stigmaticheskie_s_zadney_vershinnoy_refraktsiey_o' for key 'code'
+Query: INSERT  INTO shop_feature
+                   (`name`, `type`, `selectable`, `multiple`, `code`) VALUES ('Линзы очковые стигматические с задней вершинной рефракцией - от +0.25 до +20.00 дптр', 'varchar', 0, 0, 'linzy_ochkovye_stigmaticheskie_s_zadney_vershinnoy_refraktsiey_ot_0_25_do_20_00_dptr')
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('INSERT  INTO sh...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(565): waModel->query('INSERT  INTO sh...')
+#2 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeature.model.php(90): waModel->insert(Array)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopProductFeatures.model.php(437): shopFeatureModel->save(Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(437): shopProductFeaturesModel->setData(Object(shopProduct), Array)
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopProduct.class.php(334): shopProduct->saveData(Array)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/product/shopProductSave.controller.php(95): shopProduct->save(Array, true, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopProductSaveController->execute()
+#8 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#9 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopProductSaveController), NULL)
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'product', 'save')
+#12 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#13 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#14 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#15 {main}
+
+2017-01-28 20:57:32 94.158.32.221
+Query Error 1062: Duplicate entry '911-1000-m-length' for key 'feature_id'
+Query: INSERT  INTO shop_feature_values_dimension
+                   (`type`, `unit`, `value`, `value_base_unit`, `sort`, `feature_id`) VALUES ('length', 'm', 1000, 1000, 3, 911)
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('INSERT  INTO sh...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(565): waModel->query('INSERT  INTO sh...')
+#2 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopSortable.model.php(129): waModel->insert(Array, 0)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeatureValues.model.php(235): shopSortableModel->insert(Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeature.model.php(382): shopFeatureValuesModel->addValue('911', '1000 \xD0\xBA\xD0\xB3', -543, 'dimension.lengt...', 3)
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopFeatureValuesConverter.class.php(251): shopFeatureModel->setValues(Array, Array, false)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopFeatureValuesConverter.class.php(356): shopFeatureValuesConverter->setValues(Array, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopFeatureValuesConverter.class.php(142): shopFeatureValuesConverter->_convert(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopFeatureValuesConverter.class.php(44): shopFeatureValuesConverter->convert()
+#9 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/settings/features/shopSettingsFeaturesValuesTypeConvert.controller.php(26): shopFeatureValuesConverter::run('911', Array)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopSettingsFeaturesValuesTypeConvertController->execute()
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#13 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopSettingsFeaturesValuesTypeConvertController), NULL)
+#14 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'settings', 'featuresValuesT...')
+#15 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#16 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#17 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#18 {main}
+
+2017-01-28 20:57:32 94.158.32.221
+Query Error 1062: Duplicate entry '911-1-m-length' for key 'feature_id'
+Query: INSERT  INTO shop_feature_values_dimension
+                   (`type`, `unit`, `value`, `value_base_unit`, `sort`, `feature_id`) VALUES ('length', 'm', 1, 1, 4, 911)
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('INSERT  INTO sh...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(565): waModel->query('INSERT  INTO sh...')
+#2 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopSortable.model.php(129): waModel->insert(Array, 0)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeatureValues.model.php(235): shopSortableModel->insert(Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeature.model.php(382): shopFeatureValuesModel->addValue('911', '1 \xD0\xB3', -544, 'dimension.lengt...', 4)
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopFeatureValuesConverter.class.php(251): shopFeatureModel->setValues(Array, Array, false)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopFeatureValuesConverter.class.php(356): shopFeatureValuesConverter->setValues(Array, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopFeatureValuesConverter.class.php(142): shopFeatureValuesConverter->_convert(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopFeatureValuesConverter.class.php(44): shopFeatureValuesConverter->convert()
+#9 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/settings/features/shopSettingsFeaturesValuesTypeConvert.controller.php(26): shopFeatureValuesConverter::run('911', Array)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopSettingsFeaturesValuesTypeConvertController->execute()
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#13 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopSettingsFeaturesValuesTypeConvertController), NULL)
+#14 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'settings', 'featuresValuesT...')
+#15 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#16 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#17 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#18 {main}
+
+2017-01-28 20:57:32 94.158.32.221
+Query Error 1062: Duplicate entry '911-500-m-length' for key 'feature_id'
+Query: INSERT  INTO shop_feature_values_dimension
+                   (`type`, `unit`, `value`, `value_base_unit`, `sort`, `feature_id`) VALUES ('length', 'm', 500, 500, 7, 911)
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('INSERT  INTO sh...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(565): waModel->query('INSERT  INTO sh...')
+#2 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopSortable.model.php(129): waModel->insert(Array, 0)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeatureValues.model.php(235): shopSortableModel->insert(Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeature.model.php(382): shopFeatureValuesModel->addValue('911', '500 \xD0\xB3', -547, 'dimension.lengt...', 7)
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopFeatureValuesConverter.class.php(251): shopFeatureModel->setValues(Array, Array, false)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopFeatureValuesConverter.class.php(356): shopFeatureValuesConverter->setValues(Array, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopFeatureValuesConverter.class.php(142): shopFeatureValuesConverter->_convert(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopFeatureValuesConverter.class.php(44): shopFeatureValuesConverter->convert()
+#9 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/settings/features/shopSettingsFeaturesValuesTypeConvert.controller.php(26): shopFeatureValuesConverter::run('911', Array)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopSettingsFeaturesValuesTypeConvertController->execute()
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#13 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopSettingsFeaturesValuesTypeConvertController), NULL)
+#14 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'settings', 'featuresValuesT...')
+#15 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#16 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#17 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#18 {main}
+
+2017-01-28 21:27:08 94.158.32.221
+Query Error 1062: Duplicate entry '912-0-kg-weight' for key 'feature_id'
+Query: INSERT  INTO shop_feature_values_dimension
+                   (`type`, `unit`, `value`, `value_base_unit`, `sort`, `feature_id`) VALUES ('weight', 'kg', 0, 0, 2, 912)
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('INSERT  INTO sh...')
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(565): waModel->query('INSERT  INTO sh...')
+#2 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopSortable.model.php(129): waModel->insert(Array, 0)
+#3 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeatureValues.model.php(235): shopSortableModel->insert(Array)
+#4 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/model/shopFeature.model.php(382): shopFeatureValuesModel->addValue('912', '\xD0\x94\xD0\xB0', -1, 'dimension.weigh...', 2)
+#5 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopFeatureValuesConverter.class.php(251): shopFeatureModel->setValues(Array, Array, false)
+#6 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopFeatureValuesConverter.class.php(356): shopFeatureValuesConverter->setValues(Array, Array)
+#7 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopFeatureValuesConverter.class.php(142): shopFeatureValuesConverter->_convert(Array, Array)
+#8 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/classes/shopFeatureValuesConverter.class.php(44): shopFeatureValuesConverter->convert()
+#9 /home/almamed/web/almamed.su/public_html/wa-apps/shop/lib/actions/settings/features/shopSettingsFeaturesValuesTypeConvert.controller.php(26): shopFeatureValuesConverter::run('912', Array)
+#10 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopSettingsFeaturesValuesTypeConvertController->execute()
+#11 /home/almamed/web/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#12 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#13 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopSettingsFeaturesValuesTypeConvertController), NULL)
+#14 /home/almamed/web/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'settings', 'featuresValuesT...')
+#15 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#16 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#17 /home/almamed/web/almamed.su/public_html/index.php(10): waSystem->dispatch()
+#18 {main}
