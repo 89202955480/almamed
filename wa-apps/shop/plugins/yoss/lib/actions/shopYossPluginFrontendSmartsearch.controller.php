@@ -27,7 +27,7 @@ class shopYossPluginFrontendSmartsearchController extends waJsonController {
             }
 
             $products = $collection->getProducts('*', ($page-1)*$product_limit, $product_limit);
-            
+
             if ($products) {
 
                 $brands = array();
@@ -72,7 +72,7 @@ class shopYossPluginFrontendSmartsearchController extends waJsonController {
                         "name" => $p['name'],
                         "url" => $p['frontend_url'],
                         "image" => $image,
-                        "price" => shop_currency_html($p['price'], $p['currency']),
+                        "price" => shop_currency_html($p['price']),
                         "brands" => $brands,
                         "category" => $res_category,
                     );

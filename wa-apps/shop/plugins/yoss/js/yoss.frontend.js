@@ -25,6 +25,7 @@ var yossFrontend = (function () { 'use strict';
 		productBrands   = $('<div/>').addClass('product-brand');
 		productCategory = $('<div/>').addClass('product-category').html(product.category);
 
+
 		productPrice    = $('<div/>').addClass('product-price').html(product.price);
 		productLink     = $('<a/>').addClass('product-link').attr('href', product.url).html('{_wp("to product")} &rarr;');
 		if(+product.price.replace(/\D+/g,"") == 0) {
@@ -154,6 +155,7 @@ var yossFrontend = (function () { 'use strict';
 				var lastEl = resultBlock.find('.yoss-result-wrapper:last-child');
 
 				if (query.length > 0 && nextPage > 0 ) {
+
 					lastEl.after(loadingBlock);
 
 					$.ajax({		            	

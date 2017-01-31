@@ -98,6 +98,7 @@
 <script type="text/javascript" src="{$wa_theme_url}at.min.js?v0.0.1"></script>
 
 <script type="text/javascript">
+    $(function() {
     $(window).scroll(function() {
         if ( $(this).scrollTop()>=200) {
             $('.logo-menu-top-fix').show();
@@ -110,6 +111,7 @@
             $('.link-top-not-fix').show();
             $(".nav-wrapper").removeClass( "fixed" );
         }
+    });
     });
 </script>
 {/strip}
