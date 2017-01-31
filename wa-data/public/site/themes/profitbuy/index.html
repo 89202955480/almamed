@@ -93,8 +93,9 @@
 
                 <div class="row-grid hide-on-med-and-down header-fix-top-menu-hidden" >
                     <div class="table-grid">
-                        {if !empty($header0)}<div class="col-grid">{$header0}</div>{/if}
-                        {if !empty($header1)}<div class="col-grid  max-width">{$header1}</div>{/if}
+                        {if !empty($header0)}<div class="col-grid logo-menu-top-fix" style="display: none">{$header0}</div>{/if}
+                        {if !empty($header1)}<div class="col-grid  max-width link-top-not-fix">{$header1}</div>{/if}
+                        {if !empty($header4)}<div class="col-grid  max-width link-top-fix" style="display: none">{$header4}</div>{/if}
                         {if !empty($header2)}<div class="col-grid">{$header2}</div>{/if}
                         <div class="col-grid">{include file="cart.top.menu.fix.html" inline}</div>
                         {if !empty($header3)}<div class="col-grid">{$header3}</div>{/if}

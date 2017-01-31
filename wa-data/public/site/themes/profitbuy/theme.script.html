@@ -99,9 +99,15 @@
 
 <script type="text/javascript">
     $(window).scroll(function() {
-        if ( $(this).scrollTop()>=250) {
+        if ( $(this).scrollTop()>=200) {
+            $('.logo-menu-top-fix').show();
+            $('.link-top-not-fix').css('display','none');
+            $('.link-top-fix').show();
             $(".nav-wrapper").addClass( "fixed" );
-        }else if ( $(this).scrollTop()<240 ) {
+        }else if ( $(this).scrollTop()<190 ) {
+            $('.logo-menu-top-fix').css('display','none');
+            $('.link-top-fix').css('display','none');
+            $('.link-top-not-fix').show();
             $(".nav-wrapper").removeClass( "fixed" );
         }
     });
