@@ -15,5 +15,6 @@ return array (
   'currencyrates' => true,
   'quickeditor' => true,
   'vendorlink' => true,
+  'accordion' => true,
 );
 //EOF

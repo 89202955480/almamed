@@ -676,6 +676,8 @@ var scrollbarWidth = function() {
 })(jQuery);
 
 $(document).ready(function() {
+
+   // console.log(123123);
     $('input[type=checkbox],input[type=radio]').stylizeInput();
     
     $('<style type="text/css">.dialog-margin { overflow: hidden; margin-right: ' + scrollbarWidth() + 'px; }</style>').appendTo('head');
