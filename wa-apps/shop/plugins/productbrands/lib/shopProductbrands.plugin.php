@@ -24,6 +24,10 @@ class shopProductbrandsPlugin extends shopPlugin
      * @return string
      */
 
+    public function getAllAll(){
+        return print 123123;
+    }
+
 
     public function getAll(){
 
