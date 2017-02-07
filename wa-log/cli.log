@@ -1,0 +1,13 @@
+
+2017-02-03 00:00:06 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/almamed/web/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/almamed/web/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/almamed/web/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/almamed/web/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/almamed/web/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/almamed/web/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/almamed/web/almamed.su/public_html/cli.php(3): require_once('/home/almamed/w...')
+#7 {main}
