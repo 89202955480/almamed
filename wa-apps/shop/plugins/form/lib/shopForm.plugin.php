@@ -71,7 +71,7 @@ class shopFormPlugin extends shopPlugin
                 'Reply-To: '. $email_admin . "\r\n" .
                 'X-Mailer: PHP/' . phpversion();
 
-            $send = mail($to, $subject, $message, $headers);
+            $send = mail($to, $subject, $message);
 
             ?>
 <h1>Спасибо!</h1>
