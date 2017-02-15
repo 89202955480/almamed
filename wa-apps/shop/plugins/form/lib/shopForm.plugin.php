@@ -67,11 +67,8 @@ class shopFormPlugin extends shopPlugin
 
             $headers  = 'MIME-Version: 1.0' . "\r\n";
             $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-            $headers .= 'From: '. $email_admin . "\r\n" .
-                'Reply-To: '. $email_admin . "\r\n" .
-                'X-Mailer: PHP/' . phpversion();
-
-            $send = mail($to, $subject, $message);
+            
+            $send = mail($to, $subject, $message, $headers);
 
             ?>
 <h1>Спасибо!</h1>
