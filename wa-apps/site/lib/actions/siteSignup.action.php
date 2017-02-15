@@ -4,6 +4,7 @@ class siteSignupAction extends waSignupAction
 {
     public function execute()
     {
+
         $this->setLayout(new siteFrontendLayout());
         $this->setThemeTemplate('signup.html');
         try {

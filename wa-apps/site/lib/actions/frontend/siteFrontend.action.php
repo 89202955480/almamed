@@ -4,6 +4,7 @@ class siteFrontendAction extends waViewAction
 {   
     public function execute()
     {
+       
         $page = $this->params;
         if ($page && is_array($page)) {
             $params = waRequest::param();

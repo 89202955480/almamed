@@ -27,6 +27,7 @@ class contactsRightsSaveController extends waJsonController
         
         $app_id = waRequest::post('app_id');
         $name = waRequest::post('name');
+
         $value = (int)waRequest::post('value');
         $contact_id = waRequest::get('id');
 

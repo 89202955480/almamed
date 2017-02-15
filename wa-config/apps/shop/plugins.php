@@ -16,5 +16,6 @@ return array (
   'quickeditor' => true,
   'vendorlink' => true,
   'accordion' => true,
+  'form' => true,
 );
 //EOF
