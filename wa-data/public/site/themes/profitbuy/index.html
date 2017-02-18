@@ -62,9 +62,11 @@
         
         <nav class="nav-wrapper">
             <div class="container">
-                
+
+                {include file="search.form.html" assign="header2" inline}
                 <!-- MOBILE NAV -->
-                <div class="row-grid hide-on-large-only"><div class="col-grid s12">
+                <div class="row-grid hide-on-large-only">
+                    <div class="col-grid s12">
                     <div class="mobile-nav-button-wrapper float-left">
                         <a href="#" data-nav="all" class="mobile-nav-button action"><i class="material-icons mi-3x">&#xE5D2;</i></a>
                     </div>
@@ -73,6 +75,7 @@
                             <a href="#" data-nav="contacts" class="mobile-nav-button action"><i class="material-icons mi-3x">&#xE0CD;</i></a>
                         </div>
                     {/if}
+                    <div class="mobile-nav-button-wrapper float-left">{$header2}</div>
                     {if $wa->shop && strpos($wa->currentUrl(), 'cart') === false && strpos($wa->currentUrl(), 'checkout') === false}
                         <div class="mobile-nav-button-wrapper float-right">
                             {$cart_count = $wa->shop->cart->count()}
@@ -81,13 +84,14 @@
            	     			</a>
                         </div>
                     {/if}
-                </div></div>
+                </div>
+                </div>
             
                 <!-- DESKTOP NAV -->
                 {include file="logo.no.text.html" assign="header0" inline}
                 {include file="links.pages.top.fix.html" assign="header4" inline}
                 {include file="links.pages.top.html" assign="header1" inline}
-                {include file="search.form.html" assign="header2" inline}
+
                 {include file="links.auth.html" assign="header3" inline}
 
 

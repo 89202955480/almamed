@@ -210,7 +210,7 @@ input:-ms-input-placeholder { color: #d1d1d1; }
     .align-left-on-small-and-down { text-align: left !important; }
     .align-center-on-small-and-down { text-align: center !important; }
 }
-@media only screen and (max-width : 992px) {
+@media only screen and (max-width : 1200px) {
     .hide-on-med-and-down { display: none !important; }
     .align-right-on-med-and-down { text-align: right !important; }
     .align-left-on-med-and-down { text-align: left !important; }
