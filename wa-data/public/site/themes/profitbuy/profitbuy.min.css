@@ -968,8 +968,5 @@ input[type=checkbox].at-stylize-input:checked + .at-stylize-button{box-shadow:in
     max-width: 80px;
 }
 
-@media (max-width: 412px) {
-    form[action="/search/"]{
-        width: 130px;
-    }
-}
+
+
