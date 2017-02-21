@@ -968,5 +968,10 @@ input[type=checkbox].at-stylize-input:checked + .at-stylize-button{box-shadow:in
     max-width: 80px;
 }
 
-
+@media only screen and (max-width: 425px) {
+	.search-mob-width{
+		width: 130px	
+	}
+	
+}
 
