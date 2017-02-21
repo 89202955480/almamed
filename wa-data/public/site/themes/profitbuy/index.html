@@ -75,7 +75,6 @@
                             <a href="#" data-nav="contacts" class="mobile-nav-button action"><i class="material-icons mi-3x">&#xE0CD;</i></a>
                         </div>
                     {/if}
-                    <div class="mobile-nav-button-wrapper float-left">{$search_mob}</div>
                     {if $wa->shop && strpos($wa->currentUrl(), 'cart') === false && strpos($wa->currentUrl(), 'checkout') === false}
                         <div class="mobile-nav-button-wrapper float-right">
                             {$cart_count = $wa->shop->cart->count()}
@@ -84,6 +83,7 @@
            	     			</a>
                         </div>
                     {/if}
+                        <div class="mobile-nav-button-wrapper float-right">{$search_mob}</div>
                 </div>
                 </div>
             

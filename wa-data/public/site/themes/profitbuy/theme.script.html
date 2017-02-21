@@ -112,6 +112,20 @@
             $(".nav-wrapper").removeClass( "fixed" );
         }
     });
+
+
+
+        function windowSize(){
+            if ($(window).width() <= '425'){
+                console.log(1);
+                $('.autofit').attr('placeholder','Поиск');
+            } else {
+                console.log(2);
+                $('.autofit').attr('placeholder','Поиск товара');
+            }
+        }
+        $(window).load(windowSize);
+        $(window).resize(windowSize);
     });
 </script>
 {/strip}
