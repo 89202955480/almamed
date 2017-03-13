@@ -98,6 +98,130 @@
         </div>
     </div>
 
+    <hr>
+
+    <div class="field-group">
+        <div class="field">
+            <div class="name">
+                <input type="text" name="title_name_related_one" value="{$product.user_value_related_name}">
+            </div>
+            <div class="value">
+                <label><input type="radio" name="user_value_related" value="1" {if $product.user_value_related == 1}checked="true"{/if}> [`On`]
+                    {if $type.user_value_related}
+                    <em class="hint">[`Auto`] ({if $type.user_value_related == 'alsobought'}{sprintf('[`based on what other customers bought with %s`]',$product.name)}{else}[`products from category`] "{$type.category.name}"{/if})</em></label>
+                {/if}
+            </div>
+            <div class="value">
+                <label><input type="radio" name="user_value_related" value="0" {if !$product.user_value_related}checked="true"{/if}> [`Off`]</label>
+                {if !$type.user_value_related}
+                <em class="hint">[`Auto`]</em>
+                {/if}
+            </div>
+            <div class="value">
+                <label><input type="radio" name="user_value_related" value="2" {if $product.user_value_related == 2}checked="true"{/if}> [`Select manually`]</label>
+            </div>
+            <div class="value manually" {if $product.user_value_related != 2}style="display:none"{/if}>
+                <table class="related zebra">
+                    {if isset($related.user_value_related)}
+                    {foreach $related.user_value_related as $p}
+                    <tr class="p" data-product-id="{$p.id}">
+                        <td>{$p.name|escape}</td>
+                        <td>{shop_currency_html($p.price, true)}</td>
+                        <td class="min-width"><a class="delete" href="#"><i class="icon16 delete"></i></a></td>
+                    </tr>
+                    {/foreach}
+                    {/if}
+                    <tr>
+                        <td colspan="3">
+                            <input data-type="user_value_related" class="product-autocomplete long" type="text" placeholder="[`Start typing product name or SKU`]">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="field-group">
+        <div class="field">
+            <div class="name">
+                <input type="text" name="title_name_related_two" value="{$product.user_value_related_two_name}">
+            </div>
+            <div class="value">
+                <label><input type="radio" name="user_value_related_two" value="1" {if $product.user_value_related_two == 1}checked="true"{/if}> [`On`]
+                    {if $type.user_value_related_two}
+                    <em class="hint">[`Auto`] ({if $type.user_value_related_two == 'alsobought'}{sprintf('[`based on what other customers bought with %s`]',$product.name)}{else}[`products from category`] "{$type.category.name}"{/if})</em></label>
+                {/if}
+            </div>
+            <div class="value">
+                <label><input type="radio" name="user_value_related_two" value="0" {if !$product.user_value_related_two}checked="true"{/if}> [`Off`]</label>
+                {if !$type.user_value_related_two}
+                <em class="hint">[`Auto`]</em>
+                {/if}
+            </div>
+            <div class="value">
+                <label><input type="radio" name="user_value_related_two" value="2" {if $product.user_value_related_two == 2}checked="true"{/if}> [`Select manually`]</label>
+            </div>
+            <div class="value manually" {if $product.user_value_related_two != 2}style="display:none"{/if}>
+                <table class="related zebra">
+                    {if isset($related.user_value_related_two)}
+                    {foreach $related.user_value_related_two as $p}
+                    <tr class="p" data-product-id="{$p.id}">
+                        <td>{$p.name|escape}</td>
+                        <td>{shop_currency_html($p.price, true)}</td>
+                        <td class="min-width"><a class="delete" href="#"><i class="icon16 delete"></i></a></td>
+                    </tr>
+                    {/foreach}
+                    {/if}
+                    <tr>
+                        <td colspan="3">
+                            <input data-type="user_value_related_two" class="product-autocomplete long" type="text" placeholder="[`Start typing product name or SKU`]">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="field-group">
+        <div class="field">
+            <div class="name">
+                <input type="text" name="title_name_related_three" value="{$product.user_value_related_three_name}">
+            </div>
+            <div class="value">
+                <label><input type="radio" name="user_value_related_three" value="1" {if $product.user_value_related_three == 1}checked="true"{/if}> [`On`]
+                    {if $type.user_value_related_three}
+                    <em class="hint">[`Auto`] ({if $type.user_value_related_three == 'alsobought'}{sprintf('[`based on what other customers bought with %s`]',$product.name)}{else}[`products from category`] "{$type.category.name}"{/if})</em></label>
+                {/if}
+            </div>
+            <div class="value">
+                <label><input type="radio" name="user_value_related_three" value="0" {if !$product.user_value_related_three}checked="true"{/if}> [`Off`]</label>
+                {if !$type.user_value_related_three}
+                <em class="hint">[`Auto`]</em>
+                {/if}
+            </div>
+            <div class="value">
+                <label><input type="radio" name="user_value_related_three" value="2" {if $product.user_value_related_three == 2}checked="true"{/if}> [`Select manually`]</label>
+            </div>
+            <div class="value manually" {if $product.user_value_related_three != 2}style="display:none"{/if}>
+                <table class="related zebra">
+                    {if isset($related.user_value_related_three)}
+                    {foreach $related.user_value_related_three as $p}
+                    <tr class="p" data-product-id="{$p.id}">
+                        <td>{$p.name|escape}</td>
+                        <td>{shop_currency_html($p.price, true)}</td>
+                        <td class="min-width"><a class="delete" href="#"><i class="icon16 delete"></i></a></td>
+                    </tr>
+                    {/foreach}
+                    {/if}
+                    <tr>
+                        <td colspan="3">
+                            <input data-type="user_value_related_three" class="product-autocomplete long" type="text" placeholder="[`Start typing product name or SKU`]">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
     <!-- plugin hook: 'backend_product_edit.related' -->
     {* @event backend_product_edit.%plugin_id%.related *}
     {if !empty($backend_product_edit)}{foreach $backend_product_edit as $_}{ifset($_.related)}{/foreach}{/if}
@@ -166,7 +290,7 @@
         });
 
     })();
-    $('input[name="upselling"], input[name="cross_selling"]').click(function () {
+    $('input[name="upselling"], input[name="cross_selling"],input[name="user_value_related"],input[name="user_value_related_two"],input[name="user_value_related_three"]').click(function () {
         var data = { };
         data[this.name] = this.value;
         if (this.value == 2) {
@@ -179,8 +303,18 @@
         } else {
             $(this).closest('div.field').find('.manually').hide();
         }
+        //console.log(data);
         save(data);
     });
+
+    $('.button.green').click(function(){
+        save({
+            'title_name_related_one': $('input[name="title_name_related_one"]').val(),
+            'title_name_related_two': $('input[name="title_name_related_two"]').val(),
+            'title_name_related_three': $('input[name="title_name_related_three"]').val()
+        });
+    });
+
 
     $("table.related").on('click', 'a.delete', function () {
         var tr = $(this).closest('tr');

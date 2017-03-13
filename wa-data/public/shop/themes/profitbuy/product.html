@@ -293,10 +293,14 @@
 </article>
 
 <!-- RELATED PRODUCTS -->
+<!-- 32321 -->
 {$upselling = $product->upSelling(12)}
 {$crossselling = $product->crossSelling(12)}
+{$uservaluerelated = $product->userValueRelated(12)}
+{$uservaluerelatedtwo = $product->userValueRelatedTwo(12)}
+{$uservaluerelatedthree = $product->userValueRelatedThree(12)}
 
-{if $upselling || $crossselling}
+{if $upselling || $crossselling || $uservaluerelated || $uservaluerelatedtwo || $uservaluerelatedthree}
 
     {if $crossselling}
         <section class="related fill-background">
@@ -314,6 +318,27 @@
                 
             </h3>
             {include file="list-thumbs.html" products=$upselling ulclass="colored carousel expandable" without_micro_markup=true}
+        </section>
+    {/if}
+
+    {if $uservaluerelated}
+    <section class="related fill-background">
+        <h3>{$product.user_value_related_name}</h3>
+        {include file="list-thumbs.html" products=$uservaluerelated without_micro_markup=true}
+    </section>
+    {/if}
+
+    {if $uservaluerelatedtwo}
+        <section class="related fill-background">
+            <h3>{$product.user_value_related_two_name}</h3>
+            {include file="list-thumbs.html" products=$uservaluerelatedtwo without_micro_markup=true}
+        </section>
+    {/if}
+
+    {if $uservaluerelatedthree}
+        <section class="related fill-background">
+            <h3>{$product.user_value_related_three_name}</h3>
+            {include file="list-thumbs.html" products=$uservaluerelatedthree without_micro_markup=true}
         </section>
     {/if}
     
