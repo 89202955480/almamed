@@ -1726,7 +1726,7 @@ msgstr "Услуги"
 
 #: /wa-apps/shop/templates/actions/product/Product.html:309
 msgid "Related products"
-msgstr "Рекомендуемые товары"
+msgstr "Дополнительные/Рекомендуемые товары"
 
 #: /wa-apps/shop/templates/actions/backend/BackendStorefronts.html:37
 msgid "Pages"
