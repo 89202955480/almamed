@@ -18,6 +18,12 @@ class shopProductRelatedSaveController extends waJsonController
         if (waRequest::post('user_value_related_three') !== null) {
             $this->save('user_value_related_three');
         }
+        if (waRequest::post('user_value_related_four') !== null) {
+            $this->save('user_value_related_four');
+        }
+        if (waRequest::post('user_value_related_five') !== null) {
+            $this->save('user_value_related_five');
+        }
 
         if (waRequest::post('cross_selling') !== null) {
             $this->save('cross_selling');
@@ -50,6 +56,14 @@ class shopProductRelatedSaveController extends waJsonController
                     $product = new shopProduct($this->product_id);
                     $product->save(array('user_value_related_three_name' => waRequest::post('title_name_related_three')));
                 }
+        if (waRequest::post('title_name_related_four')) {
+            $product = new shopProduct($this->product_id);
+            $product->save(array('user_value_related_four_name' => waRequest::post('title_name_related_four')));
+        }
+        if (waRequest::post('title_name_related_five')) {
+            $product = new shopProduct($this->product_id);
+            $product->save(array('user_value_related_five_name' => waRequest::post('title_name_related_five')));
+        }
 
     }
 

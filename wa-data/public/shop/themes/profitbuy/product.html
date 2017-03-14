@@ -299,8 +299,45 @@
 {$uservaluerelated = $product->userValueRelated(12)}
 {$uservaluerelatedtwo = $product->userValueRelatedTwo(12)}
 {$uservaluerelatedthree = $product->userValueRelatedThree(12)}
+{$uservaluerelatedfour = $product->userValueRelatedFour(12)}
+{$uservaluerelatedfive = $product->userValueRelatedFive(12)}
 
 {if $upselling || $crossselling || $uservaluerelated || $uservaluerelatedtwo || $uservaluerelatedthree}
+
+    {if $uservaluerelated}
+    <section class="related fill-background">
+        <h3>{$product.user_value_related_name}</h3>
+        {include file="list-thumbs.html" products=$uservaluerelated without_micro_markup=true}
+    </section>
+    {/if}
+
+    {if $uservaluerelatedtwo}
+    <section class="related fill-background">
+        <h3>{$product.user_value_related_two_name}</h3>
+        {include file="list-thumbs.html" products=$uservaluerelatedtwo without_micro_markup=true}
+    </section>
+    {/if}
+
+    {if $uservaluerelatedthree}
+    <section class="related fill-background">
+        <h3>{$product.user_value_related_three_name}</h3>
+        {include file="list-thumbs.html" products=$uservaluerelatedthree without_micro_markup=true}
+    </section>
+    {/if}
+
+    {if $uservaluerelatedfour}
+        <section class="related fill-background">
+            <h3>{$product.user_value_related_four_name}</h3>
+            {include file="list-thumbs.html" products=$uservaluerelatedfour without_micro_markup=true}
+        </section>
+    {/if}
+
+    {if $uservaluerelatedfive}
+        <section class="related fill-background">
+            <h3>{$product.user_value_related_five_name}</h3>
+            {include file="list-thumbs.html" products=$uservaluerelatedfive without_micro_markup=true}
+        </section>
+    {/if}
 
     {if $crossselling}
         <section class="related fill-background">
@@ -321,26 +358,7 @@
         </section>
     {/if}
 
-    {if $uservaluerelated}
-    <section class="related fill-background">
-        <h3>{$product.user_value_related_name}</h3>
-        {include file="list-thumbs.html" products=$uservaluerelated without_micro_markup=true}
-    </section>
-    {/if}
 
-    {if $uservaluerelatedtwo}
-        <section class="related fill-background">
-            <h3>{$product.user_value_related_two_name}</h3>
-            {include file="list-thumbs.html" products=$uservaluerelatedtwo without_micro_markup=true}
-        </section>
-    {/if}
-
-    {if $uservaluerelatedthree}
-        <section class="related fill-background">
-            <h3>{$product.user_value_related_three_name}</h3>
-            {include file="list-thumbs.html" products=$uservaluerelatedthree without_micro_markup=true}
-        </section>
-    {/if}
     
 {/if}
 

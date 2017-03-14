@@ -833,6 +833,98 @@ class shopProduct implements ArrayAccess
         return array();
     }
 
+    public function userValueRelatedFour($limit = 5, $available_only = false, $exclude = array())
+    {
+
+        $user_value_related_four = $this->getData('user_value_related_four');
+        // cross selling on (using similar setting for type)
+        if ($user_value_related_four == 1 || $user_value_related_four === null) {
+            $type = $this->getType();
+            if ($type['user_value_related_four']) {
+                $hash = $type['user_value_related_four'].($type['user_value_related_four'] == 'alsobought' ? '/'.$this->getId() : '');
+                $collection = new shopProductsCollection($hash);
+                if ($type['user_value_related_four'] != 'alsobought') {
+                    $collection->orderBy('RAND()');
+                }
+            } else {
+                return array();
+            }
+        } elseif (!$user_value_related_four) {
+            return array();
+        } else {
+            $collection = new shopProductsCollection('related/user_value_related_four/'.$this->getId());
+        }
+        if (!empty($collection)) {
+            if ($available_only) {
+                $collection->addWhere('(p.count > 0 OR p.count IS NULL)');
+            }
+            if ($exclude) {
+                $ids = array();
+                foreach ($exclude as $exclude_id) {
+                    $exclude_id = (int)$exclude_id;
+                    if ($exclude_id) {
+                        $ids[] = $exclude_id;
+                    }
+                }
+                if ($ids) {
+                    $collection->addWhere('p.id NOT IN ('.(implode(',', $ids)).')');
+                }
+            }
+            $result = $collection->getProducts('*', $limit);
+            if (isset($result[$this->getId()])) {
+                unset($result[$this->getId()]);
+            }
+            return $result;
+        }
+        return array();
+    }
+
+    public function userValueRelatedFive($limit = 5, $available_only = false, $exclude = array())
+    {
+
+        $user_value_related_five = $this->getData('user_value_related_five');
+        // cross selling on (using similar setting for type)
+        if ($user_value_related_five == 1 || $user_value_related_five === null) {
+            $type = $this->getType();
+            if ($type['user_value_related_five']) {
+                $hash = $type['user_value_related_five'].($type['user_value_related_five'] == 'alsobought' ? '/'.$this->getId() : '');
+                $collection = new shopProductsCollection($hash);
+                if ($type['user_value_related_five'] != 'alsobought') {
+                    $collection->orderBy('RAND()');
+                }
+            } else {
+                return array();
+            }
+        } elseif (!$user_value_related_five) {
+            return array();
+        } else {
+            $collection = new shopProductsCollection('related/user_value_related_five/'.$this->getId());
+        }
+        if (!empty($collection)) {
+            if ($available_only) {
+                $collection->addWhere('(p.count > 0 OR p.count IS NULL)');
+            }
+            if ($exclude) {
+                $ids = array();
+                foreach ($exclude as $exclude_id) {
+                    $exclude_id = (int)$exclude_id;
+                    if ($exclude_id) {
+                        $ids[] = $exclude_id;
+                    }
+                }
+                if ($ids) {
+                    $collection->addWhere('p.id NOT IN ('.(implode(',', $ids)).')');
+                }
+            }
+            $result = $collection->getProducts('*', $limit);
+            if (isset($result[$this->getId()])) {
+                unset($result[$this->getId()]);
+            }
+            return $result;
+        }
+        return array();
+    }
+
     /**
      * Returns estimated information on product's sales based on specified sales rate
      *

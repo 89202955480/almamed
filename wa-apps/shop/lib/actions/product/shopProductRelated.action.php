@@ -31,13 +31,21 @@ class shopProductRelatedAction extends waViewAction
         if ($product['user_value_related_three'] === null) {
             $product['user_value_related_three'] = $type['user_value_related_three'] ? 1 : 0;
         }
+        if ($product['user_value_related_four'] === null) {
+            $product['user_value_related_four'] = $type['user_value_related_four'] ? 1 : 0;
+        }
+        if ($product['user_value_related_five'] === null) {
+            $product['user_value_related_five'] = $type['user_value_related_five'] ? 1 : 0;
+        }
 
         // if manually
         if ($product['cross_selling'] == 2 ||
             $product['upselling'] == 2 ||
             $product['user_value_related'] == 2 ||
             $product['user_value_related_two'] == 2 ||
-            $product['user_value_related_three'] == 2
+            $product['user_value_related_three'] == 2 ||
+            $product['user_value_related_four'] == 2 ||
+            $product['user_value_related_five'] == 2
         ) {
             $related_model = new shopProductRelatedModel();
             $related = $related_model->getAllRelated($product_id);
@@ -63,7 +71,7 @@ class shopProductRelatedAction extends waViewAction
         $this->view->assign(array(
             'type' => $type,
             'product' => $product,
-            'product' => $product,
+            'related' => $related,
             'title1' => $title1
         ));
 
