@@ -82,6 +82,23 @@ a:hover {
 .icon16.left-margin {
     margin-left: 1em;
 }
+.icon16.middle {
+    vertical-align: middle;
+}
+
+.logs-action-icon {
+    cursor: pointer;
+}
+
+.back-link {
+    font-weight: normal;
+    font-size: 0.8em;
+    margin-right: 1em;
+    color: #777!important;
+    background: #eee;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
 
 /* item list */
 
@@ -111,20 +128,20 @@ a:hover {
     color: #777;
 }
 
-.item-list .actions * {
+.item-list .file-actions * {
     cursor: pointer;
 }
 
-.item-list .actions {
+.item-list .file-actions {
     visibility: hidden;
     margin-left: 10px;
 }
 
-.item-list li:hover .actions {
+.item-list li:hover .file-actions {
     visibility: visible;
 }
 
-.item-list .actions a:hover {
+.item-list .file-actions a:hover {
     text-decoration: none;
 }
 
@@ -193,11 +210,17 @@ a:hover {
     background: #D3E7FC;
 }
 
-.file_menu {
-    float: right;
+ul.action-menu {
+    font-size: 16pt;
+    margin-top: 0.5em;
 }
 
-/* "get more" */
+ul.action-menu li {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+/* 'get more' */
 
 .file-data .get-more {
     background: #eee;
@@ -259,6 +282,7 @@ a:hover {
 }
 
 /* navigation */
+
 /* breadcrumbs */
 
 .breadcrumbs {
@@ -278,8 +302,9 @@ a:hover {
     color: #558FCE;
 }
 
-.breadcrumbs .separator {
+.breadcrumbs-separator {
     color: #999;
+    margin: 0 0.3em;
 }
 
 /* view modes */
@@ -357,25 +382,12 @@ ul.dropdown {
     color: white;
 }
 
-/* settings */
+/* published */
 
-.settings-block {
-    font-size: 16pt;
-    margin-top: 0.5em;
-    float: right;
+.published-status-selector {
+    display: inline-block;
 }
 
-.icon16.settings,
-.icon16.update {
-    cursor: pointer;
-}
-
-.back-link {
-    font-weight: normal;
-    font-size: 0.8em;
-    margin-right: 1em;
-    color: #777!important;
-    background: #eee;
-    padding: 4px 10px;
-    border-radius: 4px;
+.published-url {
+    width: 650px;
 }

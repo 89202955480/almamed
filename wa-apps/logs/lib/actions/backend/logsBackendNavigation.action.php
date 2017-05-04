@@ -47,14 +47,7 @@ class logsBackendNavigationAction extends logsViewAction
             foreach ($view_modes as &$view_mode) {
                 $view_mode['selected'] = $view_mode['action'] == $action && $view_mode['mode'] == $mode;
             }
-            usort($view_modes, create_function(
-                '$a, $b',
-                'if ($a["selected"] != $b["selected"]) {
-                    return $b["selected"] ? 1 : -1;
-                } else {
-                    return $a["sort"] < $b["sort"] ? -1 : 1;
-                }'
-            ));
+            usort($view_modes, array($this, 'sortViewModes'));
 
             $total_size = logsHelper::getTotalLogsSize();
             $this->view->assign(array(
@@ -62,6 +55,15 @@ class logsBackendNavigationAction extends logsViewAction
                 'total_size'       => $total_size > 0 ? logsHelper::formatSize($total_size) : null,
                 'total_size_class' => logsHelper::isLargeSize($total_size) ? 'total-size total-size-large' : 'total-size',
             ));
+        }
+    }
+
+    private function sortViewModes($a, $b)
+    {
+        if ($a['selected'] != $b['selected']) {
+            return $b['selected'] ? 1 : -1;
+        } else {
+            return $a['sort'] < $b['sort'] ? -1 : 1;
         }
     }
 }

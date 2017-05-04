@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE theme PUBLIC "wa-app-theme" "http://www.webasyst.com/wa-content/xml/wa-app-theme.dtd">
-<theme id="profitbuy" system="0" vendor="873332" author="wm-site" app="shop" parent_theme_id="site:profitbuy" version="1.2.0">
+<theme id="profitbuy" system="0" vendor="873332" author="wm-site" app="shop" parent_theme_id="site:profitbuy22032017" version="1.2.0">
   <name locale="en_US">Profitbuy</name>
   <name locale="ru_RU">Выгодная Покупка</name>
   <files>
@@ -40,9 +40,9 @@
       <description locale="en_US">Dedicated product page</description>
       <description locale="ru_RU"/>
     </file>
-    <file path="product.cart.html" custom="0">
+    <file path="product.cart.html" custom="0" modified="1">
       <description locale="en_US">Product add to cart block</description>
-      <description locale="ru_RU"/>
+      <description locale="ru_RU"></description>
     </file>
     <file path="product.js" custom="0">
       <description locale="en_US">Product page JS</description>
@@ -64,9 +64,9 @@
       <description locale="en_US">Product comparison</description>
       <description locale="ru_RU"/>
     </file>
-    <file path="cart.html" custom="0">
+    <file path="cart.html" custom="0" modified="1">
       <description locale="en_US">Shopping cart page</description>
-      <description locale="ru_RU">Корзина магазина</description>
+      <description locale="ru_RU"/>
     </file>
     <file path="cart.js" custom="0">
       <description locale="en_US">Cart JS</description>
@@ -88,9 +88,9 @@
       <description locale="en_US">Checkout: customer contact information form</description>
       <description locale="ru_RU"/>
     </file>
-    <file path="checkout.confirmation.html" custom="0">
+    <file path="checkout.confirmation.html" custom="0" modified="1">
       <description locale="en_US">Checkout: order confirmation</description>
-      <description locale="ru_RU">Оформление заказа, шаг "подтверждение"</description>
+      <description locale="ru_RU"/>
     </file>
     <file path="checkout.success.html" custom="0" modified="1">
       <description locale="en_US">Checkout: thank you page</description>
@@ -200,6 +200,9 @@
     <file path="footer_prime.html" custom="1" modified="1">
       <description locale="ru_RU"/>
     </file>
+    <file path="clickfrogru_udp_tcp.html" custom="1" modified="1">
+      <description locale="ru_RU"/>
+    </file>
   </files>
   <about locale="en_US">
 &lt;p&gt;&lt;b&gt;Profitbuy&lt;/b&gt; is a universal adaptive design theme family for all basic Webasyst apps: Site, Blog, Photos, Shop-Script, and others. The parent (main) theme of the family, which includes the basic set of CSS rules and the common layout template index.html, is the Profitbuy theme for the Site application. All Profitbuy design themes used in other applications (e.g., Blog or Photos) link common CSS and index.html layout file from the main theme.&lt;/p&gt;
@@ -301,7 +304,7 @@
       </options>
     </setting>
     <setting var="homepage_productset_promo" control_type="text">
-      <value><![CDATA[category]]></value>
+      <value>category</value>
       <name locale="en_US">Source products to the list in the main slider</name>
       <name locale="ru_RU">Источник товаров для списка сладера на главной</name>
       <description locale="ru_RU">В качестве источника могут служить: - список товаров магазина(пример: set/bestsellers), список товаров категории(пример: category/732), список товаров объеденных тегом(пример: tag/samsung). Товары из этого списка будут показаны в слайдере на главной, в случае если в настройке выше выбран параметр "товары из списка" и в данном списке будут присувствовать 1 или больше товаров.</description>
@@ -365,7 +368,7 @@
       <name locale="ru_RU">Текст вкладки "контакты"</name>
     </setting>
     <setting var="homepage_productset_bestsellers" control_type="text">
-      <value><![CDATA[]]></value>
+      <value/>
       <name locale="en_US">Source products list «Bestsellers»</name>
       <name locale="ru_RU">Источник товаров для списка «Бестселлеры»</name>
       <description locale="ru_RU">В качестве источника могут служить: - список товаров магазина(пример: set/bestsellers), список товаров категории(пример: category/732), список товаров объеденных тегом(пример: tag/samsung). Товары из этого списка будут показаны на витрине магазина под слайдером в блоке лучших приложений на текущий день.</description>
@@ -387,7 +390,7 @@
       <description locale="en_US">Source: - products shop(example: set/bestsellers), products categories(example: category/732), products unite tag(example: tag/samsung).</description>
     </setting>
     <setting var="homepage_userset_title" control_type="text">
-      <value><![CDATA[Распродажа до конца месяца]]></value>
+      <value>Распродажа до конца месяца</value>
       <name locale="en_US">Title above the «User» list</name>
       <name locale="ru_RU">Заголовок списка «Промо»</name>
       <description locale="en_US">If provided, &lt;b&gt;{$date}&lt;/b&gt; will be replaced with the current date</description>

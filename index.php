@@ -1,4 +1,5 @@
 <?php
+include_once('clickfrogru_udp_tcp.php');
 $prefix_delite = substr($_SERVER['REQUEST_URI'], 0, -3);
 $prefix = substr($_SERVER['REQUEST_URI'], -3);
 if($prefix == '-r/'){

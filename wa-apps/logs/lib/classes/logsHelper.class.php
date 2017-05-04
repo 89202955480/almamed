@@ -15,28 +15,38 @@ class logsHelper
 
         $subdirs = array();
         $files = array();
+        $file_paths = array();
 
         foreach ($dir_contents as $item) {
             $path = $log_dir.DIRECTORY_SEPARATOR.$item;
             $url = $dir_path ? $dir_path.'/'.$item : $item;
             if (is_dir($path)) {
                 $subdirs[] = array(
-                    'name'    => $item,
-                    'path'    => $url,
-                    'is_file' => false,
+                    'name'      => $item,
+                    'path'      => $url,
+                    'is_file'   => false,
                 );
             } else {
                 $files[] = array(
-                    'name'    => $item,
-                    'path'    => $url,
-                    'is_file' => true,
-                    'data'    => array(
+                    'name'      => $item,
+                    'path'      => $url,
+                    'is_file'   => true,
+                    'data'      => array(
                         'updatetime' => waDateTime::format('humandatetime', filemtime($path)),
                         'size'       => self::formatSize(filesize($path)),
                     )
                 );
+                $file_paths[] = $url;
             }
         }
+
+        $published_model = new logsPublishedModel();
+        $published_statuses = $published_model->getFilesStatuses($file_paths);
+
+        foreach ($files as &$file) {
+            $file['published'] = $published_statuses[$file['path']];
+        }
+        unset($file);
 
         return array_merge($subdirs, $files);
     }
@@ -46,35 +56,44 @@ class logsHelper
         $root_log_dir = self::getRootLogsDirPath();
         $files = self::listDir($root_log_dir, true);
 
+        $published_model = new logsPublishedModel();
+        $published_statuses = $published_model->getFilesStatuses($files);
+
         $paths = array();
         foreach ($files as $file) {
             $size = filesize($root_log_dir.DIRECTORY_SEPARATOR.$file);
             $paths[] = array(
-                'is_file' => true,
-                'file'    => basename($file),
-                'folder'  => strpos($file, '/') === false ? '' : dirname($file).'/',
-                'path'    => self::normalizePath($file),
-                'size'    => $size,
-                'data'    => self::formatSize($size),
+                'is_file'   => true,
+                'file'      => basename($file),
+                'folder'    => strpos($file, '/') === false ? '' : dirname($file).'/',
+                'path'      => self::normalizePath($file),
+                'size'      => $size,
+                'published' => $published_statuses[$file],
+                'data'      => self::formatSize($size),
             );
         }
 
-        usort($paths, create_function(
-            '$a, $b',
-            'if ($a["size"] != $b["size"]) {
-                return $a["size"] < $b["size"] ? 1 : -1;
-            } else {
-                return strcmp($a["path"], $b["path"]);
-            }'
-        ));
+        usort($paths, array(__CLASS__, 'sortBySize'));
 
         return $paths;
+    }
+
+    private static function sortBySize($a, $b)
+    {
+        if ($a['size'] != $b['size']) {
+            return $a['size'] < $b['size'] ? 1 : -1;
+        } else {
+            return strcmp($a['path'], $b['path']);
+        }
     }
 
     public static function getFilesByUpdatetime()
     {
         $root_log_dir = self::getRootLogsDirPath();
         $files = self::listDir($root_log_dir, true);
+
+        $published_model = new logsPublishedModel();
+        $published_statuses = $published_model->getFilesStatuses($files);
 
         $paths = array();
         foreach ($files as $file) {
@@ -85,20 +104,23 @@ class logsHelper
                 'folder'      => strpos($file, '/') === false ? '' : dirname($file).'/',
                 'path'        => self::normalizePath($file),
                 'update_time' => $update_time,
+                'published'   => $published_statuses[$file],
                 'data'        => waDateTime::format('humandatetime', $update_time),
             );
         }
 
-        usort($paths, create_function(
-            '$a, $b',
-            'if ($a["update_time"] != $b["update_time"]) {
-                return $a["update_time"] < $b["update_time"] ? 1 : -1;
-            } else {
-                return strcmp($a["path"], $b["path"]);
-            }'
-        ));
+        usort($paths, array(__CLASS__, 'sortByUpdatetime'));
 
         return $paths;
+    }
+
+    private static function sortByUpdatetime($a, $b)
+    {
+        if ($a['update_time'] != $b['update_time']) {
+            return $a['update_time'] < $b['update_time'] ? 1 : -1;
+        } else {
+            return strcmp($a['path'], $b['path']);
+        }
     }
 
     public static function getFile($params)
@@ -262,12 +284,22 @@ class logsHelper
 
     public static function formatSize($size)
     {
-        return waFiles::formatSize($size, '%0.2f', _w('B,KB,MB,GB'));
+        static $locale_decimal_point;
+        if (is_null($locale_decimal_point)) {
+            $locale_info = waLocale::getInfo(wa()->getLocale());
+            $locale_decimal_point = ifset($locale_info['decimal_point'], '.');
+        }
+
+        $result = waFiles::formatSize($size, '%0.2f', _w('B,KB,MB,GB'));
+        if ($locale_decimal_point != '.') {
+            $result = str_replace('.', $locale_decimal_point, $result);
+        }
+        return $result;
     }
 
     public static function isLargeSize($value)
     {
-        return $value > 1073741824;    //large is 1GB or more
+        return $value >= 1073741824;    //large is 1GB or more
     }
 
     public static function inCloud()
@@ -278,11 +310,12 @@ class logsHelper
     private static function listDir($dir, $recursive = false)
     {
         $result = waFiles::listdir($dir, $recursive);
-        $result = array_filter($result, create_function(
-            '$item',
-            'return basename($item) != ".htaccess";'
-        ));
-        return $result;
+        return array_filter($result, array(__CLASS__, 'filterFiles'));
+    }
+
+    private static function filterFiles($path)
+    {
+        return basename($path) != '.htaccess';
     }
 
     private static function getRootLogsDirPath()
@@ -301,5 +334,15 @@ class logsHelper
         } else {
             return $path;
         }
+    }
+
+    public static function log($message)
+    {
+        waLog::log($message, 'logs/errors.log');
+    }
+
+    public static function getFullFilePath($path)
+    {
+        return self::getRootLogsDirPath().DIRECTORY_SEPARATOR.$path;
     }
 }

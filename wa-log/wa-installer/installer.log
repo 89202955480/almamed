@@ -105499,3 +105499,1499 @@ waInstaller::__destruct called
 
 
 
+2017-02-24T17:04:50+03:0000001	D80	DEBUG	1,47Mb	1,48Mb	
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 0,
+  'stage_name' => 'unkown_none',
+  'state_heartbeat' => false,
+  'thread_id' => 'D80',
+  'chunk_id' => NULL,
+  'stage_status' => 'none',
+  'timestamp' => 1487945090,
+  'timestamp_float' => 1487945090.3169589,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000002	D80	DEBUG	1,47Mb	1,56Mb	
+waInstaller::formatUpdateList tree
+{------------------------------------------------------------
+array (
+  'targets' => 
+  array (
+    0 => 'wa-apps/logs/',
+  ),
+  'update_list' => 
+  array (
+    'wa-apps/logs' => 
+    array (
+      'source' => 'http://www.webasyst.com/download/archive/wa-apps/logs/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+      'target' => 'wa-apps/logs/',
+      'slug' => 'logs',
+      'md5' => NULL,
+      'pass' => false,
+      'name' => 'Логи',
+      'icon' => '//www.webasyst.com/wa-data/public/updates/img/98/298/icon.png',
+      'update' => true,
+      'subject' => 'app',
+      'edition' => true,
+      'extract_path' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/',
+      'skipped' => false,
+      'dependent' => false,
+    ),
+  ),
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000003	D80	DEBUG	1,48Mb	1,56Mb	
+callback
+{------------------------------------------------------------
+array (
+  0 => 
+  array (
+    'file' => '/wa-installer/lib/classes/wainstaller.class.php:155',
+    'function' => 'waInstaller->envSet()',
+  ),
+  1 => 
+  array (
+    'file' => '/wa-apps/installer/lib/actions/update/installerUpdateExecute.controller.php:49',
+    'function' => 'waInstaller->update(Array(1))',
+  ),
+  2 => 
+  array (
+    'file' => '/wa-system/controller/waController.class.php:21',
+    'function' => 'installerUpdateExecuteController->execute()',
+  ),
+  3 => 
+  array (
+    'file' => '/wa-system/controller/waJsonController.class.php:28',
+    'function' => 'installerUpdateExecuteController(waController)->run()',
+  ),
+  4 => 
+  array (
+    'file' => '/wa-system/controller/waFrontController.class.php:227',
+    'function' => 'installerUpdateExecuteController(waJsonController)->run()',
+  ),
+  5 => 
+  array (
+    'file' => '/wa-system/controller/waFrontController.class.php:162',
+    'function' => 'waFrontController->runController(installerUpdateExecuteController)',
+  ),
+  6 => 
+  array (
+    'file' => '/wa-system/controller/waFrontController.class.php:58',
+    'function' => 'waFrontController->execute()',
+  ),
+  7 => 
+  array (
+    'file' => '/wa-system/waSystem.class.php:538',
+    'function' => 'waFrontController->dispatch()',
+  ),
+  8 => 
+  array (
+    'file' => '/wa-system/waSystem.class.php:476',
+    'function' => 'waSystem->dispatchBackend()',
+  ),
+  9 => 
+  array (
+    'file' => '/index.php:10',
+    'function' => 'waSystem->dispatch()',
+  ),
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000004	D80	TRACE	1,49Mb	1,57Mb	
+Register ob error handler
+{------------------------------------------------------------
+true
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000005	D80	TRACE	1,50Mb	1,59Mb	prepare_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 1,
+  'stage_name' => 'prepare',
+  'state_heartbeat' => 0.17831206321716309,
+  'thread_id' => 'D80',
+  'chunk_id' => 'logs',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1487945090,
+  'timestamp_float' => 1487945090.4952321,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1487945090.4952321,
+  'datetime' => 'Fri, 24 Feb 2017 17:04:50 +0300',
+  'stage_value' => 0,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000006	D80	DEBUG	1,50Mb	1,59Mb	prepare_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000007	D80	TRACE	1,50Mb	1,59Mb	prepare_heartbeat
+checkRequiredSpace
+{------------------------------------------------------------
+array (
+  'disk_free_space' => 32142626816,
+  'source_size' => 114654,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000008	D80	TRACE	1,51Mb	1,59Mb	prepare_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 1,
+  'stage_name' => 'prepare',
+  'state_heartbeat' => 0.0096898078918457031,
+  'thread_id' => 'D80',
+  'chunk_id' => 'logs',
+  'stage_status' => 'complete',
+  'timestamp' => 1487945090,
+  'timestamp_float' => 1487945090.5049131,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1487945090.4952321,
+  'datetime' => 'Fri, 24 Feb 2017 17:04:50 +0300',
+  'stage_value' => 0,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000009	D80	TRACE	1,51Mb	1,60Mb	copy_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'copy',
+  'state_heartbeat' => 0.00050187110900878906,
+  'thread_id' => 'D80',
+  'chunk_id' => 'logs',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1487945090,
+  'timestamp_float' => 1487945090.5053871,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1487945090.5053871,
+  'datetime' => 'Fri, 24 Feb 2017 17:04:50 +0300',
+  'stage_value' => 0,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000010	D80	TRACE	1,51Mb	1,60Mb	copy_heartbeat
+waInstaller::stageCopy
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-apps/logs',
+  'target_path' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs',
+  'source_size' => 114654,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000011	D80	DEBUG	1,51Mb	1,60Mb	copy_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'copy',
+  'state_heartbeat' => 0.010798931121826172,
+  'thread_id' => 'D80',
+  'chunk_id' => 'logs',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1487945090,
+  'timestamp_float' => 1487945090.516176,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1487945090.5053871,
+  'datetime' => 'Fri, 24 Feb 2017 17:04:50 +0300',
+  'stage_value' => 114654,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000012	D80	TRACE	1,51Mb	1,60Mb	copy_heartbeat
+waInstaller::stageCopy
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-apps/logs/templates',
+  'target_path' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/templates',
+  'source_size' => 114654,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000013	D80	DEBUG	1,51Mb	1,60Mb	copy_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/templates',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000014	D80	TRACE	1,51Mb	1,60Mb	copy_heartbeat
+waInstaller::stageCopy
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-apps/logs/templates/includes',
+  'target_path' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/templates/includes',
+  'source_size' => 114654,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000015	D80	DEBUG	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/templates/includes',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000016	D80	TRACE	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::stageCopy
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-apps/logs/templates/actions',
+  'target_path' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/templates/actions',
+  'source_size' => 114654,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000017	D80	DEBUG	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/templates/actions',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000018	D80	TRACE	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::stageCopy
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-apps/logs/templates/actions/backend',
+  'target_path' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/templates/actions/backend',
+  'source_size' => 114654,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000019	D80	DEBUG	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/templates/actions/backend',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000020	D80	TRACE	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::stageCopy
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-apps/logs/templates/layouts',
+  'target_path' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/templates/layouts',
+  'source_size' => 114654,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000021	D80	DEBUG	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/templates/layouts',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000022	D80	TRACE	1,51Mb	1,60Mb	copy_heartbeat
+waInstaller::stageCopy
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-apps/logs/css',
+  'target_path' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/css',
+  'source_size' => 114654,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000023	D80	DEBUG	1,51Mb	1,60Mb	copy_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/css',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000024	D80	TRACE	1,51Mb	1,60Mb	copy_heartbeat
+waInstaller::stageCopy
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-apps/logs/lib',
+  'target_path' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/lib',
+  'source_size' => 114654,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000025	D80	DEBUG	1,51Mb	1,60Mb	copy_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/lib',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000026	D80	TRACE	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::stageCopy
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-apps/logs/lib/actions',
+  'target_path' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/lib/actions',
+  'source_size' => 114654,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000027	D80	DEBUG	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/lib/actions',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000028	D80	TRACE	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::stageCopy
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-apps/logs/lib/actions/backend',
+  'target_path' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/lib/actions/backend',
+  'source_size' => 114654,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000029	D80	DEBUG	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/lib/actions/backend',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000030	D80	TRACE	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::stageCopy
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-apps/logs/lib/classes',
+  'target_path' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/lib/classes',
+  'source_size' => 114654,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000031	D80	DEBUG	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/lib/classes',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000032	D80	TRACE	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::stageCopy
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-apps/logs/lib/updates',
+  'target_path' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/lib/updates',
+  'source_size' => 114654,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000033	D80	DEBUG	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/lib/updates',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000034	D80	TRACE	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::stageCopy
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-apps/logs/lib/config',
+  'target_path' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/lib/config',
+  'source_size' => 114654,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000035	D80	DEBUG	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/lib/config',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000036	D80	TRACE	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::stageCopy
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-apps/logs/lib/layouts',
+  'target_path' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/lib/layouts',
+  'source_size' => 114654,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000037	D80	DEBUG	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/lib/layouts',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000038	D80	TRACE	1,51Mb	1,60Mb	copy_heartbeat
+waInstaller::stageCopy
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-apps/logs/js',
+  'target_path' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/js',
+  'source_size' => 114654,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000039	D80	DEBUG	1,51Mb	1,60Mb	copy_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/js',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000040	D80	TRACE	1,51Mb	1,60Mb	copy_heartbeat
+waInstaller::stageCopy
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-apps/logs/locale',
+  'target_path' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/locale',
+  'source_size' => 114654,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000041	D80	DEBUG	1,51Mb	1,60Mb	copy_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/locale',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000042	D80	TRACE	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::stageCopy
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-apps/logs/locale/en_US',
+  'target_path' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/locale/en_US',
+  'source_size' => 114654,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000043	D80	DEBUG	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/locale/en_US',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000044	D80	TRACE	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::stageCopy
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-apps/logs/locale/en_US/LC_MESSAGES',
+  'target_path' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/locale/en_US/LC_MESSAGES',
+  'source_size' => 114654,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000045	D80	DEBUG	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/locale/en_US/LC_MESSAGES',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000046	D80	TRACE	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::stageCopy
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-apps/logs/locale/ru_RU',
+  'target_path' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/locale/ru_RU',
+  'source_size' => 114654,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000047	D80	DEBUG	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/locale/ru_RU',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000048	D80	TRACE	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::stageCopy
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-apps/logs/locale/ru_RU/LC_MESSAGES',
+  'target_path' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/locale/ru_RU/LC_MESSAGES',
+  'source_size' => 114654,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000049	D80	DEBUG	1,52Mb	1,60Mb	copy_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/locale/ru_RU/LC_MESSAGES',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000050	D80	TRACE	1,51Mb	1,60Mb	copy_heartbeat
+waInstaller::stageCopy
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-apps/logs/img',
+  'target_path' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/img',
+  'source_size' => 114654,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000051	D80	DEBUG	1,51Mb	1,60Mb	copy_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/img',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000052	D80	TRACE	1,51Mb	1,60Mb	copy_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'copy',
+  'state_heartbeat' => 0.10046792030334473,
+  'thread_id' => 'D80',
+  'chunk_id' => 'logs',
+  'stage_status' => 'complete',
+  'timestamp' => 1487945090,
+  'timestamp_float' => 1487945090.6166301,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1487945090.5053871,
+  'datetime' => 'Fri, 24 Feb 2017 17:04:50 +0300',
+  'stage_value' => 114654,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000053	D80	TRACE	1,51Mb	1,62Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.00063991546630859375,
+  'thread_id' => 'D80',
+  'chunk_id' => 'logs',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1487945090,
+  'timestamp_float' => 1487945090.617254,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1487945090.617254,
+  'datetime' => 'Fri, 24 Feb 2017 17:04:50 +0300',
+  'stage_value' => 0,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000054	D80	TRACE	1,51Mb	1,62Mb	download_heartbeat
+waInstaller::downloadCurl :download via cURL
+{------------------------------------------------------------
+array (
+  'source' => 'http://www.webasyst.com/download/archive/wa-apps/logs/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+  'target' => '/home/almamed/web/almamed.su/public_html/wa-data/protected/wa-installer/D80/download/64b0417f69797451104e50256a2fec3b',
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000055	D80	DEBUG	1,51Mb	1,62Mb	download_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/D80/download/',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000056	D80	DEBUG	1,52Mb	1,62Mb	download_heartbeat
+waInstaller::curlHeaderHandler
+{------------------------------------------------------------
+array (
+  'header' => 'Content-Length: 50272
+',
+  'header_matches' => 
+  array (
+    0 => 'Content-Length: 50272',
+    1 => '50272',
+  ),
+  'value' => 50272,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000057	D80	DEBUG	1,52Mb	1,62Mb	download_heartbeat
+waInstaller::curlHeaderHandler
+{------------------------------------------------------------
+array (
+  'header' => 'Content-MD5: JQNKYi5nEuE73qIFAEWhgw==
+',
+  'header_matches' => 
+  array (
+    1 => '25034a622e6712e13bdea2050045a183',
+  ),
+  'value' => '25034a622e6712e13bdea2050045a183',
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000058	D80	DEBUG	1,53Mb	1,62Mb	download_heartbeat
+waInstaller::curlWriteHandler
+{------------------------------------------------------------
+array (
+  'url' => 'http://www.webasyst.com/download/archive/wa-apps/logs/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+  'content_type' => 'application/octet-stream',
+  'http_code' => 200,
+  'header_size' => 374,
+  'request_size' => 295,
+  'filetime' => -1,
+  'ssl_verify_result' => 0,
+  'redirect_count' => 0,
+  'total_time' => 0.084894999999999998,
+  'namelookup_time' => 3.4E-5,
+  'connect_time' => 0.084825999999999999,
+  'pretransfer_time' => 0.084830000000000003,
+  'size_upload' => 0,
+  'size_download' => 11210,
+  'speed_download' => 0,
+  'speed_upload' => 0,
+  'download_content_length' => 50272,
+  'upload_content_length' => 0,
+  'starttransfer_time' => 0.26550499999999999,
+  'redirect_time' => 0,
+  'certinfo' => 
+  array (
+  ),
+  'primary_ip' => '178.33.57.200',
+  'redirect_url' => '',
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000059	D80	DEBUG	1,53Mb	1,62Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.27726507186889648,
+  'thread_id' => 'D80',
+  'chunk_id' => 'logs',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1487945090,
+  'timestamp_float' => 1487945090.8944941,
+  'stage_performance' => 40434.27523737368,
+  'stage_current_value' => 11210,
+  'stage_start_time' => 1487945090.617254,
+  'datetime' => 'Fri, 24 Feb 2017 17:04:50 +0300',
+  'stage_value' => 50272,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000060	D80	DEBUG	1,53Mb	1,63Mb	download_heartbeat
+waInstaller::curlWriteHandler
+{------------------------------------------------------------
+array (
+  'url' => 'http://www.webasyst.com/download/archive/wa-apps/logs/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+  'content_type' => 'application/octet-stream',
+  'http_code' => 200,
+  'header_size' => 374,
+  'request_size' => 295,
+  'filetime' => -1,
+  'ssl_verify_result' => 0,
+  'redirect_count' => 0,
+  'total_time' => 0.26781100000000002,
+  'namelookup_time' => 3.4E-5,
+  'connect_time' => 0.084825999999999999,
+  'pretransfer_time' => 0.084830000000000003,
+  'size_upload' => 0,
+  'size_download' => 14106,
+  'speed_download' => 41857,
+  'speed_upload' => 0,
+  'download_content_length' => 50272,
+  'upload_content_length' => 0,
+  'starttransfer_time' => 0.26550499999999999,
+  'redirect_time' => 0,
+  'certinfo' => 
+  array (
+  ),
+  'primary_ip' => '178.33.57.200',
+  'redirect_url' => '',
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000061	D80	DEBUG	1,53Mb	1,63Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0016520023345947266,
+  'thread_id' => 'D80',
+  'chunk_id' => 'logs',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1487945090,
+  'timestamp_float' => 1487945090.8961339,
+  'stage_performance' => 1766022.7368421052,
+  'stage_current_value' => 14106,
+  'stage_start_time' => 1487945090.617254,
+  'datetime' => 'Fri, 24 Feb 2017 17:04:50 +0300',
+  'stage_value' => 50272,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000062	D80	DEBUG	1,53Mb	1,63Mb	download_heartbeat
+waInstaller::curlWriteHandler
+{------------------------------------------------------------
+array (
+  'url' => 'http://www.webasyst.com/download/archive/wa-apps/logs/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+  'content_type' => 'application/octet-stream',
+  'http_code' => 200,
+  'header_size' => 374,
+  'request_size' => 295,
+  'filetime' => -1,
+  'ssl_verify_result' => 0,
+  'redirect_count' => 0,
+  'total_time' => 0.27221200000000001,
+  'namelookup_time' => 3.4E-5,
+  'connect_time' => 0.084825999999999999,
+  'pretransfer_time' => 0.084830000000000003,
+  'size_upload' => 0,
+  'size_download' => 18450,
+  'speed_download' => 51819,
+  'speed_upload' => 0,
+  'download_content_length' => 50272,
+  'upload_content_length' => 0,
+  'starttransfer_time' => 0.26550499999999999,
+  'redirect_time' => 0,
+  'certinfo' => 
+  array (
+  ),
+  'primary_ip' => '178.33.57.200',
+  'redirect_url' => '',
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000063	D80	DEBUG	1,53Mb	1,63Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.071933984756469727,
+  'thread_id' => 'D80',
+  'chunk_id' => 'logs',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1487945090,
+  'timestamp_float' => 1487945090.9680469,
+  'stage_performance' => 60406.321014504763,
+  'stage_current_value' => 18450,
+  'stage_start_time' => 1487945090.617254,
+  'datetime' => 'Fri, 24 Feb 2017 17:04:50 +0300',
+  'stage_value' => 50272,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000064	D80	DEBUG	1,54Mb	1,63Mb	download_heartbeat
+waInstaller::curlWriteHandler
+{------------------------------------------------------------
+array (
+  'url' => 'http://www.webasyst.com/download/archive/wa-apps/logs/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+  'content_type' => 'application/octet-stream',
+  'http_code' => 200,
+  'header_size' => 374,
+  'request_size' => 295,
+  'filetime' => -1,
+  'ssl_verify_result' => 0,
+  'redirect_count' => 0,
+  'total_time' => 0.34090399999999998,
+  'namelookup_time' => 3.4E-5,
+  'connect_time' => 0.084825999999999999,
+  'pretransfer_time' => 0.084830000000000003,
+  'size_upload' => 0,
+  'size_download' => 32930,
+  'speed_download' => 54120,
+  'speed_upload' => 0,
+  'download_content_length' => 50272,
+  'upload_content_length' => 0,
+  'starttransfer_time' => 0.26550499999999999,
+  'redirect_time' => 0,
+  'certinfo' => 
+  array (
+  ),
+  'primary_ip' => '178.33.57.200',
+  'redirect_url' => '',
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000065	D80	DEBUG	1,54Mb	1,63Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0010590553283691406,
+  'thread_id' => 'D80',
+  'chunk_id' => 'logs',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1487945090,
+  'timestamp_float' => 1487945090.9690981,
+  'stage_performance' => 13774897.237468814,
+  'stage_current_value' => 32930,
+  'stage_start_time' => 1487945090.617254,
+  'datetime' => 'Fri, 24 Feb 2017 17:04:50 +0300',
+  'stage_value' => 50272,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000066	D80	DEBUG	1,53Mb	1,64Mb	download_heartbeat
+waInstaller::curlWriteHandler
+{------------------------------------------------------------
+array (
+  'url' => 'http://www.webasyst.com/download/archive/wa-apps/logs/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+  'content_type' => 'application/octet-stream',
+  'http_code' => 200,
+  'header_size' => 374,
+  'request_size' => 295,
+  'filetime' => -1,
+  'ssl_verify_result' => 0,
+  'redirect_count' => 0,
+  'total_time' => 0.34444200000000003,
+  'namelookup_time' => 3.4E-5,
+  'connect_time' => 0.084825999999999999,
+  'pretransfer_time' => 0.084830000000000003,
+  'size_upload' => 0,
+  'size_download' => 40170,
+  'speed_download' => 95603,
+  'speed_upload' => 0,
+  'download_content_length' => 50272,
+  'upload_content_length' => 0,
+  'starttransfer_time' => 0.26550499999999999,
+  'redirect_time' => 0,
+  'certinfo' => 
+  array (
+  ),
+  'primary_ip' => '178.33.57.200',
+  'redirect_url' => '',
+)
+}------------------------------------------------------------
+2017-02-24T17:04:50+03:0000067	D80	DEBUG	1,53Mb	1,64Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.003543853759765625,
+  'thread_id' => 'D80',
+  'chunk_id' => 'logs',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1487945090,
+  'timestamp_float' => 1487945090.97263,
+  'stage_performance' => 2049869.107600918,
+  'stage_current_value' => 40170,
+  'stage_start_time' => 1487945090.617254,
+  'datetime' => 'Fri, 24 Feb 2017 17:04:50 +0300',
+  'stage_value' => 50272,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:51+03:0000068	D80	DEBUG	1,53Mb	1,64Mb	download_heartbeat
+waInstaller::curlWriteHandler
+{------------------------------------------------------------
+array (
+  'url' => 'http://www.webasyst.com/download/archive/wa-apps/logs/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+  'content_type' => 'application/octet-stream',
+  'http_code' => 200,
+  'header_size' => 374,
+  'request_size' => 295,
+  'filetime' => -1,
+  'ssl_verify_result' => 0,
+  'redirect_count' => 0,
+  'total_time' => 0.34809299999999999,
+  'namelookup_time' => 3.4E-5,
+  'connect_time' => 0.084825999999999999,
+  'pretransfer_time' => 0.084830000000000003,
+  'size_upload' => 0,
+  'size_download' => 45962,
+  'speed_download' => 115400,
+  'speed_upload' => 0,
+  'download_content_length' => 50272,
+  'upload_content_length' => 0,
+  'starttransfer_time' => 0.26550499999999999,
+  'redirect_time' => 0,
+  'certinfo' => 
+  array (
+  ),
+  'primary_ip' => '178.33.57.200',
+  'redirect_url' => '',
+)
+}------------------------------------------------------------
+2017-02-24T17:04:51+03:0000069	D80	DEBUG	1,53Mb	1,64Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.069535017013549805,
+  'thread_id' => 'D80',
+  'chunk_id' => 'logs',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1487945091,
+  'timestamp_float' => 1487945091.0421441,
+  'stage_performance' => 83321.301975902286,
+  'stage_current_value' => 45962,
+  'stage_start_time' => 1487945090.617254,
+  'datetime' => 'Fri, 24 Feb 2017 17:04:50 +0300',
+  'stage_value' => 50272,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:51+03:0000070	D80	DEBUG	1,53Mb	1,64Mb	download_heartbeat
+waInstaller::curlWriteHandler
+{------------------------------------------------------------
+array (
+  'url' => 'http://www.webasyst.com/download/archive/wa-apps/logs/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+  'content_type' => 'application/octet-stream',
+  'http_code' => 200,
+  'header_size' => 374,
+  'request_size' => 295,
+  'filetime' => -1,
+  'ssl_verify_result' => 0,
+  'redirect_count' => 0,
+  'total_time' => 0.41506999999999999,
+  'namelookup_time' => 3.4E-5,
+  'connect_time' => 0.084825999999999999,
+  'pretransfer_time' => 0.084830000000000003,
+  'size_upload' => 0,
+  'size_download' => 50272,
+  'speed_download' => 110733,
+  'speed_upload' => 0,
+  'download_content_length' => 50272,
+  'upload_content_length' => 0,
+  'starttransfer_time' => 0.26550499999999999,
+  'redirect_time' => 0,
+  'certinfo' => 
+  array (
+  ),
+  'primary_ip' => '178.33.57.200',
+  'redirect_url' => '',
+)
+}------------------------------------------------------------
+2017-02-24T17:04:51+03:0000071	D80	DEBUG	1,53Mb	1,64Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0010778903961181641,
+  'thread_id' => 'D80',
+  'chunk_id' => 'logs',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1487945091,
+  'timestamp_float' => 1487945091.0432141,
+  'stage_performance' => 4027952.3707664884,
+  'stage_current_value' => 50272,
+  'stage_start_time' => 1487945090.617254,
+  'datetime' => 'Fri, 24 Feb 2017 17:04:50 +0300',
+  'stage_value' => 50272,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:51+03:0000072	D80	DEBUG	1,53Mb	1,64Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0032608509063720703,
+  'thread_id' => 'D80',
+  'chunk_id' => 'logs',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1487945091,
+  'timestamp_float' => 1487945091.0464671,
+  'stage_performance' => 0,
+  'stage_current_value' => 50272,
+  'stage_start_time' => 1487945090.617254,
+  'datetime' => 'Fri, 24 Feb 2017 17:04:50 +0300',
+  'stage_value' => 50272,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:51+03:0000073	D80	TRACE	1,52Mb	1,64Mb	download_heartbeat
+MD5 hash 25034a622e6712e13bdea2050045a183 get from header
+2017-02-24T17:04:51+03:0000074	D80	TRACE	1,53Mb	1,64Mb	download_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0016698837280273438,
+  'thread_id' => 'D80',
+  'chunk_id' => 'logs',
+  'stage_status' => 'complete',
+  'timestamp' => 1487945091,
+  'timestamp_float' => 1487945091.048131,
+  'stage_performance' => 0,
+  'stage_current_value' => 50272,
+  'stage_start_time' => 1487945090.617254,
+  'datetime' => 'Fri, 24 Feb 2017 17:04:50 +0300',
+  'stage_value' => 50272,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:51+03:0000075	D80	TRACE	1,53Mb	1,64Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 4,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.0028440952301025391,
+  'thread_id' => 'D80',
+  'chunk_id' => 'logs',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1487945091,
+  'timestamp_float' => 1487945091.050957,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1487945091.050957,
+  'datetime' => 'Fri, 24 Feb 2017 17:04:51 +0300',
+  'stage_value' => 0,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:51+03:0000076	D80	TRACE	1,53Mb	1,64Mb	extract_heartbeat
+waInstaller::stageExtract
+{------------------------------------------------------------
+array (
+  'compressed_file' => '/home/almamed/web/almamed.su/public_html/wa-data/protected/wa-installer/D80/download/64b0417f69797451104e50256a2fec3b',
+  'target_path' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/',
+  'base_path' => 'wa-apps/logs/',
+)
+}------------------------------------------------------------
+2017-02-24T17:04:51+03:0000077	D80	DEBUG	2,08Mb	2,13Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 4,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.083555936813354492,
+  'thread_id' => 'D80',
+  'chunk_id' => 'logs',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1487945091,
+  'timestamp_float' => 1487945091.1344831,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1487945091.050957,
+  'datetime' => 'Fri, 24 Feb 2017 17:04:51 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => NULL,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-02-24T17:04:51+03:0000078	D80	DEBUG	2,09Mb	2,15Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 4,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.0015189647674560547,
+  'thread_id' => 'D80',
+  'chunk_id' => 'logs',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1487945091,
+  'timestamp_float' => 1487945091.1359921,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1487945091.050957,
+  'datetime' => 'Fri, 24 Feb 2017 17:04:51 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 0,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-02-24T17:04:51+03:0000079	D80	DEBUG	2,09Mb	2,17Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 4,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.021136999130249023,
+  'thread_id' => 'D80',
+  'chunk_id' => 'logs',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1487945091,
+  'timestamp_float' => 1487945091.1571169,
+  'stage_performance' => 5453295.7970294794,
+  'stage_current_value' => 115200,
+  'stage_start_time' => 1487945091.050957,
+  'datetime' => 'Fri, 24 Feb 2017 17:04:51 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 225,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-02-24T17:04:51+03:0000080	D80	TRACE	2,07Mb	2,17Mb	extract_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 4,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.0099401473999023438,
+  'thread_id' => 'D80',
+  'chunk_id' => 'logs',
+  'stage_status' => 'complete',
+  'timestamp' => 1487945091,
+  'timestamp_float' => 1487945091.167047,
+  'stage_performance' => 0,
+  'stage_current_value' => 115200,
+  'stage_start_time' => 1487945091.050957,
+  'datetime' => 'Fri, 24 Feb 2017 17:04:51 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 225,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-02-24T17:04:51+03:0000081	D80	TRACE	2,07Mb	2,17Mb	replace_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 5,
+  'stage_name' => 'replace',
+  'state_heartbeat' => 0.00079607963562011719,
+  'thread_id' => 'D80',
+  'chunk_id' => 'logs',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1487945091,
+  'timestamp_float' => 1487945091.1678281,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1487945091.1678281,
+  'datetime' => 'Fri, 24 Feb 2017 17:04:51 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 225,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-02-24T17:04:51+03:0000082	D80	TRACE	2,07Mb	2,17Mb	replace_heartbeat
+waInstaller::stageReplace
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs',
+  'target_path' => 'wa-apps/logs',
+  'store_prev' => false,
+)
+}------------------------------------------------------------
+2017-02-24T17:04:51+03:0000083	D80	TRACE	2,07Mb	2,17Mb	replace_heartbeat
+waInstaller::rename replace current version code
+{------------------------------------------------------------
+array (
+  'oldname' => 'wa-data/protected/wa-installer/backup/wa-apps/logs',
+  'newname' => 'wa-data/protected/wa-installer/backup/wa-apps/logs.cef9202fa2d56123416b806a6f1efc46',
+)
+}------------------------------------------------------------
+2017-02-24T17:04:51+03:0000084	D80	TRACE	2,07Mb	2,17Mb	replace_heartbeat
+waInstaller::rename replace current version code
+{------------------------------------------------------------
+array (
+  'oldname' => 'wa-apps/logs',
+  'newname' => 'wa-data/protected/wa-installer/backup/wa-apps/logs',
+)
+}------------------------------------------------------------
+2017-02-24T17:04:51+03:0000085	D80	TRACE	2,07Mb	2,17Mb	replace_heartbeat
+waInstaller::stageReplace backup current version code
+{------------------------------------------------------------
+array (
+  'backup_path' => 'wa-data/protected/wa-installer/backup/wa-apps/logs',
+)
+}------------------------------------------------------------
+2017-02-24T17:04:51+03:0000086	D80	TRACE	2,07Mb	2,17Mb	replace_heartbeat
+waInstaller::rename replace current version code
+{------------------------------------------------------------
+array (
+  'oldname' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs',
+  'newname' => 'wa-apps/logs',
+)
+}------------------------------------------------------------
+2017-02-24T17:04:51+03:0000087	D80	TRACE	2,07Mb	2,17Mb	replace_heartbeat
+waInstaller::stageReplace replace current version code
+{------------------------------------------------------------
+array (
+  'target_path' => 'wa-apps/logs',
+)
+}------------------------------------------------------------
+2017-02-24T17:04:51+03:0000088	D80	TRACE	2,07Mb	2,17Mb	replace_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 5,
+  'stage_name' => 'replace',
+  'state_heartbeat' => 0.11028385162353516,
+  'thread_id' => 'D80',
+  'chunk_id' => 'logs',
+  'stage_status' => 'complete',
+  'timestamp' => 1487945091,
+  'timestamp_float' => 1487945091.2780941,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1487945091.1678281,
+  'datetime' => 'Fri, 24 Feb 2017 17:04:51 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 225,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-02-24T17:04:51+03:0000089	D80	TRACE	2,07Mb	2,17Mb	cleanup_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 6,
+  'stage_name' => 'cleanup',
+  'state_heartbeat' => 0.0015039443969726562,
+  'thread_id' => 'D80',
+  'chunk_id' => 'logs',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1487945091,
+  'timestamp_float' => 1487945091.2795711,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1487945091.2795711,
+  'datetime' => 'Fri, 24 Feb 2017 17:04:51 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 225,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-02-24T17:04:51+03:0000090	D80	TRACE	2,07Mb	2,17Mb	cleanup_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 6,
+  'stage_name' => 'cleanup',
+  'state_heartbeat' => 0.027143001556396484,
+  'thread_id' => 'D80',
+  'chunk_id' => 'logs',
+  'stage_status' => 'complete',
+  'timestamp' => 1487945091,
+  'timestamp_float' => 1487945091.3067031,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1487945091.2795711,
+  'datetime' => 'Fri, 24 Feb 2017 17:04:51 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 225,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-02-24T17:04:51+03:0000091	D80	TRACE	2,07Mb	2,18Mb	update_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 7,
+  'stage_name' => 'update',
+  'state_heartbeat' => 0.00095486640930175781,
+  'thread_id' => 'D80',
+  'chunk_id' => 'logs',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1487945091,
+  'timestamp_float' => 1487945091.3076429,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1487945091.3076429,
+  'datetime' => 'Fri, 24 Feb 2017 17:04:51 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 225,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-02-24T17:04:51+03:0000092	D80	TRACE	2,07Mb	2,19Mb	update_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1487945090,
+  'start_time_float' => 1487945090.3169501,
+  'elapsed_time' => 0,
+  'stage' => 7,
+  'stage_name' => 'update',
+  'state_heartbeat' => 0.0099561214447021484,
+  'thread_id' => 'D80',
+  'chunk_id' => 'logs',
+  'stage_status' => 'complete',
+  'timestamp' => 1487945091,
+  'timestamp_float' => 1487945091.3175881,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1487945091.3076429,
+  'datetime' => 'Fri, 24 Feb 2017 17:04:51 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 225,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-02-24T17:04:51+03:0000093	D80	DEBUG	2,07Mb	2,20Mb	update_complete
+waInstaller::update
+{------------------------------------------------------------
+array (
+  'update_list' => 
+  array (
+    'wa-apps/logs' => 
+    array (
+      'source' => 'http://www.webasyst.com/download/archive/wa-apps/logs/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+      'target' => 'wa-apps/logs/',
+      'slug' => 'logs',
+      'md5' => NULL,
+      'pass' => false,
+      'name' => 'Логи',
+      'icon' => '//www.webasyst.com/wa-data/public/updates/img/98/298/icon.png',
+      'update' => true,
+      'subject' => 'app',
+      'edition' => true,
+      'extract_path' => 'wa-data/protected/wa-installer/D80/update/wa-apps/logs/',
+      'skipped' => false,
+      'dependent' => false,
+      'current_size' => 114654,
+      'archive' => '/home/almamed/web/almamed.su/public_html/wa-data/protected/wa-installer/D80/download/64b0417f69797451104e50256a2fec3b',
+      'backup' => 'wa-data/protected/wa-installer/backup/wa-apps/logs',
+    ),
+  ),
+)
+}------------------------------------------------------------
+2017-02-24T17:05:01+03:0000094	D80	TRACE	2,19Mb	2,27Mb	update_complete
+waInstaller::__destruct called
+
+
+

@@ -149,10 +149,6 @@ msgstr ""
 msgid "Notify me on large logs size"
 msgstr ""
 
-#: /wa-apps/logs/lib/actions/backend/logsBackendSettings.action.php:43
-msgid "Show indicator next to app icon in main menu when total logs size exceed 1 GB."
-msgstr ""
-
 #: /wa-apps/logs/lib/config/logsConfig.class.php:27
 msgid "1GB+"
 msgstr ""
@@ -204,4 +200,81 @@ msgstr ""
 #: /wa-apps/logs/lib/actions/backend/logsBackendSettings.action.php:42
 #: /wa-apps/logs/lib/actions/backend/logsBackendSettings.action.php:58
 msgid "PHP errors will be logged during 1 hour only, to prevent large error logs from occupying server disk space."
+msgstr ""
+
+#: /wa-apps/logs/templates/actions/dialog/DialogPublished.html:2
+msgid "Not published"
+msgstr ""
+
+#: /wa-apps/logs/templates/actions/dialog/DialogPublished.html:6
+msgid "Published"
+msgstr ""
+
+#: /wa-apps/logs/templates/actions/backend/BackendNavigation.html:10
+msgid "Public link"
+msgstr ""
+
+#: /wa-apps/logs/lib/actions/frontend/logsFrontendDownloadFile.controller.php:10
+msgid "Empty file path."
+msgstr ""
+
+#: /wa-apps/logs/lib/actions/frontend/logsFrontendDownloadFile.controller.php:16
+msgid "File %s is not published."
+msgstr ""
+
+#: /wa-apps/logs/lib/actions/frontend/logsFrontendDownloadFile.controller.php:22
+msgid "File %s does not exist."
+msgstr ""
+
+#: /wa-apps/logs/templates/actions/dialog/DialogPublished.html:16
+msgid "No routing rules available for sharing files. Add a <em>hidden</em> rule for Logs app in Site app’s “<a href=\"%s\">Structure</a>” section."
+msgstr ""
+
+#: /wa-apps/logs/templates/actions/backend/BackendNavigation.html:10
+msgid "Share link"
+msgstr ""
+
+#: /wa-apps/logs/templates/includes/fileList.html:7
+msgid "Shared file"
+msgstr ""
+
+#: /wa-apps/logs/lib/actions/frontend/logsFrontendDownloadFile.controller.php:12
+msgid "Empty hash or file path"
+msgstr ""
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendDelete.controller.php:11
+msgid "Empty file path submitted for deletion."
+msgstr ""
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendDelete.controller.php:15
+msgid "Insufficient access rights for user id=%u to delete log file %s."
+msgstr ""
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendDelete.controller.php:22
+msgid "File %s is not available for deletion."
+msgstr ""
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendDelete.controller.php:28
+msgid "Could not delete file %s."
+msgstr ""
+
+#: /wa-apps/logs/lib/actions/frontend/logsFrontendDownloadFile.controller.php:12
+msgid "Empty hash or file path."
+msgstr ""
+
+#: /wa-apps/logs/templates/actions/dialog/DialogPublished.html:18
+#: /wa-apps/logs/lib/actions/backend/logsBackendUpdatePublishedStatus.controller.php:9
+msgid "You have no permission to publish or unpublish log files."
+msgstr ""
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendUpdatePublishedStatus.controller.php:16
+msgid "Incorrect data received. Reload this page and try again."
+msgstr ""
+
+#: /wa-apps/logs/lib/actions/backend/logsBackendUpdatePublishedStatus.controller.php:21
+msgid "This file is not available any more. Reload this page."
+msgstr ""
+
+#: /wa-apps/logs/lib/config/logsRightConfig.class.php:8
+msgid "Can publish and unpublish files"
 msgstr ""

@@ -4,22 +4,36 @@ class logsBackendDeleteController extends waJsonController
 {
     public function execute()
     {
-        $path = waRequest::post('path');
+        $path = waRequest::post('path', '', waRequest::TYPE_STRING_TRIM);
 
-        $deleted = false;
-        if ($this->getRights('delete_files')) {
-            if ($path) {
-                $full_path = logsHelper::getAbsolutePath($path);
-                if (!is_dir($full_path)) {
-                    $available = logsHelper::checkPath($full_path, false);
-                    if ($available) {
-                        $deleted = waFiles::delete($full_path);
-                    }
-                }
+        try {
+            if (!strlen($path)) {
+                throw new Exception(_w('Empty file path submitted for deletion.'));
             }
-        }
-        if ($deleted) {
+
+            if (!$this->getRights('delete_files')) {
+                throw new Exception(sprintf(_w('Insufficient access rights for user id=%u to delete log file %s.'), wa()->getUser()->getId(), $path));
+            }
+
+            $full_path = logsHelper::getAbsolutePath($path);
+            $available = logsHelper::checkPath($full_path, false);
+
+            if (!$available) {
+                throw new Exception(sprintf(_w('File %s is not available for deletion.'), $path));
+            }
+
+            $deleted = waFiles::delete($full_path);
+
+            if (!$deleted) {
+                throw new Exception(sprintf(_w('Could not delete file %s.'), $path));
+            }
+
             $this->logAction('file_delete', $path);
+
+            $published_model = new logsPublishedModel();
+            $published_model->deleteByField(array(
+                'path' => $path,
+            ));
 
             $update_total_size = (bool) waRequest::get('update_size', 0, waRequest::TYPE_INT);
             if ($update_total_size) {
@@ -37,8 +51,9 @@ class logsBackendDeleteController extends waJsonController
             } else {
                 $this->response['total_size'] = '';
             }
-        } else {
-            $this->errors[] = _wp('File cannot be deleted');
+        } catch (Exception $e) {
+            logsHelper::log($e->getMessage());
+            $this->errors[] = _wp('File cannot be deleted. See logs/errors.log file for details.');
         }
     }
 }

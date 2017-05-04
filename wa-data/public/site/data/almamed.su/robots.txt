@@ -1,9 +1,9 @@
 User-agent: *
-# wa shop *
 Disallow: /my/
 Disallow: /checkout/
 # razdel sajta
 Disallow: /i/*
-# wa shop
+Disallow: /webasyst/*
+
 Host: almamed.su
 Sitemap: http://almamed.su/sitemap.xml

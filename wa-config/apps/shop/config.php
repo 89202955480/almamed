@@ -1,6 +1,5 @@
 <?php
 return array (
-  'lazy_loading' => 1,
   'notification_name' => 'general',
   'discount_description' => 1,
   'filters_features' => 'join',

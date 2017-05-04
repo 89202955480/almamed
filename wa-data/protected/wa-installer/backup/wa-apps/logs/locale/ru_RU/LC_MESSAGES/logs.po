@@ -13,7 +13,7 @@ msgstr ""
 "%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: .\n"
 
@@ -251,3 +251,12 @@ msgid ""
 msgstr ""
 "Ошибки PHP будут логироваться только в течение 1 часа во избежание "
 "заполнения дискового пространства большими файлами логов."
+
+msgid "Function <tt>phpinfo()</tt> is not available on your server."
+msgstr "Функция <tt>phpinfo()</tt> недоступна на этом сервере."
+
+msgid "Close"
+msgstr "Закрыть"
+
+msgid "Cannot show PHP configuration"
+msgstr "Просмотр конфигурации PHP невозможен"

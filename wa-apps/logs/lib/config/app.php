@@ -8,8 +8,12 @@ return array (
         48 => 'img/logs48.png',
         96 => 'img/logs96.png',
     ),
-    'version' => '0.8.3',
+    'version' => '0.9.0',
     'rights' => 1,
     'vendor' => 817747,
     'sash_color' => '#558FCE',
+    'frontend' => true,
+    'routing_params' => array(
+        'private' => true,
+    ),
 );

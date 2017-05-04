@@ -24,7 +24,6 @@ class logsConfig extends waAppConfig
             //if PHP logging was enabled with disabled debug_mode (WITH time limit) and then debug_mode was enabled
             //change logging WITH time limit to logging WITHOUT time limit
             logsPhpLogging::setSetting(true);    //existing logging config is removed automatically when logging is being enabled
-
         } elseif (!logsHelper::inCloud()
         && !waSystemConfig::isDebug()
         && logsPhpLogging::getSetting()
@@ -33,7 +32,6 @@ class logsConfig extends waAppConfig
             //if PHP logging was enabled with enabled debug_mode (WITH no time limit) and then debug_mode was disabled
             //change logging WITHOUT time limit to logging WITH time limit
             logsPhpLogging::setSetting(true);    //existing logging config is removed automatically when logging is being enabled
-
         } elseif ((int) $asm->get('logs', 'php_log_with_time_limit') == 1
         && logsPhpLogging::configExists(true)
         && !logsPhpLogging::getSetting()) {

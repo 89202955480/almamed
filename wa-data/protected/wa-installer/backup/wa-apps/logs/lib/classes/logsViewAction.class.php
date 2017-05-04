@@ -1,6 +1,6 @@
 <?php
 
-class logsViewAction extends waViewAction
+abstract class logsViewAction extends waViewAction
 {
     public function __construct()
     {
@@ -33,7 +33,9 @@ class logsViewAction extends waViewAction
                 ));
             }
         } else {
-            if (!$is_navigation_action) {
+            if ($is_navigation_action) {
+                $this->view->assign('phpinfo_available', function_exists('phpinfo'));
+            } else {
                 wa()->getResponse()->setCookie('back_url', wa()->getConfig()->getCurrentUrl());
             }
         }

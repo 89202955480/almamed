@@ -4,26 +4,23 @@ return array (
   array (
     'new' => 
     array (
-      'name' => 'Новый',
+      'name' => 'Новый / Не обработан',
       'options' => 
       array (
-        'icon' => 'icon16 ss new',
         'style' => 
         array (
-          'color' => '#009900',
+          'color' => '#7d7a0a',
           'font-weight' => 'bold',
         ),
+        'icon' => 'icon16 ss flag-yellow',
       ),
       'available_actions' => 
       array (
         0 => 'process',
-        1 => 'pay',
-        2 => 'ship',
-        3 => 'complete',
-        4 => 'comment',
-        5 => 'edit',
-        6 => 'message',
-        7 => 'delete',
+        1 => 'comment',
+        2 => 'edit',
+        3 => 'message',
+        4 => 'delete',
       ),
       'classname' => 'shopWorkflowState',
     ),
@@ -32,22 +29,21 @@ return array (
       'name' => 'Подтвержден',
       'options' => 
       array (
-        'icon' => 'icon16 ss confirmed',
         'style' => 
         array (
           'color' => '#008800',
           'font-style' => 'italic',
         ),
+        'icon' => 'icon16 ss new',
       ),
       'available_actions' => 
       array (
-        0 => 'pay',
-        1 => 'ship',
-        2 => 'complete',
+        0 => 'zayavka-s-zaprosom-tseny-obrabot',
+        1 => 'pay',
+        2 => 'delete',
         3 => 'comment',
         4 => 'edit',
         5 => 'message',
-        6 => 'delete',
       ),
       'classname' => 'shopWorkflowState',
     ),
@@ -56,20 +52,41 @@ return array (
       'name' => 'Оплачен',
       'options' => 
       array (
-        'icon' => 'icon16 ss flag-yellow',
         'style' => 
         array (
-          'color' => '#FF9900',
+          'color' => '#ff9900',
           'font-weight' => 'bold',
           'font-style' => 'italic',
         ),
+        'icon' => 'icon16 ss flag-yellow',
+      ),
+      'available_actions' => 
+      array (
+        0 => 'edit',
+        1 => 'peredan-na-otgruzku',
+        2 => 'refund',
+        3 => 'comment',
+        4 => 'message',
+      ),
+      'classname' => 'shopWorkflowState',
+    ),
+    'peredan-na-otgru' => 
+    array (
+      'name' => 'Передан на отгрузку',
+      'options' => 
+      array (
+        'style' => 
+        array (
+          'color' => '#668e3b',
+        ),
+        'icon' => 'icon16 ss new',
       ),
       'available_actions' => 
       array (
         0 => 'ship',
-        1 => 'complete',
-        2 => 'refund',
-        3 => 'comment',
+        1 => 'refund',
+        2 => 'edit',
+        3 => 'complete',
         4 => 'message',
       ),
       'classname' => 'shopWorkflowState',
@@ -95,6 +112,24 @@ return array (
       ),
       'classname' => 'shopWorkflowState',
     ),
+    'zayavka-s-zapros' => 
+    array (
+      'name' => 'Заявка с запросом цены (обработана)',
+      'options' => 
+      array (
+        'style' => 
+        array (
+          'color' => '#800080',
+        ),
+        'icon' => 'icon16 ss flag-purple',
+      ),
+      'available_actions' => 
+      array (
+        0 => 'pay',
+        1 => 'delete',
+        2 => 'message',
+      ),
+    ),
     'completed' => 
     array (
       'name' => 'Выполнен',
@@ -119,15 +154,16 @@ return array (
       'name' => 'Возврат',
       'options' => 
       array (
-        'icon' => 'icon16 ss refunded',
         'style' => 
         array (
           'color' => '#cc0000',
         ),
+        'icon' => 'icon16 ss refunded',
       ),
       'available_actions' => 
       array (
-        0 => 'message',
+        0 => 'delete',
+        1 => 'message',
       ),
       'classname' => 'shopWorkflowState',
     ),
@@ -260,7 +296,11 @@ return array (
         'position' => 'top',
         'icon' => 'email',
         'log_record' => 'Сообщение отправлено',
-        'template' => '',
+        'template' => 'Доброго часа, информация по заказу ****!
+
+
+
+Спасибо за Ваш заказ в компании АльмаМед!',
       ),
     ),
     'comment' => 
@@ -295,6 +335,32 @@ return array (
         'head' => true,
         'log_record' => 'Заказ был объединен с другим',
       ),
+    ),
+    'peredan-na-otgruzku' => 
+    array (
+      'name' => 'Передан на отгрузку',
+      'options' => 
+      array (
+        'position' => '',
+        'button_class' => '',
+        'border_color' => 'e6de4e',
+      ),
+      'state' => 'peredan-na-otgru',
+      'classname' => 'shopWorkflowAction',
+      'id' => 'peredan-na-otgruzku',
+    ),
+    'zayavka-s-zaprosom-tseny-obrabot' => 
+    array (
+      'name' => 'Заявка с запросом цены (обработана)',
+      'options' => 
+      array (
+        'position' => '',
+        'button_class' => '',
+        'border_color' => 'ddd',
+      ),
+      'state' => 'zayavka-s-zapros',
+      'classname' => 'shopWorkflowAction',
+      'id' => 'zayavka-s-zaprosom-tseny-obrabot',
     ),
   ),
 );

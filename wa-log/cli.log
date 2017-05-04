@@ -11,3 +11,38 @@ Stack trace:
 #5 /home/almamed/web/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
 #6 /home/almamed/web/almamed.su/public_html/cli.php(3): require_once('/home/almamed/w...')
 #7 {main}
+
+2017-03-10 08:00:16 
+2017-03-10 08:00:16 php /home/almamed/web/almamed.su/public_html/cli.php shop followup
+Error: Got error 28 from storage engine
+with code 1030 in '/home/almamed/web/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php' around line 280
+
+Call stack:
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(280)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(156): waDbMysqliAdapter->exception()
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(171): waDbMysqliAdapter->schema('wa_app_settings', false)
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(127): waModel->describe()
+#3 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(93): waModel->getFields()
+#4 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(77): waModel->getMetadata()
+#5 /home/almamed/web/almamed.su/public_html/wa-system/config/waAppConfig.class.php(266): waModel->__construct()
+#6 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(94): waAppConfig->checkUpdates()
+#7 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(710): waSystem::getInstance('webasyst')
+#8 /home/almamed/web/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#9 /home/almamed/web/almamed.su/public_html/cli.php(3): require_once('/home/almamed/w...')
+#10 {main}
+
+2017-03-13 08:30:09 
+2017-03-13 08:30:09 php /home/almamed/web/almamed.su/public_html/cli.php shop followup
+Error: Got error 28 from storage engine
+with code 1030 in '/home/almamed/web/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php' around line 280
+
+Call stack:
+## /home/almamed/web/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(280)
+#0 /home/almamed/web/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(156): waDbMysqliAdapter->exception()
+#1 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(171): waDbMysqliAdapter->schema('wa_app_settings', false)
+#2 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(127): waModel->describe()
+#3 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(93): waModel->getFields()
+#4 /home/almamed/web/almamed.su/public_html/wa-system/database/waModel.class.php(77): waModel->getMetadata()
+#5 /home/almamed/web/almamed.su/public_html/wa-system/config/waAppConfig.class.php(266): waModel->__construct()
+#6 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(94): waAppConfig->checkUpdates()
+#7 /home/almamed/web/almamed.su/public_html/wa-system/waSystem.class.php(710): waSystem

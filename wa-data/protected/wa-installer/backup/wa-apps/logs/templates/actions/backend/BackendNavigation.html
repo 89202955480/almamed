@@ -28,7 +28,7 @@
             <i class="icon16 settings" title="[`Settings`]"></i>
         {/if}
         {if ifset($rights.view_phpinfo, $admin)}
-            <a href="?action=phpinfo" title="[`View PHP info`]" target="_blank"><i class="icon16 script-php"></i></a>
+            <a href="?action=phpinfo" title="[`View PHP info`]" target="_blank"{if !$phpinfo_available} class="phpinfo-disabled-link"{/if}><i class="icon16 script-php"></i></a>
         {/if}
     </div>
 

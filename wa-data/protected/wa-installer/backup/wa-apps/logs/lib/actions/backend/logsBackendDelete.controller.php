@@ -37,7 +37,6 @@ class logsBackendDeleteController extends waJsonController
             } else {
                 $this->response['total_size'] = '';
             }
-
         } else {
             $this->errors[] = _wp('File cannot be deleted');
         }

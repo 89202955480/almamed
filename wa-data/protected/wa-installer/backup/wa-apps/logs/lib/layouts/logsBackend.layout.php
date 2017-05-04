@@ -13,6 +13,9 @@ class logsBackendLayout extends waLayout
             'Settings',
             'nothing received',
             'Save',
+            'Function <tt>phpinfo()</tt> is not available on your server.',
+            'Close',
+            'Cannot show PHP configuration',
         );
         $loc = array_flip($loc);
         foreach ($loc as $key => &$string) {

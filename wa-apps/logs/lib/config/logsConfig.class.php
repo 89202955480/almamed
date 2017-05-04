@@ -5,7 +5,8 @@ class logsConfig extends waAppConfig
     public function explainLogs($logs)
     {
         foreach ($logs as $id => $log) {
-            if ($log['action'] == 'file_delete' && strlen(ifset($log['params']))) {
+            if (in_array($log['action'], array('file_delete', 'file_publish', 'file_unpublish'))
+            && strlen(ifset($log['params']))) {
                 $logs[$id]['params_html'] = 'wa-log/'.$log['params'];
             }
         }

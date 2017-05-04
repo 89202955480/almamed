@@ -36,9 +36,8 @@
                 {if $tax > 0} 
                     <td class="align-right nowrap">{if isset($item.tax)}{shop_currency_html($item.tax, true)}{else}&ndash;{/if}</td>
                 {/if}
-                <td class="align-right nowrap">{if shop_currency_html($item.price) == 0}<div class="buy-box-product" data-tooltip="Цена зависит от комплектации прибора и/или наличия на складах в России.
-                При заказе данного продукта Вам перезвонит менеджер и уточнит все детали.
-                В случаи если Вас не устроит текущая цена или комплектация, Вы всегда сможете отказаться от товара до момента оплаты.">
+                <td class="align-right nowrap">{if shop_currency_html($item.price) == 0}                        
+                <div class="buy-box-product" data-tooltip="Цена зависит от комплектации прибора и/или наличия на складах в России. При заказе данного продукта Вам перезвонит менеджер и уточнит все детали. В случае, если Вас не устроит текущая цена или комплектация, Вы всегда сможете отказаться от товара до момента оплаты.">
                     <span>Цена по запросу</span>&nbsp;
                     <i>?</i>
                 </div>{else}{shop_currency_html($item.price * $item.quantity, $item.currency)}{/if}</td>

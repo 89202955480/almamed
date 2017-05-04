@@ -63,7 +63,7 @@ $(function () {
     };
 
     //delete file
-    $('body').on('click', '.delete', function () {
+    $(document).on('click', '.delete', function () {
         var delete_button = $(this);
         var path = delete_button.children('.path-value:first').attr('value');
         $('<h1>' + $.loc['Delete file'] + ' <span class="gray">' + path + '</span>?</h1>'
@@ -113,7 +113,7 @@ $(function () {
     });
 
     //download more file contents via AJAX
-    $('body').on('click', '.get-more', function () {
+    $(document).on('click', '.get-more', function () {
         var button = $(this);
         var arrow = button.find('.arrow');
         if (arrow.hasClass('hidden')) {
@@ -193,7 +193,7 @@ $(function () {
     });
 
     //show & save settings
-    $('body').on('click', '.icon16.settings', function () {
+    $(document).on('click', '.icon16.settings', function () {
         $('<h1>' + $.loc['Settings'] + '</h1>'
         + '<div class="content"><i class="icon16 loading"></i></div>'
         + '<p class="error hidden"></p>').waDialog({
@@ -226,7 +226,7 @@ $(function () {
     });
 
     //reload content
-    $('body').on('click', '.icon16.update', function () {
+    $(document).on('click', '.icon16.update', function () {
         var icon = $(this);
         icon.removeClass('update').addClass('loading');
         $.get(location.href, function (html) {
@@ -244,6 +244,18 @@ $(function () {
             }, 500);
         });
     });
+    
+    //show phpinfo() not available message
+    $(document).on('click', '.phpinfo-disabled-link', function () {
+        $('<p>' + $.loc['Function <tt>phpinfo()</tt> is not available on your server.'] + '</p>').waDialog({
+            buttons: '<input type="submit" value="' + $.loc['Close'] + '" class="button blue cancel">',
+            width:   '700px',
+            height:  '150px',
+            title: $.loc['Cannot show PHP configuration']
+        });
+        return false;
+    })
+    
 
     //execute on page load
     writeLineCountCookie();

@@ -6,7 +6,21 @@ abstract class logsViewAction extends waViewAction
     {
         parent::__construct();
 
+        static $rights_vars;
+        if (!$rights_vars) {
+            $rights_vars = array(
+                'rights' => $this->getRights(),
+                'admin'  => wa()->getUser()->isAdmin('logs'),
+            );
+        }
+        $this->view->assign($rights_vars);
+
         $is_navigation_action = $this instanceof logsBackendNavigationAction;
+        if ($is_navigation_action) {
+            $this->view->assign('phpinfo_available', function_exists('phpinfo'));
+        } else {
+            $this->setLayout(new logsBackendLayout());
+        }
 
         if (waRequest::get('action') == 'file') {
             //moved this logic here to make file-related data available both in navigation and in file actions
@@ -28,25 +42,10 @@ abstract class logsViewAction extends waViewAction
             if ($data['page'] !== null && ($data['page'] < 1 || $data['page'] > $data['file']['page_count'])) {
                 $this->redirect('?action=file&path='.$data['path']);
             } else {
-                $this->view->assign(array(
-                    'file' => $data['file'],
-                ));
+                $this->view->assign('file', $data['file']);
             }
         } else {
-            if ($is_navigation_action) {
-                $this->view->assign('phpinfo_available', function_exists('phpinfo'));
-            } else {
-                wa()->getResponse()->setCookie('back_url', wa()->getConfig()->getCurrentUrl());
-            }
-        }
-
-        $this->view->assign(array(
-            'rights' => $this->getRights(),
-            'admin'  => wa()->getUser()->isAdmin('logs'),
-        ));
-
-        if (!$is_navigation_action) {
-            $this->setLayout(new logsBackendLayout());
+            wa()->getResponse()->setCookie('back_url', wa()->getConfig()->getCurrentUrl());
         }
     }
 }

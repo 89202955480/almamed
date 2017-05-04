@@ -8,7 +8,7 @@
   <files>
     <file path="index.html" custom="0" modified="1">
       <description locale="en_US">Core layout of Profitbuy theme family</description>
-      <description locale="ru_RU"></description>
+      <description locale="ru_RU"/>
     </file>
     <file path="profitbuy.css" custom="0">
       <description locale="en_US">Core CSS of the Profitbuy theme family</description>
@@ -317,12 +317,12 @@
       <name locale="en_US">Button 2 text color when you hover</name>
     </setting>
     <setting var="custom_background_button2" control_type="color">
-      <value/>
+      <value></value>
       <name locale="ru_RU">Кнопка 2 фон</name>
       <name locale="en_US">Button 2 Background</name>
     </setting>
     <setting var="custom_background_button2_hover" control_type="color">
-      <value/>
+      <value>#d93d3d</value>
       <name locale="ru_RU">Кнопка 2 фон при наведении</name>
       <name locale="en_US">Button 2 hover background</name>
     </setting>
@@ -356,7 +356,7 @@
       <name locale="ru_RU">Отображать фон</name>
     </setting>
     <setting var="background" control_type="image_select">
-      <value>img/backgrounds/themesettings/abstract1.jpg</value>
+      <value>img/backgrounds/themesettings/abstract5.jpg</value>
       <name locale="en_US">Background</name>
       <name locale="ru_RU">Фон</name>
       <options>
@@ -400,7 +400,7 @@
       <name locale="ru_RU">Зафиксировать</name>
     </setting>
     <setting var="background_repeat" control_type="checkbox">
-      <value/>
+      <value>1</value>
       <name locale="en_US">Repeat</name>
       <name locale="ru_RU">Тиражировать</name>
     </setting>
@@ -442,7 +442,7 @@
       <name locale="ru_RU">Подпись под вторым телефоном</name>
     </setting>
     <setting var="address_email" control_type="text">
-      <value/>
+      <value>info@almamed.su</value>
       <name locale="en_US">Email</name>
       <name locale="ru_RU">Email</name>
       <description locale="ru_RU">Если это поле пустое будет отображен email из настроек приложения Магазин.</description>

@@ -16,6 +16,7 @@ class logsBackendLayout extends waLayout
             'Function <tt>phpinfo()</tt> is not available on your server.',
             'Close',
             'Cannot show PHP configuration',
+            'Share link',
         );
         $loc = array_flip($loc);
         foreach ($loc as $key => &$string) {
