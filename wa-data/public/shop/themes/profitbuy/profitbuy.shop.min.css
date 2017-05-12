@@ -698,3 +698,9 @@ h1{font-size:1.75em;}
     margin: 5px 0;
     font-weight: bold;
 }
+.fast-prvew-one{
+    position: absolute;
+    top: -90px;
+    width: 200px;
+    left: -5px;
+}
