@@ -106,7 +106,8 @@
                             {/if}
                             {if !empty($theme_settings.product_preview)}
                                 <span title="[`Preview`]" class="image-setting-btn image-setting-product-preview" data-url="{$p.frontend_url}{if strpos($p.frontend_url, '?')}&{else}?{/if}cart=1&amp;preview=1">
-                                    <i class="material-icons mi-2x">&#xE85B;</i>
+                                    <!-- <i class="material-icons mi-2x">&#xE85B;</i> -->
+                                    <span class="fast-prvew">Открыть</span>
                                 </span>
                             {/if}
                         </div>
