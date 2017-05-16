@@ -83,10 +83,13 @@ class webasystBackendActions extends waViewActions
         } else {
             $user_filters = array();
         }
+
         $activity = $activity_action->getLogs(array(
             'app_id' => ifempty($user_filters),
         ), $count);
         $activity_load_more = $count == 50;
+
+      //  var_dump($activity);
 
         $is_admin = wa()->getUser()->isAdmin('webasyst');
         $public_dashboards = array();
@@ -94,6 +97,8 @@ class webasystBackendActions extends waViewActions
             $dashboard_model = new waDashboardModel();
             $public_dashboards = $dashboard_model->order('name')->fetchAll('id');
         }
+
+
 
         $this->view->assign(array(
             'widgets' => $widgets,

@@ -12,5 +12,6 @@ return array (
   'stickies' => true,
   'logs' => true,
   'blog' => true,
+  'userlogs' => true,
 );
 //EOF

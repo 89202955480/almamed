@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{$wa->appName()} - {$wa->accountName()}</title>
+    {$wa->css()}
+    <link type="text/css" rel="stylesheet" href="{$wa_app_static_url}css/simplePagination.css"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+    {wa_js}
+    {$wa_app_static_url}js/jquery.columnfilters.js
+    {$wa_app_static_url}js/jquery.simplePagination.js
+    {/wa_js}
+</head>
+<body>
+
+{literal}
+<script>
+
+    $(document).ready(function() {
+        $('#delite-all-logs').click(function(){
+            var result = confirm('точно удалить логи?');
+            if(!result){
+                return false;
+            }
+        });
+        $('table#filterTable1').columnFilters({alternateRowClassNames:['rowa','rowb']});
+        $('#light-pagination').pagination({
+            pages: {/literal}{$count_page}{literal},
+            cssStyle: 'compact-theme',
+            displayedPages: 7,
+            onPageClick : function(){
+
+                var page = this.currentPage+1;
+                window.location.hash = 'page-' + page;
+                window.location.search = 'page=' + page;
+            }
+        });
+        var nowPage = {/literal}{$carent_page}{literal};
+        $('#light-pagination').pagination('drawPage', nowPage);
+    });
+
+</script>
+{/literal}
+
+<div id="wa">
+    {$wa->header()}
+    <div id="wa-app">
+        <div class="block">
+
+            Количество строк:
+            <a href="?rows=100">100</a> /
+            <a href="?rows=500">500</a> /
+            <a href="?rows=1000">1000</a>
+
+            <a href="?delite-all-logs=yes" id="delite-all-logs" title="Скачать" style="float: right">
+               Удалить все логи <i class="icon16 cross-bw logs-action-icon logs-action-delete-file" data-path="cli.log" title="Удалить"></i>
+            </a>
+
+            <table id="filterTable1" class="zebra" cellspacing="0" cellpadding="0">
+                <thead>
+                <tr>
+                    <th>Приложение</th><th>Пользователь</th><th>Событие</th><th>Дата</th>
+                </tr>
+                </thead>
+                <tfoot></tfoot>
+                <tbody>
+                {foreach $activity as $activity_item}
+                {$app_name = $activity_item.app.name}
+                <tr>
+                    <td>{$app_name}</td>
+                    <td><a href="{$wa_backend_url}contacts/#/contact/{$activity_item.contact_id}">{$activity_item.contact_name|escape}</a></td>
+                    <td>
+                        {$activity_item.action_name|escape}
+                        {if !empty($activity_item.params_html)}
+                        {$activity_item.params_html}
+                        {/if}
+                    </td>
+                    <td>{waDateTime::format('humandatetime', $activity_item.datetime)}</td>
+                </tr>
+                {/foreach}
+
+             </tbody>
+
+            </table>
+
+            <div class="pagination-holder clearfix">
+                <div id="light-pagination" class="pagination"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

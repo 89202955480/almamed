@@ -29,6 +29,7 @@ class webasystDashboardActivityAction extends waViewAction
 
     public function getLogs($filters = array(), &$count = null, $autoload_more = true)
     {
+
         $log_model = new waLogModel();
         $apps = wa()->getUser()->getApps();
         if (!isset($filters['app_id']) || !is_array($filters['app_id'])) {
@@ -41,6 +42,7 @@ class webasystDashboardActivityAction extends waViewAction
                 $filters['app_id'] = array_keys($apps);
             }
         }
+
         $rows = $log_model->getLogs($filters);
         $last_row = end($rows);
         $count = count($rows);
