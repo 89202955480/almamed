@@ -136,7 +136,7 @@
                             <span{if empty($without_micro_markup)} itemprop="name"{/if}>{$p.name}</span>
                         </h5>
                     </a>
-                    
+                    <!--
                     <div class="stock-and-rating">
                         {if $p.rating > 0}
                             <span class="rating nowrap">{$wa->shop->ratingHtml($p.rating, '24')}</span>
@@ -153,7 +153,7 @@
                             <div class="stock-label out-of-stock"><i class="icon16 stock-transparent"></i>{if $wa->shop->settings('ignore_stock_count')}[`Pre-order only`]{else}[`Out of stock`]{/if}</div>
                         {/if*}
                     </div>
-                    
+                    -->
                     {if $p.summary}<div{if empty($without_micro_markup)} itemprop="description"{/if} class="summary">{*strip_tags($p.summary)|truncate:100*}{$p.summary}</div>{/if}
                     
                     {if !empty($p.features)}

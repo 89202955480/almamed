@@ -80,7 +80,7 @@ ul.product-list.thumbs li .pl-item-info-expandable{min-height:2.8em;max-height:2
 ul.product-list.thumbs li input[type="button"],
 ul.product-list.thumbs li input[type="submit"]{width:100%;}
 ul.product-list.thumbs li .offers{background-color:#fff;background-color:rgba(255, 255, 255, 0.9);padding-bottom:10px;}
-ul.product-list.thumbs li .pl-item-info-expandable h5{margin:0 0 1.3em;}
+ul.product-list.thumbs li .pl-item-info-expandable h5{margin:0;}
 ul.product-list.list > li{padding:0.75rem;border:1px solid #ebebeb;}
 ul.product-list.list li .image{width:100%;}
 ul.product-list.list li .pl-item-image img{max-height:200px;vertical-align:middle;}
