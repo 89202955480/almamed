@@ -209,7 +209,7 @@ ul.product-list.thumbs.carousel .owl-next{left:auto;right:-96px;border-radius:0 
 @media only screen and (min-width:993px){#product-tabs-nav{display:block;}
 .product-tab-active .product-tab{display:none;}
 .product-tab-active .product-tabs-nav-trigger-wrapper{display:none;}
-#product-tabs.product-tab-active{padding:1.5rem;border:1px solid #ebebeb;border-radius:4px;display: inline-block;}
+#product-tabs.product-tab-active{padding:1.5rem;border:1px solid #ebebeb;border-radius:4px;display: grid;}
 }
 #product-tags.tags{margin-top:10px;}
 .selectable-articul > div,
