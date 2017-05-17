@@ -126,7 +126,7 @@ input:-ms-input-placeholder{color:#d1d1d1;}
 }
 @media only screen and (max-width:600px){.center-on-small-only{text-align:center;}
 }
-.container{margin:0 auto;padding:0;width:100%;max-width:1280px;}
+.container{margin:0 auto;padding:0;width:100%;max-width:1300px;}
 @media only screen and (min-width:1201px){.container{width:85%;min-width:950px;}
 }
 .col-grid .row-grid{margin-left:-0.75rem;margin-right:-0.75rem;margin-bottom:1.5rem;}
