@@ -59,7 +59,7 @@
             <table id="filterTable1" class="zebra" cellspacing="0" cellpadding="0">
                 <thead>
                 <tr>
-                    <th>Приложение</th><th>Пользователь</th><th>Элемент</th><th>Событие</th><th>Дата</th>
+                    <th>ID</th><th>Приложение</th><th>Пользователь</th><th>Элемент</th><th>Событие</th><th>Дата</th>
                 </tr>
                 </thead>
                 <tfoot></tfoot>
@@ -67,6 +67,7 @@
                 {foreach $activity as $activity_item}
                 {$app_name = $activity_item.app.name}
                 <tr>
+                    <td>{$activity_item.params}</td>
                     <td>{$app_name}</td>
                     <td><a href="{$wa_backend_url}contacts/#/contact/{$activity_item.contact_id}">{$activity_item.contact_name|escape}</a></td>
                     <td>{if !empty($activity_item.params_html)}{$activity_item.params_html}{/if}</td>
