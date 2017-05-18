@@ -59,7 +59,7 @@
             <table id="filterTable1" class="zebra" cellspacing="0" cellpadding="0">
                 <thead>
                 <tr>
-                    <th>Приложение</th><th>Пользователь</th><th>Событие</th><th>Дата</th>
+                    <th>Приложение</th><th>Пользователь</th><th>Элемент</th><th>Событие</th><th>Дата</th>
                 </tr>
                 </thead>
                 <tfoot></tfoot>
@@ -69,12 +69,8 @@
                 <tr>
                     <td>{$app_name}</td>
                     <td><a href="{$wa_backend_url}contacts/#/contact/{$activity_item.contact_id}">{$activity_item.contact_name|escape}</a></td>
-                    <td>
-                        {$activity_item.action_name|escape}
-                        {if !empty($activity_item.params_html)}
-                        {$activity_item.params_html}
-                        {/if}
-                    </td>
+                    <td>{if !empty($activity_item.params_html)}{$activity_item.params_html}{/if}</td>
+                    <td>{$activity_item.action_name|escape}</td>
                     <td>{waDateTime::format('humandatetime', $activity_item.datetime)}</td>
                 </tr>
                 {/foreach}
