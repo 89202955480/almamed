@@ -88,12 +88,15 @@ class userlogsBackendActions extends waViewActions
             }
         }
 
-
-
-
-
-
-
+        foreach($rows as $k => $r){
+            if(!isset($r['params_html'])){
+                $model = new shopCategoryModel();
+                $cat = $model->getById($r['params']);
+                if(!empty($cat)){
+                    $rows[$k]['params_html'] = '<a href="/webasyst/shop/?action=products#/products/category_id='.$r['params'].'&view=table&sort=sort&order=asc">'.$cat['name'].'</a>';
+                }
+            }
+        }
 
         $num_page = ceil($log_model->getLogsCount()/$rows_count);
 
