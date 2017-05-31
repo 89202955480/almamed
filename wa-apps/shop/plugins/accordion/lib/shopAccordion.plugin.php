@@ -18,23 +18,11 @@ class shopAccordionPlugin extends shopPlugin
     public function getAcordionListPage(){
         $plugin = wa('shop')->getPlugin('accordion');
         $settings = $plugin->getSettings();
-
-        $tpl = '';
-        $tpl .= '<link rel="stylesheet" type="text/css" href="'.self::getStaticUrlPlugin().'css/style.css" />';
-        $tpl .= '<section class="ac-container">';
-
-        foreach($settings['title'] as $key => $val):
-        $tpl .= '<div>';
-        $tpl .= '<input id="ac-'.$key.'" class="ac-checkbox-container" name="accordion-'.$key.'" type="checkbox" />';
-        $tpl .= '<label for="ac-'.$key.'">'.$val.'</label>';
-        $tpl .= '<article class="ac-small">';
-        $tpl .= '<p>'.$settings['desc'][$key].'</p>';
-        $tpl .= '</article>';
-        $tpl .= '</div>';
-        endforeach;
-        $tpl .= '</section>';
-
-        return $tpl;
+        
+        $view = wa()->getView();
+        $view->assign('settings', $settings);
+        $html = $view->fetch($_SERVER['DOCUMENT_ROOT'].self::getStaticUrlPlugin().'templates/actions/Frontend.html');
+        return $html;
     }
 
     public function saveSettings($settings = array()) {
