@@ -18,7 +18,7 @@ class shopAccordionPlugin extends shopPlugin
     public function getAcordionListPage(){
         $plugin = wa('shop')->getPlugin('accordion');
         $settings = $plugin->getSettings();
-        
+
         $view = wa()->getView();
         $view->assign('settings', $settings);
         $html = $view->fetch($_SERVER['DOCUMENT_ROOT'].self::getStaticUrlPlugin().'templates/actions/Frontend.html');
