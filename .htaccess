@@ -9,6 +9,14 @@ Options -Indexes
 
 
 AddDefaultCharset utf-8
+
+
+
+RewriteEngine On
+RewriteCond %{HTTPS} =off
+RewriteCond %{REQUEST_URI} !^/bitrix/admin/1c_exchange.php
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [QSA,L]
+
     
 <ifModule mod_rewrite.c>
     RewriteEngine On
@@ -35,3 +43,12 @@ Redirect 301 /category/proktologicheskiy-nabor-welch-allyn-ssha/ /product/prokto
 Redirect 301 /category/osvetitelnaya-golovka-dlya-anoskopov-proktoskopov-heine-r// /category/osvetitelnaya-golovka-dlya-anoskopov-proktoskopov-heine/
 Redirect 301 /category/odnorazovye-tuby-heine-unispec-r// /category/odnorazovye-tuby-heine-unispec/
 Redirect 301 /category/instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r// /category/instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya/
+Redirect 301 http://almamed.su/robots.txt https://almamed.su/robots.txt
+
+
+
+#включение логов
+#php_flag display_errors Off
+#php_value error_reporting 2147483647
+#php_flag log_errors On
+#php_value error_log ./wa-log/php.log

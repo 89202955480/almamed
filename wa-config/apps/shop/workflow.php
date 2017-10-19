@@ -2,6 +2,30 @@
 return array (
   'states' => 
   array (
+    'processing' => 
+    array (
+      'name' => 'Подтвержден',
+      'options' => 
+      array (
+        'style' => 
+        array (
+          'color' => '#008800',
+          'font-style' => 'italic',
+        ),
+        'icon' => 'icon16 ss new',
+      ),
+      'available_actions' => 
+      array (
+        0 => 'zayavka-s-zaprosom-tseny-obrabot',
+        1 => 'pay',
+        2 => 'delete',
+        3 => 'comment',
+        4 => 'edit',
+        5 => 'message',
+        6 => 'otmenen',
+      ),
+      'classname' => 'shopWorkflowState',
+    ),
     'new' => 
     array (
       'name' => 'Новый / Не обработан',
@@ -24,26 +48,21 @@ return array (
       ),
       'classname' => 'shopWorkflowState',
     ),
-    'processing' => 
+    'otmenen' => 
     array (
-      'name' => 'Подтвержден',
+      'name' => 'Отменен',
       'options' => 
       array (
         'style' => 
         array (
-          'color' => '#008800',
-          'font-style' => 'italic',
+          'color' => '#ff2121',
         ),
-        'icon' => 'icon16 ss new',
+        'icon' => 'icon16 ss flag-red',
       ),
       'available_actions' => 
       array (
-        0 => 'zayavka-s-zaprosom-tseny-obrabot',
-        1 => 'pay',
-        2 => 'delete',
-        3 => 'comment',
-        4 => 'edit',
-        5 => 'message',
+        0 => 'process',
+        1 => 'delete',
       ),
       'classname' => 'shopWorkflowState',
     ),
@@ -129,6 +148,7 @@ return array (
         1 => 'delete',
         2 => 'message',
       ),
+      'classname' => 'shopWorkflowState',
     ),
     'completed' => 
     array (
@@ -162,8 +182,10 @@ return array (
       ),
       'available_actions' => 
       array (
-        0 => 'delete',
-        1 => 'message',
+        0 => 'ship',
+        1 => 'comment',
+        2 => 'delete',
+        3 => 'message',
       ),
       'classname' => 'shopWorkflowState',
     ),
@@ -361,6 +383,19 @@ return array (
       'state' => 'zayavka-s-zapros',
       'classname' => 'shopWorkflowAction',
       'id' => 'zayavka-s-zaprosom-tseny-obrabot',
+    ),
+    'otmenen' => 
+    array (
+      'name' => 'Отменен',
+      'options' => 
+      array (
+        'position' => '',
+        'button_class' => '',
+        'border_color' => 'f60000',
+      ),
+      'state' => 'otmenen',
+      'classname' => 'shopWorkflowAction',
+      'id' => 'otmenen',
     ),
   ),
 );

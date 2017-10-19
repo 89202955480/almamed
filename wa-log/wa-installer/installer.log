@@ -106995,3 +106995,756 @@ waInstaller::__destruct called
 
 
 
+2017-06-28T18:48:37+03:0000001	FD4	DEBUG	1,52Mb	1,54Mb	
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1498664917,
+  'start_time_float' => 1498664917.0418971,
+  'elapsed_time' => 0,
+  'stage' => 0,
+  'stage_name' => 'unkown_none',
+  'state_heartbeat' => false,
+  'thread_id' => 'FD4',
+  'chunk_id' => NULL,
+  'stage_status' => 'none',
+  'timestamp' => 1498664917,
+  'timestamp_float' => 1498664917.0419021,
+  'stage_performance' => 0,
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000002	FD4	DEBUG	1,53Mb	1,63Mb	
+waInstaller::formatUpdateList tree
+{------------------------------------------------------------
+array (
+  'targets' => 
+  array (
+    0 => 'wa-apps/shop/plugins/plugmein/',
+  ),
+  'update_list' => 
+  array (
+    'wa-apps/shop/plugins/plugmein' => 
+    array (
+      'source' => 'http://www.webasyst.com/download/archive/wa-apps/shop/plugins/plugmein/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+      'target' => 'wa-apps/shop/plugins/plugmein/',
+      'slug' => 'wa-apps/shop/plugins/plugmein',
+      'md5' => NULL,
+      'pass' => false,
+      'name' => 'Управление плагинами (Shop-Script 7)',
+      'icon' => '//www.webasyst.com/wa-data/public/updates/img/56/1056/icon.ru_RU.png',
+      'update' => false,
+      'subject' => 'app_plugins',
+      'edition' => true,
+      'extract_path' => 'wa-data/protected/wa-installer/FD4/update/wa-apps/shop/plugins/plugmein/',
+      'skipped' => false,
+      'dependent' => false,
+    ),
+  ),
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000003	FD4	DEBUG	1,53Mb	1,63Mb	
+callback
+{------------------------------------------------------------
+array (
+  0 => 
+  array (
+    'file' => '/wa-installer/lib/classes/wainstaller.class.php:155',
+    'function' => 'waInstaller->envSet()',
+  ),
+  1 => 
+  array (
+    'file' => '/wa-apps/installer/lib/actions/update/installerUpdateExecute.controller.php:49',
+    'function' => 'waInstaller->update(Array(1))',
+  ),
+  2 => 
+  array (
+    'file' => '/wa-system/controller/waController.class.php:21',
+    'function' => 'installerUpdateExecuteController->execute()',
+  ),
+  3 => 
+  array (
+    'file' => '/wa-system/controller/waJsonController.class.php:28',
+    'function' => 'installerUpdateExecuteController(waController)->run()',
+  ),
+  4 => 
+  array (
+    'file' => '/wa-system/controller/waFrontController.class.php:227',
+    'function' => 'installerUpdateExecuteController(waJsonController)->run()',
+  ),
+  5 => 
+  array (
+    'file' => '/wa-system/controller/waFrontController.class.php:162',
+    'function' => 'waFrontController->runController(installerUpdateExecuteController)',
+  ),
+  6 => 
+  array (
+    'file' => '/wa-system/controller/waFrontController.class.php:58',
+    'function' => 'waFrontController->execute()',
+  ),
+  7 => 
+  array (
+    'file' => '/wa-system/waSystem.class.php:538',
+    'function' => 'waFrontController->dispatch()',
+  ),
+  8 => 
+  array (
+    'file' => '/wa-system/waSystem.class.php:476',
+    'function' => 'waSystem->dispatchBackend()',
+  ),
+  9 => 
+  array (
+    'file' => '/index.php:11',
+    'function' => 'waSystem->dispatch()',
+  ),
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000004	FD4	TRACE	1,54Mb	1,64Mb	
+Register ob error handler
+{------------------------------------------------------------
+true
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000005	FD4	TRACE	1,56Mb	1,65Mb	prepare_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1498664917,
+  'start_time_float' => 1498664917.0418971,
+  'elapsed_time' => 0,
+  'stage' => 1,
+  'stage_name' => 'prepare',
+  'state_heartbeat' => 0.011647939682006836,
+  'thread_id' => 'FD4',
+  'chunk_id' => 'wa-apps/shop/plugins/plugmein',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1498664917,
+  'timestamp_float' => 1498664917.0535221,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1498664917.0535221,
+  'datetime' => 'Wed, 28 Jun 2017 18:48:37 +0300',
+  'stage_value' => 0,
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000006	FD4	DEBUG	1,56Mb	1,66Mb	prepare_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/FD4/update/wa-apps/shop/plugins/plugmein/',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000007	FD4	TRACE	1,56Mb	1,66Mb	prepare_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1498664917,
+  'start_time_float' => 1498664917.0418971,
+  'elapsed_time' => 0,
+  'stage' => 1,
+  'stage_name' => 'prepare',
+  'state_heartbeat' => 0.0059437751770019531,
+  'thread_id' => 'FD4',
+  'chunk_id' => 'wa-apps/shop/plugins/plugmein',
+  'stage_status' => 'complete',
+  'timestamp' => 1498664917,
+  'timestamp_float' => 1498664917.0594571,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1498664917.0535221,
+  'datetime' => 'Wed, 28 Jun 2017 18:48:37 +0300',
+  'stage_value' => 0,
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000008	FD4	TRACE	1,57Mb	1,66Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1498664917,
+  'start_time_float' => 1498664917.0418971,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.00051903724670410156,
+  'thread_id' => 'FD4',
+  'chunk_id' => 'wa-apps/shop/plugins/plugmein',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1498664917,
+  'timestamp_float' => 1498664917.059963,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1498664917.059963,
+  'datetime' => 'Wed, 28 Jun 2017 18:48:37 +0300',
+  'stage_value' => 0,
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000009	FD4	TRACE	1,57Mb	1,66Mb	download_heartbeat
+waInstaller::downloadCurl :download via cURL
+{------------------------------------------------------------
+array (
+  'source' => 'http://www.webasyst.com/download/archive/wa-apps/shop/plugins/plugmein/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+  'target' => '/home/almamed/web/almamed.su/public_html/wa-data/protected/wa-installer/FD4/download/9d7c7956fc1e9c92a14f8b00b9b9ca1d',
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000010	FD4	DEBUG	1,57Mb	1,66Mb	download_heartbeat
+waInstaller::mkdir
+{------------------------------------------------------------
+array (
+  'pathname' => 'wa-data/protected/wa-installer/FD4/download/',
+  'mode' => 511,
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000011	FD4	DEBUG	1,57Mb	1,66Mb	download_heartbeat
+waInstaller::curlHeaderHandler
+{------------------------------------------------------------
+array (
+  'header' => 'Content-Length: 5237
+',
+  'header_matches' => 
+  array (
+    0 => 'Content-Length: 5237',
+    1 => '5237',
+  ),
+  'value' => 5237,
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000012	FD4	DEBUG	1,57Mb	1,66Mb	download_heartbeat
+waInstaller::curlHeaderHandler
+{------------------------------------------------------------
+array (
+  'header' => 'Content-MD5: NdYMUvOmjQFQHQKmGS7I3A==
+',
+  'header_matches' => 
+  array (
+    1 => '35d60c52f3a68d01501d02a6192ec8dc',
+  ),
+  'value' => '35d60c52f3a68d01501d02a6192ec8dc',
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000013	FD4	DEBUG	1,58Mb	1,66Mb	download_heartbeat
+waInstaller::curlWriteHandler
+{------------------------------------------------------------
+array (
+  'url' => 'http://www.webasyst.com/download/archive/wa-apps/shop/plugins/plugmein/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+  'content_type' => 'application/octet-stream',
+  'http_code' => 200,
+  'header_size' => 389,
+  'request_size' => 312,
+  'filetime' => -1,
+  'ssl_verify_result' => 0,
+  'redirect_count' => 0,
+  'total_time' => 0.050685000000000001,
+  'namelookup_time' => 0.00049399999999999997,
+  'connect_time' => 0.050604000000000003,
+  'pretransfer_time' => 0.050608,
+  'size_upload' => 0,
+  'size_download' => 3955,
+  'speed_download' => 0,
+  'speed_upload' => 0,
+  'download_content_length' => 5237,
+  'upload_content_length' => 0,
+  'starttransfer_time' => 0.19009999999999999,
+  'redirect_time' => 0,
+  'certinfo' => 
+  array (
+  ),
+  'primary_ip' => '178.33.57.200',
+  'redirect_url' => '',
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000014	FD4	DEBUG	1,58Mb	1,66Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1498664917,
+  'start_time_float' => 1498664917.0418971,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.20206499099731445,
+  'thread_id' => 'FD4',
+  'chunk_id' => 'wa-apps/shop/plugins/plugmein',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1498664917,
+  'timestamp_float' => 1498664917.262007,
+  'stage_performance' => 19574.943087013267,
+  'stage_current_value' => 3955,
+  'stage_start_time' => 1498664917.059963,
+  'datetime' => 'Wed, 28 Jun 2017 18:48:37 +0300',
+  'stage_value' => 5237,
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000015	FD4	DEBUG	1,58Mb	1,68Mb	download_heartbeat
+waInstaller::curlWriteHandler
+{------------------------------------------------------------
+array (
+  'url' => 'http://www.webasyst.com/download/archive/wa-apps/shop/plugins/plugmein/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+  'content_type' => 'application/octet-stream',
+  'http_code' => 200,
+  'header_size' => 389,
+  'request_size' => 312,
+  'filetime' => -1,
+  'ssl_verify_result' => 0,
+  'redirect_count' => 0,
+  'total_time' => 0.19140099999999999,
+  'namelookup_time' => 0.00049399999999999997,
+  'connect_time' => 0.050604000000000003,
+  'pretransfer_time' => 0.050608,
+  'size_upload' => 0,
+  'size_download' => 5237,
+  'speed_download' => 20663,
+  'speed_upload' => 0,
+  'download_content_length' => 5237,
+  'upload_content_length' => 0,
+  'starttransfer_time' => 0.19009999999999999,
+  'redirect_time' => 0,
+  'certinfo' => 
+  array (
+  ),
+  'primary_ip' => '178.33.57.200',
+  'redirect_url' => '',
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000016	FD4	DEBUG	1,58Mb	1,68Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1498664917,
+  'start_time_float' => 1498664917.0418971,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.00076889991760253906,
+  'thread_id' => 'FD4',
+  'chunk_id' => 'wa-apps/shop/plugins/plugmein',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1498664917,
+  'timestamp_float' => 1498664917.262768,
+  'stage_performance' => 1684554.426065163,
+  'stage_current_value' => 5237,
+  'stage_start_time' => 1498664917.059963,
+  'datetime' => 'Wed, 28 Jun 2017 18:48:37 +0300',
+  'stage_value' => 5237,
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000017	FD4	DEBUG	1,57Mb	1,68Mb	download_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1498664917,
+  'start_time_float' => 1498664917.0418971,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0014359951019287109,
+  'thread_id' => 'FD4',
+  'chunk_id' => 'wa-apps/shop/plugins/plugmein',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1498664917,
+  'timestamp_float' => 1498664917.26419,
+  'stage_performance' => 0,
+  'stage_current_value' => 5237,
+  'stage_start_time' => 1498664917.059963,
+  'datetime' => 'Wed, 28 Jun 2017 18:48:37 +0300',
+  'stage_value' => 5237,
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000018	FD4	TRACE	1,57Mb	1,68Mb	download_heartbeat
+MD5 hash 35d60c52f3a68d01501d02a6192ec8dc get from header
+2017-06-28T18:48:37+03:0000019	FD4	TRACE	1,57Mb	1,68Mb	download_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1498664917,
+  'start_time_float' => 1498664917.0418971,
+  'elapsed_time' => 0,
+  'stage' => 2,
+  'stage_name' => 'download',
+  'state_heartbeat' => 0.0013980865478515625,
+  'thread_id' => 'FD4',
+  'chunk_id' => 'wa-apps/shop/plugins/plugmein',
+  'stage_status' => 'complete',
+  'timestamp' => 1498664917,
+  'timestamp_float' => 1498664917.265579,
+  'stage_performance' => 0,
+  'stage_current_value' => 5237,
+  'stage_start_time' => 1498664917.059963,
+  'datetime' => 'Wed, 28 Jun 2017 18:48:37 +0300',
+  'stage_value' => 5237,
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000020	FD4	TRACE	1,57Mb	1,68Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1498664917,
+  'start_time_float' => 1498664917.0418971,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.0011119842529296875,
+  'thread_id' => 'FD4',
+  'chunk_id' => 'wa-apps/shop/plugins/plugmein',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1498664917,
+  'timestamp_float' => 1498664917.266669,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1498664917.266669,
+  'datetime' => 'Wed, 28 Jun 2017 18:48:37 +0300',
+  'stage_value' => 0,
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000021	FD4	TRACE	1,57Mb	1,68Mb	extract_heartbeat
+waInstaller::stageExtract
+{------------------------------------------------------------
+array (
+  'compressed_file' => '/home/almamed/web/almamed.su/public_html/wa-data/protected/wa-installer/FD4/download/9d7c7956fc1e9c92a14f8b00b9b9ca1d',
+  'target_path' => 'wa-data/protected/wa-installer/FD4/update/wa-apps/shop/plugins/plugmein/',
+  'base_path' => 'wa-apps/shop/plugins/plugmein/',
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000022	FD4	DEBUG	2,13Mb	2,17Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1498664917,
+  'start_time_float' => 1498664917.0418971,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.009265899658203125,
+  'thread_id' => 'FD4',
+  'chunk_id' => 'wa-apps/shop/plugins/plugmein',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1498664917,
+  'timestamp_float' => 1498664917.275918,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1498664917.266669,
+  'datetime' => 'Wed, 28 Jun 2017 18:48:37 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => NULL,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000023	FD4	DEBUG	2,13Mb	2,20Mb	extract_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1498664917,
+  'start_time_float' => 1498664917.0418971,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.00097203254699707031,
+  'thread_id' => 'FD4',
+  'chunk_id' => 'wa-apps/shop/plugins/plugmein',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1498664917,
+  'timestamp_float' => 1498664917.2768819,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1498664917.266669,
+  'datetime' => 'Wed, 28 Jun 2017 18:48:37 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 0,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000024	FD4	TRACE	2,11Mb	2,20Mb	extract_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1498664917,
+  'start_time_float' => 1498664917.0418971,
+  'elapsed_time' => 0,
+  'stage' => 3,
+  'stage_name' => 'extract',
+  'state_heartbeat' => 0.056418180465698242,
+  'thread_id' => 'FD4',
+  'chunk_id' => 'wa-apps/shop/plugins/plugmein',
+  'stage_status' => 'complete',
+  'timestamp' => 1498664917,
+  'timestamp_float' => 1498664917.333288,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1498664917.266669,
+  'datetime' => 'Wed, 28 Jun 2017 18:48:37 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 0,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000025	FD4	TRACE	2,11Mb	2,20Mb	replace_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1498664917,
+  'start_time_float' => 1498664917.0418971,
+  'elapsed_time' => 0,
+  'stage' => 4,
+  'stage_name' => 'replace',
+  'state_heartbeat' => 0.00075507164001464844,
+  'thread_id' => 'FD4',
+  'chunk_id' => 'wa-apps/shop/plugins/plugmein',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1498664917,
+  'timestamp_float' => 1498664917.3340271,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1498664917.3340271,
+  'datetime' => 'Wed, 28 Jun 2017 18:48:37 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 0,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000026	FD4	TRACE	2,11Mb	2,20Mb	replace_heartbeat
+waInstaller::stageReplace
+{------------------------------------------------------------
+array (
+  'source_path' => 'wa-data/protected/wa-installer/FD4/update/wa-apps/shop/plugins/plugmein',
+  'target_path' => 'wa-apps/shop/plugins/plugmein',
+  'store_prev' => false,
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000027	FD4	TRACE	2,11Mb	2,20Mb	replace_heartbeat
+waInstaller::rename replace current version code
+{------------------------------------------------------------
+array (
+  'oldname' => 'wa-data/protected/wa-installer/FD4/update/wa-apps/shop/plugins/plugmein',
+  'newname' => 'wa-apps/shop/plugins/plugmein',
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000028	FD4	TRACE	2,11Mb	2,20Mb	replace_heartbeat
+waInstaller::stageReplace replace current version code
+{------------------------------------------------------------
+array (
+  'target_path' => 'wa-apps/shop/plugins/plugmein',
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000029	FD4	TRACE	2,11Mb	2,20Mb	replace_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1498664917,
+  'start_time_float' => 1498664917.0418971,
+  'elapsed_time' => 0,
+  'stage' => 4,
+  'stage_name' => 'replace',
+  'state_heartbeat' => 0.0017340183258056641,
+  'thread_id' => 'FD4',
+  'chunk_id' => 'wa-apps/shop/plugins/plugmein',
+  'stage_status' => 'complete',
+  'timestamp' => 1498664917,
+  'timestamp_float' => 1498664917.335753,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1498664917.3340271,
+  'datetime' => 'Wed, 28 Jun 2017 18:48:37 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 0,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000030	FD4	TRACE	2,12Mb	2,20Mb	cleanup_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1498664917,
+  'start_time_float' => 1498664917.0418971,
+  'elapsed_time' => 0,
+  'stage' => 5,
+  'stage_name' => 'cleanup',
+  'state_heartbeat' => 0.0025410652160644531,
+  'thread_id' => 'FD4',
+  'chunk_id' => 'wa-apps/shop/plugins/plugmein',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1498664917,
+  'timestamp_float' => 1498664917.338279,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1498664917.338279,
+  'datetime' => 'Wed, 28 Jun 2017 18:48:37 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 0,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000031	FD4	TRACE	2,12Mb	2,20Mb	cleanup_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1498664917,
+  'start_time_float' => 1498664917.0418971,
+  'elapsed_time' => 0,
+  'stage' => 5,
+  'stage_name' => 'cleanup',
+  'state_heartbeat' => 0.0016601085662841797,
+  'thread_id' => 'FD4',
+  'chunk_id' => 'wa-apps/shop/plugins/plugmein',
+  'stage_status' => 'complete',
+  'timestamp' => 1498664917,
+  'timestamp_float' => 1498664917.339932,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1498664917.338279,
+  'datetime' => 'Wed, 28 Jun 2017 18:48:37 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 0,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000032	FD4	TRACE	2,12Mb	2,21Mb	update_heartbeat
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1498664917,
+  'start_time_float' => 1498664917.0418971,
+  'elapsed_time' => 0,
+  'stage' => 6,
+  'stage_name' => 'update',
+  'state_heartbeat' => 0.0016131401062011719,
+  'thread_id' => 'FD4',
+  'chunk_id' => 'wa-apps/shop/plugins/plugmein',
+  'stage_status' => 'heartbeat',
+  'timestamp' => 1498664917,
+  'timestamp_float' => 1498664917.341531,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1498664917.341531,
+  'datetime' => 'Wed, 28 Jun 2017 18:48:37 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 0,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000033	FD4	TRACE	2,12Mb	2,22Mb	update_complete
+waInstaller::setState
+{------------------------------------------------------------
+array (
+  'start_time' => 1498664917,
+  'start_time_float' => 1498664917.0418971,
+  'elapsed_time' => 0,
+  'stage' => 6,
+  'stage_name' => 'update',
+  'state_heartbeat' => 0.0019268989562988281,
+  'thread_id' => 'FD4',
+  'chunk_id' => 'wa-apps/shop/plugins/plugmein',
+  'stage_status' => 'complete',
+  'timestamp' => 1498664917,
+  'timestamp_float' => 1498664917.343452,
+  'stage_performance' => 0,
+  'stage_current_value' => 0,
+  'stage_start_time' => 1498664917.341531,
+  'datetime' => 'Wed, 28 Jun 2017 18:48:37 +0300',
+  'stage_value' => 0,
+  'resume' => 
+  array (
+    'offset' => 0,
+    'tar_size' => NULL,
+  ),
+  'debug' => 
+  array (
+    'block_performance' => 32,
+    'additional' => NULL,
+  ),
+)
+}------------------------------------------------------------
+2017-06-28T18:48:37+03:0000034	FD4	DEBUG	2,12Mb	2,23Mb	update_complete
+waInstaller::update
+{------------------------------------------------------------
+array (
+  'update_list' => 
+  array (
+    'wa-apps/shop/plugins/plugmein' => 
+    array (
+      'source' => 'http://www.webasyst.com/download/archive/wa-apps/shop/plugins/plugmein/?hash=b88180ac356a881774d531a7924fb044&domain=YWxtYW1lZC5zdQ%3D%3D&signature=eyJwaHAiOiI1LjQuNDUiLCJjIjo4LCJhcGkiOiJhcGFjaGUyaGFuZGxlciIsIm9zIjoiTGludXgiLCJyIjoiMi42LjMyLTU3My4zLjEuZWw2Lng4Nl82NCJ9&locale=ru_RU',
+      'target' => 'wa-apps/shop/plugins/plugmein/',
+      'slug' => 'wa-apps/shop/plugins/plugmein',
+      'md5' => NULL,
+      'pass' => false,
+      'name' => 'Управление плагинами (Shop-Script 7)',
+      'icon' => '//www.webasyst.com/wa-data/public/updates/img/56/1056/icon.ru_RU.png',
+      'update' => false,
+      'subject' => 'app_plugins',
+      'edition' => true,
+      'extract_path' => 'wa-data/protected/wa-installer/FD4/update/wa-apps/shop/plugins/plugmein/',
+      'skipped' => false,
+      'dependent' => false,
+      'current_size' => 0,
+      'archive' => '/home/almamed/web/almamed.su/public_html/wa-data/protected/wa-installer/FD4/download/9d7c7956fc1e9c92a14f8b00b9b9ca1d',
+      'backup' => false,
+    ),
+  ),
+)
+}------------------------------------------------------------
+2017-06-28T18:48:46+03:0000035	FD4	TRACE	2,66Mb	2,73Mb	update_complete
+waInstaller::__destruct called
+
+
+

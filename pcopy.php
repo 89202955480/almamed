@@ -1,11 +1,19 @@
 <?php
-$db = include('/wa-config/db.php');
-
+//mb_internal_encoding("UTF-8");
+//phpinfo();
+//$db = include('/wa-config/db.php');
+//var_dump($db);
 //anoskopy-welch-allyn-ssha
 if(!empty($_POST['url_post_product_copy_btn']) and !empty($_POST['url_post_product_copy'])) {
     $url = trim(strip_tags($_POST['url_post_product_copy']));
 
-    $mysqli = new mysqli($db['default']['host'], $db['default']['user'], $db['default']['password'], $db['default']['database']);
+    $mysqli = new mysqli('localhost', 'almamed_1', 'pbel7PSt44', 'almamed_1');
+	$mysqli->set_charset("utf8");
+	
+	if ($mysqli->connect_errno) {
+		printf("Соединение не удалось: %s\n", $mysqli->connect_error);
+		exit();
+	}
 
     $query = "SELECT * FROM `shop_category` WHERE `url` LIKE '%$url%'";
 
@@ -14,6 +22,7 @@ if(!empty($_POST['url_post_product_copy_btn']) and !empty($_POST['url_post_produ
         $arCategoryName = array();
         $arCategoryFullUrl = array();
         while ($row = $result->fetch_assoc()) {
+			//var_dump($row);
             $arCategoryId[] = $row['id'];
             $arCategoryName[] = $row['name'];
             $arCategoryFullUrl[] = $row['full_url'];
@@ -31,6 +40,8 @@ if(!empty($_POST['url_post_product_copy_btn']) and !empty($_POST['url_post_produ
             }
         }
     }
+	
+
 
 
     $countProd = count($arIdProduct);

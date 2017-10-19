@@ -8,7 +8,7 @@
   <files>
     <file path="index.html" custom="0" modified="1">
       <description locale="en_US">Core layout of Profitbuy theme family</description>
-      <description locale="ru_RU"/>
+      <description locale="ru_RU"></description>
     </file>
     <file path="profitbuy.css" custom="0">
       <description locale="en_US">Core CSS of the Profitbuy theme family</description>
@@ -454,7 +454,7 @@
       <name locale="ru_RU">Skype</name>
     </setting>
     <setting var="address" control_type="text">
-      <value>Доставка товаров по РФ</value>
+      <value>Отправляем товары по всей РФ</value>
       <name locale="en_US">Address</name>
       <name locale="ru_RU">Адрес</name>
     </setting>

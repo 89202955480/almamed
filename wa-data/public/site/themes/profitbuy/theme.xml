@@ -169,7 +169,7 @@
       <description locale="ru_RU"/>
     </file>
     <file path="copyright.html" custom="0" modified="1">
-      <description locale="ru_RU"/>
+      <description locale="ru_RU"></description>
     </file>
     <file path="links.pages.sidebar.html" custom="0">
       <description locale="ru_RU"/>
@@ -317,7 +317,7 @@
       <name locale="en_US">Button 2 text color when you hover</name>
     </setting>
     <setting var="custom_background_button2" control_type="color">
-      <value></value>
+      <value/>
       <name locale="ru_RU">Кнопка 2 фон</name>
       <name locale="en_US">Button 2 Background</name>
     </setting>

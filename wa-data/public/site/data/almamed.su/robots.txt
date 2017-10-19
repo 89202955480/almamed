@@ -5,5 +5,5 @@ Disallow: /checkout/
 Disallow: /i/*
 Disallow: /webasyst/*
 
-Host: almamed.su
-Sitemap: http://almamed.su/sitemap.xml
+Host: https://almamed.su/
+Sitemap: https://almamed.su/sitemap.xml

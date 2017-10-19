@@ -64,6 +64,7 @@ return array (
       'drop_out_of_stock' => '0',
       'payment_id' => '0',
       'shipping_id' => '0',
+      'ssl' => '1',
     ),
   ),
   'dev.almamed.su' => 

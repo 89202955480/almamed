@@ -17,5 +17,6 @@ return array (
   'vendorlink' => true,
   'accordion' => true,
   'form' => true,
+  'plugmein' => true,
 );
 //EOF

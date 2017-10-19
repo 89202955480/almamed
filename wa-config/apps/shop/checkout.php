@@ -49,11 +49,6 @@ return array (
             'localized_names' => 'Регион',
             'required' => '',
           ),
-          'zip' => 
-          array (
-            'localized_names' => 'Индекс',
-            'required' => '',
-          ),
           'country' => 
           array (
             'localized_names' => 'Страна',
@@ -81,11 +76,6 @@ return array (
             'localized_names' => 'Регион',
             'required' => '',
           ),
-          'zip' => 
-          array (
-            'localized_names' => 'Индекс',
-            'required' => '',
-          ),
           'country' => 
           array (
             'localized_names' => 'Страна',
@@ -94,10 +84,5 @@ return array (
         ),
       ),
     ),
-  ),
-  'confirmation' => 
-  array (
-    'name' => 'Подтверждение',
-    'terms' => '',
   ),
 );
