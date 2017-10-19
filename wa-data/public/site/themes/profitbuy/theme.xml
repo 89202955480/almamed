@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE theme PUBLIC "wa-app-theme" "http://www.webasyst.com/wa-content/xml/wa-app-theme.dtd">
-<theme id="profitbuy" system="0" vendor="873332" author="wm-site" app="site" version="1.2.0" edition="14">
+<theme id="profitbuy" system="0" vendor="873332" author="wm-site" app="site" version="1.2.0" edition="16">
   <name locale="en_US">Profitbuy</name>
   <name locale="ru_RU">Выгодная Покупка</name>
   <description locale="en_US">Adaptive design theme for all base Webasyst apps</description>
@@ -14,7 +14,7 @@
       <description locale="en_US">Core CSS of the Profitbuy theme family</description>
       <description locale="ru_RU"/>
     </file>
-    <file path="profitbuy.js" custom="0">
+    <file path="profitbuy.js" custom="0" modified="1">
       <description locale="en_US">Basic script file js website template, shop, blog, photo</description>
       <description locale="ru_RU"/>
     </file>
@@ -22,7 +22,7 @@
       <description locale="en_US">Site app's &lt;head&gt; instructions</description>
       <description locale="ru_RU">Блок &lt;head&gt; приложения «Сайт»</description>
     </file>
-    <file path="main.html" custom="0">
+    <file path="main.html" custom="0" modified="1">
       <description locale="en_US">Main layout for Site app content</description>
       <description locale="ru_RU"/>
     </file>
@@ -169,7 +169,7 @@
       <description locale="ru_RU"/>
     </file>
     <file path="copyright.html" custom="0" modified="1">
-      <description locale="ru_RU"></description>
+      <description locale="ru_RU"/>
     </file>
     <file path="links.pages.sidebar.html" custom="0">
       <description locale="ru_RU"/>

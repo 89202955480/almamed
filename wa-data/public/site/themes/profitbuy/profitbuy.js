@@ -737,6 +737,7 @@ $(document).ready(function() {
     };
 
     $(document).on('click.toggle_menu', '.toggle-menu', function(){
+        console.log(123123);
         $(this).parent().parent().find('.sidebar-box').slideToggle();
         return false;
     });

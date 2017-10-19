@@ -57,6 +57,7 @@
     
 </head>
 <body class="{if !empty($theme_settings.show_background)}is-background{/if}{if !empty($theme_settings.volumetric)} is-volumetric{/if}">
+
 {if !$at.ie || $at.ie >= 9}
     <header class="globalheader">
         
@@ -137,7 +138,7 @@
     
     <!-- APP CONTENT -->
     <main class="maincontent">
-    
+
         <div class="container">
             {include file="`$wa_active_theme_path`/main.html" assign="html" inline}
             {if $at.speedup}
