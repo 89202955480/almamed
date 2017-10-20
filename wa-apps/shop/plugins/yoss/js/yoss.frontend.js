@@ -101,7 +101,7 @@ var yossFrontend = (function () { 'use strict';
 		if ( t.val().length >= {$yoss_settings.min_char_count} ) {
 
 			var inputOffset = t.offset();
-			var inputHeight = t.outerHeight() - 1;
+			var inputHeight = t.outerHeight();
 			var inputParentWidth = t.parent().outerWidth();
 
 			var resultBlock = $('<div/>').addClass('yoss-result loading').css({
@@ -113,7 +113,11 @@ var yossFrontend = (function () { 'use strict';
 
 			if ($('.yoss-result').length > 0) {
 				$('.yoss-result').remove();
-			} 
+			}
+
+
+
+
 
 			{if $yoss_settings.result_width === 'auto'}
 				resultBlock.css({ 'width': inputParentWidth + 'px' });
@@ -203,6 +207,12 @@ var yossFrontend = (function () { 'use strict';
 		$(document).on('keyup', '{$yoss_settings.id_in_html}', onSearchInputKeyup);
 
 		$(document).mouseup('.yoss-result', onNonResultBlockClick);
+
+		window.onscroll = function() {
+			var menu_top = document.documentElement.scrollTop;
+			$('.yoss-result').css('top',menu_top + 56 + 'px');
+		};
+
 	};
 
 	return {
