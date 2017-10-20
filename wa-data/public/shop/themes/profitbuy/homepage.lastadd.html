@@ -5,7 +5,7 @@
 
 
 {if !empty($theme_settings.last_posts_show) && $wa->blog}
-    {$company_news_posts = $wa->blog->posts(3, 5)}
+    {$company_news_posts = $wa->blog->posts(4, 5)}
     {$med_news_posts = $wa->blog->posts(2, 4)}
 
 {/if}
@@ -21,7 +21,7 @@
                 <div class="fill-background">
                 
                 <h2 class="last-post-header">Новости компании</h2>
-                
+
                 {foreach $company_news_posts as $post}
                 {$count = preg_match_all('/(src)=("[^"]*")/i',$post.text, $result)}
                 {$img = $result.2.0}
@@ -58,7 +58,11 @@
 
                     </div>
 
+                    {$section = $post.blog_url}
                 {/foreach}
+                    <div class="row-grid" style="text-align: right">
+                        <a href="/{$section}/" style="color: #999;">Еще >></a>
+                    </div>
                 
             </div>
             </div>
@@ -109,8 +113,11 @@
 
                 </div>
 
-
+                {$section = $post.blog_url}
                 {/foreach}
+                <div class="last-post-wrapper col-grid m12" style="text-align: right">
+                    <a href="/{$section}/" style="color: #999;">Еще >></a>
+                </div>
 
             </div>
         </div>
