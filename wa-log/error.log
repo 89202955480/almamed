@@ -12349,3 +12349,12 @@ MySQL server has gone away
 #17 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(478): waSystem->dispatchFrontend('')
 #18 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
 #19 {main}
+
+2017-10-25 14:22:41 91.204.60.9
+Unable to get data from currencyquotes widget API: Curl executing error: 28 - Connection timed out after 10001 milliseconds. Url: http://www.cbr.ru/scripts/XML_daily.asp?date_req=26/10/2017
+
+2017-10-25 14:22:52 91.204.60.9
+Unable to get data from currencyquotes widget API: Curl executing error: 28 - Connection timed out after 10001 milliseconds. Url: http://www.cbr.ru/scripts/XML_daily.asp?date_req=26/10/2017
+
+2017-10-25 14:23:03 91.204.60.9
+Unable to get data from currencyquotes widget API: Curl executing error: 28 - Connection timed out after 10001 milliseconds. Url: http://www.cbr.ru/scripts/XML_daily.asp?date_req=26/10/2017

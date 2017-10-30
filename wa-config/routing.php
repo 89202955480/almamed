@@ -2,6 +2,20 @@
 return array (
   'almamed.su' => 
   array (
+    4 => 
+    array (
+      'url' => 'company-news/*',
+      'app' => 'blog',
+      'theme' => 'profitbuy',
+      'theme_mobile' => 'profitbuy',
+      'blog_url_type' => '3',
+      'post_url_type' => '0',
+      'title_type' => 'blog_post',
+      'title' => '',
+      'meta_keywords' => '',
+      'meta_description' => '',
+      'rss_title' => '',
+    ),
     3 => 
     array (
       'url' => 'vystavki/*',
