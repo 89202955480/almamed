@@ -150,6 +150,21 @@ return array (
           ),
            '_type' => 'waContactCountryField',
         )),
+        'soglasie-na-obr' => 
+        waContactCheckboxField::__set_state(array(
+           'id' => 'soglasie-na-obr',
+           'options' => 
+          array (
+            'app_id' => 'shop',
+            'storage' => 'data',
+            'required' => '1',
+          ),
+           'name' => 
+          array (
+            'en_US' => 'Согласие на обработку персональных данных',
+          ),
+           '_type' => 'waContactCheckboxField',
+        )),
         'lng' => 
         waContactHiddenField::__set_state(array(
            'id' => 'lng',

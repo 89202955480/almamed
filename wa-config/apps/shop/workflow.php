@@ -144,11 +144,11 @@ return array (
       ),
       'available_actions' => 
       array (
-        0 => 'pay',
-        1 => 'delete',
-        2 => 'message',
+        0 => 'process',
+        1 => 'pay',
+        2 => 'delete',
+        3 => 'message',
       ),
-      'classname' => 'shopWorkflowState',
     ),
     'completed' => 
     array (

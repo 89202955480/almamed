@@ -122,6 +122,20 @@
 
 <script type="text/javascript">
     $(function () {
+	
+	     function func1() {
+            window.open("/rules/user_yes.pdf", "_blank");
+            return false;
+        }
+        function func2() {
+            window.open("/rules/personal.pdf", "_blank");
+            return false;
+        }
+
+        $('#checkout-contact-form .wa-form .wa-field p .field:last-child > span').click(function(){
+            setTimeout(func1, 500);
+            setTimeout(func2, 1000);
+        });
     
         function checkoutStep(step_id) {
             $.get("{$wa->getUrl('/frontend/checkout')}" + step_id + '/', function (response) {

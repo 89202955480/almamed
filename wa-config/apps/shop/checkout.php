@@ -54,6 +54,10 @@ return array (
             'localized_names' => 'Страна',
             'required' => '',
           ),
+          'soglasie-na-obr' => 
+          array (
+            'required' => '1',
+          ),
         ),
       ),
       'address.shipping' => 
@@ -80,6 +84,10 @@ return array (
           array (
             'localized_names' => 'Страна',
             'required' => '',
+          ),
+          'soglasie-na-obr' => 
+          array (
+            'required' => '1',
           ),
         ),
       ),
