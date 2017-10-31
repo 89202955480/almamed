@@ -125,9 +125,7 @@
 
         var text = "Нажимая на эту кнопку , я даю свое согласие на <a href='/rules/personal.pdf'>обработку персональных данных</a> и соглашаюсь с условиями <a href='/rules/user_yes.pdf'>политики конфеденциальности</a>";
         $('#checkout-contact-form .wa-form .wa-field p .wa-field-address-soglasie-na-obr > span').html(text);
-
-        var text2 = "Я согласен на получение <a href='https://almamed.su'>информации от almamed.su</a>";
-        $('#checkout-contact-form .wa-form .wa-field p .wa-field-address-ya-soglasen-na- > span').html(text2);
+        
 
         function checkoutStep(step_id) {
             $.get("{$wa->getUrl('/frontend/checkout')}" + step_id + '/', function (response) {

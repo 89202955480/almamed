@@ -58,10 +58,6 @@ return array (
           array (
             'required' => '1',
           ),
-          'ya-soglasen-na-' => 
-          array (
-            'required' => '1',
-          ),
         ),
       ),
       'address.shipping' => 
@@ -90,10 +86,6 @@ return array (
             'required' => '',
           ),
           'soglasie-na-obr' => 
-          array (
-            'required' => '1',
-          ),
-          'ya-soglasen-na-' => 
           array (
             'required' => '1',
           ),

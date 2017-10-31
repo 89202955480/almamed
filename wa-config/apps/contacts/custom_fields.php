@@ -165,21 +165,6 @@ return array (
           ),
            '_type' => 'waContactCheckboxField',
         )),
-        'ya-soglasen-na-' => 
-        waContactCheckboxField::__set_state(array(
-           'id' => 'ya-soglasen-na-',
-           'options' => 
-          array (
-            'app_id' => 'shop',
-            'storage' => 'data',
-            'required' => '1',
-          ),
-           'name' => 
-          array (
-            'en_US' => 'Я согласен на получение информации от сайта',
-          ),
-           '_type' => 'waContactCheckboxField',
-        )),
         'lng' => 
         waContactHiddenField::__set_state(array(
            'id' => 'lng',
