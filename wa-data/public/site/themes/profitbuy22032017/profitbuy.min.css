@@ -980,7 +980,10 @@ input[type=checkbox].at-stylize-input:checked + .at-stylize-button{box-shadow:in
 
 #checkout-contact-form .wa-form .wa-field p .field:last-child{
 
-    margin: 15px auto;
+    margin-bottom: 70px;
+    margin-top: 20px;
+    margin-left: -12px;
+    width: 100%;
 
 }
 #checkout-contact-form .wa-form .wa-field p .field:last-child span{

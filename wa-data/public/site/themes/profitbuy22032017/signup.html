@@ -17,10 +17,26 @@
         {/if}
         
     {else}
-    
+
         <h1>[s`Sign up`]</h1>
         {$wa->authAdapters()}
         {$wa->signupForm($errors)}
+
+    <div class="wa-form">
+        <div class="wa-field wa-field-firstname">
+            <input id="tm-license-agreement" type="checkbox" checked="ckecked" /> <a href="/rules/user_yes.pdf">Согласие на обработку персональных данных</a>.
+        </div>
+    </div>
+    <script type="text/javascript">
+        ;(function($) { 'use strict';
+            var $checkbox = $('#tm-license-agreement');
+            var $submit = $('.wa-field .wa-submit input');
+            $checkbox.on('change', function() {
+                        $submit.attr('disabled', $checkbox.prop('checked') ? false : true);
+                    }).trigger('change');
+
+        })(jQuery);
+    </script>
         
     {/if}
     
