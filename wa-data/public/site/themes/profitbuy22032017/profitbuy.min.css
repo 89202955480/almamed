@@ -978,25 +978,43 @@ input[type=checkbox].at-stylize-input:checked + .at-stylize-button{box-shadow:in
 	
 }
 
-#checkout-contact-form .wa-form .wa-field p .field:last-child{
+#checkout-contact-form .wa-form .wa-field p .wa-field-address-soglasie-na-obr{
 
-    margin-bottom: 70px;
+    margin-bottom: 40px;
     margin-top: 20px;
-    margin-left: -12px;
     width: 100%;
 
 }
-#checkout-contact-form .wa-form .wa-field p .field:last-child span{
+#checkout-contact-form .wa-form .wa-field p .wa-field-address-soglasie-na-obr > span{
+    width: 95%;
     float: right;
-    font-size: 16px;
-    line-height: 14px;
-    cursor: pointer;
-    color: #0497C0;
 }
-#checkout-contact-form .wa-form .wa-field p .field:last-child span:hover{
-    text-decoration: underline;
+#checkout-contact-form .wa-form .wa-field p .wa-field-address-soglasie-na-obr .at-stylize-label{
+    width: 5%;
 }
-.wa-form .wa-field .wa-value p .field:last-child span.at-stylize-box:after{
+
+.wa-form .wa-field .wa-value p .wa-field-address-soglasie-na-obr span.at-stylize-box:after{
+    content: "";
+    color: #f44336;
+}
+
+
+#checkout-contact-form .wa-form .wa-field p .wa-field-address-ya-soglasen-na-{
+
+    margin-bottom: 50px;
+    margin-top: 20px;
+    width: 100%;
+
+}
+#checkout-contact-form .wa-form .wa-field p .wa-field-address-ya-soglasen-na- > span{
+    width: 95%;
+    float: right;
+}
+#checkout-contact-form .wa-form .wa-field p .wa-field-address-ya-soglasen-na- .at-stylize-label{
+    width: 5%;
+}
+
+.wa-form .wa-field .wa-value p .wa-field-address-ya-soglasen-na- span.at-stylize-box:after{
     content: "";
     color: #f44336;
 }
