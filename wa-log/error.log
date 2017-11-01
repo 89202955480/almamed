@@ -12358,3 +12358,98 @@ Unable to get data from currencyquotes widget API: Curl executing error: 28 - Co
 
 2017-10-25 14:23:03 91.204.60.9
 Unable to get data from currencyquotes widget API: Curl executing error: 28 - Connection timed out after 10001 milliseconds. Url: http://www.cbr.ru/scripts/XML_daily.asp?date_req=26/10/2017
+
+2017-10-31 12:55:07 91.204.60.9
+Event handling error in shopYandexmarketPlugin:
+MySQL server has gone away
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(156): waDbMysqliAdapter->exception()
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(171): waDbMysqliAdapter->schema('wa_app_settings', false)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(127): waModel->describe()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(93): waModel->getFields()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(77): waModel->getMetadata()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/plugin/waPlugin.class.php(60): waModel->__construct()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/plugin/waPlugin.class.php(41): waPlugin->checkUpdates()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(1533): waPlugin->__construct(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/lib/config/shopConfig.class.php(118): waSystem->event(Array, Array)
+#9 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(295): shopConfig->getRouting(Array, true)
+#10 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(213): waRouting->getAppRoutes('shop', Array, true)
+#11 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(618): waRouting->dispatch()
+#12 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(478): waSystem->dispatchFrontend(false)
+#13 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#14 {main}
+
+2017-10-31 12:55:07 91.204.60.9
+Event handling error in shopYossPlugin:
+MySQL server has gone away
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(156): waDbMysqliAdapter->exception()
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(171): waDbMysqliAdapter->schema('wa_app_settings', false)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(127): waModel->describe()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(93): waModel->getFields()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(77): waModel->getMetadata()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/plugin/waPlugin.class.php(60): waModel->__construct()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/plugin/waPlugin.class.php(41): waPlugin->checkUpdates()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(1533): waPlugin->__construct(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/lib/config/shopConfig.class.php(118): waSystem->event(Array, Array)
+#9 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(295): shopConfig->getRouting(Array, true)
+#10 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(213): waRouting->getAppRoutes('shop', Array, true)
+#11 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(618): waRouting->dispatch()
+#12 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(478): waSystem->dispatchFrontend(false)
+#13 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#14 {main}
+
+2017-10-31 12:55:07 91.204.60.9
+Event handling error in shopError301Plugin:
+MySQL server has gone away
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(156): waDbMysqliAdapter->exception()
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(171): waDbMysqliAdapter->schema('wa_app_settings', false)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(127): waModel->describe()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(93): waModel->getFields()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(77): waModel->getMetadata()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/plugin/waPlugin.class.php(60): waModel->__construct()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/plugin/waPlugin.class.php(41): waPlugin->checkUpdates()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(1533): waPlugin->__construct(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/lib/config/shopConfig.class.php(118): waSystem->event(Array, Array)
+#9 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(295): shopConfig->getRouting(Array, true)
+#10 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(213): waRouting->getAppRoutes('shop', Array, true)
+#11 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(618): waRouting->dispatch()
+#12 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(478): waSystem->dispatchFrontend(false)
+#13 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#14 {main}
+
+2017-10-31 12:55:07 91.204.60.9
+Event handling error in shopWmimageincatPlugin:
+MySQL server has gone away
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(156): waDbMysqliAdapter->exception()
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(171): waDbMysqliAdapter->schema('wa_app_settings', false)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(127): waModel->describe()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(93): waModel->getFields()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(77): waModel->getMetadata()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/plugin/waPlugin.class.php(60): waModel->__construct()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/plugin/waPlugin.class.php(41): waPlugin->checkUpdates()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(1533): waPlugin->__construct(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/lib/config/shopConfig.class.php(118): waSystem->event(Array, Array)
+#9 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(295): shopConfig->getRouting(Array, true)
+#10 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(213): waRouting->getAppRoutes('shop', Array, true)
+#11 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(618): waRouting->dispatch()
+#12 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(478): waSystem->dispatchFrontend(false)
+#13 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#14 {main}
+
+2017-10-31 12:55:07 91.204.60.9
+Event handling error in shopProductbrandsPlugin:
+MySQL server has gone away
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(156): waDbMysqliAdapter->exception()
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(171): waDbMysqliAdapter->schema('wa_app_settings', false)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(127): waModel->describe()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(93): waModel->getFields()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(77): waModel->getMetadata()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/plugin/waPlugin.class.php(60): waModel->__construct()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/plugin/waPlugin.class.php(41): waPlugin->checkUpdates()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(1533): waPlugin->__construct(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/lib/config/shopConfig.class.php(118): waSystem->event(Array, Array)
+#9 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(295): shopConfig->getRouting(Array, true)
+#10 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(213): waRouting->getAppRoutes('shop', Array, true)
+#11 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(618): waRouting->dispatch()
+#12 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(478): waSystem->dispatchFrontend(false)
+#13 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#14 {main}
