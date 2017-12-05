@@ -61,8 +61,9 @@ return array (
       ),
       'available_actions' => 
       array (
-        0 => 'process',
-        1 => 'delete',
+        0 => 'comment',
+        1 => 'process',
+        2 => 'delete',
       ),
       'classname' => 'shopWorkflowState',
     ),
@@ -102,11 +103,12 @@ return array (
       ),
       'available_actions' => 
       array (
-        0 => 'ship',
-        1 => 'refund',
-        2 => 'edit',
-        3 => 'complete',
-        4 => 'message',
+        0 => 'comment',
+        1 => 'ship',
+        2 => 'refund',
+        3 => 'edit',
+        4 => 'complete',
+        5 => 'message',
       ),
       'classname' => 'shopWorkflowState',
     ),
@@ -115,19 +117,20 @@ return array (
       'name' => 'Отправлен',
       'options' => 
       array (
-        'icon' => 'icon16 ss sent',
         'style' => 
         array (
-          'color' => '#0000FF',
+          'color' => '#0000ff',
           'font-style' => 'italic',
         ),
+        'icon' => 'icon16 ss sent',
       ),
       'available_actions' => 
       array (
-        0 => 'complete',
-        1 => 'comment',
-        2 => 'delete',
-        3 => 'message',
+        0 => 'edit',
+        1 => 'complete',
+        2 => 'comment',
+        3 => 'delete',
+        4 => 'message',
       ),
       'classname' => 'shopWorkflowState',
     ),
@@ -144,10 +147,11 @@ return array (
       ),
       'available_actions' => 
       array (
-        0 => 'process',
-        1 => 'pay',
-        2 => 'delete',
-        3 => 'message',
+        0 => 'comment',
+        1 => 'process',
+        2 => 'pay',
+        3 => 'delete',
+        4 => 'message',
       ),
     ),
     'completed' => 

@@ -45,6 +45,8 @@ Redirect 301 /category/odnorazovye-tuby-heine-unispec-r// /category/odnorazovye-
 Redirect 301 /category/instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya-r// /category/instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya/
 Redirect 301 http://almamed.su/robots.txt https://almamed.su/robots.txt
 
+#По просьбе Гугла от 14.11
+Redirect 301 /category/probirki-dlya-issledovaniya-plazmy-krovi-s-litiy-geparinom-lithium-heparin-tube-kitay/  /category/probirki-dlya-issledovaniya-plazmy-krovi-s-litiy-geparinom-lithium-heparin-tube-kitay1/
 
 
 #включение логов

@@ -606,7 +606,7 @@
       </options>
     </setting>
     <setting var="pages_sidebar" control_type="select">
-      <value/>
+      <value>site</value>
       <name locale="en_US">Links to the pages in the sidebar</name>
       <name locale="ru_RU">Ссылки на страницы в боковой панели</name>
       <description locale="ru_RU">Эту настройку следует определить в каждом из приложений.</description>
@@ -662,7 +662,7 @@
       <name locale="ru_RU">Количество изначально видимых товаров в корзине(нижняя панель)</name>
     </setting>
     <setting var="pages_bottom" control_type="select">
-      <value>site</value>
+      <value/>
       <name locale="en_US">Links to the pages in the bottom panel</name>
       <name locale="ru_RU">Ссылки на страницы в нижней панели</name>
       <options>
