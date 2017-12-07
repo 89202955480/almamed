@@ -1,0 +1,42 @@
+<div class="sidebar right15px">
+    <div class="block s-nolevel2-sidebar"></div>
+</div>
+<div class="sidebar left15px">
+    <div class="block s-nolevel2-sidebar"></div>
+</div>
+
+<div class="content left15px right15px s-nolevel2-box">
+
+    <div class="content left200px blank bordered-left">
+
+        <div class="block double-padded">
+            <div class="sidebar left200px">
+                <ul class="menu-v">
+                    <li>
+                        <label class="black">Все товары</label>
+                    </li>
+
+                </ul>
+            </div>
+            <form method="post" action="">
+                {foreach from=$cat item=c}
+                <input type="checkbox" name="del_cat[]" value="{$c.id}"/>{$c.name}<br>
+                <input type="hidden" name="all_cat[]" value="{$c.id}">
+                {/foreach}
+                <br>
+                <input type="submit" value="Скачать">
+            </form>
+
+            {if $import == true}
+                <p>Экспорт успешно завершён!</p>
+                <a href="/import.xml">Скачать файл импорта</a>
+            {/if}
+
+        </div>
+
+
+
+
+    </div>
+
+</div>

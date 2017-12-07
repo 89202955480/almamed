@@ -18,5 +18,6 @@ return array (
   'accordion' => true,
   'form' => true,
   'plugmein' => true,
+  'xml' => true,
 );
 //EOF
