@@ -10,14 +10,7 @@
     <div class="content left200px blank bordered-left">
 
         <div class="block double-padded">
-            <div class="sidebar left200px">
-                <ul class="menu-v">
-                    <li>
-                        <label class="black">Все товары</label>
-                    </li>
-
-                </ul>
-            </div>
+            
             <form method="post" action="">
                 {foreach from=$cat item=c}
                 <input type="checkbox" name="del_cat[]" value="{$c.id}"/>{$c.name}<br>
