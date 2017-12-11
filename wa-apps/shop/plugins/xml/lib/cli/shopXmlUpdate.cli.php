@@ -26,14 +26,14 @@ class shopXmlUpdateCli extends waCliController
                         $all_cat[] = $cat['id'];
                     }
                 }
-                $path = $root.'/bx-import/'.$key.'.xml';
+                $path = $root.'bx-import/'.$key.'.xml';
                 var_dump($path);
                 $plugin->indexCat($all_cat,$path);
             }
 
             if(strstr($key, 'brands')){
                 $ids_b = explode('_',$set);
-                $path = $root.'/bx-import/'.$key.'.xml';
+                $path = $root.'bx-import/'.$key.'.xml';
                 $plugin->indexBrand($ids_b,$path);
             }
 
