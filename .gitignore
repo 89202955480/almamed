@@ -5,4 +5,5 @@ wa-data/protected/shop/products/
 wa-data/protected/
 wa-config/db.php
 wa-cache/
+bx-import/
 .idea
