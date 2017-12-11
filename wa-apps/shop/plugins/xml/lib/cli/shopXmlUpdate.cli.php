@@ -15,6 +15,7 @@ class shopXmlUpdateCli extends waCliController
 
         $root = realpath(__DIR__."../../../../../../../");
 
+
         $arrResult = array();
         foreach($settings as $key => $set){
 
@@ -27,6 +28,7 @@ class shopXmlUpdateCli extends waCliController
                     }
                 }
                 $path = $root.'/bx-import/'.$key.'.xml';
+                var_dump($path);
                 $plugin->indexCat($all_cat,$path);
             }
 
