@@ -13,8 +13,7 @@ class shopXmlUpdateCli extends waCliController
         $settings = $plugin->getSettings();
         $cat_parent = $plugin->getFullTree(false,true,array(),true);
 
-        $root = realpath(__DIR__."../../../../../../../");
-
+        $root = wa()->getConfig()->getPath('root').DIRECTORY_SEPARATOR;
 
         $arrResult = array();
         foreach($settings as $key => $set){
