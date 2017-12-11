@@ -7,6 +7,7 @@ Options -Indexes
 # Comment the following line, if option Multiviews not allowed here
 # Options -MultiViews
 
+php_value error_reporting 1
 
 AddDefaultCharset utf-8
 

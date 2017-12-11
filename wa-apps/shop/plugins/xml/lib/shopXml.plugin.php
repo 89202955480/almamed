@@ -15,9 +15,81 @@ Class shopXmlPlugin extends shopPlugin {
         return array('core_li'  => '<li class="no-tab"><a href="?plugin=xml&action=edit ">Экспорт Xml для Битрикс</a></li>');
     }
 
+    public function indexBrand($brands,$path){
+        $brand = new shopProductbrandsPlugin();
+        $self = new waNestedSetModel();
 
-    public function indexCat($cat)
+
+        $category = $this->getFullTree('',true);
+
+        $cat_tree = array();
+        $prod_tree = array();
+        $cat_product = array();
+        foreach($category as $k => $cat){
+            //$cat_tree[$cat['parent_id']][] = $cat;
+            $collection = new shopProductsCollection("category/" . $cat['id']);
+            $product = $collection->getProducts();
+            if ($product) {
+                foreach ($product as $key_prod => $prod) {
+
+                    $idb = $brand->productBrand($prod['id']);
+
+                    if(in_array($idb['id'],$brands)){
+                        $prod_tree[$key_prod] = $prod;
+                        $sql = "SELECT * FROM shop_category_products WHERE product_id = " . $prod['id'];
+                        $cat_ar = $self->query($sql)->fetchAll();
+                        $prod_tree[$key_prod]['id_category'] = $cat_ar;
+                        foreach($cat_ar as $c){
+                            $cat_product[$c['category_id']] = $c;
+                        }
+
+                    }
+                }
+            }
+        }
+
+
+        foreach($cat_product as $id){
+            $category_prod = explode(',',$this->recursive_prod_parent_cat($id['category_id']));
+            foreach($category_prod as $id_cat){
+                $sql = "SELECT * FROM shop_category WHERE id = " . $id_cat;
+                $cat_ar = $self->query($sql)->fetchAll();
+                $cat_tree[$cat_ar[0]['parent_id']][$cat_ar[0]['id']] = $cat_ar[0];
+            }
+        }
+
+
+
+
+        $this->saveXml($this->create_tree($cat_tree,0),$this->create_product($prod_tree),$path);
+
+        return true;
+
+    }
+
+
+    public function recursive_prod_parent_cat($id_cat){
+
+            $arr = '';
+            $self = new waNestedSetModel();
+
+            $sql = "SELECT * FROM shop_category WHERE id = " . $id_cat;
+            $cat_ar = $self->query($sql)->fetch();
+
+            if($cat_ar['parent_id'] > 0){
+                $arr .= $cat_ar['id'].',';
+                $arr .= $this->recursive_prod_parent_cat($cat_ar['parent_id']);
+            }else{
+                $arr .= $id_cat;
+            }
+
+        return $arr;
+    }
+
+
+    public function indexCat($cat,$path)
     {
+        //получаем категории которые нужно убрать.
 
         $cat_tree = array();
         $prod_tree = array();
@@ -43,7 +115,7 @@ Class shopXmlPlugin extends shopPlugin {
             }
         }
 
-        $this->saveXml($this->create_tree($cat_tree,0),$this->create_product($prod_tree));
+        $this->saveXml($this->create_tree($cat_tree,0),$this->create_product($prod_tree),$path);
 
         return true;
     }
@@ -141,7 +213,7 @@ Class shopXmlPlugin extends shopPlugin {
     }
 
 
-    public function saveXml($cat,$prod){
+    public function saveXml($cat,$prod,$path){
 
         $tree = '<?xml version="1.0" encoding="UTF-8"?>';
         $tree .= '<КоммерческаяИнформация ВерсияСхемы="3.1" ДатаФормирования="2017-12-06T16:04:37">';
@@ -164,14 +236,18 @@ Class shopXmlPlugin extends shopPlugin {
 	    $tree .= '</Каталог>';
 
         $tree .= '</КоммерческаяИнформация>';
-
-        file_put_contents($_SERVER['DOCUMENT_ROOT'].'/import.xml', $tree);
+        if($path){
+            file_put_contents($path, $tree);
+        }else{
+            file_put_contents($_SERVER['DOCUMENT_ROOT'].'/import.xml', $tree);
+        }
 
     }
 
     public function xmlEscape($string) {
         return str_replace(array('&', '<', '>', '\'', '"'), array('&amp;', '&lt;', '&gt;', '&apos;', '&quot;'), $string);
     }
+
 
 
 

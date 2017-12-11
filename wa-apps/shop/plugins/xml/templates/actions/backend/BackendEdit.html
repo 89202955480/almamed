@@ -7,17 +7,30 @@
 
 <div class="content left15px right15px s-nolevel2-box">
 
+    <div class="sidebar left300px blank">
+        <div class="block double-padded">
+            <p>Бренды</p>
+            <form method="post" action="">
+                {foreach from=$brand item=b}
+                <input type="checkbox" name="brand[]" value="{$b.id}"/>{$b.name} id:({$b.id})<br>
+                {/foreach}
+                <br>
+
+        </div>
+
+    </div>
+
     <div class="content left200px blank bordered-left">
 
         <div class="block double-padded">
+            <p>Категории</p>
 
-            <form method="post" action="">
                 {foreach from=$cat item=c}
                 <input type="checkbox" name="del_cat[]" value="{$c.id}"/>{$c.name}<br>
                 <input type="hidden" name="all_cat[]" value="{$c.id}">
                 {/foreach}
                 <br>
-                <input type="submit" value="экспортировать">
+                <input type="submit" value="экспорт">
             </form>
 
             {if $import == true}
