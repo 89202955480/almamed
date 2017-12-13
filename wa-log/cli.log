@@ -2217,3 +2217,803 @@ Stack trace:
 #7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
 #8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
 #9 {main}
+
+2017-12-06 12:28:05 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-06 12:29:06 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-06 12:30:05 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-06 12:31:05 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-06 12:32:06 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-06 12:33:06 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-06 12:34:06 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-06 12:35:05 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-06 12:36:05 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-06 12:37:05 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-06 12:50:06 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-06 12:51:06 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-06 12:52:06 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-06 12:53:05 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-06 12:54:05 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-06 12:55:05 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-07 12:41:05 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-07 12:42:05 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-07 12:43:05 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-07 12:44:06 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-07 12:45:05 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-11 00:11:01 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2017-12-11 00:12:01 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2017-12-11 00:13:00 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2017-12-11 00:14:01 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2017-12-11 00:15:00 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2017-12-11 00:16:00 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2017-12-11 00:17:02 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2017-12-11 00:18:00 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2017-12-11 00:19:00 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2017-12-11 00:20:01 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2017-12-11 00:21:00 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2017-12-11 00:22:01 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2017-12-11 00:23:01 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2017-12-11 00:24:00 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2017-12-11 00:25:01 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2017-12-11 00:26:01 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2017-12-11 00:27:01 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2017-12-11 00:28:01 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2017-12-11 00:29:01 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2017-12-11 00:30:01 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2017-12-11 00:31:01 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2017-12-11 00:32:01 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2017-12-11 00:33:01 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2017-12-11 00:34:01 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2017-12-11 00:35:00 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2017-12-11 00:36:01 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:9
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(9): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2017-12-11 12:51:06 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-11 12:52:07 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-12 12:50:05 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-12 12:51:06 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-12 12:52:06 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-12 12:53:05 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-12 12:54:05 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-12 12:55:05 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-12 12:56:06 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-12 12:57:06 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-12 12:58:05 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2017-12-12 12:59:05 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:11
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(11): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(130): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(193): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}

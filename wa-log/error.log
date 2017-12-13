@@ -13622,3 +13622,30 @@ Database error. See log for details. (2006)
 #9 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
 #10 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
 #11 {main}
+
+2017-12-12 13:31:30 194.154.75.198
+Unable to get data from currencyquotes widget API: Curl executing error: 28 - Connection timed out after 10001 milliseconds. Url: http://www.cbr.ru/scripts/XML_daily.asp?date_req=13/12/2017
+
+2017-12-12 13:31:41 194.154.75.198
+Unable to get data from currencyquotes widget API: Curl executing error: 28 - Connection timed out after 10001 milliseconds. Url: http://www.cbr.ru/scripts/XML_daily.asp?date_req=13/12/2017
+
+2017-12-12 13:31:52 194.154.75.198
+Unable to get data from currencyquotes widget API: Curl executing error: 28 - Connection timed out after 10001 milliseconds. Url: http://www.cbr.ru/scripts/XML_daily.asp?date_req=13/12/2017
+
+2017-12-12 18:04:27 178.150.85.244
+Uncaught exception waDbException:
+Database error. See log for details. (1062)
+## /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('INSERT  INTO sh...')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(565): waModel->query('INSERT  INTO sh...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/lib/model/shopFeature.model.php(90): waModel->insert(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/lib/actions/settings/features/shopSettingsFeaturesFeatureSave.controller.php(22): shopFeatureModel->save(Array, -1)
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopSettingsFeaturesFeatureSaveController->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopSettingsFeaturesFeatureSaveController), NULL)
+#8 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'settings', 'featuresFeature...')
+#9 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#10 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#11 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#12 {main}

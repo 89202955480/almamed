@@ -1,5 +1,4 @@
 <?php
-
 return array (
   'yandexmarket' => true,
   'yoss' => true,
@@ -18,6 +17,5 @@ return array (
   'accordion' => true,
   'form' => true,
   'plugmein' => true,
-  'xml' => true,
+  'xml' => '1',
 );
-//EOF
