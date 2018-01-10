@@ -1,0 +1,36 @@
+<style type="text/css">
+    {include file="../css/style.css" inline}
+</style>
+
+
+<div class="manager-block">
+
+    <div class="manager-img-block">
+        <img src="{$user.photo}" alt="{$user.name}">
+    </div>
+
+    <div class="manager-block-one"></div>
+
+
+    <div class="manager-text-block">
+        <div class="manager-text">
+            <span class="manager-h1">{$user.name}</span>
+            <span class="">Менеджер по этому товару</span>
+        </div>
+        <div class="manager-text">
+            {foreach from=$user.email item=email}
+            <span class="manager-callback"><i class="material-icons">&#xE0BE;</i> {$email}</span>
+            {/foreach}
+
+            {foreach from=$user.phone item=phone}
+            <span class="manager-callback"><i class="material-icons">&#xE325;</i> {$phone}</span>
+            {/foreach}
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
