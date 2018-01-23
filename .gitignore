@@ -1,9 +1,10 @@
 s.zip
-sxd/
-wa-data/public/shop/products/
-wa-data/protected/shop/products/
-wa-data/protected/
+sxd/*
+/wa-data/public/blog/img/*
+wa-data/public/shop/products/*
+wa-data/protected/shop/products/*
+wa-data/protected/*
 wa-config/db.php
-wa-cache/
-bx-import/
+wa-cache/*
+bx-import/*
 .idea
