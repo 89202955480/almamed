@@ -23,10 +23,15 @@
                     form.find('.dialog-buttons i.loading').show();
                     var action = form.attr('action');
                     var id_manager = form.serializeArray().shift().value;
-
+                    var product_id;
+                    if(products.product_id){
+                        product_id = products.product_id
+                    }else{
+                        product_id = products.hash
+                    }
                     var data = {
                         "manager_id" : id_manager,
-                        "product_id" : products.product_id
+                        "product_id" : product_id
                     };
 
                     $.post(action, data, function (html) {
