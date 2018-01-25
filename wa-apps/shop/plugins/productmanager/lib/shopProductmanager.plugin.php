@@ -9,12 +9,21 @@ Class shopProductmanagerPlugin extends shopPlugin {
         "photo"
     );
 
+
     public function product_edit($data)
     {
         return array(
             'category_action_li' => $this->backend_user_html($data->data['manager']),
         );
     }
+
+    public function backend_products_all(){
+        return array(
+            'title_suffix' => '<script src="'.$this->getPluginStaticUrl().'js/script.js"></script>',
+            'toolbar_organize_li' => '<li data-castom-action="assign-manager"><a href="#"><i class="icon16 user"></i>Назначить менеджера</a></li>',
+        );
+    }
+
 
     public function front_product($params){
 

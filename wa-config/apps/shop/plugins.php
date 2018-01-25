@@ -18,7 +18,7 @@ return array (
   'accordion' => true,
   'form' => true,
   'plugmein' => true,
-  'productmanager' => true,
   'xml' => '1',
+  'productmanager' => true,
 );
 //EOF

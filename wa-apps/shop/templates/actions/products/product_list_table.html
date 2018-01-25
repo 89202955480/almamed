@@ -21,6 +21,13 @@
                     </a>{if $sort=='name'}<i class="icon10 {if $order == 'asc'}uarr{else}darr{/if}"></i>{/if}
                 </span>
             </th>
+            <th>
+                <span class="sort" title="Менеджер">
+                    <a href="#/products/{if $collection_param}{$collection_param}&{/if}view={$view}&sort=manager&order={if $order == 'asc' && $sort=='manager'}desc{else}asc{/if}" class="inline-link selected">
+                        Менеджер
+                    </a>{if $sort=='manager'}<i class="icon10 {if $order == 'asc'}uarr{else}darr{/if}"></i>{/if}
+                </span>
+            </th>
             <th class="short align-right" title="[`Price`]">
                 <span class="sort">
                     <a href="#/products/{if $collection_param}{$collection_param}&{/if}view={$view}&sort=price&order={if $order == 'asc' && $sort=='price'}desc{else}asc{/if}" class="inline-link selected">
@@ -110,6 +117,9 @@
         {literal}
         <td class="drag-handle s-product-name">
             <a href="#/product/{%#p.id%}/"><div>{%#p.name%}<i class="shortener"></i></div></a>
+        </td>
+        <td class="drag-handle s-product-name">
+            <a href="#/product/{%#p.id%}/"><div>{%#p.manager%}<i class="shortener"></i></div></a>
         </td>
         <td class="short nowrap align-right s-product-price" title="[`Price`]"><span class="editable">{%#p.price_range%}</span></td>
         <td class="short nowrap align-right s-product-stock" title="[`In stock`]">
