@@ -110,7 +110,7 @@
     
     <!-- product info -->
     <div class="product-info col-grid s12 {if !$is_sidebar_product}l8{/if}" id="overview">
-        
+        {shopProductmanagerPlugin::getManagerFront($product.manager)}
         <div class="fill-background">
         
             <!-- product internal nav -->

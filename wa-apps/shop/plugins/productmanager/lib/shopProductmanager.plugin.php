@@ -24,9 +24,37 @@ Class shopProductmanagerPlugin extends shopPlugin {
         );
     }
 
+    public function getManagerFront($params){
+        if($params){
+
+            $field_user = array(
+                "name",
+                "email",
+                "phone",
+                "photo"
+            );
+
+            $contact = new waContact($params);
+            foreach($field_user as $field){
+                if($field == "phone" or $field == "email")
+                    $arr_users[$field] = $contact->get($field,"value");
+                else
+                    $arr_users[$field] = $contact->get($field,"default");
+
+                if($field == "photo")
+                    $arr_users[$field] = $contact->getPhoto(120,160);
+            }
+
+            $view = wa()->getView();
+            $view->assign('user', $arr_users);
+
+            return $view->fetch($_SERVER['DOCUMENT_ROOT'].'/wa-apps/shop/plugins/productmanager/templates/frontendManager.html');
+        }
+    }
+
 
     public function front_product($params){
-
+        /*
         if($params['manager']){
 
             $view = wa()->getView();
@@ -36,6 +64,8 @@ Class shopProductmanagerPlugin extends shopPlugin {
                 'block'     => $view->fetch($this->path.'/templates/frontendManager.html'),
             );
         }
+        */
+
     }
 
     public function backend_user_html($id_user){
