@@ -23,14 +23,12 @@
             <h2 class="last-post-header">Новости компании</h2>
 
             {foreach $company_news_posts as $post}
-            {$count = preg_match_all('/(src)=("[^"]*")/i',$post.text, $result)}
-            {$img = $result.2.0}
 
             <div class="row-grid">
                 <div class="last-post-wrapper col-grid m6" style="overflow: hidden;height: 250px;">
 
-                    {$image = shopCustom::resize($img, 490)}
-                    <img src={$img} style="max-width:485px;">
+
+                    <img src={$post.image} style="max-width:485px;">
                 </div>
                 <div class="last-post-wrapper col-grid m6" style="height: 250px;">
                     <h4 class="last-post-title" style="margin-top: 10px;">
@@ -83,16 +81,10 @@
             <h2 class="last-post-header">Новости медицины</h2>
 
             {foreach $med_news_posts as $post}
-            {$count = preg_match_all('/(src)=("[^"]*")/i',$post.text, $result)}
-            {$img = $result.2.0}
-
             <div class="last-post-wrapper col-grid m3" style="">
 
                 <div class="images-post" style="overflow: hidden;height: 170px">
-
-                    {$image = shopCustom::resize($img, 240)}
-
-                    <img src={$img} style="max-width: 240px;">
+                    <img src={$post.image} style="max-width: 240px;">
                 </div>
 
                 <h4 class="last-post-title" style="margin-top: 10px;height: 80px;">
