@@ -97,8 +97,9 @@ class userlogsBackendActions extends waViewActions
                 }
             }
         }
-
-        $num_page = ceil($log_model->getLogsCount()/$rows_count);
+        $result = $log_model->query("SELECT COUNT(id) as num FROM wa_log");
+        $num = $result->fetchField();
+        $num_page = ceil($num/$rows_count);
 
         // передаем записи в шаблон
         $this->view->assign('activity', $rows);
