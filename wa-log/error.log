@@ -16504,3 +16504,17 @@ Uncaught exception waException:
 #7 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
 #8 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
 #9 {main}
+
+2018-02-19 15:34:09 2.63.84.157
+Uncaught exception waException:
+product not found (500)
+## /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/lib/actions/frontend/shopFrontendCartAdd.controller.php(174)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopFrontendCartAddController->execute()
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waJsonController.class.php(28): waController->run(NULL)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waJsonController->run(NULL)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopFrontendCartAddController), NULL)
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'frontendCart', 'add')
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(684): waFrontController->dispatch()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(478): waSystem->dispatchFrontend('cart/add/')
+#7 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#8 {main}

@@ -10,7 +10,7 @@ return array (
   'weather' => true,
   'checklists' => true,
   'stickies' => true,
-  'logs' => true,
+  'logs' => false,
   'blog' => true,
   'userlogs' => true,
 );
