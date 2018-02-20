@@ -134,7 +134,7 @@ abstract class waContactField
         } else {
             $name = reset($this->name); // reset() returns the first value
         }
-        return $escape ? htmlspecialchars($name, ENT_QUOTES) : $name;
+        return $name;
     }
 
     public function isMulti()
