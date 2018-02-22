@@ -4,13 +4,15 @@
 
     <h2>{$form.name}</h2>
     {foreach $fields as $field}
-    <label>{$field.names}</label>
     <div class="nb-field">
         {if $field.type == "textarea"}
+            <label>{$field.names}</label>
             <textarea name="form_{$field.id_form}_{$field.id}" {if $field.required}required{/if}></textarea>
-        {elseif "checkbox"}
-            <input type="{$field.type}" name="form_{$field.id_form}_{$field.id}" {if $field.required}required{/if}>
+        {elseif $field.type == "checkbox"}
+            <input type="{$field.type}" name="form_{$field.id_form}_{$field.id}" checked {if $field.required}required{/if}>
+            <span>Нажимая на эту кнопку , я даю свое согласие на <a href="/rules/personal.pdf">обработку персональных данных</a> и соглашаюсь с условиями <a href="/rules/user_yes.pdf">политики конфиденциальности</a></span>
         {else}
+            <label>{$field.names}</label>
             <input type="{$field.type}" name="form_{$field.id_form}_{$field.id}" {if $field.required}required{/if}>
         {/if}
     </div>
@@ -66,7 +68,7 @@
             $('.nb-popup-form').waDialog({
                 'buttons': '<input type="submit" value="Отправить" style="width: 200px;"/>',
                 'width': '500px',
-                'height':'700px',
+                'height':'800px',
                 onSubmit : function(a){
                     var data = {
                         name : name,
