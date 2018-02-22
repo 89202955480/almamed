@@ -59,6 +59,10 @@
         box-shadow: 0px 0px 70px #bbb;
         border-radius: 15px;
     }
+
+
+
+
 </style>
 
 <script>
@@ -66,6 +70,16 @@
 
         $('#phone-mask').mask('+7 (999) 999-9999');
 
+        var width = $(window).width();
+        var left = "";
+        if(width < 800){
+            width = "300px";
+            left = "0%"
+        }else{
+            width = "400px";
+        }
+
+        console.log(width);
         $('.nb-open-form').click(function(){
             var name = $('title').text();
             var url = window.location.href;
@@ -73,8 +87,9 @@
 
             $('.nb-popup-form').waDialog({
                 'buttons': '<input type="submit" value="Отправить" style="width: 200px;"/>',
-                'width': '500px',
-                'height':'800px',
+                'width': width,
+                'height':'80%',
+                'offsetLeft':left,
                 onSubmit : function(a){
                     var data = {
                         name : name,
