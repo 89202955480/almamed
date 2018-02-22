@@ -1,25 +1,28 @@
 <input type="submit" class="nb-open-form" style="width: 287px;margin: 15px 0;height: 50px;" value="{$form.name}" />
 
+<script type="text/javascript" src="/wa-data/public/shop/themes/profitbuy/jquery.maskinput.js"></script>
+
 <div class="nb-popup-form">
 
     <h2>{$form.name}</h2>
-    {foreach $fields as $field}
+    {foreach $fields as $key => $field}
     <div class="nb-field">
         {if $field.type == "textarea"}
             <label>{$field.names}</label>
-            <textarea name="form_{$field.id_form}_{$field.id}" {if $field.required}required{/if}></textarea>
+            <textarea name="{$field.names}" {if $field.required}required{/if}></textarea>
         {elseif $field.type == "checkbox"}
-            <input type="{$field.type}" name="form_{$field.id_form}_{$field.id}" checked {if $field.required}required{/if}>
+            <input type="{$field.type}" name="{$field.names}" checked {if $field.required}required{/if}>
             <span>Нажимая на эту кнопку , я даю свое согласие на <a href="/rules/personal.pdf">обработку персональных данных</a> и соглашаюсь с условиями <a href="/rules/user_yes.pdf">политики конфиденциальности</a></span>
         {else}
             <label>{$field.names}</label>
-            <input type="{$field.type}" name="form_{$field.id_form}_{$field.id}" {if $field.required}required{/if}>
+            <input type="{$field.type}" {if $key == 1}id="phone-mask"{/if} name="{$field.names}" {if $field.required}required{/if}>
         {/if}
     </div>
     {/foreach}
 
 
 </div>
+
 
 <script type="text/javascript" src="{$wa_url}wa-content/js/jquery-wa/wa.dialog.js"></script>
 <style>
@@ -61,8 +64,11 @@
 <script>
     $(function(){
 
+        $('#phone-mask').mask('+7 (999) 999-9999');
+
         $('.nb-open-form').click(function(){
             var name = $('title').text();
+            var url = window.location.href;
             var manager = $('.manager-callback:first').text().replace("" ,"");
 
             $('.nb-popup-form').waDialog({
@@ -73,6 +79,7 @@
                     var data = {
                         name : name,
                         manager : manager,
+                        url : url,
                         data : $(this).serializeArray()
                     };
                     $.post('/nbpopupform/send/',data,function(data){

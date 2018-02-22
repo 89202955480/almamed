@@ -4,7 +4,9 @@
 *********************
 <ul>
 {foreach $data.data as $d}
-<li>{$d.value}</li>
+<li>{$d.name} - {$d.value}</li>
 {/foreach}
 </ul>
+
+<a href="{$data.url}">{$data.name}</a>
 *********************
