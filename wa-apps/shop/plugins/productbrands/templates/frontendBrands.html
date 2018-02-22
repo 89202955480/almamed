@@ -1,7 +1,56 @@
-{foreach $brands as $b}
-<div class="brand">
-    <a href="{$b.url}">{if $b.image}<img src="{$wa_url}wa-data/public/shop/brands/{$b.id}/{$b.id}{$b.image}">{else}{$b.name}{/if}</a>
+<style>
+    .brands{
+        margin-bottom: 50px;
+    }
+    .brands:after{
+        display: block;
+        content: "";
+        clear: both;
+    }
+    .brands .item-brand{
+        margin-right: 8px;
+        margin-bottom: 8px;
+        border: 2px solid #e6e6e6;
+        width: 175px;
+        height: 180px;
+        display: inline-block;
+        overflow: hidden;
+    }
+    .brands .img-brand{
+        height: 130px;
+        line-height: 130px;
+        text-align: center;
+    }
+    .brands .img-brand img{
+        max-width: 160px;
+        max-height: 125px;
+        vertical-align: middle;
+    }
+    .brands .name-brand{
+        height: 50px;
+        line-height: 50px;
+        background: #e6e6e6;
+        color: #333;
+        text-align: center;
+    }
+    .brands .name-brand p{
 
+    }
+</style>
+
+<div class="brands">
+    {foreach $brands as $b}
+    <div class="item-brand">
+        <a href="{$b.url}">
+            <div class="img-brand">
+                <img src="{$wa_url}wa-data/public/shop/brands/{$b.id}/{$b.id}{$b.image}">
+            </div>
+            <div class="name-brand">
+                {$b.name}
+            </div>
+        </a>
+    </div>
     {$b.summary}
+    {/foreach}
 </div>
-{/foreach}
+
