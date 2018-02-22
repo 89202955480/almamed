@@ -1,0 +1,107 @@
+<input type="submit" class="nb-open-form" style="width: 287px;margin: 15px 0;" value="{$form.name}" />
+
+<div class="nb-popup-form">
+
+    <h2>{$form.name}</h2>
+    {foreach $fields as $field}
+    <label>{$field.names}</label>
+    <div class="nb-field">
+        {if $field.type == "textarea"}
+            <textarea name="form_{$field.id_form}_{$field.id}" {if $field.required}required{/if}></textarea>
+        {elseif "checkbox"}
+            <input type="{$field.type}" name="form_{$field.id_form}_{$field.id}" {if $field.required}required{/if}>
+        {else}
+            <input type="{$field.type}" name="form_{$field.id_form}_{$field.id}" {if $field.required}required{/if}>
+        {/if}
+    </div>
+    {/foreach}
+
+
+</div>
+
+<script type="text/javascript" src="{$wa_url}wa-content/js/jquery-wa/wa.dialog.js"></script>
+<style>
+    .nb-popup-form{
+        display: none;
+    }
+    .nb-popup-form h2{
+        text-align: center;
+    }
+
+    .nb-popup-form .nb-field{
+        margin-bottom: 20px;
+    }
+
+    .nb-popup-form input[type="text"],
+    .nb-popup-form textarea
+    {
+        width: 100%;
+    }
+
+    .nb-popup-form textarea{
+        height: 100px;
+    }
+
+    .dialog-buttons-gradient{
+        text-align: center;
+    }
+
+    .dialog-window{
+        background: #FFF;
+        padding: 20px 50px;
+        overflow: auto;
+        border: 5px solid #f3f3f3;
+        box-shadow: 0px 0px 70px #bbb;
+        border-radius: 15px;
+    }
+</style>
+
+<script>
+    $(function(){
+
+        $('.nb-open-form').click(function(){
+            var name = $('title').text();
+            var manager = $('.manager-callback:first').text().replace("" ,"");
+
+            $('.nb-popup-form').waDialog({
+                'buttons': '<input type="submit" value="Отправить" style="width: 200px;"/>',
+                'width': '500px',
+                'height':'700px',
+                onSubmit : function(a){
+                    var data = {
+                        name : name,
+                        manager : manager,
+                        data : $(this).serializeArray()
+                    };
+                    $.post('/nbpopupform/send/',data,function(data){
+                        if(data.data.response){
+                            a.trigger('close');
+                            $('<div><form>' +
+                                '<div class="dialog-content" style="text-align: center;margin-bottom: 20px">Спасибо за обращение, Ваша заявка в обработке. Мы обрабатываем заявки по очередности, средний срок обработки от часа до  1 рабочего дня.</div>' +
+                                    '<div class="dialog-buttons" style="text-align: center">' +
+                                        '<input type="submit" value="Закрыть" style="width: 200px;"/>' +
+                                    '</form></div>' +
+                            '</div>').waDialog({
+                                'onSubmit': function (d) {
+                                    d.trigger('close');
+                                    return false;
+                                },
+                                'width': '300px',
+                                'height':'150px',
+                            });
+                        }else{
+                            alert("Ошибка отправки!");
+                        }
+                    },"json");
+                    return false;
+                }
+            });
+            return false;
+        });
+
+        $('body').on('click','.dialog-background',function(){
+            $('.dialog-window').trigger('close');
+        });
+
+    });
+</script>

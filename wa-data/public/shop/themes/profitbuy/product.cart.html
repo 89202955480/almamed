@@ -191,7 +191,7 @@
 
     <!-- stock info -->
 
-    
+
 
     <div class="purchase{if !$product_available} purchase-disabled{/if}">
         <!-- price -->
@@ -235,6 +235,7 @@
             <span class="added2cart" style="display: none;">{sprintf('[`%s is now <a href="%s"><strong>in your shopping cart</strong></a>`]', $product.name|escape, $wa->getUrl('shop/frontend/cart'))}
                 {if $wa->get('cart')}<br><a href="#" class="dialog-close button second-type">[`Continue shopping`].</a>{/if}
             </span>
+            {shopNbpopupformPlugin::getForm(8)}
         </div>
     </div>
     

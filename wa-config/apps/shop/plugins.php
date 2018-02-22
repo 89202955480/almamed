@@ -20,5 +20,6 @@ return array (
   'plugmein' => true,
   'xml' => '1',
   'productmanager' => true,
+  'nbpopupform' => true,
 );
 //EOF
