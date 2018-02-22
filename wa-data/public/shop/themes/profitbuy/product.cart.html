@@ -235,7 +235,6 @@
             <span class="added2cart" style="display: none;">{sprintf('[`%s is now <a href="%s"><strong>in your shopping cart</strong></a>`]', $product.name|escape, $wa->getUrl('shop/frontend/cart'))}
                 {if $wa->get('cart')}<br><a href="#" class="dialog-close button second-type">[`Continue shopping`].</a>{/if}
             </span>
-            {shopNbpopupformPlugin::getForm(8)}
         </div>
     </div>
     
@@ -243,6 +242,7 @@
     <input type="hidden" class="flying-cart-data" data-url = "{$wa->shop->productUrl($product)}" data-img_url = "{$wa->shop->productImgUrl($product, '96x96')}" data-name = "{$product.name|escape}" data-price = "{shop_currency_html($product.price)|escape}" />
     {/if}
 </form>
+{shopNbpopupformPlugin::getForm(8)}
 
 {if $wa->get('cart')}
         {if $wa->get('preview')}
