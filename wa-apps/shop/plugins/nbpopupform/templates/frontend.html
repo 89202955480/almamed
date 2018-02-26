@@ -99,6 +99,7 @@
                     };
                     $.post('/nbpopupform/send/',data,function(data){
                         if(data.data.response){
+                            yaCounter34079080.reachGoal('zapros_kp');
                             a.trigger('close');
                             $('<div><form>' +
                                 '<div class="dialog-content" style="text-align: center;margin-bottom: 20px">Спасибо за обращение, Ваша заявка в обработке. Мы обрабатываем заявки по очередности, средний срок обработки от часа до  1 рабочего дня.</div>' +
