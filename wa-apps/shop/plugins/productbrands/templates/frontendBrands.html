@@ -46,7 +46,7 @@
                 <img src="{$wa_url}wa-data/public/shop/brands/{$b.id}/{$b.id}{$b.image}">
             </div>
             <div class="name-brand">
-                {$b.name}
+                {$b.name|truncate:20:"..."}
             </div>
         </a>
     </div>
