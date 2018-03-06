@@ -1,0 +1,82 @@
+<Товары>
+    {$features = $wa->shop->features($product)}
+
+    {foreach $product as $key => $prod}
+    {$_product = $wa->shop->product($prod.id)}
+    {$sku = $_product.skus[$_product.sku_id]}
+    {$comp = array_shift($_product.pages)}
+
+    <Товар>
+
+        <Ид>{$prod.id}</Ид>
+        <Артикул>{$sku.sku}</Артикул>
+        <ПометкаУдаления>false</ПометкаУдаления>
+        <Наименование>{shopXmlPlugin::xmlEscape($prod.name)}</Наименование>
+
+        <Группы>
+            {foreach $prod.id_category as $cat}
+                <Ид>{$cat.category_id}</Ид>
+            {/foreach}
+        </Группы>
+
+        <Картинка>{shopImage::getUrl(['product_id' => $prod.id, 'id' => $prod.image_id, 'ext' => $prod.ext])|substr:1:255}</Картинка>
+
+        <ХарактеристикиТовара>
+
+            {foreach $_product.features as $key => $features_val}
+            <ХарактеристикаТовара>
+                <Наименование>{shopXmlPlugin::xmlEscape($features.$key.name)}</Наименование>
+                <Значение>{shopXmlPlugin::xmlEscape($features_val)}</Значение>
+            </ХарактеристикаТовара>
+            {/foreach}
+
+        </ХарактеристикиТовара>
+
+
+        <ЗначенияСвойств>
+
+            <ЗначенияСвойства>
+                <Ид>CML2_COMPLECT</Ид>
+                <Значение>{shopXmlPlugin::xmlEscape($comp.content)}</Значение>
+            </ЗначенияСвойства>
+
+            <ЗначенияСвойства>
+                <Ид>ARTICLS</Ид>
+                {foreach $_product.skus as $key => $skus}
+                <Значение>{$skus.sku}</Значение>
+                <ЗначениеСвойства>
+                    <Значение>{$skus.sku}</Значение>
+                    <Описание>{$skus.name}</Описание>
+                </ЗначениеСвойства>
+                {/foreach}
+            </ЗначенияСвойства>
+
+            <ЗначенияСвойства>
+                <Ид>CML2_PREVIEW_TEXT</Ид>
+                <Значение>{shopXmlPlugin::xmlEscape($prod.description)}</Значение>
+                <Тип>html</Тип>
+            </ЗначенияСвойства>
+
+            <ЗначенияСвойства>
+                <Ид>CML2_DETAIL_TEXT</Ид>
+                <Значение>{shopXmlPlugin::xmlEscape($prod.description)}</Значение>
+                <Тип>html</Тип>
+            </ЗначенияСвойства>
+
+        </ЗначенияСвойств>
+
+        <Цены>
+            <Цена>
+                <ИдТипаЦены>BASE</ИдТипаЦены>
+                <ЦенаЗаЕдиницу>{$prod.price}</ЦенаЗаЕдиницу>
+                <Валюта>RUB</Валюта>
+                <Единица>796</Единица>
+                <КоличествоОт></КоличествоОт>
+                <КоличествоДо></КоличествоДо>
+            </Цена>
+        </Цены>
+
+    </Товар>
+    {/foreach}
+
+</Товары>

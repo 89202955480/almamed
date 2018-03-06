@@ -188,54 +188,20 @@ Class shopXmlPlugin extends shopPlugin {
 
 
     public function create_product($product){
-
-        $tree = '<Товары>';
-        foreach($product as $prod){
-            $tree .= '<Товар>';
-
-            $tree .= '<Ид>'.$prod['id'].'</Ид>';
-            $tree .= '<ПометкаУдаления>false</ПометкаУдаления>';
-            $tree .= '<Наименование>'.$this->xmlEscape($prod['name']).'</Наименование>';
-            $tree .= '<Группы>';
-            foreach($prod['id_category'] as $cat){
-                $tree .= '<Ид>'.$cat['category_id'].'</Ид>';
-            }
-            $tree .= '</Группы>';
-
-
-            $tree .= '</Товар>';
-        }
-
-        $tree .= '</Товары>';
-
-        return $tree;
-
+        $view = wa()->getView();
+        $view->assign('product', $product);
+        return $view->fetch($_SERVER['DOCUMENT_ROOT'].'/wa-apps/shop/plugins/xml/templates/product.html');
     }
 
 
     public function saveXml($cat,$prod,$path){
 
-        $tree = '<?xml version="1.0" encoding="UTF-8"?>';
-        $tree .= '<КоммерческаяИнформация ВерсияСхемы="3.1" ДатаФормирования="2017-12-06T16:04:37">';
-        $tree .= '<Классификатор СодержитТолькоИзменения="true">';
-        $tree .= '<Ид>4c51910a-f6e7-4f39-8d18-3a2c9d0291ed</Ид>';
-        $tree .= '<Наименование>Основной каталог товаров</Наименование>';
+        $view = wa()->getView();
+        $view->assign('cat', $cat);
+        $view->assign('prod', $prod);
 
-        $tree .= $cat;
+        $tree = $view->fetch($_SERVER['DOCUMENT_ROOT'].'/wa-apps/shop/plugins/xml/templates/body.html');
 
-        $tree .= '</Классификатор>';
-
-        $tree .= '<Каталог СодержитТолькоИзменения="true">';
-		$tree .= '<Ид>4c51910a-f6e7-4f39-8d18-3a2c9d0291ed</Ид>';
-        $tree .= '<ИдКлассификатора>4c51910a-f6e7-4f39-8d18-3a2c9d0291ed</ИдКлассификатора>';
-		$tree .= '<Наименование>Основной каталог товаров</Наименование>';
-
-        $tree .= $prod;
-
-        $tree .= '<Описание>Основной каталог товаров</Описание>';
-	    $tree .= '</Каталог>';
-
-        $tree .= '</КоммерческаяИнформация>';
         if($path){
             file_put_contents($path, $tree);
         }else{
