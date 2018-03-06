@@ -26,7 +26,13 @@
             {foreach $_product.features as $key => $features_val}
             <ХарактеристикаТовара>
                 <Наименование>{shopXmlPlugin::xmlEscape($features.$key.name)}</Наименование>
-                <Значение>{shopXmlPlugin::xmlEscape($features_val)}</Значение>
+                <Значение>
+                    {if shopXmlPlugin::xmlEscape($features_val)|is_array}
+                    {', '|implode:shopXmlPlugin::xmlEscape($features_val)}
+                    {else}
+                    {shopXmlPlugin::xmlEscape($features_val)}
+                    {/if}
+                </Значение>
             </ХарактеристикаТовара>
             {/foreach}
 
@@ -61,6 +67,11 @@
                 <Ид>CML2_DETAIL_TEXT</Ид>
                 <Значение>{shopXmlPlugin::xmlEscape($prod.description)}</Значение>
                 <Тип>html</Тип>
+            </ЗначенияСвойства>
+
+            <ЗначенияСвойства>
+                <Ид>CML2_CODE</Ид>
+                <Значение>{shopXmlPlugin::xmlEscape($prod.url)}</Значение>
             </ЗначенияСвойства>
 
         </ЗначенияСвойств>

@@ -164,13 +164,12 @@ Class shopXmlPlugin extends shopPlugin {
     public function create_tree($cats,$parent_id){
 
         if(is_array($cats) and  isset($cats[$parent_id])){
-
             $tree = '<Группы>';
             foreach($cats[$parent_id] as $cat){
 
                 $tree .= "<Группа>";
                 $tree .= "<Ид>".$cat['id']."</Ид>";
-                $tree .= "<НомерВерсии>123</НомерВерсии>";
+                $tree .= "<БитриксКод>".$cat['url']."</БитриксКод>";
                 $tree .= "<ПометкаУдаления>false</ПометкаУдаления>";
                 $tree .= "<Наименование>".$this->xmlEscape($cat['name'])."</Наименование>";
                 $tree .=  $this->create_tree($cats,$cat['id']);
