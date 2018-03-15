@@ -2,6 +2,28 @@
 return array (
   'states' => 
   array (
+    'new' => 
+    array (
+      'name' => 'Новый / Не обработан',
+      'options' => 
+      array (
+        'style' => 
+        array (
+          'color' => '#7d7a0a',
+          'font-weight' => 'bold',
+        ),
+        'icon' => 'icon16 ss flag-yellow',
+      ),
+      'available_actions' => 
+      array (
+        0 => 'process',
+        1 => 'comment',
+        2 => 'edit',
+        3 => 'message',
+        4 => 'delete',
+      ),
+      'classname' => 'shopWorkflowState',
+    ),
     'processing' => 
     array (
       'name' => 'Подтвержден',
@@ -23,28 +45,6 @@ return array (
         4 => 'edit',
         5 => 'message',
         6 => 'otmenen',
-      ),
-      'classname' => 'shopWorkflowState',
-    ),
-    'new' => 
-    array (
-      'name' => 'Новый / Не обработан',
-      'options' => 
-      array (
-        'style' => 
-        array (
-          'color' => '#7d7a0a',
-          'font-weight' => 'bold',
-        ),
-        'icon' => 'icon16 ss flag-yellow',
-      ),
-      'available_actions' => 
-      array (
-        0 => 'process',
-        1 => 'comment',
-        2 => 'edit',
-        3 => 'message',
-        4 => 'delete',
       ),
       'classname' => 'shopWorkflowState',
     ),
@@ -153,6 +153,7 @@ return array (
         3 => 'delete',
         4 => 'message',
       ),
+      'classname' => 'shopWorkflowState',
     ),
     'completed' => 
     array (

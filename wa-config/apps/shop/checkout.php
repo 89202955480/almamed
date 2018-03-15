@@ -27,7 +27,7 @@ return array (
       ),
       'rekvizity-organ' => 
       array (
-        'required' => '',
+        'required' => '1',
       ),
       'address' => 
       array (

@@ -21,5 +21,8 @@ return array (
   'xml' => '1',
   'productmanager' => true,
   'nbpopupform' => true,
+  'carts' => true,
+  'wait' => true,
+  'cml1c' => true,
 );
 //EOF

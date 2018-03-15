@@ -1,0 +1,4 @@
+{$u = $wa->user()}
+{if $u->isAdmin('shop') || $u->getRights('shop', 'carts_plugin.%')}
+<li class="{if $wa->get('plugin') == 'carts'}selected{else}no-tab{/if}"><a href="?plugin=carts&module=report">[`Abandoned carts`]</a></li>
+{/if}

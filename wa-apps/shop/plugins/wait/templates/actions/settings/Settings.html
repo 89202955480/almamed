@@ -1,0 +1,536 @@
+<style>
+hr { clear:none; }
+.field-value, .for-show1, .for-in_carts, .for-pdn {
+    background: #f6eeea none repeat scroll 0 0;
+    overflow: hidden;
+    padding: 8px 0px;
+	clear: left;
+}
+#plugins-settings-form .t0_value input, 
+#plugins-settings-form .t0_cookie input, 
+#plugins-settings-form .t0_hours input,
+#plugins-settings-form .t1_hours input,
+#plugins-settings-form .t3_form_id input,
+#plugins-settings-form .t5_form_id input,
+#plugins-settings-form .for-show1 input,
+#plugins-settings-form .for-in_carts input {
+	width: 70px;
+	min-width: 70px;
+}
+.imgs img { height:100px; }
+.img-select { border: 2px solid #900; }
+.field .name { width: 165px; }
+.description { color:#999; font-size: 12px; }
+p { margin-bottom: 1.0em; }
+ul li { padding-bottom:5px; }
+h2 { margin-top: 30px; }
+</style>
+
+<script>
+$(document).ready(function() {
+    /* Подсветка кода textarea */
+    /*
+	CodeMirror.fromTextArea(document.getElementById('wait-description'), {
+		mode: "text/html",
+		tabMode: "indent",
+		height: "dynamic",
+		lineWrapping: true,
+		lineNumbers: true,
+		onChange: function(cm) {
+			$("#wait-description").val(cm.getValue());
+		}
+	});
+	*/
+
+	$('.imgs img').on('click', function() {
+		$('input[name="shop_wait[img]"]').val($(this).attr('data'));
+		$('.imgs img').removeClass('img-select');
+		$(this).addClass('img-select');
+	});
+
+	$('.field-value').hide();
+
+    $('.in_carts input').change(function() {
+        if ($(this).is(":checked")) {
+            $('.for-in_carts').show();
+        } else {
+        	$('.for-in_carts').hide();
+        }
+    });
+	$('.in_carts input').trigger('change');
+
+	/* */
+    $('input[name="shop_wait[pdn]"]').change(function() {
+        if ($(this).is(":checked")) {
+            $('.for-pdn').show();
+        } else {
+        	$('.for-pdn').hide();
+        }
+    });
+	$('input[name="shop_wait[pdn]"]').trigger('change');
+
+	$('.select-type').change(function() {
+  		var select = $(this).val();
+  		$('.field-value').hide();
+  		$('.field-value' + select).show();
+	});
+	$('.select-type').trigger('change');
+
+	$('.select-show').change(function() {
+  		var select = $(this).val();
+  		if (select == 1) $('.for-show1').show();
+  		else $('.for-show1').hide();
+	});
+	$('.select-show').trigger('change');
+
+	$('.t0_type').change(function() {
+		$('.t0_value input').show();
+		var select = $(this).val();
+		if (select == '0') $('.t0_value b').html('%');
+		else if (select == '1') $('.t0_value b').html('руб.');
+		else {
+			$('.t0_value input').hide();
+			$('.t0_value b').html('Скидка будет рассчитана автоматически для соответствия стоимости доставки.');
+		}
+	});
+	$('.t0_type').trigger('change');
+	
+	$('.autosettings').change(function() {
+		var select = $(this).val();
+		
+		if (select == 1) {
+			$('input[name="shop_wait[title]"]').val('Не торопитесь уходить!');
+			$('textarea[name="shop_wait[text]"]').val('Уже уходите? А мы приготовили для Вас специальный подарок - купон на скидку!');
+			$('select[name="shop_wait[type]"] option[value="0"]').attr('selected', 'true');
+			$('.select-type').trigger('change');
+			$('input[name="shop_wait[img]"]').val('2');
+			$('.imgs img').removeClass('img-select');
+			$('.imgs .bg2').addClass('img-select');
+			$('select[name="shop_wait[t0_cookie]"]').val('30');
+			$('select[name="shop_wait[t0_type]"] option[value="0"]').attr('selected', 'true');
+			$('input[name="shop_wait[t0_value]"]').val('10');
+			$('input[name="shop_wait[t0_hours]"]').val('24');
+			$('input[name="shop_wait[t0_comment]"]').val('Всплывающее окно при уходе с сайта');
+		}
+		
+		if (select == 2) {
+			$('input[name="shop_wait[title]"]').val('У вас остались вопросы?');
+			$('textarea[name="shop_wait[text]"]').val('Мы можем позвонить вам абсолютно бесплатно и ответить на любые возникшие вопросы!');
+			$('select[name="shop_wait[type]"] option[value="5"]').attr('selected', 'true');
+			$('.select-type').trigger('change');
+			$('select[name="shop_wait[t5_field_name]"] option[value="1"]').attr('selected', 'true');
+			$('select[name="shop_wait[t5_field_email]"] option[value="1"]').attr('selected', 'true');
+			$('select[name="shop_wait[t5_field_phone]"] option[value="2"]').attr('selected', 'true');
+			$('input[name="shop_wait[img]"]').val('5');
+			$('.imgs img').removeClass('img-select');
+			$('.imgs .bg5').addClass('img-select');
+			$('input[name="shop_wait[t5_name]"]').val('Отправить');
+		}
+
+		if (select == 3) {
+			$('input[name="shop_wait[title]"]').val('У вас остались вопросы?');
+			$('textarea[name="shop_wait[text]"]').val('Оставьте ваш электронный адрес и мы свяжемся с вами в ближайшее время!');
+			$('select[name="shop_wait[type]"] option[value="5"]').attr('selected', 'true');
+			$('.select-type').trigger('change');
+			$('select[name="shop_wait[t5_field_name]"] option[value="1"]').attr('selected', 'true');
+			$('select[name="shop_wait[t5_field_email]"] option[value="2"]').attr('selected', 'true');
+			$('select[name="shop_wait[t5_field_phone]"] option[value="1"]').attr('selected', 'true');
+			$('input[name="shop_wait[img]"]').val('4');
+			$('.imgs img').removeClass('img-select');
+			$('.imgs .bg4').addClass('img-select');
+			$('input[name="shop_wait[t5_name]"]').val('Отправить');
+		}
+
+		if (select == 4) {
+			$('input[name="shop_wait[title]"]').val('Не торопитесь уходить!');
+			$('textarea[name="shop_wait[text]"]').val('Нажмите на кнопку и узнайте, какой подарок мы приготовили специально для Вас!');
+			$('select[name="shop_wait[type]"] option[value="4"]').attr('selected', 'true');
+			$('.select-type').trigger('change');
+			$('input[name="shop_wait[img]"]').val('1');
+			$('.imgs img').removeClass('img-select');
+			$('.imgs .bg1').addClass('img-select');
+			$('input[name="shop_wait[t4_name]"]').val('Перейти');
+		}
+	});
+});
+</script>
+
+<h1>Всплывающее окно при уходе с сайта</h1>
+<hr>
+
+<p><b>Плагин позволяет вернуть покупателей при уходе с сайта.</b></p>
+
+<p><i class="icon16 exclamation"></i>Работает только для неавторизованных покупателей.</p>
+
+<p>Для корректной работы плагина необходимо наличие хук "frontend_footer" и "frontend_checkout" в теме дизайна.</p>
+
+<p>- Добавлена интеграция с плагином "<a href="https://www.webasyst.ru/store/plugin/shop/carts/" target="_blank">Брошенные корзины</a>".</p>
+<p>- Добавлена интеграция с приложением "<a href="https://www.webasyst.ru/store/app/mailer/" target="_blank">Рассылки</a>" (только формы без Капчи).</p>
+
+<p>Все вопросы, предложения и пожелания пишите на <a href="mailto:support@xverst.ru">support@xverst.ru</a></p>
+
+<h2>Автонастройка</h2>
+<p>Не знаете как настроить плагин? Попробуйте автонастройку.<br/>
+Что необходимо сделать когда покупатель уходит:</p>
+<select class="autosettings">
+	<option value="0">---</option>
+	<option value="1">Предложить купон на скидку</option>
+	<option value="2">Попроcить оставить телефон</option>
+	<option value="3">Попросить оставить e-mail</option>
+	<option value="4">Открыть подготовленную страницу с подарком</option>
+</select>
+<p></p>
+
+<div class="fields form">
+    <form action="?module=plugins&id=wait&action=save" method="post" id="plugins-settings-form">
+		{$wa->csrf()}
+
+		<h3>Настройки показа</h3>
+
+		<div class="field">
+			<div class="name">
+				Включить/выключить
+			</div>
+			<div class="value">
+				<select name="shop_wait[switchoff]" class="select-switch">
+					<option {if !isset($settings.switchoff) || $settings.switchoff == 0} selected="selected" {/if} value="0">Включен</option>
+					<option {if isset($settings.switchoff) && $settings.switchoff == 1} selected="selected" {/if} value="1">Выключен</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="field">
+			<div class="name">
+				Показывать окно
+			</div>
+			<div class="value">
+				<select name="shop_wait[show]" class="select-show">
+					<option {if !isset($settings.show) || $settings.show == 0} selected="selected" {/if} value="0">При уходе с сайта</option>
+					<option {if isset($settings.show) && $settings.show == 1} selected="selected" {/if} value="1">При задержке на странице</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="field for-show1">
+			<div class="name">
+				Задержка (секунд)
+			</div>
+			<div class="value">
+				<input type="text" name="shop_wait[second]" value="{$settings.second|default:''|escape}"> <b></b>
+			</div>
+		</div>
+
+		<div class="field in_carts">
+			<div class="name">
+				Показывать если товар в корзине
+			</div>
+			<div class="value">
+				<input type="checkbox" name="shop_wait[in_carts]" value="1" {if $settings.in_carts == 1} checked="checked" {/if}>
+				<br/><span class="description">показывать окно только если у покупателя лежит товар в корзине</span>
+			</div>
+		</div>
+
+		<div class="field for-in_carts">
+			<div class="name">
+				Сумма товаров в корзине более
+			</div>
+			<div class="value">
+				<input type="text" name="shop_wait[summ_in_carts]" value="{$settings.summ_in_carts|default:''|escape}"> <b></b>
+			</div>
+		</div>
+
+		<div class="field">
+			<div class="name">
+				Время жизни cookie (дней)
+			</div>
+			<div class="value t0_cookie">
+				<input type="text" name="shop_wait[t0_cookie]" value="{$settings.t0_cookie|default:''|escape}">
+				<br/><span class="description">интервал показа всплывающего окна этому же покупателю</span>
+			</div>
+		</div>	
+
+		<h3>Настройки формы</h3>
+
+		<div class="field">
+			<div class="name">
+				Предложить
+			</div>
+			<div class="value">
+				<select name="shop_wait[type]" class="select-type">
+					<option {if !isset($settings.type) || $settings.type == 0} selected="selected" {/if} value="0">Автогенерация купонов</option>
+					<option {if isset($settings.type) && $settings.type == 1} selected="selected" {/if} value="1">Свой код купона</option>
+					<option {if isset($settings.type) && $settings.type == 5} selected="selected" {/if} value="5">Поля для ввода имени/e-mail/телефона</option>
+					<option {if isset($settings.type) && $settings.type == 2} selected="selected" {/if} value="2">Поле для ввода телефона</option>
+					<option {if isset($settings.type) && $settings.type == 3} selected="selected" {/if} value="3">Поле для ввода e-mail</option>
+					<option {if isset($settings.type) && $settings.type == 4} selected="selected" {/if} value="4">Ссылка на отдельную страницу</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="field-value field-value0">
+			<div class="field">
+				<div class="name">
+					Тип купона
+				</div>
+				<div class="value">
+					<select name="shop_wait[t0_type]" class="t0_type">
+						<option {if !isset($settings.t0_type) || $settings.t0_type == 0} selected="selected" {/if} value="0">% скидка</option>
+						<option {if isset($settings.t0_type) && $settings.t0_type == 1} selected="selected" {/if} value="1">руб. RUB</option>
+						<option {if isset($settings.t0_type) && $settings.t0_type == 2} selected="selected" {/if} value="2">Бесплатная доставка</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="field">
+				<div class="name">
+					Скидка
+				</div>
+				<div class="value t0_value">
+					<input type="text" name="shop_wait[t0_value]" value="{$settings.t0_value|default:''|escape}"> <b></b>
+				</div>
+			</div>
+
+			<div class="field">
+				<div class="name">
+					Время действия (часов)
+				</div>
+				<div class="value t0_hours">
+					<input type="text" name="shop_wait[t0_hours]" value="{$settings.t0_hours|default:''|escape}">
+				</div>
+			</div>
+
+			<div class="field">
+				<div class="name">
+					Комментарий купона
+				</div>
+				<div class="value">
+					<input type="text" name="shop_wait[t0_comment]" value="{$settings.t0_comment|default:''|escape}">
+				</div>
+			</div>
+		</div>
+
+		<div class="field-value field-value1">
+			<div class="field">
+				<div class="name">
+					Код купона
+				</div>
+				<div class="value">
+					<input type="text" name="shop_wait[t1_code]" value="{$settings.t1_code|default:''|escape}">
+				</div>
+			</div>
+			
+			<div class="field">
+				<div class="name">
+					Скидка
+				</div>
+				<div class="value t1_value">
+					<input type="text" name="shop_wait[t1_value]" value="{$settings.t1_value|default:''|escape}"> <b></b>
+				</div>
+			</div>			
+			
+			<div class="field">
+				<div class="name">
+					Время действия (часов)
+				</div>
+				<div class="value t1_hours">
+					<input type="text" name="shop_wait[t1_hours]" value="{$settings.t1_hours|default:''|escape}">
+				</div>
+			</div>			
+		</div>		
+		
+		<div class="field-value field-value5">
+			<div class="field">
+				<div class="name">
+					Поле "Имя"
+				</div>
+				<div class="value">
+					<select name="shop_wait[t5_field_name]">
+						<option {if !isset($settings.t5_field_name) || $settings.t5_field_name == 0} selected="selected" {/if} value="0">Не показывать</option>
+						<option {if isset($settings.t5_field_name) && $settings.t5_field_name == 1} selected="selected" {/if} value="1">Показывать, необязательное для заполнения</option>
+						<option {if isset($settings.t5_field_name) && $settings.t5_field_name == 2} selected="selected" {/if} value="2">Показывать, обязательное для заполнения</option>
+					</select>
+				</div>
+			</div>
+			
+			<div class="field">
+				<div class="name">
+					Поле "e-mail"
+				</div>
+				<div class="value">
+					<select name="shop_wait[t5_field_email]">
+						<option {if !isset($settings.t5_field_email) || $settings.t5_field_email == 0} selected="selected" {/if} value="0">Не показывать</option>
+						<option {if isset($settings.t5_field_email) && $settings.t5_field_email == 1} selected="selected" {/if} value="1">Показывать, необязательное для заполнения</option>
+						<option {if isset($settings.t5_field_email) && $settings.t5_field_email == 2} selected="selected" {/if} value="2">Показывать, обязательное для заполнения</option>
+					</select>
+				</div>
+			</div>
+			
+			<div class="field">
+				<div class="name">
+					Поле "телефон"
+				</div>
+				<div class="value">
+					<select name="shop_wait[t5_field_phone]">
+						<option {if !isset($settings.t5_field_phone) || $settings.t5_field_phone == 0} selected="selected" {/if} value="0">Не показывать</option>
+						<option {if isset($settings.t5_field_phone) && $settings.t5_field_phone == 1} selected="selected" {/if} value="1">Показывать, необязательное для заполнения</option>
+						<option {if isset($settings.t5_field_phone) && $settings.t5_field_phone == 2} selected="selected" {/if} value="2">Показывать, обязательное для заполнения</option>
+					</select>
+				</div>
+			</div>
+			
+			<div class="field">
+				<div class="name">
+					ID формы подписки
+				</div>
+				<div class="value t5_form_id">
+					<input type="text" name="shop_wait[t5_form_id]" value="{$settings.t5_form_id|default:''|escape}">
+					<br/><span class="description">приложение "Рассылки", идентификатор формы подписки (число)</span>
+				</div>
+			</div>
+			
+			<div class="field">
+				<div class="name">
+					Название кнопки
+				</div>
+				<div class="value">
+					<input type="text" name="shop_wait[t5_name]" value="{$settings.t5_name|default:''|escape}">
+				</div>
+			</div>
+		</div>
+		
+		<div class="field-value field-value2">
+			<div class="field">
+				<div class="name">
+					Название кнопки
+				</div>
+				<div class="value">
+					<input type="text" name="shop_wait[t2_name]" value="{$settings.t2_name|default:''|escape}">
+				</div>
+			</div>
+		</div>
+
+		<div class="field-value field-value3">
+			<div class="field">
+				<div class="name">
+					ID формы подписки
+				</div>
+				<div class="value t3_form_id">
+					<input type="text" name="shop_wait[t3_form_id]" value="{$settings.t3_form_id|default:''|escape}">
+					<br/><span class="description">приложение "Рассылки", идентификатор формы подписки (число)</span>
+				</div>
+			</div>
+
+			<div class="field">
+				<div class="name">
+					Название кнопки
+				</div>
+				<div class="value">
+					<input type="text" name="shop_wait[t3_name]" value="{$settings.t3_name|default:''|escape}">
+				</div>
+			</div>
+		</div>
+
+		<div class="field-value field-value4">
+			<div class="field">
+				<div class="name">
+					Название кнопки
+				</div>
+				<div class="value">
+					<input type="text" name="shop_wait[t4_name]" value="{$settings.t4_name|default:''|escape}">
+				</div>
+			</div>
+
+			<div class="field">
+				<div class="name">
+					Ссылка на подарок
+				</div>
+				<div class="value">
+					<input type="text" name="shop_wait[t4_url]" value="{$settings.t4_url|default:''|escape}">
+					<br/><span class="description">полная ссылка вместе с протоколом</span>
+				</div>
+			</div>			
+		</div>
+
+		<div class="field">
+			<div class="name">
+				Обработка персональных данных
+			</div>
+			<div class="value">
+				<input type="checkbox" name="shop_wait[pdn]" value="1" {if $settings.pdn == 1} checked="checked" {/if}>
+				<br/><span class="description">требовать согласие на обработку персональных данных</span>
+			</div>
+		</div>
+
+		<div class="field for-pdn">
+			<div class="name">
+				Текст персональных данных
+				<br/><span class="hint">HTML</span>
+			</div>
+			<div class="value">
+				<textarea name="shop_wait[pdn_text]">{$settings.pdn_text|default:''|escape}</textarea>
+			</div>
+		</div>
+		
+		<div class="field">
+			<div class="name">
+				Заголовок
+			</div>
+			<div class="value">
+				<input type="text" name="shop_wait[title]" value="{$settings.title|default:''|escape}">
+			</div>
+		</div>
+
+		<div class="field">
+			<div class="name">
+				Описание
+				<br/><span class="hint">HTML</span>
+			</div>
+			<div class="value">
+				<textarea id="wait-description" name="shop_wait[text]">{$settings.text|default:''|escape}</textarea>
+			</div>
+		</div>	
+		
+		<div class="field">
+			<div class="name">
+				Картинка
+			</div>
+			<div class="value imgs">
+				<img src="{$wa_url}wa-apps/shop/plugins/wait/img/bg1.jpg" data="1" class="bg1{if isset($settings.img) && $settings.img == '1'} img-select{/if}">
+				<img src="{$wa_url}wa-apps/shop/plugins/wait/img/bg2.jpg" data="2" class="bg2{if isset($settings.img) && $settings.img == '2'} img-select{/if}">
+				<img src="{$wa_url}wa-apps/shop/plugins/wait/img/bg3.jpg" data="3" class="bg3{if isset($settings.img) && $settings.img == '3'} img-select{/if}">
+				<img src="{$wa_url}wa-apps/shop/plugins/wait/img/bg4.jpg" data="4" class="bg4{if isset($settings.img) && $settings.img == '4'} img-select{/if}">
+				<img src="{$wa_url}wa-apps/shop/plugins/wait/img/bg5.jpg" data="5" class="bg5{if isset($settings.img) && $settings.img == '5'} img-select{/if}">
+			</div>
+			<input type="hidden" name="shop_wait[img]" value="{if isset($settings.img)}{$settings.img}{/if}">
+		</div>
+
+		<h3>Настройки e-mail</h3>
+
+		<div class="field">
+			<div class="name">
+				E-mail
+			</div>
+			<div class="value">
+				<input type="text" name="shop_wait[email]" value="{$settings.email|default:''|escape}">
+				<br/><span class="description">куда будет отправлено письмо, по умолчанию e-mail настроек магазина</span>
+				<br/><span class="description">используется для форм телефона и e-mail</span>
+			</div>
+		</div>
+
+		<div class="field">
+			<div class="name">
+				Тема e-mail сообщения
+			</div>
+			<div class="value">
+				<input type="text" name="shop_wait[email_subject]" value="{$settings.email_subject|default:''|escape}">
+			</div>
+		</div>
+
+		<div class="field">
+			<div class="value submit">
+				<input type="submit" class="button green" value="[s`Save`]">
+				<span id="plugins-settings-form-status" style="display:none"></span>
+			</div>
+		</div>
+    </form>
+</div>

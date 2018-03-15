@@ -1,0 +1,39 @@
+{strip}
+<script>
+(function(c,a,r,t,$){
+$(function(){
+    var timer, selectors = [], $tmp;
+    $[c] = $[c] || {
+        selectors: {
+            email : 'input[name="customer[email]"], input[name="customer[email][value]"]',
+            phone : 'input[name="customer[phone]"]',
+            firstname: 'input[name="customer[firstname]"]'
+        },
+        save:function(){
+            var $f = $(this).closest('form');
+            clearTimeout(timer);
+
+            timer = setTimeout(function () {
+                var data = { };
+                if($f.length) {
+                    $f.find('[name^="customer"]').each(function (i,v) {
+                        data[$(v).prop('name')] = $(v).val();
+                    });
+                    if(data) $.post('{$wa->getUrl('shop/frontend/save', ['plugin'=>'carts'])}', data);
+                }
+            }, t)
+        }
+    };
+    $.each($[c].selectors, function (key, selector) {
+        $tmp = $(selector).first();
+        if($tmp.length && !$tmp.val()) {
+            $tmp.val(r[key]);
+        }
+        selectors.push(selector);
+    });
+    $('body').off(a, selectors.join(','), $[c].save)
+        .on(a, selectors.join(','), $[c].save);
+})
+})('shopCartsPlugin','change blur',{$carts_customer|@json_encode},500,jQuery)
+</script>
+{/strip}

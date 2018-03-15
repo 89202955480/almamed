@@ -1,0 +1,134 @@
+<script type="text/javascript">
+    var wa_url = '{$wa_url}';
+    var wa_app = '{$wa_app}';
+    var wa_lang = '{$lang}';
+    var wa_csrf = '{waRequest::cookie("_csrf", "")}';
+</script>
+
+<style type="text/css">
+.carts-report-dialog .dialog-content{
+    position: relative;
+}
+</style>
+
+<script type="text/javascript" src="{$wa_url}wa-content/js/ace/ace.js"></script>
+<link type="text/css" rel="stylesheet" href="{$wa_url}wa-content/js/redactor/redactor.css">
+<script src="{$wa_url}wa-content/js/redactor/redactor.min.js"></script>
+{if $lang == 'ru'}<script src="{$wa_url}wa-content/js/redactor/ru.js"></script>{/if}
+<script src="{$wa_url}wa-content/js/jquery-wa/editor.js"></script>
+
+
+<div class="block double-padded">
+
+<h1>[`Abandoned carts`]</h1>
+<div class="block half-padded">
+    <ul class="menu-h small">
+        <li{if !$all} class="selected"{/if}><a href="#/carts/" class="inline-link"><b><i>[`Only with contact details`]</i></b></a></li>
+        <li{if $all} class="selected"{/if}><a href="#/carts/all/" class="inline-link"><b><i>[`All`]</i></b></a></li>
+    </ul>
+</div>
+{if $data.items}
+    <table class="zebra">
+        <tr>
+            <th>[`Contact`]</th>
+            <th>[`Cart`]</th>
+            <th>[`Storefront`]</th>
+            <th>[`Left`]</th>
+            <th>[`Messages`]</th>
+            <th>[`State`]</th>
+        </tr>
+{foreach $data.items as $item}
+    <tr data-code="{$item.code|escape}">
+        <td>
+            {if !$item.contact}
+                <i class="icon16 status-red-tiny"></i> [`No contact details!`]
+            {elseif $item.contact_id}
+                <a href="../contacts/#/contact/{$item.contact_id}/" target="_blank"><i class="icon16 status-green-tiny" title="[`Registered user`]"></i> {$item.contact.name|escape}</a>
+            {else}
+                <a href="#/carts/" class="inline-link show-customer"><i class="icon16 status-yellow-tiny" title="[`Unregistered user`]"></i> <b><i>{$item.contact.name|escape}</i></b></a>
+            {/if}
+        </td>
+        <td>
+            {if $item.total_products}
+            {_wp('%d product', '%d products', $item.total_products)},
+            {$item.total|wa_format_amount_currency:$item.currency}<sup class="hint">*</sup>
+            (<a href="#/carts/" class="inline-link show-messages" style="display: inline"><b><i>[`show`]</i></b></a>,
+                <a href="?action=orders#/orders/new/carts_plugin={$item.code|escape}" class="inline-link" style="display: inline"><b><i>[`create order`]</i></b></a>)
+            {else}
+                <em class="hint">[`empty`]</em>
+            {/if}
+        </td>
+        <td>{$item.storefront|escape}</td>
+        <td>{$item.edit_datetime|wa_date:'humandatetime'}</td>
+        <td>
+            {if !$item.last_send_datetime}
+                [`Not sent yet`]
+            {else}
+                {$item.last_send_datetime|wa_date:'humandatetime'}
+                (<a href="#/carts/" class="inline-link show-messages" style="display: inline"><b><i>[`show`]</i></b></a>)
+            {/if}
+        </td>
+        <td>
+            {if $item.cancel}<i class="icon16 no"></i>{/if}
+            {if $item.restore}<i class="icon16 update"></i>{/if}
+            {if $item.order_id}
+                <a href="?action=orders#/orders/id={$item.order_id}/" style="display: inline-block"><i class="icon16 dollar"></i> {shopHelper::encodeOrderId($item.order_id)}</a>
+            {/if}
+        </td>
+    </tr>
+{/foreach}
+    </table>
+{else}
+    <p>[`No data matched selected period`].</p>
+{/if}
+    <div class="block" id="carts-pagination">{wa_pagination total=$pages_total attrs=['class' => 'menu-h']}</div>
+
+
+    <div class="block shadowed">
+        <ul class="menu-v">
+            <li><i class="icon16 status-green-tiny"></i> &mdash; [`Registered user`]</li>
+            <li><i class="icon16 status-yellow-tiny"></i> &mdash; [`Unregistered user`]</li>
+            <li><i class="icon16 status-red-tiny"></i> &mdash; [`No contact details!`]</li>
+            <li><i class="icon16 no"></i> &mdash; [`Canceled`]</li>
+            <li><i class="icon16 update"></i> &mdash; [`Restored`]</li>
+            <li><i class="icon16 dollar"></i> &mdash; [`Order`]</li>
+            <li>* [`This amount has been shown in a shopping cart (including all discounts, etc).`]</li>
+        </ul>
+    </div>
+
+
+    <div class="block">
+        <p class="hint">{sprintf('[`Report generated at %f ms`]', $generated)}</p>
+    </div>
+</div>
+
+<script>
+    $(function(){
+        document.title = '[`Abandoned carts report`]';
+        $('a', $('#carts-pagination')).click(function(e){
+            var a = $(this);
+            $('#reportscontent').load(a.prop('href'));
+            e.preventDefault();
+        });
+
+        $('.show-messages, .carts-report-items, .show-customer').click(function(e) {
+            e.preventDefault();
+            var code = $(this).closest('tr').data('code');
+            $.get('?plugin=carts&module=report&action=messages', { code: code}, function (data) {
+                $(data).waDialog({
+                    buttons: '<input type="button" value="[`Close`]" class="button cancel" /> ',
+                    onSubmit: function (d) {
+                        d.trigger('close');
+                        return false;
+                    },
+                    onClose:function(d) {
+                        setTimeout(function(){
+                            $('.dialog, .redactor-toolbar-tooltip').remove();
+                        },500);
+                    },
+                    className: 'carts-report-dialog'
+                });
+            })
+        });
+    });
+</script>
