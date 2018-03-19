@@ -9,7 +9,7 @@ class shopNbpopupformPluginFrontendSendController extends waJsonController
 
         $product = new shopProduct($data['id']);
         $data['name'] = $product['name'];
-        $data['url'] = "/product/".$product['url'];
+        $data['url'] = wa()->getRootUrl(true)."product/".$product['url'];
 
         $contact = new waContact($product['manager']);
         $data['manager'] = $contact->get("email","default");

@@ -94,7 +94,7 @@
                         data : $(this).serializeArray()
                     };
                     $.post('/nbpopupform/send/',data,function(data){
-                        console.log(data);
+                        
                         if(data.data.response){
                             yaCounter34079080.reachGoal('zapros_kp',false,goalCallback);
                             a.trigger('close');
