@@ -19,7 +19,7 @@
             {/foreach}
         </Группы>
 
-        <Картинка>{shopImage::getUrl(['product_id' => $prod.id, 'id' => $prod.image_id, 'ext' => $prod.ext])|substr:1:255}</Картинка>
+        <Картинка>{stristr(shopImage::getPath(['product_id' => $prod.id, 'id' => $prod.image_id,'ext' => $prod.ext]),"wa-data")}</Картинка>
 
         <ХарактеристикиТовара>
 
