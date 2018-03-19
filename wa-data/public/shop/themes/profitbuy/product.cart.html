@@ -33,7 +33,7 @@
         <div class="col-grid s12{if $wa->get('preview')}{if $product.images} l4{/if}{else} l6{/if}">
 {/if}
 
-<form id="cart-form{if $wa->get('cart')}-dialog{/if}" method="post" action="{$wa->getUrl('/frontendCart/add')}">
+<form id="cart-form{if $wa->get('cart')}-dialog{/if}" method="post" data-id="{$product.id}" action="{$wa->getUrl('/frontendCart/add')}">
     {if $product.sku_type}
     
         <div class="selectable-articul">

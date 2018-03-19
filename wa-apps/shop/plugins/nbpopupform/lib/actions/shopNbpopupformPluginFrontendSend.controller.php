@@ -7,6 +7,13 @@ class shopNbpopupformPluginFrontendSendController extends waJsonController
     {
         $data = waRequest::post();
 
+        $product = new shopProduct($data['id']);
+        $data['name'] = $product['name'];
+        $data['url'] = "/product/".$product['url'];
+
+        $contact = new waContact($product['manager']);
+        $data['manager'] = $contact->get("email","default");
+
         if(empty($data['manager'])){
             $data['manager'] = "info@almamed.su";
         }

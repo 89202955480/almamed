@@ -80,11 +80,9 @@
         }
 
 
-        $('.nb-open-form').click(function(){
-            var name = $('title').text();
-            var url = window.location.href;
-            var manager = $('.manager-callback:first').text().replace("" ,"");
 
+        $('.nb-open-form').click(function(){
+            var id = $('[id^="cart-form"]').attr('data-id');
             $('.nb-popup-form').waDialog({
                 'buttons': '<input type="submit" value="Отправить" style="width: 200px;"/>',
                 'width': width,
@@ -92,12 +90,11 @@
                 'offsetLeft':left,
                 onSubmit : function(a){
                     var data = {
-                        name : name,
-                        manager : manager,
-                        url : url,
+                        id : id,
                         data : $(this).serializeArray()
                     };
                     $.post('/nbpopupform/send/',data,function(data){
+                        console.log(data);
                         if(data.data.response){
                             yaCounter34079080.reachGoal('zapros_kp',false,goalCallback);
                             a.trigger('close');
