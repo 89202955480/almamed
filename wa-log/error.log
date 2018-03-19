@@ -17170,3 +17170,147 @@ Bad parameters (2) (400)
 #2 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(478): waSystem->dispatchFrontend('5dc935ee3fe9609...')
 #3 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
 #4 {main}
+
+2018-03-16 00:15:35 83.139.137.169
+Uncaught exception waException:
+Bad parameters (3) (400)
+## /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(88)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(53): waFrontController->getDispatchParams()
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#3 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#4 {main}
+
+2018-03-16 00:16:05 83.139.137.169
+Uncaught exception waException:
+Bad parameters (3) (400)
+## /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(88)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(53): waFrontController->getDispatchParams()
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#3 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#4 {main}
+
+2018-03-16 19:58:43 194.154.75.198
+Uncaught exception waDbException:
+Database error. See log for details. (2006)
+## /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('SELECT * FROM w...')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(842): waModel->query('SELECT * FROM w...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(805): waModel->getByField('id', '1', false)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/contact/waContact.class.php(810): waModel->getById('1')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(936): waContact->getLocale()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(1091): waSystem->getApps()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(522): waSystem->appExists('webasyst')
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/')
+#8 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#9 {main}
+
+2018-03-16 19:58:43 194.154.75.198
+Uncaught exception waDbException:
+Database error. See log for details. (2006)
+## /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('SELECT * FROM w...')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(842): waModel->query('SELECT * FROM w...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(805): waModel->getByField('id', '1', false)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/contact/waContact.class.php(810): waModel->getById('1')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(936): waContact->getLocale()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(1091): waSystem->getApps()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(522): waSystem->appExists('webasyst')
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/')
+#8 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#9 {main}
+
+2018-03-16 20:02:22 194.154.75.198
+Uncaught exception waDbException:
+Database error. See log for details. (2006)
+## /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('SELECT * FROM w...')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(842): waModel->query('SELECT * FROM w...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(805): waModel->getByField('id', '1', false)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/contact/waContact.class.php(810): waModel->getById('1')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(936): waContact->getLocale()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(1091): waSystem->getApps()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(522): waSystem->appExists('webasyst')
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/')
+#8 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#9 {main}
+
+2018-03-16 20:02:22 194.154.75.198
+Uncaught exception waDbException:
+Database error. See log for details. (2006)
+## /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('SELECT * FROM w...')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(842): waModel->query('SELECT * FROM w...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(805): waModel->getByField('id', '1', false)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/contact/waContact.class.php(810): waModel->getById('1')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(936): waContact->getLocale()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(1091): waSystem->getApps()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(522): waSystem->appExists('webasyst')
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/')
+#8 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#9 {main}
+
+2018-03-16 20:05:17 194.154.75.198
+Uncaught exception waDbException:
+Database error. See log for details. (2006)
+## /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('SELECT * FROM w...')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(842): waModel->query('SELECT * FROM w...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(805): waModel->getByField('id', '1', false)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/contact/waContact.class.php(810): waModel->getById('1')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(936): waContact->getLocale()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(1091): waSystem->getApps()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(522): waSystem->appExists('webasyst')
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/')
+#8 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#9 {main}
+
+2018-03-16 20:05:17 194.154.75.198
+Uncaught exception waDbException:
+Database error. See log for details. (2006)
+## /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('SELECT * FROM w...')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(842): waModel->query('SELECT * FROM w...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(805): waModel->getByField('id', '1', false)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/contact/waContact.class.php(810): waModel->getById('1')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(936): waContact->getLocale()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(1091): waSystem->getApps()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(522): waSystem->appExists('webasyst')
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/')
+#8 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#9 {main}
+
+2018-03-17 19:55:04 83.139.137.169
+Uncaught exception waException:
+Плагин не найден (404)
+## /home/s/svprim4w/almamed.su/public_html/wa-apps/installer/lib/actions/plugins/installerPluginsInfo.action.php(49)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waViewAction.class.php(170): installerPluginsInfoAction->execute()
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waViewController.class.php(86): waViewAction->display()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waDefaultViewController.class.php(48): waViewController->executeAction(Object(installerPluginsInfoAction))
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): waDefaultViewController->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waViewController.class.php(46): waController->run(NULL)
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waViewController->run(NULL)
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(waDefaultViewController), NULL)
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'plugins', 'info')
+#8 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#9 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/instal...')
+#10 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#11 {main}
+
+2018-03-17 22:44:22 83.139.137.169
+Uncaught exception waException:
+Плагин не найден (404)
+## /home/s/svprim4w/almamed.su/public_html/wa-apps/installer/lib/actions/plugins/installerPluginsInfo.action.php(49)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waViewAction.class.php(170): installerPluginsInfoAction->execute()
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waViewController.class.php(86): waViewAction->display()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waDefaultViewController.class.php(48): waViewController->executeAction(Object(installerPluginsInfoAction))
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): waDefaultViewController->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waViewController.class.php(46): waController->run(NULL)
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waViewController->run(NULL)
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(waDefaultViewController), NULL)
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'plugins', 'info')
+#8 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#9 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/instal...')
+#10 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#11 {main}
