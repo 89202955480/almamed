@@ -169,7 +169,7 @@ Class shopXmlPlugin extends shopPlugin {
 
                 $tree .= "<Группа>";
                 $tree .= "<Ид>".$cat['id']."</Ид>";
-                $tree .= "<БитриксКод>".$cat['url']."</БитриксКод>";
+                $tree .= "<БитриксКод>".str_replace('/','',$cat['url'])."</БитриксКод>";
                 $tree .= "<ПометкаУдаления>false</ПометкаУдаления>";
                 $tree .= "<Наименование>".$this->xmlEscape($cat['name'])."</Наименование>";
                 $tree .=  $this->create_tree($cats,$cat['id']);
