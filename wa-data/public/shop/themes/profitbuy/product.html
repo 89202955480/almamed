@@ -262,7 +262,7 @@
                 {foreach $product.pages as $page}
                     <h2 class="product-tabs-nav-trigger-wrapper"><a class="product-tabs-nav-trigger" data-name="page_{$page.url}" href="{$wa->shop->productUrl($product, 'page', ['page_url' => $page.url])}">{$page.name|escape}</a></h2>
                 {/foreach}
-                
+
             </div>
 
             <!-- plugin hook: 'frontend_product.block' -->

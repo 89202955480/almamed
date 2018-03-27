@@ -418,6 +418,9 @@
 
                 </div>
             </div>
+
+
+
             <div class="field-group">
                 {if $product_types}
                     <div class="field">
@@ -455,6 +458,8 @@
                         </div>
                     </div>
                 {/if}
+
+
                 <div class="field">
                     <input type="text" name="product[categories.deleted]" value="" style="display:none;">
                     <div class="name">[`Categories`]</div>
@@ -531,6 +536,8 @@
                     </div>
                 </div>
 
+
+
                 {if !empty($sets)}
                     <div class="field s-product-sets">
                         <div class="name">[`Sets`]</div>
@@ -568,6 +575,8 @@
                     </div>
                 {/if}
 
+
+
                 {* @event backend_product_edit.%plugin_id%.basics *}
                 {foreach $backend_product_edit as $_}{if !empty($_.basics)}{$_.basics}{/if}{/foreach}
 
@@ -599,15 +608,15 @@
                 </div>
             </div>
 
+            <!--new field-->
 
             <div class="field" id="s-product-feature-superposition-field-group" {if $product.sku_type == shopProductModel::SKU_TYPE_FLAT}style="display:none"{else}data-type="{$product.type_id}"{/if}>
                 {include file="./ProductFeaturesSelectable.html"}
             </div>
 
 
-            <!-- plugin hook: 'backend_product.edit_basics' -->
-            {* @event backend_product.%plugin_id%.edit_basics *}
-            {if !empty($backend_product)}{foreach $backend_product as $_}{ifset($_.edit_basics)}{/foreach}{/if}
+
+
 
             <div class="field">
                 <div class="value s-sku-list">
@@ -815,6 +824,10 @@
                 </div>
                 <input type="hidden" value="{$product.currency}" name="product[currency]" id="s-product-currency-code">
             </div>
+
+            <!-- plugin hook: 'backend_product.edit_basics' -->
+            {* @event backend_product.%plugin_id%.edit_basics *}
+            {if !empty($backend_product)}{foreach $backend_product as $_}{ifset($_.edit_basics)}{/foreach}{/if}
 
         </div>
 {* PRODUCT EDIT MAIN TAB SECTION END *}
