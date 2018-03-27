@@ -24,5 +24,6 @@ return array (
   'carts' => true,
   'wait' => true,
   'cml1c' => true,
+  'wholesale' => true,
 );
 //EOF

@@ -17314,3 +17314,198 @@ Uncaught exception waException:
 #9 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/instal...')
 #10 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
 #11 {main}
+
+2018-03-19 13:48:29 91.237.94.5
+Database error. See log for details.
+
+2018-03-19 13:48:29 91.237.94.5
+Event handling error in shopWholesalePlugin:
+Database error. See log for details.
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('ALTER TABLE `sh...')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/wholesale/lib/config/install.php(22): waModel->query('ALTER TABLE `sh...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/plugin/waPlugin.class.php(160): include('/home/s/svprim4...')
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/plugin/waPlugin.class.php(64): waPlugin->install()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/plugin/waPlugin.class.php(41): waPlugin->checkUpdates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(1533): waPlugin->__construct(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/lib/config/shopConfig.class.php(118): waSystem->event(Array, Array)
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(295): shopConfig->getRouting(Array, true)
+#8 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(213): waRouting->getAppRoutes('shop', Array, true)
+#9 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(618): waRouting->dispatch()
+#10 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(478): waSystem->dispatchFrontend('category/raspro...')
+#11 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#12 {main}
+
+2018-03-19 13:48:30 91.237.94.5
+Database error. See log for details.
+
+2018-03-19 13:48:30 91.237.94.5
+Event handling error in shopWholesalePlugin:
+Database error. See log for details.
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('ALTER TABLE `sh...')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/wholesale/lib/config/install.php(30): waModel->query('ALTER TABLE `sh...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/plugin/waPlugin.class.php(160): include('/home/s/svprim4...')
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/plugin/waPlugin.class.php(64): waPlugin->install()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/plugin/waPlugin.class.php(41): waPlugin->checkUpdates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(1533): waPlugin->__construct(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/lib/config/shopConfig.class.php(118): waSystem->event(Array, Array)
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(295): shopConfig->getRouting(Array, false)
+#8 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(457): waRouting->getAppRoutes('shop', Array)
+#9 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(1134): waRouting->getUrl('shop/frontend', Array, false, NULL, NULL)
+#10 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/productbrands/lib/shopProductbrands.plugin.php(212): waSystem->getRouteUrl('shop/frontend')
+#11 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/productbrands/lib/shopProductbrands.plugin.php(62): shopProductbrandsPlugin::getBrands()
+#12 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/productbrands/lib/shopProductbrands.plugin.php(46): shopProductbrandsPlugin->nav()
+#13 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(1542): shopProductbrandsPlugin->frontendNav(NULL)
+#14 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/lib/actions/frontend/shopFrontend.action.php(105): waSystem->event('frontend_nav')
+#15 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waViewController.class.php(86): shopFrontendAction->display()
+#16 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waDefaultViewController.class.php(48): waViewController->executeAction(Object(shopFrontendCategoryAction))
+#17 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): waDefaultViewController->execute()
+#18 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waViewController.class.php(46): waController->run(NULL)
+#19 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waViewController->run(NULL)
+#20 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(waDefaultViewController), NULL)
+#21 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'frontend', 'category')
+#22 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(684): waFrontController->dispatch()
+#23 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(478): waSystem->dispatchFrontend('category/raspro...')
+#24 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#25 {main}
+
+2018-03-20 03:01:07 66.249.75.128
+Uncaught exception waDbException:
+Database error. See log for details. (2002)
+## /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(33)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbAdapter.class.php(30): waDbMysqliAdapter->connect(Array)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbConnector.class.php(49): waDbAdapter->__construct(Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(75): waDbConnector::getConnection('default', false)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/config/waAppConfig.class.php(266): waModel->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(94): waAppConfig->checkUpdates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(295): waSystem::getInstance('shop', NULL, true)
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(213): waRouting->getAppRoutes('shop', Array, true)
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(618): waRouting->dispatch()
+#8 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(478): waSystem->dispatchFrontend('wholesale/produ...')
+#9 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#10 {main}
+
+2018-03-20 03:01:10 176.121.14.168
+Uncaught exception waDbException:
+Database error. See log for details. (2002)
+## /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(33)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbAdapter.class.php(30): waDbMysqliAdapter->connect(Array)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbConnector.class.php(49): waDbAdapter->__construct(Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(75): waDbConnector::getConnection('default', false)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/config/waAppConfig.class.php(266): waModel->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(94): waAppConfig->checkUpdates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(295): waSystem::getInstance('shop', NULL, true)
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(213): waRouting->getAppRoutes('shop', Array, true)
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(618): waRouting->dispatch()
+#8 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(478): waSystem->dispatchFrontend('product/sonix-o...')
+#9 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#10 {main}
+
+2018-03-20 03:01:11 94.26.231.92
+Uncaught exception waDbException:
+Database error. See log for details. (2002)
+## /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(33)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbAdapter.class.php(30): waDbMysqliAdapter->connect(Array)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbConnector.class.php(49): waDbAdapter->__construct(Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(75): waDbConnector::getConnection('default', false)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/config/waAppConfig.class.php(266): waModel->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(94): waAppConfig->checkUpdates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(295): waSystem::getInstance('shop', NULL, true)
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(213): waRouting->getAppRoutes('shop', Array, true)
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(618): waRouting->dispatch()
+#8 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(478): waSystem->dispatchFrontend('product/sonix-o...')
+#9 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#10 {main}
+
+2018-03-20 03:01:15 54.36.148.159
+Uncaught exception waDbException:
+Database error. See log for details. (2002)
+## /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(33)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbAdapter.class.php(30): waDbMysqliAdapter->connect(Array)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbConnector.class.php(49): waDbAdapter->__construct(Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(75): waDbConnector::getConnection('default', false)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/config/waAppConfig.class.php(266): waModel->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(94): waAppConfig->checkUpdates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(295): waSystem::getInstance('shop', NULL, true)
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(213): waRouting->getAppRoutes('shop', Array, true)
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(618): waRouting->dispatch()
+#8 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(478): waSystem->dispatchFrontend('product/zazhim-...')
+#9 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#10 {main}
+
+2018-03-20 03:01:21 66.249.75.156
+Uncaught exception waDbException:
+Database error. See log for details. (2002)
+## /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(33)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbAdapter.class.php(30): waDbMysqliAdapter->connect(Array)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbConnector.class.php(49): waDbAdapter->__construct(Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(75): waDbConnector::getConnection('default', false)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/config/waAppConfig.class.php(266): waModel->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(94): waAppConfig->checkUpdates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(295): waSystem::getInstance('shop', NULL, true)
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(213): waRouting->getAppRoutes('shop', Array, true)
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(618): waRouting->dispatch()
+#8 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(478): waSystem->dispatchFrontend('wholesale/produ...')
+#9 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#10 {main}
+
+2018-03-20 03:01:26 176.121.14.175
+Uncaught exception waDbException:
+Database error. See log for details. (2002)
+## /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(33)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbAdapter.class.php(30): waDbMysqliAdapter->connect(Array)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbConnector.class.php(49): waDbAdapter->__construct(Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(75): waDbConnector::getConnection('default', false)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/config/waAppConfig.class.php(266): waModel->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(94): waAppConfig->checkUpdates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(295): waSystem::getInstance('shop', NULL, true)
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(213): waRouting->getAppRoutes('shop', Array, true)
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(618): waRouting->dispatch()
+#8 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(478): waSystem->dispatchFrontend('product/valik-p...')
+#9 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#10 {main}
+
+2018-03-20 03:01:27 94.26.228.130
+Uncaught exception waDbException:
+Database error. See log for details. (2002)
+## /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(33)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbAdapter.class.php(30): waDbMysqliAdapter->connect(Array)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbConnector.class.php(49): waDbAdapter->__construct(Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(75): waDbConnector::getConnection('default', false)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/config/waAppConfig.class.php(266): waModel->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(94): waAppConfig->checkUpdates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(295): waSystem::getInstance('shop', NULL, true)
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(213): waRouting->getAppRoutes('shop', Array, true)
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(618): waRouting->dispatch()
+#8 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(478): waSystem->dispatchFrontend('product/valik-p...')
+#9 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#10 {main}
+
+2018-03-20 03:01:54 66.249.75.156
+Uncaught exception waDbException:
+Database error. See log for details. (2002)
+## /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(33)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbAdapter.class.php(30): waDbMysqliAdapter->connect(Array)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbConnector.class.php(49): waDbAdapter->__construct(Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(75): waDbConnector::getConnection('default', false)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/config/waAppConfig.class.php(266): waModel->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(94): waAppConfig->checkUpdates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(295): waSystem::getInstance('shop', NULL, true)
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(213): waRouting->getAppRoutes('shop', Array, true)
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(618): waRouting->dispatch()
+#8 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(478): waSystem->dispatchFrontend('category/analiz...')
+#9 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#10 {main}
+
+2018-03-23 08:41:24 23.105.233.236
+Uncaught exception waDbException:
+Database error. See log for details. (2006)
+## /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('SELECT id, full...')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbQuery.class.php(86): waModel->query('SELECT id, full...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(272): waDbQuery->fetchAll()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(298): waRouting->getPageRoutes('shop', Array)
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(213): waRouting->getAppRoutes('shop', Array, true)
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(618): waRouting->dispatch()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(478): waSystem->dispatchFrontend('cml1c/3a6dc9a1-...')
+#7 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#8 {main}
