@@ -13,7 +13,7 @@ class shopCastomfieldPlugin extends shopPlugin
         return array(
             'edit_basics' => '
             <div class="field">
-                <div class="name">Комментарий</div>
+                <div class="name">Комментарий по товару</div>
                 <div class="value">
                     <textarea name="product[comment_user]">'.$param->comment_user.'</textarea>
                 </div>
