@@ -27,7 +27,6 @@
                     <div class="col w9 item-name">
                         <a href="{$wa->shop->productUrl($item.product)}" class="bold">{$item.product.name|escape}</a>&nbsp;-&nbsp;
                         {if $item.sku_name && $item.sku_name != $item.product.name}{$item.sku_name|escape}{/if}
-                        {shopCastomfieldPlugin::access_user_cart(["delivery_user" => $item.product.delivery_user])}
                     </div>
                     <div class="col w2 item-qty align-center nowrap"><span class="gray">&times;</span> <input type="text" name="quantity[{$item.id}]" value="{$item.quantity}" class="qty{if !empty($item.error)} error{/if}"></div>
                     <div class="col w1 item-remove"><a class="delete" href="#" title="[`Remove from cart`]"><i class="material-icons mi-2x">&#xE5CD;</i></a></div>                        
@@ -40,7 +39,6 @@
                         {else}
                         {shop_currency_html($item.full_price, true)}
                         {/if}
-                        {shopCastomfieldPlugin::access_user_cart(["price_user" => $item.product.price_user])}
                     </div>
 
                     {if !empty($item.services)}

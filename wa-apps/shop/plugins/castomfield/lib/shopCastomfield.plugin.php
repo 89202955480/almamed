@@ -18,18 +18,6 @@ class shopCastomfieldPlugin extends shopPlugin
                     <textarea name="product[comment_user]">'.$param->comment_user.'</textarea>
                 </div>
             </div>
-            <div class="field">
-                <div class="name">Цена</div>
-                <div class="value">
-                    <input type="text" name="product[price_user]" value="'.$param->price_user.'">
-                </div>
-            </div>
-            <div class="field">
-                <div class="name">Срок поставки</div>
-                <div class="value">
-                    <input type="text" name="product[delivery_user]" value="'.$param->delivery_user.'">
-                </div>
-            </div>
             ',
         );
     }
@@ -46,16 +34,5 @@ class shopCastomfieldPlugin extends shopPlugin
         }
     }
 
-    public function access_user_cart($param){
-        $plugin = wa('shop')->getPlugin('castomfield');
-        $settings = $plugin->getSettings();
-        if($settings){
-            $view = wa()->getView();
-            $view->assign('settings', explode(",", $settings['access_user']));
-            $view->assign('param', $param);
-            $html = $view->fetch($_SERVER['DOCUMENT_ROOT'].self::getStaticUrlPlugin().'templates/actions/FrontendCart.html');
-            return $html;
-        }
-    }
 }
 
