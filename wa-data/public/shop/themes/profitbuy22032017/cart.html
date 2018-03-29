@@ -3,7 +3,7 @@
 <script type="text/javascript" src="{$wa_theme_url}cart.min.js"></script>
 
 {if !$cart.count}
-    
+
     <div class="cart your-cart-is-empty fill-background">
         <h1>[`Shopping cart`]</h1>
         <p>[`Your shopping cart is empty.`]</p>
@@ -14,21 +14,21 @@
     <form method="post" class="fill-background">
         {*<a href="{$wa_app_url}" class="button step-back">&lArr; [`Back to the store`]</a>*}
         <h1>[`Shopping cart`]</h1>
-    
+
         <!-- sixteen-column cart layout -->
         <div class="cart cart-summary-page">
-            
+
             {foreach $cart.items as $item}
-            
+
                 <!-- cart item -->
-                <div class="row" data-id="{$item.id}">                  
+                <div class="row" data-id="{$item.id}">
                     <div class="col w1 item-thumb"><a href="{$wa->shop->productUrl($item.product)}" title="{$item.product.name|escape}">{$wa->shop->productImgHtml($item.product, '96x96', ['default' => "`$wa_theme_url`img/dummy48.png"])}</a>&nbsp;</div>
                     <div class="col w9 item-name">
                         <a href="{$wa->shop->productUrl($item.product)}" class="bold">{$item.product.name|escape}</a>&nbsp;-&nbsp;
                         {if $item.sku_name && $item.sku_name != $item.product.name}{$item.sku_name|escape}{/if}
                     </div>
                     <div class="col w2 item-qty align-center nowrap"><span class="gray">&times;</span> <input type="text" name="quantity[{$item.id}]" value="{$item.quantity}" class="qty{if !empty($item.error)} error{/if}"></div>
-                    <div class="col w1 item-remove"><a class="delete" href="#" title="[`Remove from cart`]"><i class="material-icons mi-2x">&#xE5CD;</i></a></div>                        
+                    <div class="col w1 item-remove"><a class="delete" href="#" title="[`Remove from cart`]"><i class="material-icons mi-2x">&#xE5CD;</i></a></div>
                     <div class="col w3 align-right item-total nowrap">
                         {if shop_currency_html($item.full_price, true) == 0}
                         <div class="buy-box-product" data-tooltip="Цена зависит от комплектации прибора и/или наличия на складах в России.
@@ -84,11 +84,11 @@
                             {/if}
                         {/if}
                     {/if}
-                    
+
                 </div>
                 {if !empty($item.error)}<script>alert({json_encode($item.error)});</script>{/if}
             {/foreach}
-            
+
             <!-- discount -->
             <div class="row" {if !shopDiscounts::isEnabled('coupons') && !$discount}style="display:none"{/if} id="discount-row">
                 <div class="col w10 cart-coupon no-border">
@@ -103,7 +103,7 @@
                             {/if}
                         </div>
                     {/if}
-                    
+
                 </div>
                 <div class="col w2 align-center">[`Discount`]</div>
                 <div class="col w3 align-right cart-discount nowrap">&minus; {shop_currency_html($discount, true)}</div>
@@ -125,7 +125,7 @@
                 <div class="col w1">&nbsp;</div>
             </div>
             {/if}
-            
+
             <!-- TOTAL -->
             <div class="row large">
                 <div class="col w12 no-border">
@@ -135,7 +135,7 @@
                 <div class="col w3 cart-total align-right total bold nowrap">{shop_currency_html($cart.total, true)}</div>
                 <div class="col w1">&nbsp;</div>
             </div>
-            
+
             {if shopAffiliate::isEnabled() && !empty($add_affiliate_bonus)}
             <div class="row no-border">
                 <div class="col w16 no-border">
@@ -143,7 +143,7 @@
                 </div>
             </div>
             {/if}
-            
+
             <!-- CHECKOUT -->
             <div class="row no-border">
                 {*
@@ -166,7 +166,7 @@
                     <input name="checkout" type="submit" value="[`Proceed to checkout`] &rArr;" class="button">
                 </div>
             </div>
-            
+
             {$related = $wa->shop->crossSelling($cart.items, 'product_id')}
             {if $theme_settings.cart_crossselling == 'single' && $related}
                 <div class="row no-border">
@@ -178,7 +178,7 @@
                     </div>
                 </div>
             {/if}
-            
+
         </div>
 
         <!-- plugin hook: 'frontend_cart' -->

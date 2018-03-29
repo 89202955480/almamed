@@ -633,7 +633,9 @@ table.compare-responsive-table thead .name-wrapper .compare-remove:hover i{-webk
 table.compare-responsive-table tbody{display:block;width:auto;position:relative;overflow-x:auto;white-space:nowrap;}
 table.compare-responsive-table tbody tr{display:inline-block;vertical-align:top;-webkit-transition:background-color .25s ease;-moz-transition:background-color .25s ease;-o-transition:background-color .25s ease;-ms-transition:background-color .25s ease;transition:background-color .25s ease;}
 table.compare-responsive-table tbody tr:hover{background-color:#f2f2f2;}
-@media print{*{color:#000 !important;}
+
+@media print{
+*{color:#000 !important;}
 a, a:visited{text-decoration:underline;}
 pre, blockquote{border:1px solid #999;page-break-inside:avoid;}
 thead{display:table-header-group;}
@@ -660,6 +662,10 @@ h1{font-size:1.75em;}
 .phones-wrapper i{display:none;}
 .offline-wrapper a,
 .phones-wrapper a{text-decoration:none;}
+.nb-open-form, .ec-calc--call, .quickeditor-fixed-link, .item-remove, .cart-coupon, .cart-checkout, #discount-row{display: none!important;}
+.manager-img-block{left: 0px!important;}
+.print-h1{display: block!important;}
+.cart-h1{display: none!important;}
 }
 .quickorder-custom-show{display:block !important;}
 .video-container{text-align:center;border:1px solid #ebebeb;border-radius:8px;padding:1.5rem;}
