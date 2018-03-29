@@ -1,0 +1,7 @@
+{$uid = $wa->userId()}
+{$uids = $settings}
+{if in_array($uid, $uids)}
+    {foreach $param as $p}
+    <p style="font-size: 12px;font-weight: 100;">{$p}</p>
+    {/foreach}
+{/if}
