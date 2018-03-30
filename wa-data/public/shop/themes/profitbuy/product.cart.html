@@ -252,8 +252,8 @@
 {if in_array($uid, $uids)}
 <form action="" id="input_print">
     <input type="hidden" name="id_prod_user" value="{$product.id}">
-    <p><input type="text" name="price_user" value="{$product.price_user}" placeholder="Цена"></p>
-    <p><input type="text" name="delivery_user" value="{$product.delivery_user}" placeholder="Срок поставки"></p>
+    <p>Цена - <input type="text" name="price_user" value="{$product.price_user}" placeholder="Цена"></p>
+    <p>Срок поставки - <input type="text" name="delivery_user" value="{$product.delivery_user}" placeholder="Срок поставки"></p>
 </form>
 
 <script>
