@@ -205,6 +205,7 @@
                     {/if}
             	{/foreach}
             {/if}
+            <span class="price-show-print" style="display: none">{$product.price_user}</span>
             <div class="price-wrapper">
                 {if $product.compare_price > 0}<span data-compare-price="{shop_currency($product.compare_price, null, null, 0)}" class="compare-at-price nowrap"> {shop_currency_html($product.compare_price)} </span>{/if}
                 {if shop_currency_html($product.price) == 0}
@@ -258,6 +259,20 @@
 
 <script>
 
+    var isCtrl = false;
+    $(document).keyup(function (e) {
+        if(e.which == 17) isCtrl=false;
+    }).keydown(function (e) {
+        if(e.which == 17) isCtrl=true;
+        if(e.which == 80 && isCtrl == true) {
+            var price = $('.price-show-print').text();
+            if(price){
+                $('.price').html(price + ' <span class="ruble">Р</span>');
+            }
+        }
+    });
+
+
     $('#input_print').on('input', 'input', function () {
         var $item = $('#input_print');
         var data = $item.serializeArray();
@@ -285,6 +300,8 @@
     </div>
     </div>
 {/if}
+
+
 
 {* При подключенном CDN скрипт не отрабатывает если пытаться положить товар с вариациями из списка. Не зависит от темы оформления. *}
 {*<script type="text/javascript" src="{$wa_theme_url}product.js?v{$wa_theme_version}"></script>*}

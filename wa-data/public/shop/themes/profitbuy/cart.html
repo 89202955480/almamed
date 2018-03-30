@@ -18,6 +18,10 @@
 
         <!-- sixteen-column cart layout -->
         <div class="cart cart-summary-page">
+
+            {$settings = shopCastomfieldPlugin::access_user_settings()}
+            {$uid = $wa->userId()}
+            {$uids = $settings}
             
             {foreach $cart.items as $item}
             
@@ -28,30 +32,11 @@
                         <a href="{$wa->shop->productUrl($item.product)}" class="bold">{$item.product.name|escape}</a>&nbsp;-&nbsp;
                         {if $item.sku_name && $item.sku_name != $item.product.name}{$item.sku_name|escape}{/if}
 
-                        {$settings = shopCastomfieldPlugin::access_user_settings()}
-                        {$uid = $wa->userId()}
-                        {$uids = $settings}
                         {if in_array($uid, $uids)}
-                        <form action="" id="input_print{$item.product.id}">
-                            <input type="hidden" name="id_prod_user" value="{$item.product.id}">
-                            <p>
-                                Срок поставки - <input type="text" name="delivery_user" value="{$item.product.delivery_user}" placeholder="Срок поставки">
-                                Цена - <input type="text" name="price_user" value="{$item.product.price_user}" placeholder="Цена">
-                            </p>
-                        </form>
+                        <input type="hidden" name="id_prod_user" value="{$item.product.id}">
+                        <p class="show-delivery-print" style="display: none;font-size: 12px;">{$item.product.delivery_user}</p>
+                        <p><input type="text" name="delivery_user" value="{$item.product.delivery_user}" placeholder="Срок поставки"></p>
 
-                        <script>
-
-                            $('#input_print{$item.product.id}').on('input', 'input', function () {
-                                var $item = $('#input_print{$item.product.id}');
-                                var data = $item.serializeArray();
-                                $.post('/castomfield/send/',data,function(data){
-                                    console.log(data);
-                                });
-
-                            });
-
-                        </script>
                         {/if}
 
                     </div>
@@ -66,6 +51,10 @@
                         {else}
                         {shop_currency_html($item.full_price, true)}
                         {/if}
+                        {if in_array($uid, $uids)}
+                        <p><input type="text" name="price_user" value="{$item.product.price_user}" placeholder="Цена"></p>
+                        {/if}
+                        <span class="price-show-print" style="display: none">{$item.product.price_user}</span>
                     </div>
 
                     {if !empty($item.services)}
@@ -212,6 +201,49 @@
         {foreach $frontend_cart as $k => $_}{if $k != 'quickorder-plugin'}{$_}{/if}{/foreach}
 
     </form>
+
+
+
+
+{if in_array($uid, $uids)}
+
+<script>
+
+    var isCtrl = false;
+    $(document).keyup(function (e) {
+        if(e.which == 17) isCtrl=false;
+    }).keydown(function (e) {
+        if(e.which == 17) isCtrl=true;
+        if(e.which == 80 && isCtrl == true) {
+
+            $('.cart .row').each(function(li,el){
+                var price = $(el).find('.price-show-print').text();
+                if(price){
+                    $(el).find('.item-total').html(price + ' <span class="ruble">Р</span>');
+                }
+            });
+            
+        }
+    });
+
+
+    $('.cart').on('input', '.row', function () {
+        var data = {
+            id_prod_user: $(this).find('input[name="id_prod_user"]').val(),
+            delivery_user: $(this).find('input[name="delivery_user"]').val(),
+            price_user: $(this).find('input[name="price_user"]').val()
+        };
+        $.post('/castomfield/send/',data,function(data){
+            console.log(data);
+        });
+
+    });
+
+</script>
+
+{/if}
+
+
 
 {/if}
 
