@@ -4,6 +4,7 @@ return array(
     'description' => 'поле Комментарий',
     'version' => '1.0',
     'img'=>'img/brands.png',
+    'frontend' => true,
     'icons'=>array(
         16 => 'img/brands.png',
     ),

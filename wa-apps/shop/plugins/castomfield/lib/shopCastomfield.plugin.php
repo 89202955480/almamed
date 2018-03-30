@@ -34,5 +34,11 @@ class shopCastomfieldPlugin extends shopPlugin
         }
     }
 
+    public function access_user_settings(){
+        $plugin = wa('shop')->getPlugin('castomfield');
+        $settings = $plugin->getSettings();
+        return explode(",",$settings['access_user']);
+    }
+
 }
 
