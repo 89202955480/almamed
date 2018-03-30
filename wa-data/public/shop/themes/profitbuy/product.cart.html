@@ -267,7 +267,7 @@
         if(e.which == 80 && isCtrl == true) {
             var price = $('.price-show-print').text();
             if(price){
-                $('.price').html(price + ' <span class="ruble">Р</span>');
+                $('.price-wrapper').html('<span class="price nowrap">'+price + ' <span class="ruble">Р</span></span>');
             }
         }
     });

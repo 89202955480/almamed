@@ -34,7 +34,7 @@
 
                         {if in_array($uid, $uids)}
                         <input type="hidden" name="id_prod_user" value="{$item.product.id}">
-                        <p class="show-delivery-print" style="display: none;font-size: 12px;">{$item.product.delivery_user}</p>
+                        <p class="show-delivery-print" style="display: none;font-size: 12px;">Срок поставки - {$item.product.delivery_user}</p>
                         <p><input type="text" name="delivery_user" value="{$item.product.delivery_user}" placeholder="Срок поставки"></p>
 
                         {/if}
