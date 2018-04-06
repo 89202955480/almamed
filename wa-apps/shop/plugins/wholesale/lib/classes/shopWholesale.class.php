@@ -21,8 +21,13 @@ final class shopWholesale {
             }
             return $total;
         } else {
+            $route_settings = shopWholesaleRouteHelper::getRouteSettings(0);
             $cart = new shopCart();
-            return $cart->total(true);
+            $total = 0;
+            foreach($cart->items(true) as $item){
+                $total += (ceil($item['price']) == 0) ? $route_settings['min_order_sum'] : ceil($item['price']);
+            }
+            return $total;
         }
     }
 

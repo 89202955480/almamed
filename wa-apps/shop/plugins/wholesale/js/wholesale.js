@@ -42,6 +42,11 @@
             initCartTotalChange: function () {
                 var $cart_total = $(this.options.cart_total_selector);
                 var total = '';
+
+                $('.delete').click(function(){
+                    total = $cart_total.html();
+                    $(document).trigger('updateCart');
+                });
                 setInterval(function () {
                     if (total != $cart_total.html()) {
                         total = $cart_total.html();
