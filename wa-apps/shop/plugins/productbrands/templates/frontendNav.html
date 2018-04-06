@@ -1,7 +1,11 @@
 <ul class="menu-v brands">
 {foreach $brands as $b}
-    <li {if $b.name == $wa->param('brand')}class="selected"{/if}>
-        <a href="{$b.url}">{$b.name|escape}</a>
-    </li>
+        {if $i < 5}
+        <li {if $b.name == $wa->param('brand')}class="selected"{/if}>
+            <a href="{$b.url}">{$b.name|escape}</a>
+        </li>
+        {/if}
+    {$i = $inc++}
 {/foreach}
 </ul>
+<a href="/brands/" class="show-more-button button">Еще</a>

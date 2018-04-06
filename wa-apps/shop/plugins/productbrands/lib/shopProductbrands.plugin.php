@@ -65,6 +65,7 @@ class shopProductbrandsPlugin extends shopPlugin
         }
         $view = wa()->getView();
         $view->assign('brands', $brands);
+        $view->assign('inc', 1);
         if ($t_nav = $this->getSettings('template_nav')) {
             return $view->fetch('string:'.$t_nav);
         } else {
