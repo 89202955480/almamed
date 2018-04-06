@@ -47,7 +47,36 @@ Redirect 301 /category/instrumentalnaya-golovka-dlya-tub-heine-unispec-germaniya
 Redirect 301 http://almamed.su/robots.txt https://almamed.su/robots.txt
 
 #По просьбе Гугла от 14.11
-Redirect 301 /category/probirki-dlya-issledovaniya-plazmy-krovi-s-litiy-geparinom-lithium-heparin-tube-kitay/  /category/probirki-dlya-issledovaniya-plazmy-krovi-s-litiy-geparinom-lithium-heparin-tube-kitay1/
+Redirect 301 /category/probirki-dlya-issledovaniya-plazmy-krovi-improvacuter/ /404
+Redirect 301 /product/probirka-gellithium-heparin-tube-4-ml-steklyannaya-dlya-issledovaniya-plazmy-krovi-art-743040110-kitay/ /404
+Redirect 301 /product/probirka-gelsodium-heparin-tube-4-ml-plastikovaya-dlya-issledovaniya-plazmy-krovi-art-753040112-kitay/ /404
+Redirect 301 /product/probirka-gelsodium-heparin-tube-5-ml-steklyannaya-dlya-issledovaniya-plazmy-krovi-art-753050110-kitay/ /404
+Redirect 301 /product/probirka-gelsodium-heparin-tube-4-ml-steklyannaya-dlya-issledovaniya-plazmy-krovi-art-753040110-kitay/ /404
+Redirect 301 /product/probirka-gelsodium-heparin-tube-5-ml-steklyannaya-dlya-issledovaniya-plazmy-krovi-art-753050110-kitay/ /404
+Redirect 301 /product/probirka-gelsodium-heparin-tube-4-ml-steklyannaya-dlya-issledovaniya-plazmy-krovi-art-753040110-kitay/ /404
+Redirect 301 /product/probirka-sodium-heparin-tube-9-ml-plastikovaya-dlya-issledovaniya-plazmy-krovi-art-664090212-kitay/ /404
+Redirect 301 /product/probirka-sodium-heparin-tube-8-ml-plastikovaya-dlya-issledovaniya-plazmy-krovi-art-664080212-kitay/ /404
+Redirect 301 /product/probirka-sodium-heparin-tube-6-ml-plastikovaya-dlya-issledovaniya-plazmy-krovi-art-663060112-kitay/ /404
+Redirect 301 /product/probirka-sodium-heparin-tube-5-ml-plastikovaya-dlya-issledovaniya-plazmy-krovi-art-663050112-kitay/ /404
+Redirect 301 /product/probirka-sodium-heparin-tube-4-ml-plastikovaya-dlya-issledovaniya-plazmy-krovi-art-663040112-kitay/ /404
+Redirect 301 /product/probirka-sodium-heparin-tube-3-ml-plastikovaya-dlya-issledovaniya-plazmy-krovi-art-663030112-kitay/ /404
+Redirect 301 /product/probirka-sodium-heparin-tube-2-ml-plastikovaya-dlya-issledovaniya-plazmy-krovi-art-663020112-kitay/ /404
+Redirect 301 /product/probirka-sodium-heparin-tube-4-ml-plastikovaya-dlya-issledovaniya-plazmy-krovi-art-662040112-kitay/ /404
+Redirect 301 /product/probirka-sodium-heparin-tube-3-ml-plastikovaya-dlya-issledovaniya-plazmy-krovi-art-662030112-kitay/ /404
+Redirect 301 /product/probirka-sodium-heparin-tube-95-ml-steklyannaya-dlya-issledovaniya-plazmy-krovi-art-664950210-kitay/ /404
+Redirect 301 /product/probirka-sodium-heparin-tube-9-ml-steklyannaya-dlya-issledovaniya-plazmy-krovi-art-664090210-kitay/ /404
+Redirect 301 /product/probirka-sodium-heparin-tube-8-ml-steklyannaya-dlya-issledovaniya-plazmy-krovi-art-664080210-kitay/ /404
+Redirect 301 /product/probirka-sodium-heparin-tube-6-ml-steklyannaya-dlya-issledovaniya-plazmy-krovi-art-663060110-kitay/ /404
+Redirect 301 /product/probirka-sodium-heparin-tube-5-ml-steklyannaya-dlya-issledovaniya-plazmy-krovi-art-663050110-kitay/ /404
+Redirect 301 /product/probirka-sodium-heparin-tube-4-ml-steklyannaya-dlya-issledovaniya-plazmy-krovi-art-663040110-kitay/ /404
+Redirect 301 /product/probirka-sodium-heparin-tube-3-ml-steklyannaya-dlya-issledovaniya-plazmy-krovi-art-663030110-kitay/ /404
+Redirect 301 /product/probirka-sodium-heparin-tube-2-ml-steklyannaya-dlya-issledovaniya-plazmy-krovi-art-663020110-kitay/ /404
+Redirect 301 /product/probirka-sodium-heparin-tube-4-ml-steklyannaya-dlya-issledovaniya-plazmy-krovi-art-662040110-kitay/ /404
+Redirect 301 /product/probirka-sodium-heparin-tube-3-ml-steklyannaya-dlya-issledovaniya-plazmy-krovi-art-662030110-kitay/ /404
+Redirect 301 /product/probirka-gellithium-heparin-tube-5-ml-plastikovaya-dlya-issledovaniya-plazmy-krovi-art-743050112-kitay/ /404
+Redirect 301 /product/probirka-gellithium-heparin-tube-4-ml-plastikovaya-dlya-issledovaniya-plazmy-krovi-art-743040112-kitay/ /404
+Redirect 301 /product/probirka-gellithium-heparin-tube-5-ml-steklyannaya-dlya-issledovaniya-plazmy-krovi-art-743050110-kitay/ /404
+Redirect 301 /product/probirka-gelsodium-heparin-tube-5-ml-plastikovaya-dlya-issledovaniya-plazmy-krovi-art-753050112-kitay/ /404
 
 
 #включение логов
