@@ -725,7 +725,7 @@ i.cart-count:after{content:attr(data-count);display:block;position:absolute;bord
 #flying-cart .flying-cart-price{display:block;}
 #flying-cart .flying-cart-price .ruble{font-size:110%;}
 #flying-cart .flying-cart-quantity{white-space:nowrap;width:1%;}
-#flying-cart .flying-cart-qty{text-align:center;max-width:50px;}
+#flying-cart .flying-cart-qty{text-align:center;max-width:80px;}
 #flying-cart .flying-cart-delete{padding:0 10px;}
 #flying-cart .flying-cart-delete a{color:#bbb;}
 #flying-cart .flying-cart-delete a:hover i{-webkit-transition:.5s;-moz-transition:.5s;-o-transition:.5s;-ms-transition:.5s;transition:.5s;-webkit-transform:rotate(90deg);-moz-transform:rotate(90deg);-o-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg);color:#f44336;}
