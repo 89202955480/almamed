@@ -79,6 +79,17 @@
             </ЗначенияСвойства>
 
             <ЗначенияСвойства>
+                <Ид>CML2_PICTURES</Ид>
+                {foreach $_product.images as $key => $image}
+                <Значение>{stristr(shopImage::getPath(['product_id' => $image.product_id, 'id' => $image.id,'ext' => $image.ext]),"wa-data")}</Значение>
+                <ЗначениеСвойства>
+                    <Значение>{stristr(shopImage::getPath(['product_id' => $image.product_id, 'id' => $image.id,'ext' => $image.ext]),"wa-data")}</Значение>
+                    <Описание></Описание>
+                </ЗначениеСвойства>
+                {/foreach}
+            </ЗначенияСвойства>
+
+            <ЗначенияСвойства>
                 <Ид>CML2_PREVIEW_TEXT</Ид>
                 <Значение></Значение>
                 <Тип>html</Тип>
