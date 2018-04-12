@@ -17436,3 +17436,72 @@ product not found (500)
 #6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(478): waSystem->dispatchFrontend('cart/add/')
 #7 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
 #8 {main}
+
+2018-04-09 03:39:36 217.69.133.85
+Uncaught exception waDbException:
+Database error. See log for details. (2002)
+## /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(33)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbAdapter.class.php(30): waDbMysqliAdapter->connect(Array)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbConnector.class.php(49): waDbAdapter->__construct(Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(75): waDbConnector::getConnection('default', false)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/config/waAppConfig.class.php(266): waModel->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(94): waAppConfig->checkUpdates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(295): waSystem::getInstance('shop', NULL, true)
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(213): waRouting->getAppRoutes('shop', Array, true)
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(618): waRouting->dispatch()
+#8 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(478): waSystem->dispatchFrontend('product/sumka-s...')
+#9 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#10 {main}
+
+2018-04-09 03:40:30 46.4.89.220
+Uncaught exception waDbException:
+Database error. See log for details. (2002)
+## /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(33)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbAdapter.class.php(30): waDbMysqliAdapter->connect(Array)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbConnector.class.php(49): waDbAdapter->__construct(Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(75): waDbConnector::getConnection('default', false)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/config/waAppConfig.class.php(266): waModel->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(94): waAppConfig->checkUpdates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(295): waSystem::getInstance('shop', NULL, true)
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(213): waRouting->getAppRoutes('shop', Array, true)
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(618): waRouting->dispatch()
+#8 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(478): waSystem->dispatchFrontend('product/akkumul...')
+#9 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#10 {main}
+
+2018-04-09 03:40:32 5.188.76.203
+Uncaught exception waDbException:
+Database error. See log for details. (2002)
+## /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbMysqliAdapter.class.php(33)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbAdapter.class.php(30): waDbMysqliAdapter->connect(Array)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waDbConnector.class.php(49): waDbAdapter->__construct(Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(75): waDbConnector::getConnection('default', false)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/config/waAppConfig.class.php(266): waModel->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(94): waAppConfig->checkUpdates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(295): waSystem::getInstance('shop', NULL, true)
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/routing/waRouting.class.php(213): waRouting->getAppRoutes('shop', Array, true)
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(618): waRouting->dispatch()
+#8 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(478): waSystem->dispatchFrontend('product/akkumul...')
+#9 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#10 {main}
+
+2018-04-12 16:25:10 77.45.129.160
+Uncaught exception SmartyException:
+unable to write file /home/s/svprim4w/almamed.su/public_html/wa-cache/apps/shop/templates/compiled/shop_ru_RU/82/25/88/wrt5acf5e364a1734.34199913 (0)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_template.php(201): Smarty_Internal_Write_File::writeFile('/home/s/svprim4...', '<?php /* Smarty...', Object(Smarty))
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php(155): Smarty_Internal_Template->compileTemplateSource()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_template.php(286): Smarty_Internal_TemplateBase->fetch(NULL, NULL, NULL, NULL, false, false, true)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-cache/apps/shop/templates/compiled/shop_ru_RU/0a/3d/a5/0a3da506ccdf7e1c1b6fe24e94b9bb0a294f515a.file.index.html.php(222): Smarty_Internal_Template->getSubTemplate('profitbuy.criti...', NULL, 'shop_ru_RU', NULL, NULL, Array, 0)
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php(180): content_5acf5e35efb0a9_50649103(Object(Smarty_Internal_Template))
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php(374): Smarty_Internal_TemplateBase->fetch('file:index.html', NULL, NULL, NULL, true)
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(127): Smarty_Internal_TemplateBase->display('file:index.html', NULL)
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/layout/waLayout.class.php(150): waSmarty3View->display('file:index.html')
+#8 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waViewController.class.php(104): waLayout->display()
+#9 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waViewController.class.php(47): waViewController->display()
+#10 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waViewController->run(NULL)
+#11 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(waDefaultViewController), NULL)
+#12 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'frontend', 'category')
+#13 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(684): waFrontController->dispatch()
+#14 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(478): waSystem->dispatchFrontend('category/ekspre...')
+#15 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#16 {main}

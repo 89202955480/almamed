@@ -77,7 +77,10 @@ Redirect 301 /product/probirka-gellithium-heparin-tube-5-ml-plastikovaya-dlya-is
 Redirect 301 /product/probirka-gellithium-heparin-tube-4-ml-plastikovaya-dlya-issledovaniya-plazmy-krovi-art-743040112-kitay/ /404
 Redirect 301 /product/probirka-gellithium-heparin-tube-5-ml-steklyannaya-dlya-issledovaniya-plazmy-krovi-art-743050110-kitay/ /404
 Redirect 301 /product/probirka-gelsodium-heparin-tube-5-ml-plastikovaya-dlya-issledovaniya-plazmy-krovi-art-753050112-kitay/ /404
-
+Redirect 301 /category/probirki-dlya-issledovaniya-plazmy-krovi-s-natriy-geparinom-i-gelem-gel--sodium-heparin-tube-kitay/ /404
+Redirect 301 /category/probirki-dlya-issledovaniya-plazmy-krovi-s-natriy-geparinom-sodium-heparin-tube-kitay/ /404
+Redirect 301 /category/probirki-dlya-issledovaniya-plazmy-krovi-s-litiy-geparinom-i-gelem-gel--lithium-heparin-tube-kitay/ /404
+Redirect 301 /category/probirki-dlya-issledovaniya-plazmy-krovi-s-litiy-geparinom-lithium-heparin-tube-kitay/ /404
 
 #включение логов
 #php_flag display_errors Off

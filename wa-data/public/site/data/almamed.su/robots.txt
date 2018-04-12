@@ -1,9 +1,14 @@
 User-agent: *
+# kabinet sajta
 Disallow: /my/
 Disallow: /checkout/
 # razdel sajta
 Disallow: /i/*
 Disallow: /webasyst/*
+# poisk sajta
+Disallow: /search/*
+# peremennye sajta
+Disallow: /?*
 
 Host: https://almamed.su/
 Sitemap: https://almamed.su/sitemap.xml

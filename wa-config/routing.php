@@ -1,5 +1,4 @@
 <?php
-
 return array (
   'almamed.su' => 
   array (
@@ -45,8 +44,8 @@ return array (
       'url' => '*',
       'app' => 'shop',
       '_name' => 'АльмаМед - поставки медицинского оборудования по всей России',
-      'theme' => 'profitbuy',
-      'theme_mobile' => 'profitbuy',
+      'theme' => 'osnovnaja',
+      'theme_mobile' => 'osnovnaja',
       'locale' => 'ru_RU',
       'title' => 'АльмаМед - поставки медицинского оборудования по всей России',
       'meta_keywords' => '',
@@ -123,4 +122,3 @@ return array (
     ),
   ),
 );
-//EOF

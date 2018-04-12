@@ -1,4 +1,5 @@
 <?php
+
 return array (
   'yandexmarket' => true,
   'yoss' => true,
@@ -25,4 +26,6 @@ return array (
   'cml1c' => true,
   'wholesale' => true,
   'castomfield' => '1',
+  'editprice' => true,
 );
+//EOF
