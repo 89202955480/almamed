@@ -89,13 +89,13 @@
 
                 <h4 class="last-post-title" style="margin-top: 10px;height: 80px;">
 
-                    <a href="{$post.link}">{$post.title|truncate:40}</a>
+                    <a href="{$post.link}">{$post.title|truncate:50:"...":true}</a>
                     {* @event prepare_posts_frontend.%plugin_id%.post_title *}
                     {if !empty($post.plugins.post_title)}{foreach $post.plugins.post_title as $plugin => $output}{$output}{/foreach}{/if}
 
                 </h4>
 
-                <p style="height: 200px;">{$post.text|strip_tags|truncate:200}</p>
+                <p style="height: 200px;">{$post.text|strip_tags|truncate:200:"...":true}</p>
                 <a href="{$post.link}">Читать далее >></a>
                 <div class="credentials" style="margin-top: 10px;">
                     <i class="material-icons mi-lg">&#xE192;</i>
