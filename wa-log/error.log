@@ -17505,3 +17505,20 @@ unable to write file /home/s/svprim4w/almamed.su/public_html/wa-cache/apps/shop/
 #14 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(478): waSystem->dispatchFrontend('category/ekspre...')
 #15 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
 #16 {main}
+
+2018-04-13 12:12:38 194.154.75.198
+Uncaught exception waException:
+Доступ запрещен (500)
+## /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/lib/actions/backend/shopBackendOrders.action.php(8)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waViewAction.class.php(170): shopBackendOrdersAction->execute()
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waViewController.class.php(86): waViewAction->display()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/lib/actions/backend/shopBackendOrders.controller.php(7): waViewController->executeAction(Object(shopBackendOrdersAction))
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopBackendOrdersController->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waViewController.class.php(46): waController->run(NULL)
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waViewController->run(NULL)
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(shopBackendOrdersController), NULL)
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'backend', 'orders')
+#8 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#9 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#10 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#11 {main}
