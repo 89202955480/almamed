@@ -96,7 +96,7 @@
                 {include file="top.phone.head.html" assign="header4" inline}
 
 
-                <div class="row-grid hide-on-med-and-down header-fix-top-menu-hidden" style="display: none" >
+                <div class="row-grid hide-on-med-and-down header-fix-top-menu-hidden">
                     <div class="table-grid">
                         {if !empty($header0)}<div class="col-grid logo-menu-top-fix" style="display: none">{$header0}</div>{/if}
                         {if !empty($header1)}<div class="col-grid  max-width link-top-not-fix">{$header1}</div>{/if}
@@ -106,12 +106,6 @@
                         {if !empty($header4)}<div class="col-grid h-p-grid">{$header4}</div>{/if}
                     </div>
                 </div>
-
-                <script>
-                    setTimeout(function(){
-                        $('.header-fix-top-menu-hidden').css('display','block');
-                    },3000)
-                </script>
                 
             </div>
         </nav>
