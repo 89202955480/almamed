@@ -17522,3 +17522,35 @@ Uncaught exception waException:
 #9 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
 #10 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
 #11 {main}
+
+2018-04-14 13:37:43 83.139.137.127
+Uncaught exception waDbException:
+Database error. See log for details. (2006)
+## /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(243)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(343): waModel->run('SELECT * FROM w...')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(842): waModel->query('SELECT * FROM w...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/database/waModel.class.php(805): waModel->getByField('id', '1', false)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/contact/waContact.class.php(810): waModel->getById('1')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(936): waContact->getLocale()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(1091): waSystem->getApps()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(522): waSystem->appExists('webasyst')
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/')
+#8 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#9 {main}
+
+2018-04-14 15:05:54 83.139.137.127
+Uncaught exception waException:
+Product not found (404)
+## /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/lib/actions/product/shopProduct.action.php(16)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waViewAction.class.php(170): shopProductAction->execute()
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waViewController.class.php(86): waViewAction->display()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waDefaultViewController.class.php(48): waViewController->executeAction(Object(shopProductAction))
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): waDefaultViewController->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waViewController.class.php(46): waController->run(NULL)
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(227): waViewController->run(NULL)
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(162): waFrontController->runController(Object(waDefaultViewController), NULL)
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waFrontController.class.php(58): waFrontController->execute(NULL, 'product', NULL)
+#8 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(538): waFrontController->dispatch()
+#9 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(476): waSystem->dispatchBackend('webasyst/shop/')
+#10 /home/s/svprim4w/almamed.su/public_html/index.php(11): waSystem->dispatch()
+#11 {main}
