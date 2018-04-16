@@ -73,6 +73,26 @@ class shopProductbrandsPlugin extends shopPlugin
         }
     }
 
+    public function sliderBrands(){
+        $s_brands = array();
+        $brands = self::getBrands();
+        if (!$brands) {
+            return;
+        }
+        foreach($brands as $k => $b){
+            if($b['show_slider']){
+                $s_brands[$k] = $b;
+            }
+        }
+        if (!$s_brands) {
+            return;
+        }
+        $app_config = wa()->getConfig()->getAppConfig('shop');
+        $view = wa()->getView();
+        $view->assign('brands', $s_brands);
+        return $view->fetch($app_config->getPluginPath('productbrands').'/templates/frontendSlider.html');
+    }
+
 
     /**
      * @param $params

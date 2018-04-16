@@ -60,6 +60,13 @@
             href: "{$wa_theme_url}bxslider/jquery.bxslider.css",
             src: "{$wa_theme_url}bxslider/jquery.bxslider.min.js"
         },
+        "jquery.lightslider": {
+            is_done: function () {
+                return !!$.fn.lightSlider;
+            },
+            href: "{$wa_theme_url}lightslider/css/lightslider.css",
+            src: "{$wa_theme_url}lightslider/js/lightslider.js"
+        },
         "jquery.cslider": {
             is_done: function () {
                 return !!$.fn.cslider;
@@ -107,7 +114,6 @@
             $('.logo-menu-top-fix').css('display','none');
         }
     });
-
 
 
         function windowSize(){

@@ -1,25 +1,17 @@
 {strip}
 
-{if !empty($theme_settings.phone_1) || !empty($theme_settings.phone_2)}
-<ul class="phones-wrapper">
-    {if !empty($theme_settings.phone_1)}
-    <li>
-        <a href="tel:{str_replace(['(', ')', '-', ' '], '', $theme_settings.phone_1)}">{$theme_settings.phone_1}</a>
-        {if !empty($theme_settings.phone_hint_1)}<span class="hint">{$theme_settings.phone_hint_1}</span>{/if}
+{$wh = null}
+{if $wa->shop}
+{$wh = $wa->shop->settings("workhours")|default:"[`24/7, seven days a week`]"}
+{/if}
+{if !empty($theme_settings.address) || !empty($wh)}
+<ul class="offline-wrapper">
+    {if !empty($theme_settings.address)}
+    <li class="address no-hover">
+        <i class="material-icons mi-2x">&#xe88b;</i>
+        <span>Время работы</span> менеджеров: <span>09<sup><small>00</small></sup> - 20<sup><small>00</small></sup></span>
     </li>
     {/if}
-    {if !empty($theme_settings.phone_2)}
-    <li>
-        <a href="tel:{str_replace(['(', ')', '-', ' '], '', $theme_settings.phone_2)}">{$theme_settings.phone_2}</a>
-        {if !empty($theme_settings.phone_hint_2)}<span class="hint">{$theme_settings.phone_hint_2}</span>{/if}
-    </li>
-    {/if}
-    {*
-    <li>
-        <a href="tel:+74953214144">+7 (495) 321-41-44</a>
-        <span class="hint">[`Hint`]</span>
-    </li>
-    *}
 </ul>
 {/if}
 

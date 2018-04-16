@@ -1,6 +1,7 @@
 ( function ($) {
     
     $.getScript = function(u,s,c) {
+        console.log(u);
         return $.ajax({
             url: u,
             dataType: "script",

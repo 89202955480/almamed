@@ -23,7 +23,18 @@
     <form id="brand-edit-form" enctype="multipart/form-data" method="post" action="?plugin=productbrands&action=save&id={$brand.id}" target="brand-edit-iframe">
         {$wa->csrf()}
     <div  class="fields form">
+
         <div class="field-group">
+            <div class="field">
+                <div class="name">Показать в ленте</div>
+                <div class="value">
+                    <input type="checkbox" name="show_slider" value="1" {if $brand.show_slider}checked{/if}>
+                    Отобразить бренд в слайдере
+                </div>
+            </div>
+        </div>
+        <div class="field-group">
+
             <div class="field">
                 <div class="name">{_w('Name')}</div>
                 <div class="value">

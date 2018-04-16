@@ -41,6 +41,8 @@ class shopProductbrandsPluginBackendSaveController extends waJsonController
 
         $data['enable_sorting'] = waRequest::post('enable_sorting') ? 1 : 0;
 
+        $data['show_slider'] = waRequest::post('show_slider') ? 1 : 0;
+
         $img_home_brand_file = waRequest::file('img_home_brand_file');
         if ($img_home_brand_file->uploaded() && in_array(strtolower($img_home_brand_file->extension), array('jpg', 'jpeg', 'png', 'gif'))) {
             $this->response['img_home_brand'] = $data['img_home_brand'] = '.'.$img_home_brand_file->extension;
