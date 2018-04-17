@@ -1059,9 +1059,10 @@ input[type=checkbox].at-stylize-input:checked + .at-stylize-button{box-shadow:in
     left: 10px;
 }
 
+
 .header-slider{
     text-align: center;
-    padding: 30px 0px 20px;
+    padding: 10px 0px 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, .1) inset;
 }
 
@@ -1080,22 +1081,5 @@ input[type=checkbox].at-stylize-input:checked + .at-stylize-button{box-shadow:in
     width: 100%;
     vertical-align: middle;
 }
-.h-p-grid{
-    background: #19A5CC;
-}
-.head-phone{
-    color: #FFFFFF;
-}
-.head-phone div{
-    white-space: nowrap;
-}
-.head-phone .phone-h{
-    font-size: 22px;
-    line-height: 22px;
-    margin-bottom: 5px;
-}
-.head-phone .text-h{
-    font-size: 13px;
-    line-height: 13px;
-}
+
 

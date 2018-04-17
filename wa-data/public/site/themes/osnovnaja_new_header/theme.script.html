@@ -108,7 +108,7 @@
     $(function() {
 
     $(window).scroll(function() {
-        if ( $(this).scrollTop()>=200) {
+        if ( $(this).scrollTop()>=200 && $(this).width() <= '1500') {
             $('.logo-menu-top-fix').show();
         }else if ( $(this).scrollTop()<190 ) {
             $('.logo-menu-top-fix').css('display','none');

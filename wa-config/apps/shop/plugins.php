@@ -27,5 +27,6 @@ return array (
   'wholesale' => true,
   'castomfield' => '1',
   'editprice' => true,
+  'slider' => true,
 );
 //EOF
