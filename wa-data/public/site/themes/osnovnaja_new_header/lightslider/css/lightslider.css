@@ -391,3 +391,14 @@
   cursor: -ms-grabbing;
   cursor: grabbing;
 }
+
+@media print {
+    .header-slider .container{
+        display: none;
+    }
+    .header-slider .print{
+        display: block!important;
+        width: 98%;
+        margin: 0 auto;
+    }
+}
