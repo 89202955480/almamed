@@ -733,7 +733,12 @@ msgstr "текст при нулевом налоге"
 #: /wa-apps/shop/plugins/easyinvoicephys/templates/EasyinvoicephysButton.html:26
 #: /wa-apps/shop/plugins/easyinvoicephys/templates/EasyinvoicephysButton.html:39
 msgid "current"
-msgstr "текущий"
+msgstr "с печатью"
+
+#: /wa-apps/shop/plugins/easyinvoicephys/templates/EasyinvoicephysButton.html:26
+#: /wa-apps/shop/plugins/easyinvoicephys/templates/EasyinvoicephysButton.html:39
+msgid "current no print"
+msgstr "без печати"
 
 #: /wa-apps/shop/plugins/easyinvoicephys/templates/EasyinvoicephysButton.html:33
 #: /wa-apps/shop/plugins/easyinvoicephys/templates/EasyinvoicephysButton.html:40

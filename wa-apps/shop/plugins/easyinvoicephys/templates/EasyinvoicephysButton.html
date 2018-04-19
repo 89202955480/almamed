@@ -36,7 +36,8 @@
 {else if $settings.BUTTON_POSITION == '2'}
 	<li class="{$plugin_id}_menu">
 		<div><img src="{$plugin_path}img/icon.png" />{$settings.BUTTON_NAME|escape}</div>
-		<a  class="button green" href="?plugin={$plugin_id}&action=display&order_id={$order.id}" target="_blank">[`current`]</a>	
+		<a  class="button green" href="?plugin={$plugin_id}&action=display&order_id={$order.id}&print=1" target="_blank">[`current no print`]</a>
+		<a  class="button green" href="?plugin={$plugin_id}&action=display&order_id={$order.id}" target="_blank">[`current`]</a>
 		<a id="{$plugin_id}-list-print" class="button blue" href="javascript:void(0);"><i style="margin-left: 0; display:none;" class="icon16 loading"></i>[`choice`]</a>
 	</li>
 {else}

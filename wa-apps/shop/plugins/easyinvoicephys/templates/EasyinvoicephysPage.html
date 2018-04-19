@@ -298,10 +298,12 @@
 					<div class="item-invoice-total">{$order_total|wa_format_amount:$order.currency:'words'}</div>
 				</div>
 			</div>
+			{if empty(waRequest::get('print'))}
 			<div class="draggable_block">
 				{if !empty($settings.faximile_src)}<div class="draggable"><img class="faximile_src" src="{$settings.faximile_src}" /></div>{/if}
 				{if !empty($settings.stamp_src)}<div class="draggable"><img class="stamp_src" src="{$settings.stamp_src}" /></div>{/if}
 			</div>
+			{/if}
 			<div class="bottom">
 				<div class="block-bottom">
 					<div class="item-bottom">Генеральный директор</div>
