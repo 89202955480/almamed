@@ -3054,6 +3054,10 @@ msgstr "Идентификатор отправления"
 msgid "Bestseller!"
 msgstr "Хит!"
 
+#: /wa-apps/shop/lib/model/shopProductImages.model.php:160
+msgid "saleout!"
+msgstr "СНЯТ С ПРОИЗВОДСТВА!"
+
 #: /wa-apps/shop/lib/model/shopProductImages.model.php:164
 msgid "YOUR TEXT"
 msgstr "ВАШ ТЕКСТ"

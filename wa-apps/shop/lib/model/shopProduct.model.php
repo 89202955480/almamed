@@ -716,6 +716,7 @@ class shopProductModel extends waModel
             'new'        => array('name' => _w('New!'), 'code' => '<div class="badge new"><span>'._w('New!').'</span></div>'),
             'bestseller' => array('name' => _w('Bestseller!'), 'code' => '<div class="badge bestseller"><span>'._w('Bestseller!').'</span></div>'),
             'lowprice'   => array('name' => _w('Low price!'), 'code' => '<div class="badge low-price"><span>'._w('Low price!').'</span></div>'),
+            'saleout'   => array('name' => _w('saleout!'), 'code' => '<div class="badge" style="background-color: #fff;"><span>'._w('saleout!').'</span></div>'),
         );
     }
 

@@ -1268,6 +1268,7 @@ table.zebra p.hint { margin-bottom: 0; }
 .icon16.ss.coupon { background-position:-32px -112px; }
 .icon16.ss.bestseller { background-position:-48px -112px; }
 .icon16.ss.lowprice { background-position:-64px -112px; }
+.icon16.ss.saleout { background-position:-160px -112px; }
 .icon16.ss.div { background-position:-80px -112px; }
 .icon16.ss.affiliate { background-position:-96px -112px; }
 .icon16.ss.shop { background-position:-112px -112px; }
