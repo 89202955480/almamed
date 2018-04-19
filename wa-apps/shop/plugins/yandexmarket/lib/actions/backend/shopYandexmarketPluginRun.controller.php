@@ -1200,9 +1200,9 @@ SQL;
             ) {
                 $category_xml = $this->dom->createElement("category", str_replace('&', '&amp;', $category['name']));
                 $category['id'] = intval($category['id']);
-                $category_xml->setAttribute('id', $category['id']);
+                $category_xml->setAttribute('id', "9999999".$category['id']);
                 if ($category['parent_id']) {
-                    $category_xml->setAttribute('parentId', $category['parent_id']);
+                    $category_xml->setAttribute('parentId', "9999999".$category['parent_id']);
                 }
                 $nodes = $this->dom->getElementsByTagName('categories');
                 $nodes->item(0)->appendChild($category_xml);
@@ -1733,9 +1733,11 @@ SQL;
         } elseif (!$is_attribute) {
             $path = explode('/', $field);
             $field = array_pop($path);
-            $element = $this->dom->createElement($field, trim($value));
             if ($field == 'categoryId') {
+                $element = $this->dom->createElement($field,trim("9999999".$value));
                 $element->setAttribute('type', 'Own');
+            }else{
+                $element = $this->dom->createElement($field,trim($value));
             }
             while ($field = array_pop($path)) {
                 $parent = $this->dom->createElement($field);
