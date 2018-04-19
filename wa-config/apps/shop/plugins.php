@@ -28,5 +28,6 @@ return array (
   'castomfield' => '1',
   'editprice' => true,
   'slider' => true,
+  'easyinvoicephys' => true,
 );
 //EOF
