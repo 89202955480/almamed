@@ -7741,6 +7741,11 @@ msgstr ""
 msgid "Bestseller!"
 msgstr ""
 
+#: /wa-apps/shop/lib/model/shopProduct.model.php:562
+#: /wa-apps/shop/lib/model/shopProductImages.model.php:171
+msgid "saleout!"
+msgstr ""
+
 #: /wa-apps/shop/lib/model/shopProduct.model.php:563
 #: /wa-apps/shop/lib/model/shopProductImages.model.php:173
 msgid "Low price!"
