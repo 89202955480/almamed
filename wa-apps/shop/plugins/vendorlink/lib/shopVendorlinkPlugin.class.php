@@ -39,6 +39,7 @@ class shopVendorlinkPlugin extends shopPlugin
 
         return array(
             'toolbar_section' => $view->fetch($this->path . '/templates/toolbar.html'),
+            'edit_basics' => $view->fetch($this->path . '/templates/toolbar.edit.html'),
         );
     }
 
