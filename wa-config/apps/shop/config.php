@@ -1,5 +1,6 @@
 <?php
 return array (
+  'lazy_loading' => 1,
   'notification_name' => 'general',
   'discount_description' => 1,
   'filters_features' => 'join',
@@ -37,7 +38,7 @@ return array (
   array (
     'name' => '90',
     'summary' => '0',
-    'description' => '0',
+    'description' => '20',
     'tag' => '0',
     'feature' => '0',
     'sku' => '40',
