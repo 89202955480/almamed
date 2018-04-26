@@ -22460,3 +22460,994 @@ Stack trace:
 #6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
 #7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
 #8 {main}
+
+2018-04-23 12:43:05 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:10
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(10): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(10): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(8): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(74): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2018-04-23 12:44:05 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:10
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(10): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(10): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(8): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(74): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2018-04-23 13:01:33 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-23 14:01:31 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-23 15:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-23 16:01:31 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-23 17:01:29 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-23 18:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-23 19:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-23 20:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-23 21:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-23 22:01:29 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-23 23:01:31 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-24 00:01:29 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-24 01:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-24 02:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-24 03:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-24 04:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-24 05:01:29 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-24 06:01:29 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-24 07:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-24 08:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-24 09:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-24 10:01:29 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-24 11:01:29 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-24 12:01:31 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-24 12:53:09 
+SoapFault exception: [WSDL] SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL' : failed to load external entity "http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL"
+ in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:8
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(8): SoapClient->SoapClient('http://www.cbr....')
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(8): shopCurrencyratesSetrate->__construct()
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(74): shopCurrencyratesUpdateCli->UpdateRates()
+#3 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#6 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#7 {main}
+
+2018-04-24 13:01:31 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-24 14:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-24 15:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-24 16:01:31 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-24 17:01:29 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-24 18:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-24 19:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-24 20:01:31 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-24 21:01:29 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-24 22:01:29 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-24 23:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-25 00:01:31 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-25 01:01:29 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-25 02:01:31 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-25 03:01:29 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-25 04:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-25 05:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-25 06:01:31 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-25 07:01:33 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-25 08:01:31 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-25 09:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-25 10:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-25 11:01:31 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-25 12:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-25 12:54:05 
+SoapFault exception: [HTTP] Could not connect to host in /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php:10
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'http://www.cbr....', 'http://web.cbr....', 1, 0)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(10): SoapClient->__call('GetCursOnDate', Array)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/actions/shopCurrencyratesSetrate.class.php(10): SoapClient->GetCursOnDate(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(8): shopCurrencyratesSetrate->__construct()
+#4 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/currencyrates/lib/cli/shopCurrencyratesUpdate.cli.php(74): shopCurrencyratesUpdateCli->UpdateRates()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopCurrencyratesUpdateCli->execute()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#7 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#8 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#9 {main}
+
+2018-04-25 13:01:29 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-25 14:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-25 15:01:31 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-25 16:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-25 17:01:32 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-25 18:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-25 19:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-25 20:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-25 21:01:32 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-25 22:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-25 23:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-26 00:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-26 01:01:32 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-26 02:01:29 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-26 03:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-26 04:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-26 05:01:32 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-26 06:01:31 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-26 07:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-26 08:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-26 09:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-26 10:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-26 11:01:30 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
+
+2018-04-26 12:01:31 
+exception 'SmartyException' with message 'Unable to load template file '/wa-apps/shop/plugins/xml/templates/product.html'' in /home/s/svprim4w/almamed.su/public_html/wa-system/vendors/smarty3/sysplugins/smarty_internal_templatebase.php:127
+Stack trace:
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/view/waSmarty3View.class.php(117): Smarty_Internal_TemplateBase->fetch('/wa-apps/shop/p...', NULL)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(192): waSmarty3View->fetch('/wa-apps/shop/p...')
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/shopXml.plugin.php(64): shopXmlPlugin->create_product(Array)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/plugins/xml/lib/cli/shopXmlUpdate.cli.php(36): shopXmlPlugin->indexBrand(Array, '/home/s/svprim4...')
+#4 /home/s/svprim4w/almamed.su/public_html/wa-system/controller/waController.class.php(21): shopXmlUpdateCli->execute()
+#5 /home/s/svprim4w/almamed.su/public_html/wa-system/waSystem.class.php(722): waController->run()
+#6 /home/s/svprim4w/almamed.su/public_html/wa-system/cli.php(14): waSystem->dispatchCli(Array)
+#7 /home/s/svprim4w/almamed.su/public_html/cli.php(3): require_once('/home/s/svprim4...')
+#8 {main}
