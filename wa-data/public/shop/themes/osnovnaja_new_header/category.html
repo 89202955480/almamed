@@ -35,12 +35,25 @@
     {if 1 && $category.subcategories}{* PLUGIN WMIMAGEINCAT: replace 0 to 1 to enable *}
         <ul class="piicsl">
             {foreach $category.subcategories as $sc}
+            {$dop = shopCastomfieldPlugin::getDopFieldsCategory($sc.id)}
+
                 <li class="piicsl-item">
                     <a href="{$sc.url}">
                         <div class="piicsl-img">
                             <img src="{if shopWmimageincatPlugin::getCategoryImage($sc.id, 'image')}{shopWmimageincatPlugin::getCategoryImage($sc.id, 'image')}{else}{$wa_theme_url}img/dummy200.png{/if}" alt="" />
                         </div>
-                        <span class="piicsl-title">{$sc.name|escape}</span>
+                        <span class="piicsl-title">
+                            {$sc.name|escape}
+
+                            {if $dop.dop_name_one}
+                                <span class="dop_name_one">{$dop.dop_name_one|escape}</span>
+                            {/if}
+
+                            {if $dop.dop_name_one}
+                                <span class="dop_name_two">{$dop.dop_name_two|escape}</span>
+                            {/if}
+                        </span>
+
                     </a>
                 </li>
             {/foreach}

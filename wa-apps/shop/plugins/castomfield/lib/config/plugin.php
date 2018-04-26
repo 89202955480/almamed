@@ -1,7 +1,7 @@
 <?php
 return array(
-    'name' => 'поле Комментарий',
-    'description' => 'поле Комментарий',
+    'name' => 'customs field',
+    'description' => 'custom field',
     'version' => '1.0',
     'img'=>'img/brands.png',
     'frontend' => true,
@@ -9,7 +9,8 @@ return array(
         16 => 'img/brands.png',
     ),
     'handlers' => array(
-        'backend_product' => 'backend_product'
+        'backend_product' => 'backend_product',
+        'backend_category_dialog' => 'backend_category_dialog',
     ),
 );
 
