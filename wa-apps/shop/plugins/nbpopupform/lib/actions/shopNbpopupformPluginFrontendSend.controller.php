@@ -18,6 +18,8 @@ class shopNbpopupformPluginFrontendSendController extends waJsonController
             $data['manager'] = "info@almamed.su";
         }
 
+        $data['roistat'] = array_key_exists('roistat_visit', $_COOKIE) ? $_COOKIE['roistat_visit'] : "неизвестно";
+
         $app_config = wa()->getConfig()->getAppConfig('shop');
         $temp_path = $app_config->getAppPath('plugins/');
 

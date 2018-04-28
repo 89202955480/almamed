@@ -445,6 +445,8 @@ class shopFrontendCheckoutAction extends waViewAction
             $order['params']['stock_id'] = $stock_id;
         }
 
+        $order['params']['roistat'] = array_key_exists('roistat_visit', $_COOKIE) ? $_COOKIE['roistat_visit'] : "неизвестно";
+
         $workflow = new shopWorkflow();
         if ($order_id = $workflow->getActionById('create')->run($order)) {
 
