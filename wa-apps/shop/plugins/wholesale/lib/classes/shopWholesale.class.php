@@ -25,7 +25,7 @@ final class shopWholesale {
             $cart = new shopCart();
             $total = 0;
             foreach($cart->items(true) as $item){
-                $total += (ceil($item['price']) == 0) ? $route_settings['min_order_sum'] : ceil($item['price']);
+                $total += (ceil($item['price']) == 0) ? $route_settings['min_order_sum'] : ceil($item['price'])*$item['quantity'];
             }
             return $total;
         }
