@@ -28,6 +28,7 @@ Class shopXmlPlugin extends shopPlugin {
         foreach($category as $k => $cat){
             //$cat_tree[$cat['parent_id']][] = $cat;
             $collection = new shopProductsCollection("category/" . $cat['id']);
+            $collection->addWhere("p.status = '1'");
             $product = $collection->getProducts();
             if ($product) {
                 foreach ($product as $key_prod => $prod) {
