@@ -1,12 +1,9 @@
 {strip}
-
-{$email = $theme_settings.address_email}
-{if $wa->shop && empty($email)}{$email = $wa->shop->settings("email")}{/if}
-{if !empty($email) || !empty($theme_settings.address_skype)}
+<script type="text/javascript" src="/wa-data/public/site/themes/osnovnaja_new_header/prime/incut.js" async></script>
+<link rel="stylesheet" href="https://incut.prime-ltd.su/incut/incut.css">
     <ul class="e-address-wrapper">
-        {if !empty($email)}<li><a href="mailto:{$email}"><i class="material-icons mi-lg">&#xE0BE;</i>{$email}</a></li>{/if}
-        {if !empty($theme_settings.address_skype)}<li><a href="skype:{$theme_settings.address_skype}?call"><i class="icon16 skype16"></i>{$theme_settings.address_skype}</a></li>{/if}
+        <li>
+            <a class="prime-incut black colour marketing-only"></a>
+        </li>
     </ul>
-{/if}
-
 {/strip}
