@@ -75,7 +75,7 @@
 
             <ЗначенияСвойства>
                 <Ид>RECOMMEND</Ид>
-                {$related = $_product->userValueRelated(100)}
+                {$related = $_product->upSelling(100) + $_product->crossSelling(100) + $_product->userValueRelated(100) + $_product->userValueRelatedTwo(100) + $_product->userValueRelatedThree(100) + $_product->userValueRelatedFour(100) + $_product->userValueRelatedFive(100)}
                 {foreach $related as $r}
                 <Значение>{$r.id}</Значение>
                 <ЗначениеСвойства>
