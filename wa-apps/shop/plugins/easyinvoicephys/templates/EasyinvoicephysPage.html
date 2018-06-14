@@ -87,11 +87,14 @@
 						</div>
 					</div>
 					{$params = ($order.params)}
-					{if isset($params.{$settings.BUYER_JURNAME}) } {$company = ($params.{$settings.BUYER_JURNAME}|escape)}{else}{$company = NULL}{/if}
+					{if $params.payment_id == 3 }
+					{$company = ($params.{$settings.BUYER_JURNAME}|escape)}{else}{$company = $order.contact_name}{/if}
+
 					{$company = ifempty($company, $order->getContactField({$settings.BUYER_JURNAME_2|escape}, 'txt'))}
 					{$company = ifempty($company, $order->contact_company)}
 					{$company = ifempty($company,$order.billing_address.name)}
 					{$company = ifempty($company,$order.contact_name)}
+
 					{if isset($params.{$settings.BUYER_JURADDRESS}) } {$juraddress = ($params.{$settings.BUYER_JURADDRESS}|escape)}{else}{$juraddress = NULL}{/if}
 					{$juraddress = ifempty($juraddress, $order->getContactField({$settings.BUYER_JURADDRESS|default:'juraddress'|escape}, 'txt'))}	
 					{$juraddress = ifempty($juraddress, $order.billing_address.address)}
@@ -121,7 +124,7 @@
 							<div class="item-line-title">Плательщик:</div>
 							<div class="item-line-title inline_edit" contenteditable="true">
 							{if !empty($company)}{$company|escape}{/if}
-							{if !empty($inn)}, <span class="nowrap">{$inn|escape}</span>{/if}
+							{if !empty($inn) && $params.payment_id == 3}, <span class="nowrap">{$inn|escape}</span>{/if}
 							{if !empty($juraddress)}, <span class="nowrap">{$juraddress|escape}</span>{/if}
 							{if !empty($kpp)}, <span class="nowrap">{$kpp|escape}</span>{/if}
 							{if !empty($bik)}, <span class="nowrap">{$bik|escape}</span>{/if}
