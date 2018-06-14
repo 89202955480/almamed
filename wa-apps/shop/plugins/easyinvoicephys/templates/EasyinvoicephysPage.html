@@ -124,7 +124,7 @@
 							<div class="item-line-title">Плательщик:</div>
 							<div class="item-line-title inline_edit" contenteditable="true">
 							{if !empty($company)}{$company|escape}{/if}
-							{if !empty($inn) && $params.payment_id == 3}, <span class="nowrap">{$inn|escape}</span>{/if}
+							{if !empty($inn) && $params.payment_id == 3}, <span class="nowrap">ИНН: {$inn|escape}</span>{/if}
 							{if !empty($juraddress) && $params.payment_id == 4}, <span class="nowrap">{$juraddress|escape}</span>{/if}
 							{if !empty($kpp)}, <span class="nowrap">{$kpp|escape}</span>{/if}
 							{if !empty($bik)}, <span class="nowrap">{$bik|escape}</span>{/if}
@@ -141,7 +141,7 @@
 							{if !empty($baddr4)}, <span class="nowrap">{$settings.BUYER_ADDR4_NAME|escape} {$baddr4|escape}</span>{/if}
 							{if !empty($baddr5)}, <span class="nowrap">{$settings.BUYER_ADDR5_NAME|escape} {$baddr5|escape}</span>{/if}
 							{if !empty($baddr6)}, <span class="nowrap">{$settings.BUYER_ADDR6_NAME|escape} {$baddr6|escape}</span>{/if}							
-							{if !empty($phone)}, <span class="nowrap">тел.:{$phone|escape}</span>{/if}
+							{if !empty($phone) && $params.payment_id == 4}, <span class="nowrap">тел.:{$phone|escape}</span>{/if}
 							</div>
 						</div>
 					</div>
