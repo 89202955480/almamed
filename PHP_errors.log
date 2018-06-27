@@ -12,3 +12,52 @@
 [11-Jun-2018 13:47:32 Europe/Moscow] PHP Fatal error:  Class 'shopFormPlugin' not found in /home/s/svprim4w/almamed.su/public_html/wa-cache/apps/site/templates/compiled/site_ru_RU/fc/a9/02/fca902287148770da67bdd48785f5473c1e1a5e7.file.error.html.php on line 31
 [12-Jun-2018 00:00:49 Europe/Moscow] PHP Fatal error:  Class 'shopFormPlugin' not found in /home/s/svprim4w/almamed.su/public_html/wa-cache/apps/site/templates/compiled/site_ru_RU/fc/a9/02/fca902287148770da67bdd48785f5473c1e1a5e7.file.error.html.php on line 31
 [12-Jun-2018 21:02:44 Europe/Moscow] PHP Fatal error:  Class 'shopFormPlugin' not found in /home/s/svprim4w/almamed.su/public_html/wa-cache/apps/site/templates/compiled/site_ru_RU/fc/a9/02/fca902287148770da67bdd48785f5473c1e1a5e7.file.error.html.php on line 31
+[14-Jun-2018 12:45:08 Europe/Moscow] PHP Fatal error:  Class 'shopFormPlugin' not found in /home/s/svprim4w/almamed.su/public_html/wa-cache/apps/site/templates/compiled/site_ru_RU/fc/a9/02/fca902287148770da67bdd48785f5473c1e1a5e7.file.error.html.php on line 31
+[15-Jun-2018 17:42:38 Europe/Moscow] PHP Fatal error:  Uncaught <div style="width:99%; position:relative; text-align: left;">
+    <h2 id='Title'>Installed ImageMagick does not support jpg&amp;p=2&amp;text=%D0%BF%D1%83%D0%BB%D1%8C%D1%81%D0%BE%D0%BC%D0%B5%D1%82%D1%80%20%D0%BA%D0%B8%D1%82%D0%B0%D0%B9%20%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C&amp;pos=117&amp;lr=54&amp;rpt=simage images <span class="hint">code 500</span></h2>
+    <div id="Trace">
+        <h3>/home/s/svprim4w/almamed.su/public_html/wa-system/image/waImageImagick.class.php (170)</h3>
+        <pre>## /home/s/svprim4w/almamed.su/public_html/wa-system/image/waImageImagick.class.php(170)
+#0 /home/s/svprim4w/almamed.su/public_html/wa-system/image/waImageImagick.class.php(119): waImageImagick-&gt;_save_function('jpg&amp;p=2&amp;text=%D...', 90)
+#1 /home/s/svprim4w/almamed.su/public_html/wa-system/image/waImage.class.php(374): waImageImagick-&gt;_save('/home/s/svprim4...', 90)
+#2 /home/s/svprim4w/almamed.su/public_html/wa-apps/shop/lib/config/data/thumb.php(88): waImage-&gt;save('/home/s/svprim4...', 90)
+#3 /home/s/svprim4w/almamed.su/public_html/wa-data/public/shop/products/thumb.php(5): include('/home/s/svprim4...')
+#4 {main}</pre>
+    </div>
+                    <div id="Context" style="display: block;">
+                    <h3>/home/s/svprim4w/almamed.su/public_html/wa-system/image/waImageImagick.class.php around line 170</h3>
+                    <pre>165	            case 'png':
+   166	                $type = IMAGETYPE_PNG;
+   167	                $this-&gt;im-&gt;setImageFormat('png');
+   168	            break;
+   169	            default:
+ &gt;&gt;170	                throw new waException(_ws(sprintf('Installed ImageMagick does not support %s images', $extension)));
+   171	            break;
+   172	        }
+   173	
+   174	        $quality = $quality - 5;
+   175</pre>
+                </div>
+    <div id="Request">
+        <h2>Request</h2>
+        <pre>array()</pre>
+    </div>
+</div>
+    <div style="text-align: left;">
+        <h2>Params</h2>
+        <pre>array()</pre>
+    </div>
+  thrown in /home/s/svprim4w/almamed.su/public_html/wa-system/image/waImageImagick.class.php on line 170
+[15-Jun-2018 19:01:18 Europe/Moscow] PHP Fatal error:  Class 'shopFormPlugin' not found in /home/s/svprim4w/almamed.su/public_html/wa-cache/apps/site/templates/compiled/site_ru_RU/fc/a9/02/fca902287148770da67bdd48785f5473c1e1a5e7.file.error.html.php on line 31
+[17-Jun-2018 05:28:43 Europe/Moscow] PHP Fatal error:  Class 'shopFormPlugin' not found in /home/s/svprim4w/almamed.su/public_html/wa-cache/apps/site/templates/compiled/site_ru_RU/fc/a9/02/fca902287148770da67bdd48785f5473c1e1a5e7.file.error.html.php on line 31
+[17-Jun-2018 10:26:58 Europe/Moscow] PHP Fatal error:  Class 'shopFormPlugin' not found in /home/s/svprim4w/almamed.su/public_html/wa-cache/apps/site/templates/compiled/site_ru_RU/fc/a9/02/fca902287148770da67bdd48785f5473c1e1a5e7.file.error.html.php on line 31
+[18-Jun-2018 16:21:14 Europe/Moscow] PHP Fatal error:  Class 'shopFormPlugin' not found in /home/s/svprim4w/almamed.su/public_html/wa-cache/apps/site/templates/compiled/site_ru_RU/fc/a9/02/fca902287148770da67bdd48785f5473c1e1a5e7.file.error.html.php on line 31
+[18-Jun-2018 16:23:06 Europe/Moscow] PHP Fatal error:  Class 'shopFormPlugin' not found in /home/s/svprim4w/almamed.su/public_html/wa-cache/apps/site/templates/compiled/site_ru_RU/fc/a9/02/fca902287148770da67bdd48785f5473c1e1a5e7.file.error.html.php on line 31
+[19-Jun-2018 01:16:38 Europe/Moscow] PHP Fatal error:  Class 'shopFormPlugin' not found in /home/s/svprim4w/almamed.su/public_html/wa-cache/apps/site/templates/compiled/site_ru_RU/fc/a9/02/fca902287148770da67bdd48785f5473c1e1a5e7.file.error.html.php on line 31
+[20-Jun-2018 03:20:44 Europe/Moscow] PHP Fatal error:  Class 'shopFormPlugin' not found in /home/s/svprim4w/almamed.su/public_html/wa-cache/apps/site/templates/compiled/site_ru_RU/fc/a9/02/fca902287148770da67bdd48785f5473c1e1a5e7.file.error.html.php on line 31
+[20-Jun-2018 11:50:35 Europe/Moscow] PHP Fatal error:  Class 'shopFormPlugin' not found in /home/s/svprim4w/almamed.su/public_html/wa-cache/apps/site/templates/compiled/site_ru_RU/fc/a9/02/fca902287148770da67bdd48785f5473c1e1a5e7.file.error.html.php on line 31
+[22-Jun-2018 04:07:39 Europe/Moscow] PHP Fatal error:  Class 'shopFormPlugin' not found in /home/s/svprim4w/almamed.su/public_html/wa-cache/apps/site/templates/compiled/site_ru_RU/fc/a9/02/fca902287148770da67bdd48785f5473c1e1a5e7.file.error.html.php on line 31
+[22-Jun-2018 04:07:40 Europe/Moscow] PHP Fatal error:  Class 'shopFormPlugin' not found in /home/s/svprim4w/almamed.su/public_html/wa-cache/apps/site/templates/compiled/site_ru_RU/fc/a9/02/fca902287148770da67bdd48785f5473c1e1a5e7.file.error.html.php on line 31
+[25-Jun-2018 11:52:11 Europe/Moscow] PHP Fatal error:  Class 'shopFormPlugin' not found in /home/s/svprim4w/almamed.su/public_html/wa-cache/apps/site/templates/compiled/site_ru_RU/fc/a9/02/fca902287148770da67bdd48785f5473c1e1a5e7.file.error.html.php on line 31
+[26-Jun-2018 11:27:58 Europe/Moscow] PHP Fatal error:  Class 'shopFormPlugin' not found in /home/s/svprim4w/almamed.su/public_html/wa-cache/apps/site/templates/compiled/site_ru_RU/fc/a9/02/fca902287148770da67bdd48785f5473c1e1a5e7.file.error.html.php on line 31
+[27-Jun-2018 05:57:05 Europe/Moscow] PHP Fatal error:  Class 'shopFormPlugin' not found in /home/s/svprim4w/almamed.su/public_html/wa-cache/apps/site/templates/compiled/site_ru_RU/fc/a9/02/fca902287148770da67bdd48785f5473c1e1a5e7.file.error.html.php on line 31
