@@ -17602,3 +17602,21 @@ Unable to get data from currencyquotes widget API: Curl executing error: 28 - Co
 
 2018-06-26 13:28:04 91.204.61.228
 Unable to get data from currencyquotes widget API: Curl executing error: 28 - Connection timed out after 10001 milliseconds. Url: http://www.cbr.ru/scripts/XML_daily.asp?date_req=22/06/2018
+
+2018-07-06 15:02:41 178.150.85.244
+Unable to get data from currencyquotes widget API: Curl executing error: 28 - Connection timed out after 10001 milliseconds. Url: http://www.cbr.ru/scripts/XML_daily.asp?date_req=07/07/2018
+
+2018-07-06 15:02:52 178.150.85.244
+Unable to get data from currencyquotes widget API: Curl executing error: 28 - Connection timed out after 10001 milliseconds. Url: http://www.cbr.ru/scripts/XML_daily.asp?date_req=07/07/2018
+
+2018-07-06 15:03:03 178.150.85.244
+Unable to get data from currencyquotes widget API: Curl executing error: 28 - Connection timed out after 10001 milliseconds. Url: http://www.cbr.ru/scripts/XML_daily.asp?date_req=07/07/2018
+
+2018-07-19 13:26:25 93.79.168.101
+Unable to get data from currencyquotes widget API: Curl executing error: 28 - Connection timed out after 10001 milliseconds. Url: http://www.cbr.ru/scripts/XML_daily.asp?date_req=20/07/2018
+
+2018-07-19 13:26:36 93.79.168.101
+Unable to get data from currencyquotes widget API: Curl executing error: 28 - Connection timed out after 10001 milliseconds. Url: http://www.cbr.ru/scripts/XML_daily.asp?date_req=20/07/2018
+
+2018-07-19 13:26:47 93.79.168.101
+Unable to get data from currencyquotes widget API: Curl executing error: 28 - Connection timed out after 10001 milliseconds. Url: http://www.cbr.ru/scripts/XML_daily.asp?date_req=20/07/2018

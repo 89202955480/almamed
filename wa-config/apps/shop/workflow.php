@@ -82,11 +82,12 @@ return array (
       ),
       'available_actions' => 
       array (
-        0 => 'edit',
-        1 => 'peredan-na-otgruzku',
-        2 => 'refund',
-        3 => 'comment',
-        4 => 'message',
+        0 => 'otmenen',
+        1 => 'edit',
+        2 => 'peredan-na-otgruzku',
+        3 => 'refund',
+        4 => 'comment',
+        5 => 'message',
       ),
       'classname' => 'shopWorkflowState',
     ),
@@ -103,14 +104,14 @@ return array (
       ),
       'available_actions' => 
       array (
-        0 => 'comment',
-        1 => 'ship',
-        2 => 'refund',
-        3 => 'edit',
-        4 => 'complete',
-        5 => 'message',
+        0 => 'otmenen',
+        1 => 'comment',
+        2 => 'ship',
+        3 => 'refund',
+        4 => 'edit',
+        5 => 'complete',
+        6 => 'message',
       ),
-      'classname' => 'shopWorkflowState',
     ),
     'shipped' => 
     array (
