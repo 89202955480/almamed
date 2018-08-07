@@ -34,7 +34,7 @@ class shopFormPlugin extends shopPlugin
                 }
 
                 if(empty($fields['error_msg'])){
-                    $arPost[$fields['name']] = str_replace(waRequest::post($fields['name']));
+                    $arPost[$fields['name']] = strip_tags(waRequest::post($fields['name']));
                 }
             }
 
