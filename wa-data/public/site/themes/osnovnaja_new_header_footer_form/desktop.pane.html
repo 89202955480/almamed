@@ -23,7 +23,7 @@
                 <a id="viewed-link" href="{$wa->getUrl('shop/frontend')}search/?addition=viewed" rel="nofollow" class="addition-link {if !count($viewed_p)}gray{else}added{/if}"><i class="material-icons mi-2x">&#xE8F4;</i><span class="text">[`Viewed products`]</span> (<span class="count">{count($viewed_p)}</span>)</a>
             </div>
             <div class="col-grid stay-app">
-                    <a href="/ostavit-zayavku/" class="addition-link">
+                <a href="/ostavit-zayavku/?page-send={$wa->currentUrl(true)}" class="addition-link">
                         <i class="material-icons mi-2x">&#xe85d;</i>&nbsp;
                         <span>Оставить заявку</span>
                     </a>

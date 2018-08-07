@@ -21,7 +21,6 @@ class shopFormPlugin extends shopPlugin
             array("type" => "checkbox","label" => "","name" => "rule","required" => true)
         );
 
-
         if(waRequest::post('send_app')){
 
             $arPost = array();
@@ -46,8 +45,20 @@ class shopFormPlugin extends shopPlugin
                 $email_admin = $settings['email'];
 
                 $to = $email_admin;
-                $From = $email_admin;
-                $message = '123';
+                $From = "Almamed";
+
+                $message = 'ФИО: '.$arPost['name'].'\n';
+                $message .= 'Телефон: '.$arPost['phone'].'\n';
+                $message .= 'E-mail: '.$arPost['email'].'\n';
+                $message .= 'Город: '.$arPost['city'].'\n';
+                $message .= 'Укажите наименование клиники: '.$arPost['clinic'].'\n';
+                $message .= 'Ваш вопрос: '.$arPost['question'].'\n';
+                if(waRequest::get('page-send')){
+                    $message .= 'Страница отправки: '.waRequest::get('page-send').'\n';
+                }
+
+
+
                 $subject = 'Запрос с сайта AlmaMed.su';
 
                 $EOL = "\r\n"; // ограничитель строк, некоторые почтовые сервера требуют \n - подобрать опытным путём
@@ -76,20 +87,18 @@ class shopFormPlugin extends shopPlugin
                 $multipart .= "Content-Disposition: attachment; filename=\"$NameFile\"$EOL";
                 $multipart .= $EOL; // раздел между заголовками и телом прикрепленного файла
                 $multipart .= chunk_split(base64_encode($File));
-                
+
                 $multipart .= "$EOL--$boundary--$EOL";
 
                 if(!mail($to, $subject, $multipart, $headers)){
                     echo 'Письмо не отправлено';
                 } //Отправляем письмо
                 else{
-                    echo 'Письмо отправлено';
+                    wa()->getResponse()->redirect('/ostavit-zayavku/?send=ok', 302);
                 }
-
-
-
             }
         }
+
 
 
 
@@ -184,6 +193,11 @@ class shopFormPlugin extends shopPlugin
             }
         </style>
 
+    <?
+    if(waRequest::get('send') == "ok"):
+    print '<h1 style="color: #19a5cc;">Сообщение отправленно!</h1>';
+    else:
+    ?>
         <div class="wa-form app">
             <form method="post" action="" enctype='multipart/form-data'>
 
@@ -196,7 +210,7 @@ class shopFormPlugin extends shopPlugin
                         <div class="wa-field <?=($val['required']) ? "wa-required" : ""?>">
                             <div class="wa-name"><?=$val['label']?></div>
                             <div class="wa-value">
-                                <input name="<?=$val['name']?>" type="<?=$val['type']?>" class="<?=(isset($val['error_msg'])) ? "error" : ""?>" value="" />
+                                <input name="<?=$val['name']?>" type="<?=$val['type']?>" class="<?=(isset($val['error_msg'])) ? "error" : ""?>" value="<?=waRequest::post($val['name'])?>" />
                                 <? if(isset($val['error_msg'])): ?>
                                     <em class="wa-error-msg"><?=$val['error_msg']?></em>
                                 <? endif; ?>
@@ -261,6 +275,8 @@ class shopFormPlugin extends shopPlugin
 
 
         <?
+
+    endif;
     }
 
 
