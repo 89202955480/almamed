@@ -47,21 +47,21 @@ class shopFormPlugin extends shopPlugin
                 $to = $email_admin;
                 $From = "Almamed";
 
-                $message = 'ФИО: '.$arPost['name'].'\n';
-                $message .= 'Телефон: '.$arPost['phone'].'\n';
-                $message .= 'E-mail: '.$arPost['email'].'\n';
-                $message .= 'Город: '.$arPost['city'].'\n';
-                $message .= 'Укажите наименование клиники: '.$arPost['clinic'].'\n';
-                $message .= 'Ваш вопрос: '.$arPost['question'].'\n';
+                $EOL = "\r\n"; // ограничитель строк, некоторые почтовые сервера требуют \n - подобрать опытным путём
+
+                $message = 'ФИО: '.$arPost['name'].$EOL;
+                $message .= 'Телефон: '.$arPost['phone'].$EOL;
+                $message .= 'E-mail: '.$arPost['email'].$EOL;
+                $message .= 'Город: '.$arPost['city'].$EOL;
+                $message .= 'Укажите наименование клиники: '.$arPost['clinic'].$EOL;
+                $message .= 'Ваш вопрос: '.$arPost['question'].$EOL;
                 if(waRequest::get('page-send')){
-                    $message .= 'Страница отправки: '.waRequest::get('page-send').'\n';
+                    $message .= 'Страница отправки: '.waRequest::get('page-send').$EOL;
                 }
-
-
-
+                
                 $subject = 'Запрос с сайта AlmaMed.su';
 
-                $EOL = "\r\n"; // ограничитель строк, некоторые почтовые сервера требуют \n - подобрать опытным путём
+
                 $boundary     = "--".md5(uniqid(time()));  // любая строка, которой не будет ниже в потоке данных.
 
                 $headers    = "MIME-Version: 1.0;$EOL";
