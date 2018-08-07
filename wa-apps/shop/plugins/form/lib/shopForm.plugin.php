@@ -9,6 +9,267 @@
 class shopFormPlugin extends shopPlugin
 {
 
+    public static function getFormApp(){
+        $arFields = array(
+            array("type" => "text","label" => "ФИО","name" => "name","required" => true),
+            array("type" => "text","label" => "Телефон","name" => "phone","required" => true),
+            array("type" => "text","label" => "E-mail","name" => "email","required" => true),
+            array("type" => "text","label" => "Город","name" => "city","required" => true),
+            array("type" => "text","label" => "Укажите наименование клиники","name" => "clinic","required" => true),
+            array("type" => "textarea","label" => "Ваш вопрос","name" => "question","required" => false),
+            array("type" => "file","label" => "Прикрепить файл","name" => "app_file","required" => false),
+            array("type" => "checkbox","label" => "","name" => "rule","required" => true)
+        );
+
+
+        if(waRequest::post('send_app')){
+
+            $arPost = array();
+            $error = false;
+            foreach($arFields as &$fields){
+                if($fields['required'] and empty(waRequest::post($fields['name']))){
+                    $fields['error_msg'] = "Это поле обязательное";
+                    $error = true;
+                }else{
+                    unset($fields['error_msg']);
+                }
+
+                if(empty($fields['error_msg'])){
+                    $arPost[$fields['name']] = str_replace(waRequest::post($fields['name']));
+                }
+            }
+
+            if($arPost and !$error){
+
+                $plugin = wa('shop')->getPlugin('form');
+                $settings = $plugin->getSettings();
+                $email_admin = $settings['email'];
+
+                $to = $email_admin;
+                $From = "almamed.su";
+                $message = '123';
+                $subject = 'Запрос с сайта AlmaMed.su';
+
+                $EOL = "\r\n"; // ограничитель строк, некоторые почтовые сервера требуют \n - подобрать опытным путём
+                $boundary     = "--".md5(uniqid(time()));  // любая строка, которой не будет ниже в потоке данных.
+
+                $headers    = "MIME-Version: 1.0;$EOL";
+                $headers   .= "Content-Type: multipart/mixed; boundary=\"$boundary\"$EOL";
+                $headers   .= "From: $From\nReply-To: $From\n";
+
+                $multipart  = "--$boundary$EOL";
+                $multipart .= "Content-Type: text/html; charset=utf-8$EOL";
+                $multipart .= "Content-Transfer-Encoding: base64$EOL";
+                $multipart .= $EOL; // раздел между заголовками и телом html-части
+                $multipart .= chunk_split(base64_encode($message));
+
+                #начало вставки файлов
+
+                foreach($_FILES["app_file"]["name"] as $key => $value){
+                    $filename = $_FILES["app_file"]["tmp_name"][$key];
+                    $file = fopen($filename, "rb");
+                    $data = fread($file,  filesize( $filename ) );
+                    fclose($file);
+                    $NameFile = $_FILES["app_file"]["name"][$key]; // в этой переменной надо сформировать имя файла (без всякого пути);
+                    $File = $data;
+                    $multipart .=  "$EOL--$boundary$EOL";
+                    $multipart .= "Content-Type: application/octet-stream; name=\"$NameFile\"$EOL";
+                    $multipart .= "Content-Transfer-Encoding: base64$EOL";
+                    $multipart .= "Content-Disposition: attachment; filename=\"$NameFile\"$EOL";
+                    $multipart .= $EOL; // раздел между заголовками и телом прикрепленного файла
+                    $multipart .= chunk_split(base64_encode($File));
+
+                }
+
+
+                $multipart .= "$EOL--$boundary--$EOL";
+
+                if(!mail($to, $subject, $multipart, $headers)){
+                    echo 'Письмо не отправлено';
+                } //Отправляем письмо
+                else{
+                    echo 'Письмо отправлено';
+                }
+
+
+
+            }
+        }
+
+
+
+
+
+        ?>
+        <style>
+            .wa-form .wa-field .wa-name{
+                padding-top: 0;
+                padding-bottom: 0;
+                color: #000;
+                width: 250px;
+            }
+
+            .wa-form .wa-field{
+                margin-bottom: 20px;
+            }
+
+            .file_upload{
+                display: block;
+                position: relative;
+                overflow: hidden;
+                font-size: 1em;              /* example */
+                height: 2em;                 /* example */
+                line-height: 2em             /* the same as height */
+            }
+            .file_upload .button, .file_upload > mark{
+                display: block;
+                cursor: pointer              /* example */
+            }
+            .file_upload .button{
+                float: right;
+                box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                height: 100%;
+            }
+            .file_upload > mark{
+                background: transparent;
+                padding-left: 1em;
+                font-size: 12px;
+                color: #aaaaaa;
+                font-weight: normal;
+
+            }
+            @media only screen and ( max-width: 500px ){  /* example */
+                .file_upload > mark{
+                    display: none
+                }
+                .file_upload .button{
+                    width: 100%
+                }
+            }
+            .file_upload input[type=file]{
+                position: absolute;
+                top: 0;
+                opacity: 0;
+                cursor: pointer;
+            }
+
+            /* Making it beautiful */
+
+            .file_upload{
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                box-shadow: 0 0 5px rgba(0,0,0,0.1);
+                transition: box-shadow 0.1s linear;
+                width: 300px;
+                cursor: pointer;
+            }
+            .file_upload.focus{
+                box-shadow: 0 0 5px rgba(0,30,255,0.4)
+            }
+            .file_upload .button{
+                font-size: 0.95rem;
+                font-weight: normal;
+                border-radius: 2px;
+                text-transform: none;
+                line-height: unset;
+            }
+
+            .file_upload:active .button{
+                background: #5d00b3;
+                box-shadow: 0 0 3px rgba(0,0,0,0.3) inset
+            }
+
+            .wa-form .wa-field .wa-value input[type="text"]{
+                height: 2.5rem;
+            }
+
+            .wa-form .wa-field .wa-value{
+                margin-left: 255px;
+            }
+        </style>
+
+        <div class="wa-form app">
+            <form method="post" action="" enctype='multipart/form-data'>
+
+                <?
+                foreach($arFields as $val):
+                ?>
+
+                    <? if($val['type'] == "text"): ?>
+
+                        <div class="wa-field <?=($val['required']) ? "wa-required" : ""?>">
+                            <div class="wa-name"><?=$val['label']?></div>
+                            <div class="wa-value">
+                                <input name="<?=$val['name']?>" type="<?=$val['type']?>" class="<?=(isset($val['error_msg'])) ? "error" : ""?>" value="" />
+                                <? if(isset($val['error_msg'])): ?>
+                                    <em class="wa-error-msg"><?=$val['error_msg']?></em>
+                                <? endif; ?>
+                            </div>
+                        </div>
+
+                    <? elseif($val['type'] == "textarea"):?>
+
+                        <div class="wa-field <?=($val['required']) ? "wa-required" : ""?>">
+                            <div class="wa-name"><?=$val['label']?></div>
+                            <div class="wa-value">
+                                <textarea class="wa-error" name="<?=$val['name']?>" class="<?=(isset($val['error_msg'])) ? "error" : ""?>"> </textarea>
+                                <? if(isset($val['error_msg'])): ?>
+                                        <em class="wa-error-msg"><?=$val['error_msg']?></em>
+                                <? endif; ?>
+                            </div>
+                        </div>
+
+
+                    <? elseif($val['type'] == "file"):?>
+                        <div class="wa-field <?=($val['required']) ? "wa-required" : ""?>">
+                            <div class="wa-name"><?=$val['label']?></div>
+                            <label class="file_upload">
+                                <span class="button">Обзор</span>
+                                <mark>Выберите файл</mark>
+                                <input type="file" name="<?=$val['name']?>"/>
+                            </label>
+                            <? if($val['required']): ?>
+                                <em class="wa-error-msg"></em>
+                            <? endif; ?>
+                        </div>
+
+
+                    <? elseif($val['type'] == "checkbox"):;?>
+
+                        <div class="wa-field <?=($val['required']) ? "wa-required" : ""?>">
+
+                            <label class="at-stylize-label">
+                                <input id="tm-license-agreement" name="<?=$val['name']?>" value="Y" class="agreement at-stylize-input" type="checkbox" checked="ckecked"/>
+                                <span class="at-stylize-box"></span>
+                            </label>
+                            <span class="obr wa-required">
+                                Нажимая на эту кнопку , я даю свое согласие на
+                                <a href="/rules/personal.pdf">обработку персональных данных</a>
+                                и соглашаюсь с условиями <a href="/rules/user_yes.pdf">политики конфиденциальности</a>
+                            </span>
+
+                        </div>
+
+                    <? endif;?>
+
+                <?endforeach;?>
+
+                <div class="wa-field">
+                    <div class="wa-submit">
+                        <input type="submit" value="Отправить" name="send_app">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+
+        <?
+    }
+
+
+
 
     public static function getForm()
     {
