@@ -46,7 +46,7 @@ class shopFormPlugin extends shopPlugin
                 $email_admin = $settings['email'];
 
                 $to = $email_admin;
-                $From = "almamed.su";
+                $From = $email_admin;
                 $message = '123';
                 $subject = 'Запрос с сайта AlmaMed.su';
 
@@ -63,7 +63,6 @@ class shopFormPlugin extends shopPlugin
                 $multipart .= $EOL; // раздел между заголовками и телом html-части
                 $multipart .= chunk_split(base64_encode($message));
 
-                #начало вставки файлов
 
                 foreach($_FILES["app_file"]["name"] as $key => $value){
                     $filename = $_FILES["app_file"]["tmp_name"][$key];
