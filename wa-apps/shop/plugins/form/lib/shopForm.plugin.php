@@ -49,16 +49,16 @@ class shopFormPlugin extends shopPlugin
 
                 $EOL = "\r\n"; // ограничитель строк, некоторые почтовые сервера требуют \n - подобрать опытным путём
 
-                $message = 'ФИО: '.$arPost['name'].$EOL;
-                $message .= 'Телефон: '.$arPost['phone'].$EOL;
-                $message .= 'E-mail: '.$arPost['email'].$EOL;
-                $message .= 'Город: '.$arPost['city'].$EOL;
-                $message .= 'Укажите наименование клиники: '.$arPost['clinic'].$EOL;
-                $message .= 'Ваш вопрос: '.$arPost['question'].$EOL;
+                $message = 'ФИО: '.$arPost['name'].PHP_EOL;
+                $message .= 'Телефон: '.$arPost['phone'].PHP_EOL;
+                $message .= 'E-mail: '.$arPost['email'].PHP_EOL;
+                $message .= 'Город: '.$arPost['city'].PHP_EOL;
+                $message .= 'Укажите наименование клиники: '.$arPost['clinic'].PHP_EOL;
+                $message .= 'Ваш вопрос: '.$arPost['question'].PHP_EOL;
                 if(waRequest::get('page-send')){
-                    $message .= 'Страница отправки: '.waRequest::get('page-send').$EOL;
+                    $message .= 'Страница отправки: '.waRequest::get('page-send').PHP_EOL;
                 }
-                
+
                 $subject = 'Запрос с сайта AlmaMed.su';
 
 
