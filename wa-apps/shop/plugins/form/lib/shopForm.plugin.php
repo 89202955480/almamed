@@ -75,18 +75,23 @@ class shopFormPlugin extends shopPlugin
                 $multipart .= chunk_split(base64_encode($message));
 
 
-                $filename = $_FILES["app_file"]["tmp_name"];
-                $file = fopen($filename, "rb");
-                $data = fread($file,  filesize( $filename ) );
-                fclose($file);
-                $NameFile = $_FILES["app_file"]["name"]; // в этой переменной надо сформировать имя файла (без всякого пути);
-                $File = $data;
-                $multipart .=  "$EOL--$boundary$EOL";
-                $multipart .= "Content-Type: application/octet-stream; name=\"$NameFile\"$EOL";
-                $multipart .= "Content-Transfer-Encoding: base64$EOL";
-                $multipart .= "Content-Disposition: attachment; filename=\"$NameFile\"$EOL";
-                $multipart .= $EOL; // раздел между заголовками и телом прикрепленного файла
-                $multipart .= chunk_split(base64_encode($File));
+                if($_FILES["app_file"]["tmp_name"]){
+
+                    $filename = $_FILES["app_file"]["tmp_name"];
+                    $file = fopen($filename, "rb");
+                    $data = fread($file,  filesize( $filename ) );
+                    fclose($file);
+                    $NameFile = $_FILES["app_file"]["name"]; // в этой переменной надо сформировать имя файла (без всякого пути);
+                    $File = $data;
+                    $multipart .=  "$EOL--$boundary$EOL";
+                    $multipart .= "Content-Type: application/octet-stream; name=\"$NameFile\"$EOL";
+                    $multipart .= "Content-Transfer-Encoding: base64$EOL";
+                    $multipart .= "Content-Disposition: attachment; filename=\"$NameFile\"$EOL";
+                    $multipart .= $EOL; // раздел между заголовками и телом прикрепленного файла
+                    $multipart .= chunk_split(base64_encode($File));
+
+                }
+
 
                 $multipart .= "$EOL--$boundary--$EOL";
 
@@ -98,12 +103,7 @@ class shopFormPlugin extends shopPlugin
                 }
             }
         }
-
-
-
-
-
-
+        
         ?>
         <style>
             .wa-form .wa-field .wa-name{
