@@ -64,23 +64,19 @@ class shopFormPlugin extends shopPlugin
                 $multipart .= chunk_split(base64_encode($message));
 
 
-                foreach($_FILES["app_file"]["name"] as $key => $value){
-                    $filename = $_FILES["app_file"]["tmp_name"][$key];
-                    $file = fopen($filename, "rb");
-                    $data = fread($file,  filesize( $filename ) );
-                    fclose($file);
-                    $NameFile = $_FILES["app_file"]["name"][$key]; // в этой переменной надо сформировать имя файла (без всякого пути);
-                    $File = $data;
-                    $multipart .=  "$EOL--$boundary$EOL";
-                    $multipart .= "Content-Type: application/octet-stream; name=\"$NameFile\"$EOL";
-                    $multipart .= "Content-Transfer-Encoding: base64$EOL";
-                    $multipart .= "Content-Disposition: attachment; filename=\"$NameFile\"$EOL";
-                    $multipart .= $EOL; // раздел между заголовками и телом прикрепленного файла
-                    $multipart .= chunk_split(base64_encode($File));
-
-                }
-
-
+                $filename = $_FILES["app_file"]["tmp_name"];
+                $file = fopen($filename, "rb");
+                $data = fread($file,  filesize( $filename ) );
+                fclose($file);
+                $NameFile = $_FILES["app_file"]["name"]; // в этой переменной надо сформировать имя файла (без всякого пути);
+                $File = $data;
+                $multipart .=  "$EOL--$boundary$EOL";
+                $multipart .= "Content-Type: application/octet-stream; name=\"$NameFile\"$EOL";
+                $multipart .= "Content-Transfer-Encoding: base64$EOL";
+                $multipart .= "Content-Disposition: attachment; filename=\"$NameFile\"$EOL";
+                $multipart .= $EOL; // раздел между заголовками и телом прикрепленного файла
+                $multipart .= chunk_split(base64_encode($File));
+                
                 $multipart .= "$EOL--$boundary--$EOL";
 
                 if(!mail($to, $subject, $multipart, $headers)){
