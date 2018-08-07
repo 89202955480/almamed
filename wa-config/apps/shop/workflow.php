@@ -106,12 +106,35 @@ return array (
       array (
         0 => 'otmenen',
         1 => 'comment',
-        2 => 'ship',
-        3 => 'refund',
-        4 => 'edit',
-        5 => 'complete',
-        6 => 'message',
+        2 => 'chastichnaya-otgruzka',
+        3 => 'ship',
+        4 => 'refund',
+        5 => 'edit',
+        6 => 'complete',
+        7 => 'message',
       ),
+    ),
+    'chastichnoe-otpr' => 
+    array (
+      'name' => 'Частичная отгрузка',
+      'options' => 
+      array (
+        'style' => 
+        array (
+          'color' => '#aabdf1',
+          'font-weight' => 'bold',
+        ),
+        'icon' => 'icon16 ss sent',
+      ),
+      'available_actions' => 
+      array (
+        0 => 'ship',
+        1 => 'edit',
+        2 => 'complete',
+        3 => 'message',
+        4 => 'comment',
+      ),
+      'classname' => 'shopWorkflowState',
     ),
     'shipped' => 
     array (
@@ -121,6 +144,7 @@ return array (
         'style' => 
         array (
           'color' => '#0000ff',
+          'font-weight' => 'bold',
           'font-style' => 'italic',
         ),
         'icon' => 'icon16 ss sent',
@@ -402,6 +426,19 @@ return array (
       'state' => 'otmenen',
       'classname' => 'shopWorkflowAction',
       'id' => 'otmenen',
+    ),
+    'chastichnaya-otgruzka' => 
+    array (
+      'name' => 'Частичная отгрузка',
+      'options' => 
+      array (
+        'position' => '',
+        'button_class' => '',
+        'border_color' => '2b3ed5',
+      ),
+      'state' => 'chastichnoe-otpr',
+      'classname' => 'shopWorkflowAction',
+      'id' => 'chastichnaya-otgruzka',
     ),
   ),
 );
