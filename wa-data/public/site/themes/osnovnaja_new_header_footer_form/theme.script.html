@@ -53,6 +53,12 @@
             href: "{$wa_theme_url}fancybox/jquery.fancybox.css?v2.1.5",
             src: "{$wa_theme_url}fancybox/jquery.fancybox.min.js?v2.1.5"
         },
+        "jquery.maskinput": {
+            is_done: function () {
+                return !!$.fancybox;
+            },
+            src: "{$wa_theme_url}maskinput/jquery.maskinput.js?v2.1.5"
+        },
         "jquery.bxslider": {
             is_done: function () {
                 return !!$.fn.bxSlider;

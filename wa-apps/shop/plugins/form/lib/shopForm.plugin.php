@@ -45,7 +45,7 @@ class shopFormPlugin extends shopPlugin
                 $email_admin = $settings['email'];
 
                 $to = $email_admin;
-                $From = "Almamed";
+                $From = ' Almamed <noreply@almamed.su>';
 
                 $EOL = "\r\n"; // ограничитель строк, некоторые почтовые сервера требуют \n - подобрать опытным путём
 
@@ -66,7 +66,7 @@ class shopFormPlugin extends shopPlugin
 
                 $headers    = "MIME-Version: 1.0;$EOL";
                 $headers   .= "Content-Type: multipart/mixed; boundary=\"$boundary\"$EOL";
-                $headers   .= "From: $From\nReply-To: $From\n";
+                $headers   .= "From: $From";
 
                 $multipart  = "--$boundary$EOL";
                 $multipart .= "Content-Type: text/html; charset=utf-8$EOL";
@@ -99,6 +99,15 @@ class shopFormPlugin extends shopPlugin
                     echo 'Письмо не отправлено';
                 } //Отправляем письмо
                 else{
+
+                    $text_client = $settings['email_client'];
+                    $email_client = trim(strip_tags($arPost['email']));
+
+                    $headers_client  = 'MIME-Version: 1.0' . "\r\n";
+                    $headers_client .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+                    $headers_client .= "From: $From";
+
+                    mail($email_client, $subject, $text_client, $headers_client);
                     wa()->getResponse()->redirect('/ostavit-zayavku/?send=ok', 302);
                 }
             }

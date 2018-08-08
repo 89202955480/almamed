@@ -1,8 +1,8 @@
 <?php
 
 return array(
-    'name' => 'Форма',
-    'description' => 'Форма',
+    'name' => 'Форма оставить заявку',
+    'description' => 'Форма оставить заявку',
     'version' => '1.0',
     'img'=>'img/brands.png',
     'custom_settings' => true,
