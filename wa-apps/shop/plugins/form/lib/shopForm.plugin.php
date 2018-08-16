@@ -204,7 +204,14 @@ class shopFormPlugin extends shopPlugin
 
     <?
     if(waRequest::get('send') == "ok"):
-    print '<h1 style="color: #19a5cc;">Сообщение отправленно!</h1>';
+    ?>
+        <h1 style="color: #19a5cc;">Сообщение отправленно!</h1>
+        <script type="text/javascript">
+            window.onload = function() {
+                yaCounter34079080.reachGoal('ostavit_zajavku', false, function(){console.log("ostavit_zajavku");});
+            }
+        </script>
+    <?
     else:
     ?>
         <div class="wa-form app">
