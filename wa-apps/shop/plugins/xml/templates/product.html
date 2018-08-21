@@ -88,9 +88,9 @@
             <ЗначенияСвойства>
                 <Ид>CML2_PICTURES</Ид>
                 {foreach $_product.images as $key => $image}
-                <Значение>import_files/{$image.image_id}.{$image.ext}</Значение>
+                <Значение>import_files/{$image}.{$prod.ext}</Значение>
                 <ЗначениеСвойства>
-                    <Значение>import_files/{$image.image_id}.{$image.ext}</Значение>
+                    <Значение>import_files/{$image}.{$prod.ext}</Значение>
                     <Описание></Описание>
                 </ЗначениеСвойства>
                 {/foreach}
