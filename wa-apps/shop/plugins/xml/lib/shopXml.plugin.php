@@ -141,7 +141,7 @@ Class shopXmlPlugin extends shopPlugin {
         $self = new waNestedSetModel();
 
         if (!$fields) {
-            $fields = 'id, left_key, right_key, parent_id, depth, name, count, type, status';
+            $fields = 'id, url, left_key, right_key, parent_id, depth, name, count, type, status';
         }
         if($select){
             $del = '';
@@ -188,9 +188,25 @@ Class shopXmlPlugin extends shopPlugin {
 
 
     public function create_product($product){
+        $this->images_import($product);
         $view = wa()->getView();
         $view->assign('product', $product);
         return $view->fetch($_SERVER['DOCUMENT_ROOT'].'/wa-apps/shop/plugins/xml/templates/product.html');
+    }
+
+    public function images_import($product){
+        $archive = 'import_files.zip';
+        if (file_exists($archive)) {
+            unlink($archive);
+        }
+        $zip = new ZipArchive;
+        if ($res = $zip->open($archive, ZipArchive::CREATE) === TRUE) {
+        foreach($product as $key => $prod){
+            $images = stristr(shopImage::getPath(['product_id' => $prod[id], 'id' => $prod[image_id],'ext' => $prod[ext]]),"wa-data");
+            $zip->addFile($images,$prod[image_id].'.'.$prod[ext]);
+            }
+        }
+        $zip->close();
     }
 
 

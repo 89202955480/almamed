@@ -19,7 +19,7 @@
             {/foreach}
         </Группы>
 
-        <Картинка>{stristr(shopImage::getPath(['product_id' => $prod.id, 'id' => $prod.image_id,'ext' => $prod.ext]),"wa-data")}</Картинка>
+        <Картинка>import_files/{$prod.image_id}.{$prod.ext}</Картинка>
 
         <ХарактеристикиТовара>
 
@@ -88,9 +88,9 @@
             <ЗначенияСвойства>
                 <Ид>CML2_PICTURES</Ид>
                 {foreach $_product.images as $key => $image}
-                <Значение>{stristr(shopImage::getPath(['product_id' => $image.product_id, 'id' => $image.id,'ext' => $image.ext]),"wa-data")}</Значение>
+                <Значение>import_files/{$image.image_id}.{$image.ext}</Значение>
                 <ЗначениеСвойства>
-                    <Значение>{stristr(shopImage::getPath(['product_id' => $image.product_id, 'id' => $image.id,'ext' => $image.ext]),"wa-data")}</Значение>
+                    <Значение>import_files/{$image.image_id}.{$image.ext}</Значение>
                     <Описание></Описание>
                 </ЗначениеСвойства>
                 {/foreach}

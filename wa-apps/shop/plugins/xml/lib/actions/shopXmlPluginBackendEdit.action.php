@@ -14,13 +14,12 @@ class shopXmlPluginBackendEditAction extends waViewAction
         $this->layout->assign('no_level2', true);
 
 
-        $brands = new shopProductbrandsPlugin();
+        $brands = new shopProductbrandsPlugin(false);
 
 
         $cat_parent = $plugin->getFullTree(false,true,array(),true);
 
-        if (waRequest::method() == 'post') {
-
+        if (waRequest::method(false) == 'post') {
             if(waRequest::post('del_cat')){
                 $category = waRequest::post('del_cat');
                 $all_cat = waRequest::post('all_cat');
@@ -31,20 +30,17 @@ class shopXmlPluginBackendEditAction extends waViewAction
                         }
                     }
                 }
-                if($plugin->indexCat($all_cat)){
+                if($plugin->indexCat($all_cat,false)){
                     $this->view->assign('import', true);
                 }
             }
-
             if(waRequest::post('brand')){
                 $brand = waRequest::post('brand');
                 if($plugin->indexBrand($brand)){
                     $this->view->assign('import', true);
                 }
             }
-
         }
-
 
         $this->view->assign('cat', $cat_parent);
         $this->view->assign('brand', $brands->getBrands());
