@@ -105,6 +105,7 @@ Class shopXmlPlugin extends shopPlugin {
         foreach(explode(',',$products_cat) as $cat){
             $self = new waNestedSetModel();
             $collection = new shopProductsCollection("category/" . $cat);
+            $collection->addWhere("p.status = '1'");
             $product = $collection->getProducts();
             if ($product) {
                 foreach ($product as $key_prod => $prod) {
